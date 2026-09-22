@@ -1,4 +1,4 @@
-# Astra Handoff Template
+# Handoff Template
 Updated: 2026-09-09
 
 Checkpoint: <[Room]+[Table]+[Box]>

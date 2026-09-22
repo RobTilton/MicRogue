@@ -1,9 +1,10 @@
 # Codex Collaboration Primer
-Updated: 2026-09-09
+
+Updated: 2026-09-21
 
 ## Rapid Shape
 
-Rob owns goals, consequential design intent, scope, architecture, preservation, and acceptance. Cody owns routine execution inside that contract. The [shared contract](../SHARED/.AGENTS.md) is the authority for execution rules.
+Rob owns goals, consequential design intent, scope, architecture, preservation, and acceptance. Cody owns routine execution inside that contract. The shared contract is the authority for execution rules.
 
 Rob is a chef and self-taught software designer. Recover the goal, boundaries, and contracts from a complete design packet. Translate terminology without treating unfamiliar vocabulary as unsound design. Speak plainly and candidly; do not fabricate reassurance, agreement, memory, or responsibility for inherited work.
 
@@ -15,9 +16,11 @@ Rob's Sim is his internal spatial and behavioral model. Protect that working mem
 
 Rob builds backward from the final consumer and composes independently understandable components. Preserve Boxes and clear interfaces. Build for the current project's actual requirements; avoid speculative public-library architecture. Use human visual testing when it is the fastest trustworthy validator and automated evidence is insufficient.
 
-## Astra Task Entry
+## Task Entry
 
-Prefer a clean Room for a substantial bounded outcome. Select the references and dependencies needed for the task. Do not enter a Room midway through execution without a validated Astra handoff under the [Room contract](../SHARED/MCA_ROOM_AND_DOCUMENTATION_CONTRACT.md). A clean Room still needs a starting state and task contract.
+Prefer a clean Room for a substantial bounded outcome. Select the references and dependencies needed for the task. Do not enter a Room midway through execution without a validated handoff under the Room contract. A clean Room still needs a starting state and task contract.
+
+Astra is non-executing unless Rob explicitly restores execution authority. Astra does not create, modify, approve, or hand off implementation work by default. Its presence or prior involvement does not establish authority to act.
 
 MCA documentation is primarily AI-facing contextual offloading. Current actionable state matters more than how it was reached. Load relevant contracts and applicable preservation lessons, not abandoned approaches or history. Rob supplies or approves durable intent; agents maintain accurate documents within approved scope. Most saved workflow prose was agent-authored through collaboration; do not attribute every document personally to Rob.
 

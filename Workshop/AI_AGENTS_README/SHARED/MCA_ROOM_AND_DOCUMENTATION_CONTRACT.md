@@ -52,7 +52,7 @@ At each completed Box, update affected references and DOTS in the same work batc
 
 At Table closeout, validate the composed components and reconcile interface/dependency limits. At Room closeout, record final outputs, acceptance status, integration evidence, and disposition: retain in Room, preserve reusable work in ToolShed, or promote only when explicitly authorized. Closeout never grants deletion or Production authority. Preserve useful independent results even if another Box remains incomplete.
 
-## Astra Handoff Validity
+## Handoff Validity
 
 A mid-execution entry requires a current-state handoff, using [the handoff template](Templates/ASTRA_HANDOFF_TEMPLATE.md). It must point to DOTS and establish:
 
