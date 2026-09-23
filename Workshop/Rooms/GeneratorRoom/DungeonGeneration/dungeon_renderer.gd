@@ -1,21 +1,38 @@
+class_name DungeonRenderer
 extends GridMap
 
-const QuarryGenerator = preload(
-	"res://Workshop/Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd"
-)
-func build_from_quarry(quarry: Dictionary) -> void:
-	var width: int = quarry["width"]
-	var height: int = quarry["height"]
-	var cells: PackedInt32Array = quarry["cells"]
+const VOID: int = 0
+const FLOOR: int = 1
+const WALL: int = 2
+
+const FLOOR_MESH_ID: int = 0
+const WALL_MESH_ID: int = 1
+
+
+func render_dungeon(dungeon: Dictionary) -> void:
+	clear()
+
+	var width: int = dungeon["width"]
+	var height: int = dungeon["height"]
+	var cells: PackedInt32Array = dungeon["cells"]
 
 	for y: int in range(height):
 		for x: int in range(width):
-			var cell: int = cells[y * width + x]
+			var index: int = y * width + x
+			var cell: int = cells[index]
 
 			match cell:
-				0:
+				VOID:
 					continue
-				1:
-					set_cell_item(Vector3i(x, 0, y), FLOOR_ID)
-				2:
-					set_cell_item(Vector3i(x, 0, y), WALL_ID)
+
+				FLOOR:
+					set_cell_item(
+						Vector3i(x, 0, y),
+						FLOOR_MESH_ID
+					)
+
+				WALL:
+					set_cell_item(
+						Vector3i(x, 0, y),
+						WALL_MESH_ID
+					)
