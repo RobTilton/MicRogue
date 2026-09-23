@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://ok6e80r102m2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nt0cw"]
+albedo_color = Color(0.260183, 0.389136, 0.118256, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nt0cw"]
+material = SubResource("StandardMaterial3D_nt0cw")
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahmrj"]
+albedo_color = Color(0.187176, 0.187176, 0.187176, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vn62u"]
+material = SubResource("StandardMaterial3D_ahmrj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqqmi"]
+albedo_color = Color(0.391295, 0.0189089, 0.167065, 1)
+emission_enabled = true
+emission = Color(0.815022, 0.142228, 0.283703, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ai27e"]
+material = SubResource("StandardMaterial3D_mqqmi")
+
+[node name="GeneratorDebugTestLibrary" type="Node3D"]
+
+[node name="FloorTile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("BoxMesh_nt0cw")
+
+[node name="WallTile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99965, 0, 0)
+mesh = SubResource("BoxMesh_vn62u")
+
+[node name="DebugTile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = SubResource("BoxMesh_ai27e")

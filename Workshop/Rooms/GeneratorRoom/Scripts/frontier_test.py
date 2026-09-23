@@ -1,16 +1,16 @@
 import random as rndm
 TOTAL_RUNS = 10
 MAX_ATTEMPTS = 40
-ROOMS_PER_RUN = 100
+ROOMS_PER_RUN = 80
 
 ROOM_MIN_RADIUS_X = 4
-ROOM_MAX_RADIUS_X = 17
+ROOM_MAX_RADIUS_X = 15
 
 ROOM_MIN_RADIUS_Y = 4
 ROOM_MAX_RADIUS_Y = 15
 
-WIDTH = 99
-HEIGHT = 66
+WIDTH = 121
+HEIGHT = 41
 
 def generate_random_room(field, iteration):
     radius_x = rndm.randint(ROOM_MIN_RADIUS_X, max(ROOM_MIN_RADIUS_X, ROOM_MAX_RADIUS_X - iteration))

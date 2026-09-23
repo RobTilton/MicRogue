@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pg0qgxjsqdf3"]
+
+[ext_resource type="Script" uid="uid://3saj2cwdg85v" path="res://Workshop/Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd" id="1_gprww"]
+
+[node name="DunGenFrontier" type="Node3D"]
+script = ExtResource("1_gprww")
