@@ -11,6 +11,7 @@ const ERROR_ORIGIN := (
 @export var modifier: GenerationSemantics.GeometryModifier = GenerationSemantics.GeometryModifier.STANDARD
 @export var use_fixed_seed: bool = false
 @export var fixed_seed: int = 4434
+@export var apply_connection_correction: bool = true
 
 @onready var dungeon_renderer: DungeonRenderer = $DungeonRenderer
 @onready var camera: Camera3D = $Camera3D
@@ -42,6 +43,17 @@ func _ready() -> void:
 		return
 
 	var field: GeometryField = geometry_resolution.field
+	if apply_connection_correction:
+		var discovery := RoomDiscoveryFill.discover(field, true)
+		var correction := ConnectionCorrection.correct(
+			field,
+			discovery,
+			ConnectionCorrection.standard_patterns()
+		)
+		if not correction.is_success:
+			push_error("%s: %s" % [ERROR_ORIGIN, correction.error_message])
+			return
+		field = correction.field
 	dungeon_renderer.render_dungeon({
 		"width": field.size.x,
 		"height": field.size.y,

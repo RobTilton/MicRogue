@@ -1,11 +1,11 @@
 # Generator System Description
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomDiscoveryFill]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[ConnectionCorrection]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the GeneratorRoom directory reorganization
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, a completed human-accepted typed Base Geometry Generator, and a typed Room Discovery component awaiting human contract review. Room Discovery partitions bounded geometry into cardinally connected floor rooms without mutating it.
+The current generator system contains a working procedural dungeon-field prototype plus completed, human-accepted Generation Parameter Resolver, Base Geometry Generator, and Room Discovery components. ConnectionCorrection is implemented and awaiting human validation.
 
 ```text
 prototype scene caller
@@ -26,6 +26,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 | [`GenerationParameterResolver/`](../../Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/) | Typed Inspector catalog, semantic request validation, profile merge rules, and detached concrete parameter results. |
 | [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded geometry generation, taxation, safe boundary planning, square/circular/compound-circle wrapping, and F6 debug scene. |
 | [`RoomDiscoveryFill/`](../../Rooms/GeneratorRoom/LayoutGeneration/RoomDiscoveryFill/) | Typed cardinal floor-room discovery with explicitly optional immediate frontier-wall collection. |
+| [`ConnectionCorrection/`](../../Rooms/GeneratorRoom/LayoutGeneration/ConnectionCorrection/) | Typed supplied punch patterns, iterative inexpensive connection correction, fresh-room return, and correction evidence. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -98,7 +99,19 @@ Each typed `DiscoveredRoom` contains:
 
 `RoomDiscoveryResult` contains the typed room array, `frontier_walls_included`, and an error message. Calling discovery with `include_frontier_walls = false` skips frontier collection and returns empty frontier arrays. A valid map with no floor succeeds with zero rooms.
 
-The optional frontier contract is provisional for ConnectionCorrection testing. Shared wall coordinates intentionally appear in every bordering room's frontier and can identify inexpensive opening candidates. Discovery does not choose openings, build hallways, modify geometry, construct an ownership-label array, or attempt to keep room identities valid after later geometry mutation. Consumers must rediscover the corrected field when openings make the prior room arrays stale.
+The optional frontier contract is provisional for ConnectionCorrection testing. Shared wall coordinates intentionally appear in every bordering room's frontier and identify inexpensive opening candidates. Discovery does not choose openings, build hallways, modify geometry, or construct an ownership-label array. ConnectionCorrection directly maintains the room data affected by its own mutations rather than invoking discovery again. Rob accepted and checkpoint-tagged this contract on 2026-09-24, explicitly retaining permission to revisit frontier collection if Box 4 proves it wasteful.
+
+## Connection Correction
+
+Entry point: `ConnectionCorrection.correct(field, discovery, patterns)`. Inputs are a bounded field, successful Room Discovery with frontier walls, and an explicitly supplied typed pattern array. The standard catalog contains single, horizontal/vertical three-cell lines, four three-cell elbows, plus, and 3×3 square: nine orientations total.
+
+Correction copies the input field and never mutates the source. It deduplicates frontier-wall centers, builds a temporary floor-coordinate ownership lookup, and evaluates every supplied pattern at every center exactly once. Candidates crossing bounds, touching the map's outer edge, changing void, mutating no wall, or failing to touch at least two distinct rooms are rejected.
+
+Candidates are ranked by most distinct rooms connected, fewest wall cells mutated, smallest pattern, lowest Y, lowest X, then catalog order. They are processed once in that order. A candidate is skipped when its rooms have already merged; every accepted punch reduces the room count. ConnectionCorrection changes the punch cells to floor, directly merges the affected rooms' floor/frontier data, removes opened walls, adds newly exposed local frontier walls, and updates coordinate ownership. It performs no flood fill.
+
+`ConnectionCorrectionResult` returns copied corrected geometry, directly maintained post-correction rooms with floor/frontier data intact, typed applied-punch records, candidate-evaluation and mutated-cell totals, and per-pattern usage. It performs no long-route search or hallway construction; those remain RoomJudgement authority.
+
+`BaseGeometryDebug.tscn` exposes `apply_connection_correction`, defaulting to enabled. With `use_fixed_seed`, the same generated field can be viewed before and after correction by toggling only this setting.
 
 ## Entry Points And Flow
 
@@ -200,6 +213,10 @@ On 2026-09-24, [`base_geometry_generator_test.gd`](../../Rooms/GeneratorRoom/Tes
 
 On 2026-09-24, [`room_discovery_fill_test.gd`](../../Rooms/GeneratorRoom/Tests/RoomDiscoveryFill/room_discovery_fill_test.gd) passed 41,092 checks covering cardinal partitioning, diagonal separation, deterministic ordering, empty-floor success, null refusal, input non-mutation, optional and shared frontier walls, uniqueness, complete floor coverage, and composition across all 27 generated catalog combinations. Resolver and Base Geometry regressions remained clean at 107 and 63,793 checks.
 
+On 2026-09-24, [`connection_correction_test.gd`](../../Rooms/GeneratorRoom/Tests/ConnectionCorrection/connection_correction_test.gd) passed 4,447 checks covering the nine standard orientations, minimal-destruction and maximum-connection ranking, direct room/frontier maintenance, void/outer-edge/source preservation, deliberately unresolved geometry, and all 27 generated catalog combinations. Generated usage was single 32, lines 82, elbows 98, plus 6, and 3×3 square 95. The latest worst measured correction was Cave/Large/Confined seed 7026 at 121,711 µs with 4,851 one-time candidate evaluations. The suite now enforces a 250 ms per-map ceiling in this environment.
+
+[`hole_punch_selection_audit.gd`](../../Rooms/GeneratorRoom/Tests/ConnectionCorrection/hole_punch_selection_audit.gd) ran 300 Dungeon/Confined maps on 2026-09-24: seeds 0–99 for each Scale. All maps completed. Across 3,965 punches, family usage was single 318 (8.02%, present in 56.00% of maps), line 1,156 (29.16%, 97.33% of maps), elbow 1,101 (27.77%, 96.33% of maps), plus 61 (1.54%, 18.00% of maps), and 3×3 square 1,329 (33.52%, 99.00% of maps). Orientation counts were horizontal line 604, vertical line 552, right-down elbow 949, right-up elbow 75, left-down elbow 73, left-up elbow 4. Selection frequency does not establish necessity; removing a pattern requires a same-seed ablation comparison of residual rooms and geometry cost.
+
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
 Human visual evidence recorded on 2026-09-24: all tested Dungeon seeds passed; all Cave Scale/Modifier variants passed; Tower Large and Medium passed; Tower Small/Confined was accepted as a yellow pass, with possible hole-punch improvement deferred to later connectivity/judgment work. Rob subsequently declared Base Geometry ready for closure, completing the Box.
@@ -213,4 +230,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Room Discovery implementation and automated checks are complete; human contract review remains pending. ConnectionCorrection implementation is not currently authorized.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. ConnectionCorrection implementation and automated validation are complete; human validation remains pending. RoomJudgement is not currently authorized.

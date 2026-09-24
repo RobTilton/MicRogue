@@ -1,13 +1,13 @@
 # Generator Room Current State
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomDiscoveryFill]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[ConnectionCorrection]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the current Room-formatting changes
 
 ## Rapid Shape
 
 GeneratorRoom is active and incomplete. A working procedural dungeon-field prototype generates overlapping rooms, repairs most disconnected floor regions, and renders the result through a Godot `GridMap`.
 
-The typed Base Geometry Generator is complete and human-accepted. Typed Room Discovery is implemented and awaiting human contract review. It partitions bounded geometry into cardinally connected floor rooms and can explicitly include or omit immediate frontier-wall coordinates.
+The typed Base Geometry Generator and Room Discovery are complete and human-accepted. ConnectionCorrection is implemented and awaiting human validation. It ranks local punch candidates once, applies useful candidates, and directly merges and maintains the affected rooms without rerunning flood fill.
 
 Durable technical detail is owned by the [Generator System Description](../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/GENERATOR_SYSTEM.md). Completed-game requirements are owned by [`Scope_Defined.md`](../Project_Core_Documentation/Scope_Defined.md).
 
@@ -18,7 +18,8 @@ Durable technical detail is owned by the [Generator System Description](../../AI
 | [`DungeonGeneration/`](DungeonGeneration/) | Working Godot generator, prototype caller, renderer, and runnable scene. |
 | [`LayoutGeneration/GenerationParameterResolver/`](LayoutGeneration/GenerationParameterResolver/) | Completed typed semantic catalog, resolver, request, result, and refusal boundary. |
 | [`LayoutGeneration/BaseGeometryGenerator/`](LayoutGeneration/BaseGeometryGenerator/) | Completed bounded geometry generator, internal cut/wrap helpers, Cave boundary planner, tests, and F6 debug scene. |
-| [`LayoutGeneration/RoomDiscoveryFill/`](LayoutGeneration/RoomDiscoveryFill/) | Implemented typed cardinal room discovery with explicitly optional frontier-wall collection; awaiting human acceptance. |
+| [`LayoutGeneration/RoomDiscoveryFill/`](LayoutGeneration/RoomDiscoveryFill/) | Completed typed cardinal room discovery with explicitly optional frontier-wall collection; collection may be revisited if ConnectionCorrection proves it wasteful. |
+| [`LayoutGeneration/ConnectionCorrection/`](LayoutGeneration/ConnectionCorrection/) | Implemented typed local punch patterns, iterative correction, mutation evidence, fresh final rooms, and result contract; awaiting human validation. |
 | [`Assets/DunGenMeshLibrary/`](Assets/DunGenMeshLibrary/) | Required prototype rendering meshes; paths repaired and resolving. |
 | [`Scripts/`](Scripts/) | Python research and stress-test tools; not runtime dependencies. |
 | [`Tests/`](Tests/) | Godot test script and retained 10,000-seed evidence. |
@@ -38,6 +39,9 @@ Validated on 2026-09-23:
 - Base Geometry tests pass 63,793 checks across taxation, all 27 Archetype/Scale/Modifier permutations, square/circular/compound-circle boundaries, Cave planning and partial-chain preservation, deterministic RNG, and invalid inputs after Cave base-radius normalization.
 - Room Discovery tests pass 41,092 checks across focused room/frontier behavior and all 27 generated catalog combinations.
 - Resolver and Base Geometry regressions remain clean at 107 and 63,793 checks after Room Discovery integration.
+- ConnectionCorrection tests pass 4,447 checks across all nine stamp orientations, focused selection/preservation behavior, direct room merging, unresolved cases, and all 27 generated catalog combinations.
+- Generated-map evidence used single 32 times, lines 82, elbows 98, plus 6, and 3×3 square 95. The latest worst measured correction was Cave/Large/Confined seed 7026 at 121,711 µs with 4,851 one-time candidate evaluations.
+- A separate 300-seed Dungeon/Confined audit (100 seeds per Scale) completed without failure and recorded 3,965 punches: single 318 (8.02%), lines 1,156 (29.16%), elbows 1,101 (27.77%), plus 61 (1.54%), and 3×3 square 1,329 (33.52%). Usage proves selection, not necessity; removal requires an ablation comparison.
 - `BaseGeometryDebug.tscn` executes headlessly without reported errors.
 - All visually tested Dungeon seeds passed. All Cave variants passed visual testing. Tower Large and Medium passed; Tower Small/Confined remains a yellow pass pending later hole-punch confirmation.
 
@@ -54,4 +58,4 @@ The seed inspector currently requires an explicit harness path because its defau
 
 ## Next Required Action
 
-Review the Room Discovery contract and accept it or report defects. The component returns typed rooms containing stable IDs, complete floor-coordinate arrays, and optional unique frontier-wall arrays; it does not mutate geometry or perform correction. ConnectionCorrection remains unopened and unauthorized.
+Review ConnectionCorrection behavior and evidence, then accept it or report defects. `BaseGeometryDebug.tscn` exposes `apply_connection_correction`; combine it with a fixed seed to compare raw and corrected output. The result returns copied corrected geometry, directly maintained merged rooms with their floor/frontier data intact, applied-punch records, candidate/mutation counts, and per-pattern usage. RoomJudgement remains unopened and unauthorized.
