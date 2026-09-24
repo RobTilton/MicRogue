@@ -1,11 +1,11 @@
 # Generator System Description
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[BaseGeometryGenerator]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomDiscoveryFill]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the GeneratorRoom directory reorganization
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, and a completed, human-accepted typed Base Geometry Generator. Base Geometry consumes resolved parameters, creates oversized rectangular-room topology, applies interval taxation, then internally cuts and wraps a bounded Dungeon, Tower, or Cave result.
+The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, a completed human-accepted typed Base Geometry Generator, and a typed Room Discovery component awaiting human contract review. Room Discovery partitions bounded geometry into cardinally connected floor rooms without mutating it.
 
 ```text
 prototype scene caller
@@ -25,6 +25,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 |---|---|
 | [`GenerationParameterResolver/`](../../Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/) | Typed Inspector catalog, semantic request validation, profile merge rules, and detached concrete parameter results. |
 | [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded geometry generation, taxation, safe boundary planning, square/circular/compound-circle wrapping, and F6 debug scene. |
+| [`RoomDiscoveryFill/`](../../Rooms/GeneratorRoom/LayoutGeneration/RoomDiscoveryFill/) | Typed cardinal floor-room discovery with explicitly optional immediate frontier-wall collection. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -82,6 +83,22 @@ Cave uses 4/5/6 circles for Small/Medium/Large. Its circle radius is derived by 
 If no next circle can be placed, the valid partial chain is preserved. The wrapper unions the valid circle masks, calculates their bounds, expands by one cell, crops the raw field, converts every cell outside the union and every untouched void inside it to wall, and walls the union's inner perimeter. The returned Cave field is a variable-sized rectangle containing only floor and wall cells.
 
 Production generation owns internal randomized RNG state. `generate_with_rng()` permits deterministic injected RNG for testing without establishing a production seed contract. The F6 debug caller exposes optional fixed-seed controls strictly for reproducible visual inspection and defaults to Cave/Medium/Standard during the Cave validation checkpoint.
+
+## Room Discovery Fill
+
+Entry point: `RoomDiscoveryFill.discover(field, include_frontier_walls)`.
+
+The component trusts the closed internal `GeometryField` contract and performs only a null refusal. It does not defensively revalidate or copy Base Geometry output. Discovery scans row-major and uses cardinal connectivity only, giving each discovered room a stable zero-based ID in first-floor encounter order.
+
+Each typed `DiscoveredRoom` contains:
+
+- `id: int`.
+- `floor_cells: Array[Vector2i]`, containing the complete connected floor footprint.
+- `frontier_walls: Array[Vector2i]`, containing unique cardinally adjacent wall coordinates when explicitly requested.
+
+`RoomDiscoveryResult` contains the typed room array, `frontier_walls_included`, and an error message. Calling discovery with `include_frontier_walls = false` skips frontier collection and returns empty frontier arrays. A valid map with no floor succeeds with zero rooms.
+
+The optional frontier contract is provisional for ConnectionCorrection testing. Shared wall coordinates intentionally appear in every bordering room's frontier and can identify inexpensive opening candidates. Discovery does not choose openings, build hallways, modify geometry, construct an ownership-label array, or attempt to keep room identities valid after later geometry mutation. Consumers must rediscover the corrected field when openings make the prior room arrays stale.
 
 ## Entry Points And Flow
 
@@ -181,6 +198,8 @@ On 2026-09-24, [`generation_parameter_resolver_test.gd`](../../Rooms/GeneratorRo
 
 On 2026-09-24, [`base_geometry_generator_test.gd`](../../Rooms/GeneratorRoom/Tests/BaseGeometryGenerator/base_geometry_generator_test.gd) passed 63,793 checks after Cave's base room range was normalized to `4–12`. Coverage includes all supported catalog combinations, taxation, fixed minimum radius, Dungeon/Tower regression, Cave circle counts and radii, randomized safe starting sides/positions, center crossing, 20% overlap rounding, bounded perpendicular noise, one-cell union expansion, floor/wall-only Cave output, deterministic seeded generation, and valid partial-chain preservation. The Cave-default debug scene and existing prototype scene both executed headlessly without error.
 
+On 2026-09-24, [`room_discovery_fill_test.gd`](../../Rooms/GeneratorRoom/Tests/RoomDiscoveryFill/room_discovery_fill_test.gd) passed 41,092 checks covering cardinal partitioning, diagonal separation, deterministic ordering, empty-floor success, null refusal, input non-mutation, optional and shared frontier walls, uniqueness, complete floor coverage, and composition across all 27 generated catalog combinations. Resolver and Base Geometry regressions remained clean at 107 and 63,793 checks.
+
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
 Human visual evidence recorded on 2026-09-24: all tested Dungeon seeds passed; all Cave Scale/Modifier variants passed; Tower Large and Medium passed; Tower Small/Confined was accepted as a yellow pass, with possible hole-punch improvement deferred to later connectivity/judgment work. Rob subsequently declared Base Geometry ready for closure, completing the Box.
@@ -194,4 +213,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Base Geometry implementation, automated checks, human visual validation, and Box closure are complete. No further Box implementation is currently authorized.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Room Discovery implementation and automated checks are complete; human contract review remains pending. ConnectionCorrection implementation is not currently authorized.
