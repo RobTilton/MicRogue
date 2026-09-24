@@ -239,7 +239,13 @@ Saved rooms and newly opened floor cells are merged directly into the maintained
 
 The debug caller exposes `apply_room_judgement`, defaulting to enabled after correction and pre-judgement culling. The focused and generated suite passes 29 checks. It covers one-plus and offset two-plus saves, the six-coordinate sunder boundary, void and outer-edge rejection, source preservation, refusal behavior, and all 27 catalog combinations; five generated fixtures required judgement and all ended as one connected floor region. Rob visually accepted Cave/Large/Confined seed `9026` and closed RoomJudgement on 2026-09-24.
 
-This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
+This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Room acceptance, production performance, the future controller contract, or world/Local Map/POI/town generation.
+
+## Final Validation Disposition
+
+The planned standalone FinalGeometryValidation stage is superseded. MCA requires the pipeline to preserve correctness by construction: Base Geometry owns valid bounded cell topology and sealing; read-only discovery preserves it; ConnectionCorrection and RoomJudgement reject void and outer-edge punches; PreJudgementCull and sunder behavior only convert floor to wall; and RoomJudgement resolves every substantial residual region into the maintained main room or removes its floor footprint.
+
+GenerationController must trust these typed component contracts. It must not add a runtime post-hoc geometry validator or duplicate final-geometry test pass. Invariant tests remain with the components that own the relevant mutations, while controller evidence is limited to correct composition, request/result behavior, catalog traversal, and human visual acceptance.
 
 Human visual evidence recorded on 2026-09-24: all tested Dungeon seeds passed; all Cave Scale/Modifier variants passed; Tower Large and Medium passed; Tower Small/Confined was accepted as a yellow pass, with possible hole-punch improvement deferred to later connectivity/judgment work. Rob subsequently declared Base Geometry ready for closure, completing the Box.
 
@@ -252,4 +258,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. RoomJudgement implementation, automated validation, human visual acceptance, and closure are complete. FinalGeometryValidation is next eligible but not yet opened.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. RoomJudgement implementation, automated validation, human visual acceptance, and closure are complete. FinalGeometryValidation is superseded; GenerationController is next eligible but not yet opened.

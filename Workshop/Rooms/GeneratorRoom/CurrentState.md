@@ -63,4 +63,4 @@ The seed inspector currently requires an explicit harness path because its defau
 
 ## Next Required Action
 
-Open FinalGeometryValidation for design discussion and alignment. Its planned responsibility is to verify the final geometry-only result contract after RoomJudgement; implementation is not yet authorized.
+Open GenerationController for design discussion and alignment. FinalGeometryValidation has been superseded: the controller must compose trusted typed components without adding a runtime post-hoc validator or duplicating the invariant tests already owned by those components. Controller implementation is not yet authorized.
