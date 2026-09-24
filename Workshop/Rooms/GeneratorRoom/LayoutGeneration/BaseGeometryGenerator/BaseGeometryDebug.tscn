@@ -12,7 +12,7 @@ archetype = 2
 layout_scale = 2
 modifier = 2
 use_fixed_seed = true
-fixed_seed = 7026
+fixed_seed = 9026
 
 [node name="DungeonRenderer" type="GridMap" parent="."]
 mesh_library = ExtResource("3_mesh")

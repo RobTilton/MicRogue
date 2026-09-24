@@ -5,7 +5,7 @@ Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f`
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype plus completed, human-accepted Generation Parameter Resolver, Base Geometry Generator, Room Discovery, and ConnectionCorrection components.
+The current generator system contains a working procedural dungeon-field prototype plus completed, human-accepted Generation Parameter Resolver, Base Geometry Generator, Room Discovery, ConnectionCorrection, PreJudgementCull, and RoomJudgement components.
 
 ```text
 prototype scene caller
@@ -28,6 +28,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 | [`RoomDiscoveryFill/`](../../Rooms/GeneratorRoom/LayoutGeneration/RoomDiscoveryFill/) | Typed cardinal floor-room discovery with explicitly optional immediate frontier-wall collection. |
 | [`ConnectionCorrection/`](../../Rooms/GeneratorRoom/LayoutGeneration/ConnectionCorrection/) | Typed supplied punch patterns, iterative inexpensive connection correction, fresh-room return, and correction evidence. |
 | [`PreJudgementCull/`](../../Rooms/GeneratorRoom/LayoutGeneration/PreJudgementCull/) | Typed two-stage residual-room culling and explicit RoomJudgement gating. |
+| [`RoomJudgement/`](../../Rooms/GeneratorRoom/LayoutGeneration/RoomJudgement/) | Typed substantial-room save-or-sunder repair using bounded plus punches and maintained region data. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -226,7 +227,17 @@ Rob visually accepted ConnectionCorrection for closure on 2026-09-24. In particu
 
 Focused threshold tests passed 16 checks. In the 300-seed Dungeon/Confined audit, 20 maps required judgement, one map culled one 1-cell room, and 279 bypassed judgement without culling. The debug scene exposes `apply_pre_judgement_cull` for visual comparison.
 
-Rob accepted and closed PreJudgementCull on 2026-09-24. The 20 maps retaining substantial residual rooms were accepted as sufficient evidence that RoomJudgement has a real required responsibility. RoomJudgement is open for design discussion only; its hallway and save-or-sunder mechanics are not yet defined or authorized.
+Rob accepted and closed PreJudgementCull on 2026-09-24. The 20 maps retaining substantial residual rooms were accepted as sufficient evidence that RoomJudgement has a real required responsibility.
+
+## Room Judgement
+
+`RoomJudgement.judge(field, rooms)` consumes the copied post-cull field and substantial surviving room data. The largest room becomes the main region. Every other room is processed largest-first and receives exactly one disposition: save it into the main region or sunder its complete floor footprint into wall.
+
+Judgement uses only one or two plus-shaped punches. A valid one-plus route is preferred. Two pluses may be cardinally connected with a perpendicular offset; together they must provide a route through no more than five wall coordinates. Six or more wall coordinates require sunder. Candidate ordering then prefers shorter wall distance, fewer total wall mutations, and stable coordinate order. Any punch touching void or the sealed outer edge is rejected.
+
+Saved rooms and newly opened floor cells are merged directly into the maintained main room and its frontier data. Sundered rooms are removed without a replacement flood fill. RoomJudgement performs no A*, arbitrary hallway search, or defensive reconstruction of already contracted input. `RoomJudgementResult` returns copied corrected geometry, one maintained main-room record, saved and sundered room counts, punch count, and failure state.
+
+The debug caller exposes `apply_room_judgement`, defaulting to enabled after correction and pre-judgement culling. The focused and generated suite passes 29 checks. It covers one-plus and offset two-plus saves, the six-coordinate sunder boundary, void and outer-edge rejection, source preservation, refusal behavior, and all 27 catalog combinations; five generated fixtures required judgement and all ended as one connected floor region. Rob visually accepted Cave/Large/Confined seed `9026` and closed RoomJudgement on 2026-09-24.
 
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
@@ -241,4 +252,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. ConnectionCorrection implementation, automated validation, visual acceptance, and closure are complete. RoomJudgement is not currently authorized and must first be justified against measured residual-room evidence.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. RoomJudgement implementation, automated validation, human visual acceptance, and closure are complete. FinalGeometryValidation is next eligible but not yet opened.

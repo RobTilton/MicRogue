@@ -13,6 +13,7 @@ const ERROR_ORIGIN := (
 @export var fixed_seed: int = 4434
 @export var apply_connection_correction: bool = true
 @export var apply_pre_judgement_cull: bool = true
+@export var apply_room_judgement: bool = true
 
 @onready var dungeon_renderer: DungeonRenderer = $DungeonRenderer
 @onready var camera: Camera3D = $Camera3D
@@ -61,6 +62,12 @@ func _ready() -> void:
 				push_error("%s: %s" % [ERROR_ORIGIN, cull_result.error_message])
 				return
 			field = cull_result.field
+			if apply_room_judgement and cull_result.requires_judgement:
+				var judgement := RoomJudgement.judge(field, cull_result.surviving_rooms)
+				if not judgement.is_success:
+					push_error("%s: %s" % [ERROR_ORIGIN, judgement.error_message])
+					return
+				field = judgement.field
 	dungeon_renderer.render_dungeon({
 		"width": field.size.x,
 		"height": field.size.y,

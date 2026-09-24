@@ -1,13 +1,13 @@
 # Generator Room Current State
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomJudgement]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomJudgement]` complete
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the current Room-formatting changes
 
 ## Rapid Shape
 
 GeneratorRoom is active and incomplete. A working procedural dungeon-field prototype generates overlapping rooms, repairs most disconnected floor regions, and renders the result through a Godot `GridMap`.
 
-The typed pipeline through PreJudgementCull is complete and human-accepted. RoomJudgement is open for design discussion because 20 of 300 audited maps retained substantial disconnected rooms after the cheap stages.
+The typed pipeline through RoomJudgement is complete and human-accepted. RoomJudgement remains exposed in the visual debug scene and guarantees that every substantial residual room is either connected to the main room through the bounded plus-punch process or completely sundered into wall.
 
 Durable technical detail is owned by the [Generator System Description](../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/GENERATOR_SYSTEM.md). Completed-game requirements are owned by [`Scope_Defined.md`](../Project_Core_Documentation/Scope_Defined.md).
 
@@ -21,6 +21,7 @@ Durable technical detail is owned by the [Generator System Description](../../AI
 | [`LayoutGeneration/RoomDiscoveryFill/`](LayoutGeneration/RoomDiscoveryFill/) | Completed typed cardinal room discovery with explicitly optional frontier-wall collection; collection may be revisited if ConnectionCorrection proves it wasteful. |
 | [`LayoutGeneration/ConnectionCorrection/`](LayoutGeneration/ConnectionCorrection/) | Completed typed local punch patterns, direct room/frontier maintenance, mutation evidence, and result contract. |
 | [`LayoutGeneration/PreJudgementCull/`](LayoutGeneration/PreJudgementCull/) | Completed two-stage residual-room cull and explicit RoomJudgement gate. |
+| [`LayoutGeneration/RoomJudgement/`](LayoutGeneration/RoomJudgement/) | Completed and human-accepted typed save-or-sunder pass using one or two plus punches and maintained room/frontier data. |
 | [`Assets/DunGenMeshLibrary/`](Assets/DunGenMeshLibrary/) | Required prototype rendering meshes; paths repaired and resolving. |
 | [`Scripts/`](Scripts/) | Python research and stress-test tools; not runtime dependencies. |
 | [`Tests/`](Tests/) | Godot test script and retained 10,000-seed evidence. |
@@ -44,6 +45,8 @@ Validated on 2026-09-23:
 - Generated-map evidence used single 32 times, lines 82, elbows 98, plus 6, and 3×3 square 95. The latest worst measured correction was Cave/Large/Confined seed 7026 at 121,711 µs with 4,851 one-time candidate evaluations.
 - A separate 300-seed Dungeon/Confined audit (100 seeds per Scale) completed without failure and recorded 3,965 punches: single 318 (8.02%), lines 1,156 (29.16%), elbows 1,101 (27.77%), plus 61 (1.54%), and 3×3 square 1,329 (33.52%). Usage proves selection, not necessity; removal requires an ablation comparison.
 - PreJudgementCull passes 16 focused threshold checks. Applied to the same 300 maps, 20 required RoomJudgement, one map culled one 1-cell room, and 279 bypassed judgement with no residual cull required.
+- RoomJudgement passes 29 checks covering one-plus repair, connected offset two-plus repair, the five-coordinate limit, six-coordinate sunder, void and outer-edge rejection, source preservation, refusal behavior, and all 27 catalog combinations. Five generated fixtures required judgement and all returned one connected room. All preceding suites remain clean: Resolver 107, Base Geometry 63,793, Room Discovery 41,092, ConnectionCorrection 4,447, and PreJudgementCull 16.
+- Rob visually accepted Cave/Large/Confined seed `9026` with RoomJudgement active and directed the Box to ship and close on 2026-09-24.
 - `BaseGeometryDebug.tscn` executes headlessly without reported errors.
 - All visually tested Dungeon seeds passed. All Cave variants passed visual testing. Tower Large and Medium passed; Tower Small/Confined remains a yellow pass pending later hole-punch confirmation.
 
@@ -60,4 +63,4 @@ The seed inspector currently requires an explicit harness path because its defau
 
 ## Next Required Action
 
-Define RoomJudgement's substantial-room save-or-sunder rules, hallway-generation authority, result contract, and stopping behavior. The Box is open for design discussion only; implementation remains unauthorized pending alignment and explicit execution confirmation.
+Open FinalGeometryValidation for design discussion and alignment. Its planned responsibility is to verify the final geometry-only result contract after RoomJudgement; implementation is not yet authorized.
