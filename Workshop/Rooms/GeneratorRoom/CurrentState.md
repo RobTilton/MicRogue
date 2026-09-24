@@ -7,7 +7,7 @@ Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f`
 
 GeneratorRoom is active and incomplete. A working procedural dungeon-field prototype generates overlapping rooms, repairs most disconnected floor regions, and renders the result through a Godot `GridMap`.
 
-The typed Base Geometry Generator and Room Discovery are complete and human-accepted. ConnectionCorrection is implemented and awaiting human validation. It ranks local punch candidates once, applies useful candidates, and directly merges and maintains the affected rooms without rerunning flood fill.
+The typed Base Geometry Generator, Room Discovery, and ConnectionCorrection are complete and human-accepted. ConnectionCorrection ranks local punch candidates once, applies useful candidates, and directly merges and maintains affected rooms without rerunning flood fill.
 
 Durable technical detail is owned by the [Generator System Description](../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/GENERATOR_SYSTEM.md). Completed-game requirements are owned by [`Scope_Defined.md`](../Project_Core_Documentation/Scope_Defined.md).
 
@@ -19,7 +19,7 @@ Durable technical detail is owned by the [Generator System Description](../../AI
 | [`LayoutGeneration/GenerationParameterResolver/`](LayoutGeneration/GenerationParameterResolver/) | Completed typed semantic catalog, resolver, request, result, and refusal boundary. |
 | [`LayoutGeneration/BaseGeometryGenerator/`](LayoutGeneration/BaseGeometryGenerator/) | Completed bounded geometry generator, internal cut/wrap helpers, Cave boundary planner, tests, and F6 debug scene. |
 | [`LayoutGeneration/RoomDiscoveryFill/`](LayoutGeneration/RoomDiscoveryFill/) | Completed typed cardinal room discovery with explicitly optional frontier-wall collection; collection may be revisited if ConnectionCorrection proves it wasteful. |
-| [`LayoutGeneration/ConnectionCorrection/`](LayoutGeneration/ConnectionCorrection/) | Implemented typed local punch patterns, iterative correction, mutation evidence, fresh final rooms, and result contract; awaiting human validation. |
+| [`LayoutGeneration/ConnectionCorrection/`](LayoutGeneration/ConnectionCorrection/) | Completed typed local punch patterns, direct room/frontier maintenance, mutation evidence, and result contract. |
 | [`Assets/DunGenMeshLibrary/`](Assets/DunGenMeshLibrary/) | Required prototype rendering meshes; paths repaired and resolving. |
 | [`Scripts/`](Scripts/) | Python research and stress-test tools; not runtime dependencies. |
 | [`Tests/`](Tests/) | Godot test script and retained 10,000-seed evidence. |
@@ -58,4 +58,4 @@ The seed inspector currently requires an explicit harness path because its defau
 
 ## Next Required Action
 
-Review ConnectionCorrection behavior and evidence, then accept it or report defects. `BaseGeometryDebug.tscn` exposes `apply_connection_correction`; combine it with a fixed seed to compare raw and corrected output. The result returns copied corrected geometry, directly maintained merged rooms with their floor/frontier data intact, applied-punch records, candidate/mutation counts, and per-pattern usage. RoomJudgement remains unopened and unauthorized.
+Reassess whether RoomJudgement has a demonstrated responsibility by auditing post-correction residual rooms and their percentage of total floor space. ConnectionCorrection is closed. RoomJudgement remains unopened and unauthorized; trivial residual fragments may justify deterministic culling rather than hallway judgment.

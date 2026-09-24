@@ -5,7 +5,7 @@ Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f`
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype plus completed, human-accepted Generation Parameter Resolver, Base Geometry Generator, and Room Discovery components. ConnectionCorrection is implemented and awaiting human validation.
+The current generator system contains a working procedural dungeon-field prototype plus completed, human-accepted Generation Parameter Resolver, Base Geometry Generator, Room Discovery, and ConnectionCorrection components.
 
 ```text
 prototype scene caller
@@ -217,6 +217,8 @@ On 2026-09-24, [`connection_correction_test.gd`](../../Rooms/GeneratorRoom/Tests
 
 [`hole_punch_selection_audit.gd`](../../Rooms/GeneratorRoom/Tests/ConnectionCorrection/hole_punch_selection_audit.gd) ran 300 Dungeon/Confined maps on 2026-09-24: seeds 0–99 for each Scale. All maps completed. Across 3,965 punches, family usage was single 318 (8.02%, present in 56.00% of maps), line 1,156 (29.16%, 97.33% of maps), elbow 1,101 (27.77%, 96.33% of maps), plus 61 (1.54%, 18.00% of maps), and 3×3 square 1,329 (33.52%, 99.00% of maps). Orientation counts were horizontal line 604, vertical line 552, right-down elbow 949, right-up elbow 75, left-down elbow 73, left-up elbow 4. Selection frequency does not establish necessity; removing a pattern requires a same-seed ablation comparison of residual rooms and geometry cost.
 
+Rob visually accepted ConnectionCorrection for closure on 2026-09-24. In particular, the 3×3 pattern's 33.52% usage produced no visually objectionable or readily identifiable destructive artifacts across the reviewed maps; its unobtrusive high usage was accepted as evidence that the local correction blended successfully into generated geometry.
+
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
 Human visual evidence recorded on 2026-09-24: all tested Dungeon seeds passed; all Cave Scale/Modifier variants passed; Tower Large and Medium passed; Tower Small/Confined was accepted as a yellow pass, with possible hole-punch improvement deferred to later connectivity/judgment work. Rob subsequently declared Base Geometry ready for closure, completing the Box.
@@ -230,4 +232,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. ConnectionCorrection implementation and automated validation are complete; human validation remains pending. RoomJudgement is not currently authorized.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. ConnectionCorrection implementation, automated validation, visual acceptance, and closure are complete. RoomJudgement is not currently authorized and must first be justified against measured residual-room evidence.
