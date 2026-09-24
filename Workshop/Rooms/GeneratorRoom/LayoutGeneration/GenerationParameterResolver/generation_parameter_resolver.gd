@@ -43,7 +43,7 @@ static func resolve(
 
 	var resolved_min_radius: int = max(
 		MINIMUM_RADIUS,
-		archetype.base_min_radius + modifier_radius_adjustment
+		archetype.base_min_radius
 	)
 	var resolved_max_radius: int = max(
 		resolved_min_radius,
@@ -67,6 +67,7 @@ static func resolve(
 			scale.cut_window_radius,
 			scale.room_count,
 			archetype.geometry_strategy,
+			archetype.boundary_strategy,
 			resolved_min_radius,
 			resolved_max_radius,
 			resolved_tax_interval,
@@ -116,6 +117,8 @@ static func _validate_archetypes(
 			return _error("Archetype profile has an invalid identifier.")
 		if profile.geometry_strategy == GenerationSemantics.GeometryStrategy.INVALID:
 			return _error("Archetype %s has no geometry strategy." % profile.archetype)
+		if profile.boundary_strategy == GenerationSemantics.BoundaryStrategy.INVALID:
+			return _error("Archetype %s has no boundary strategy." % profile.archetype)
 		if profile.base_min_radius < MINIMUM_RADIUS:
 			return _error("Archetype %s minimum radius is below %s." % [profile.archetype, MINIMUM_RADIUS])
 		if profile.base_max_radius < profile.base_min_radius:

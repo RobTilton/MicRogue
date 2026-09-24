@@ -81,6 +81,7 @@ func _test_representative_results() -> void:
 		20,
 		false,
 		GenerationSemantics.GeometryStrategy.RECTANGULAR_ROOMS,
+		GenerationSemantics.BoundaryStrategy.SQUARE,
 		"Dungeon/Medium/Standard"
 	)
 
@@ -93,12 +94,13 @@ func _test_representative_results() -> void:
 		cave_small_confined,
 		Vector2i(41, 31),
 		Vector2i(21, 21),
-		22,
-		3,
-		7,
+		44,
 		4,
+		7,
+		7,
 		true,
-		GenerationSemantics.GeometryStrategy.CIRCLE_CLUSTER_WITH_NOISE,
+		GenerationSemantics.GeometryStrategy.RECTANGULAR_ROOMS,
+		GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES,
 		"Cave/Small/Confined"
 	)
 
@@ -111,12 +113,13 @@ func _test_representative_results() -> void:
 		cave_large_exposed,
 		Vector2i(141, 95),
 		Vector2i(41, 41),
-		234,
-		5,
+		176,
+		4,
 		11,
-		57,
+		43,
 		true,
-		GenerationSemantics.GeometryStrategy.CIRCLE_CLUSTER_WITH_NOISE,
+		GenerationSemantics.GeometryStrategy.RECTANGULAR_ROOMS,
+		GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES,
 		"Cave/Large/Exposed"
 	)
 
@@ -130,11 +133,12 @@ func _test_representative_results() -> void:
 		Vector2i(91, 63),
 		Vector2i(31, 31),
 		100,
-		6,
+		4,
 		14,
 		22,
 		false,
-		GenerationSemantics.GeometryStrategy.CIRCULAR_TOWER,
+		GenerationSemantics.GeometryStrategy.RECTANGULAR_ROOMS,
+		GenerationSemantics.BoundaryStrategy.CIRCLE,
 		"Tower/Medium/Exposed"
 	)
 
@@ -227,7 +231,7 @@ func _test_invalid_profile_values() -> void:
 		GenerationParameterResolver.resolve(bad_room_count, _standard_request()),
 		"room count must be positive"
 	)
-	bad_room_count.scales[0].room_count = 22
+	bad_room_count.scales[0].room_count = 44
 
 	var bad_radius: GenerationCatalog = CATALOG.duplicate(true)
 	bad_radius.archetypes[0].base_max_radius = 3
@@ -277,6 +281,7 @@ func _expect_result(
 	tax_interval: int,
 	room_count_is_provisional: bool,
 	geometry_strategy: GenerationSemantics.GeometryStrategy,
+	boundary_strategy: GenerationSemantics.BoundaryStrategy,
 	label: String
 ) -> void:
 	_expect(parameters != null, "%s returned no parameters." % label)
@@ -293,6 +298,7 @@ func _expect_result(
 		"%s provisional-room-count flag mismatch." % label
 	)
 	_expect(parameters.geometry_strategy == geometry_strategy, "%s strategy mismatch." % label)
+	_expect(parameters.boundary_strategy == boundary_strategy, "%s boundary mismatch." % label)
 
 
 func _standard_request() -> LayoutRequest:

@@ -6,6 +6,7 @@ var cut_window_radius: int
 var output_size: Vector2i
 var room_count: int
 var geometry_strategy: GenerationSemantics.GeometryStrategy
+var boundary_strategy: GenerationSemantics.BoundaryStrategy
 var min_radius: int
 var max_radius: int
 var tax_interval: int
@@ -17,6 +18,7 @@ func _init(
 	resolved_cut_window_radius: int,
 	resolved_room_count: int,
 	resolved_geometry_strategy: GenerationSemantics.GeometryStrategy,
+	resolved_boundary_strategy: GenerationSemantics.BoundaryStrategy,
 	resolved_min_radius: int,
 	resolved_max_radius: int,
 	resolved_tax_interval: int,
@@ -28,6 +30,7 @@ func _init(
 	output_size = Vector2i(output_diameter, output_diameter)
 	room_count = resolved_room_count
 	geometry_strategy = resolved_geometry_strategy
+	boundary_strategy = resolved_boundary_strategy
 	min_radius = resolved_min_radius
 	max_radius = resolved_max_radius
 	tax_interval = resolved_tax_interval

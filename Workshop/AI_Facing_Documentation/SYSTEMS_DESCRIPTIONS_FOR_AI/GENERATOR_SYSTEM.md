@@ -1,11 +1,11 @@
 # Generator System Description
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[GenerationParameterResolver]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[BaseGeometryGenerator]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the GeneratorRoom directory reorganization
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype and a completed semantic Generation Parameter Resolver. The prototype creates a seeded integer cell field by overlapping rectangular rooms, repairs much of the resulting floor fragmentation with connecting stamps, and renders the field through a Godot `GridMap`. The resolver independently converts required Archetype, Scale, and Geometry Modifier selections into validated concrete parameters.
+The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, and a typed Base Geometry Generator awaiting human visual validation. Base Geometry consumes resolved parameters, creates oversized rectangular-room topology, applies interval taxation, then internally cuts and wraps a bounded Dungeon or Tower result.
 
 ```text
 prototype scene caller
@@ -24,6 +24,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 | Owner | Responsibility |
 |---|---|
 | [`GenerationParameterResolver/`](../../Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/) | Typed Inspector catalog, semantic request validation, profile merge rules, and detached concrete parameter results. |
+| [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded floor/wall generation, taxation, safe window selection, square/circular wrapping, explicit Cave refusal, and F6 debug scene. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -51,14 +52,32 @@ Catalog ownership:
 
 - Archetype owns geometry strategy, base radii, radius-change buffer, and base taxation ratio.
 - Scale owns raw-field size, cut-window radius, room count, maximum-radius adjustment, and taxation multiplier.
-- Geometry Modifier owns its radius adjustment and taxation multiplier.
+- Geometry Modifier owns its maximum-radius adjustment and taxation multiplier.
 - Resolver code owns validation and merge rules.
 
 The output is a detached `ResolvedGenerationParameters` snapshot containing raw-field size, cut-window radius and derived output size, room count, geometry strategy, resolved minimum/maximum radii, concrete taxation interval, and the provisional-room-count flag.
 
-Radius adjustments are additive. Cave reduces the magnitude of every individual radius adjustment by one. Minimum radius is clamped to `3`, and maximum cannot resolve below minimum. Tax multipliers compose multiplicatively; the interval is calculated from room count × Archetype ratio × Scale multiplier × Modifier multiplier, rounded once, and clamped to at least `1`.
+Maximum-radius adjustments are additive. Cave reduces the magnitude of every individual maximum-radius adjustment by one. Minimum radius remains fixed at the Archetype's base minimum and is never changed by Scale or Geometry Modifier; maximum cannot resolve below it. Tax multipliers compose multiplicatively; the interval is calculated from room count × Archetype ratio × Scale multiplier × Modifier multiplier, rounded once, and clamped to at least `1`.
 
-Small and Large room counts (`22` and `234`) are provisional area-scaled values. Medium uses the `100`-room baseline. Calibration belongs to later geometry work and can update Inspector data without changing resolver logic.
+Small and Large room counts (`44` and `176`) are provisional test-calibration values. Medium uses the `100`-room baseline. Calibration can update this Inspector data without changing resolver logic.
+
+## Base Geometry Generator
+
+Entry scene for visual testing: [`BaseGeometryDebug.tscn`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/BaseGeometryDebug.tscn).
+
+The component accepts only `ResolvedGenerationParameters`. It validates the complete request before mutation, creates an oversized `GeometryField`, stamps rectangular rooms, selects a safe random cut window, applies the resolved boundary strategy, and returns only the bounded field.
+
+`GeometryField` owns a `Vector2i` size and row-major `PackedInt32Array` using `VOID = 0`, `FLOOR = 1`, and `WALL = 2`. No semantic labels, seed, rooms, doors, entrances, actors, or persistence data are returned.
+
+Generated room diameter is `(room_radius × 2) - 1`. X/Y radii are selected independently. Later room stamps fully overwrite earlier cell values, preserving prototype behavior.
+
+Taxation uses the concrete interval produced by the resolver. Rooms `1..interval` use the resolved maximum radius; the maximum falls by one for each completed interval and never below the resolved minimum.
+
+Cut selection computes the valid center range before selecting a coordinate and preserves one raw cell outside every cut edge. Invalid inputs refuse without partial output. Square wrapping overwrites the output perimeter as wall. Circular wrapping changes cells outside the radius to void and makes the inner circular edge wall.
+
+Dungeon and Tower share rectangular raw generation. Dungeon selects a square boundary; Tower selects a circular boundary. Cave's compound-circle boundary is pinned and explicitly refused until separately designed.
+
+Production generation owns internal randomized RNG state. `generate_with_rng()` permits deterministic injected RNG for testing without establishing a production seed contract.
 
 ## Entry Points And Flow
 
@@ -154,7 +173,7 @@ The GDScript core otherwise uses Godot built-in types.
 
 On 2026-09-23, seed `4434` remained reproducible: 83 raw regions became 2 cross-repaired regions using 67 stamps and 197 mutated cells. Godot 4.4.1 also imported, loaded, and executed the reorganized prototype scene headlessly without reported errors.
 
-On 2026-09-24, [`generation_parameter_resolver_test.gd`](../../Rooms/GeneratorRoom/Tests/GenerationParameterResolver/generation_parameter_resolver_test.gd) passed 103 checks covering all 27 starter combinations, representative resolved values, Cave buffering, percentage-based taxation, detached results, required request values, duplicate/missing profiles, invalid catalog data, and explicit Standard identity. The existing dungeon prototype also passed a headless regression execution after resolver integration.
+On 2026-09-24, [`generation_parameter_resolver_test.gd`](../../Rooms/GeneratorRoom/Tests/GenerationParameterResolver/generation_parameter_resolver_test.gd) passed 107 checks covering all 27 starter combinations, representative resolved values, Cave buffering, percentage-based taxation, detached results, required request values, duplicate/missing profiles, invalid catalog data, explicit Standard identity, and the corrected separation of room-generation strategy from boundary strategy. The existing dungeon prototype also passed a headless regression execution after resolver and Base Geometry integration.
 
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, visual acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
@@ -167,4 +186,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and their dependencies. `GenerationParameterResolver` is complete; the next eligible Box is `BaseGeometryGenerator`. No further Box implementation is currently authorized.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Base Geometry implementation and automated checks are complete; human F6 visual validation remains required before the Box can close. No further Box implementation is currently authorized.

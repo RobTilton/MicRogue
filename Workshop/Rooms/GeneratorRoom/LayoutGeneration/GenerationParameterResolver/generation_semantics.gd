@@ -25,8 +25,13 @@ enum GeometryModifier {
 enum GeometryStrategy {
 	INVALID = -1,
 	RECTANGULAR_ROOMS,
-	CIRCULAR_TOWER,
-	CIRCLE_CLUSTER_WITH_NOISE,
+}
+
+enum BoundaryStrategy {
+	INVALID = -1,
+	SQUARE,
+	CIRCLE,
+	COMPOUND_CIRCLES,
 }
 
 
