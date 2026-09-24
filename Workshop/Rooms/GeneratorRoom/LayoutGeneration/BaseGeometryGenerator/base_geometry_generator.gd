@@ -5,6 +5,13 @@ const ERROR_ORIGIN := (
 	"res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/"
 	+ "BaseGeometryGenerator/base_geometry_generator.gd"
 )
+const CAVE_OVERLAP_RATIO := 0.20
+const CAVE_MAX_NOISE_OFFSET := 3
+const CAVE_BOUNDING_MARGIN := 1
+const CaveBoundaryPlanType = preload(
+	"res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/"
+	+ "BaseGeometryGenerator/cave_boundary_plan.gd"
+)
 
 
 static func generate(
@@ -92,6 +99,9 @@ static func _cut_and_wrap(
 	parameters: ResolvedGenerationParameters,
 	rng: RandomNumberGenerator
 ) -> BaseGeometryResolution:
+	if parameters.boundary_strategy == GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES:
+		return _cut_and_wrap_cave(raw_field, parameters, rng)
+
 	var radius: int = parameters.cut_window_radius
 	var minimum_center := Vector2i(radius + 1, radius + 1)
 	var maximum_center := Vector2i(
@@ -125,12 +135,168 @@ static func _cut_and_wrap(
 		GenerationSemantics.BoundaryStrategy.CIRCLE:
 			_wrap_circle(output, radius)
 		_:
-			return _failure(
-				"Unsupported boundary strategy: %s. Cave compound-circle generation is pinned."
-				% parameters.boundary_strategy
-			)
+			return _failure("Unsupported boundary strategy: %s." % parameters.boundary_strategy)
 
 	return BaseGeometryResolution.success(output)
+
+
+static func plan_cave_boundary(
+	parameters: ResolvedGenerationParameters,
+	rng: RandomNumberGenerator
+):
+	var circle_radius: int = parameters.cut_window_radius / 2
+	var requested_count: int = _cave_circle_count(parameters.cut_window_radius)
+	var horizontal: bool = parameters.raw_field_size.x >= parameters.raw_field_size.y
+	var positive_side: bool = rng.randi_range(0, 1) == 1
+	var safe_min := Vector2i(circle_radius + CAVE_BOUNDING_MARGIN, circle_radius + CAVE_BOUNDING_MARGIN)
+	var safe_max := parameters.raw_field_size - safe_min - Vector2i.ONE
+	var start := Vector2i.ZERO
+	if horizontal:
+		start.x = safe_max.x if positive_side else safe_min.x
+		start.y = rng.randi_range(safe_min.y, safe_max.y)
+	else:
+		start.x = rng.randi_range(safe_min.x, safe_max.x)
+		start.y = safe_max.y if positive_side else safe_min.y
+
+	var field_center := Vector2(parameters.raw_field_size - Vector2i.ONE) * 0.5
+	var travel := field_center - Vector2(start)
+	if travel.is_zero_approx():
+		travel = Vector2.LEFT if horizontal else Vector2.UP
+	travel = travel.normalized()
+	var perpendicular := Vector2(-travel.y, travel.x)
+	var overlap_cells: int = ceili(float(circle_radius * 2 + 1) * CAVE_OVERLAP_RATIO)
+	var maximum_center_distance: int = circle_radius * 2 + 1 - overlap_cells
+	# Reserve one cell of longitudinal distance for each perpendicular noise step.
+	var center_step: int = max(1, maximum_center_distance - 1)
+	var centers: Array[Vector2i] = [start]
+	var noise_offset: int = 0
+	var noise_offsets := PackedInt32Array([0])
+
+	for circle_index in range(1, requested_count):
+		var base_center := Vector2(start) + travel * float(center_step * circle_index)
+		var proposed_offset: int = clampi(
+			noise_offset + rng.randi_range(-1, 1),
+			-CAVE_MAX_NOISE_OFFSET,
+			CAVE_MAX_NOISE_OFFSET
+		)
+		var placed := false
+		for candidate_offset: int in [proposed_offset, noise_offset]:
+			var noisy_center := base_center + perpendicular * float(candidate_offset)
+			var candidate := Vector2i(roundi(noisy_center.x), roundi(noisy_center.y))
+			if not _cave_center_is_safe(candidate, safe_min, safe_max):
+				continue
+			if not _cave_centers_overlap(centers[-1], candidate, maximum_center_distance):
+				continue
+			centers.append(candidate)
+			noise_offset = candidate_offset
+			noise_offsets.append(candidate_offset)
+			placed = true
+			break
+		if not placed:
+			break
+
+	return CaveBoundaryPlanType.new(
+		centers,
+		circle_radius,
+		requested_count,
+		positive_side,
+		horizontal,
+		noise_offsets,
+		overlap_cells
+	)
+
+
+static func _cut_and_wrap_cave(
+	raw_field: GeometryField,
+	parameters: ResolvedGenerationParameters,
+	rng: RandomNumberGenerator
+) -> BaseGeometryResolution:
+	var plan: RefCounted = plan_cave_boundary(parameters, rng)
+	if plan.centers.is_empty():
+		return _failure("Cave boundary planning produced no valid circles.")
+	return cut_and_wrap_cave_from_plan(raw_field, plan)
+
+
+static func cut_and_wrap_cave_from_plan(
+	raw_field: GeometryField,
+	plan
+) -> BaseGeometryResolution:
+	if raw_field == null or plan == null or plan.centers.is_empty():
+		return _failure("Cave wrapping requires a raw field and at least one valid circle.")
+
+	var minimum: Vector2i = plan.centers[0] - Vector2i.ONE * plan.circle_radius
+	var maximum: Vector2i = plan.centers[0] + Vector2i.ONE * plan.circle_radius
+	for center in plan.centers:
+		minimum.x = mini(minimum.x, center.x - plan.circle_radius)
+		minimum.y = mini(minimum.y, center.y - plan.circle_radius)
+		maximum.x = maxi(maximum.x, center.x + plan.circle_radius)
+		maximum.y = maxi(maximum.y, center.y + plan.circle_radius)
+	minimum -= Vector2i.ONE * CAVE_BOUNDING_MARGIN
+	maximum += Vector2i.ONE * CAVE_BOUNDING_MARGIN
+
+	var output := _create_empty_field(maximum - minimum + Vector2i.ONE)
+	for y in range(output.size.y):
+		for x in range(output.size.x):
+			var output_position := Vector2i(x, y)
+			var source_position: Vector2i = minimum + output_position
+			if not _inside_cave_union(source_position, plan):
+				output.set_cell(output_position, GeometryField.WALL)
+			elif _touches_outside_cave_union(source_position, plan):
+				output.set_cell(output_position, GeometryField.WALL)
+			else:
+				var source_value: int = raw_field.get_cell(source_position)
+				output.set_cell(
+					output_position,
+					GeometryField.WALL if source_value == GeometryField.VOID else source_value
+				)
+	return BaseGeometryResolution.success(output)
+
+
+static func _cave_circle_count(cut_window_radius: int) -> int:
+	match cut_window_radius:
+		10:
+			return 4
+		15:
+			return 5
+		20:
+			return 6
+		_:
+			return 0
+
+
+static func _cave_center_is_safe(
+	center: Vector2i,
+	safe_min: Vector2i,
+	safe_max: Vector2i
+) -> bool:
+	return (
+		center.x >= safe_min.x
+		and center.y >= safe_min.y
+		and center.x <= safe_max.x
+		and center.y <= safe_max.y
+	)
+
+
+static func _cave_centers_overlap(
+	first: Vector2i,
+	second: Vector2i,
+	maximum_center_distance: int
+) -> bool:
+	return first.distance_squared_to(second) <= maximum_center_distance * maximum_center_distance
+
+
+static func _inside_cave_union(position: Vector2i, plan) -> bool:
+	for center in plan.centers:
+		if position.distance_squared_to(center) <= plan.circle_radius * plan.circle_radius:
+			return true
+	return false
+
+
+static func _touches_outside_cave_union(position: Vector2i, plan) -> bool:
+	for offset: Vector2i in [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]:
+		if not _inside_cave_union(position + offset, plan):
+			return true
+	return false
 
 
 static func _wrap_square(field: GeometryField) -> void:
@@ -179,17 +345,21 @@ static func _validate_input(
 		return _error("Random number generator is required.")
 	if parameters.geometry_strategy != GenerationSemantics.GeometryStrategy.RECTANGULAR_ROOMS:
 		return _error("Unsupported geometry strategy: %s." % parameters.geometry_strategy)
-	if parameters.boundary_strategy == GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES:
-		return _error("Cave compound-circle boundary generation is pinned and unsupported.")
 	if parameters.boundary_strategy not in [
 		GenerationSemantics.BoundaryStrategy.SQUARE,
 		GenerationSemantics.BoundaryStrategy.CIRCLE,
+		GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES,
 	]:
 		return _error("Unsupported boundary strategy: %s." % parameters.boundary_strategy)
 	if parameters.raw_field_size.x <= 0 or parameters.raw_field_size.y <= 0:
 		return _error("Raw field dimensions must be positive.")
 	if parameters.output_size != Vector2i.ONE * (parameters.cut_window_radius * 2 + 1):
 		return _error("Output size does not match cut-window radius.")
+	if (
+		parameters.boundary_strategy == GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES
+		and _cave_circle_count(parameters.cut_window_radius) == 0
+	):
+		return _error("Cave boundary has no circle-count contract for this cut-window radius.")
 	if parameters.room_count <= 0:
 		return _error("Room count must be positive.")
 	if parameters.min_radius < 3:

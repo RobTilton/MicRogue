@@ -8,7 +8,8 @@
 [node name="BaseGeometryDebug" type="Node3D"]
 script = ExtResource("1_caller")
 catalog = ExtResource("2_catalog")
-archetype = 1
+archetype = 2
+layout_scale = 2
 modifier = 0
 
 [node name="DungeonRenderer" type="GridMap" parent="."]

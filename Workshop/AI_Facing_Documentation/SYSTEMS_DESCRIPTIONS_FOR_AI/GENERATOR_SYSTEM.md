@@ -5,7 +5,7 @@ Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f`
 
 ## Rapid Shape
 
-The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, and a typed Base Geometry Generator awaiting human visual validation. Base Geometry consumes resolved parameters, creates oversized rectangular-room topology, applies interval taxation, then internally cuts and wraps a bounded Dungeon or Tower result.
+The current generator system contains a working procedural dungeon-field prototype, a completed semantic Generation Parameter Resolver, and a completed, human-accepted typed Base Geometry Generator. Base Geometry consumes resolved parameters, creates oversized rectangular-room topology, applies interval taxation, then internally cuts and wraps a bounded Dungeon, Tower, or Cave result.
 
 ```text
 prototype scene caller
@@ -24,7 +24,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 | Owner | Responsibility |
 |---|---|
 | [`GenerationParameterResolver/`](../../Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/) | Typed Inspector catalog, semantic request validation, profile merge rules, and detached concrete parameter results. |
-| [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded floor/wall generation, taxation, safe window selection, square/circular wrapping, explicit Cave refusal, and F6 debug scene. |
+| [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded geometry generation, taxation, safe boundary planning, square/circular/compound-circle wrapping, and F6 debug scene. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -57,7 +57,7 @@ Catalog ownership:
 
 The output is a detached `ResolvedGenerationParameters` snapshot containing raw-field size, cut-window radius and derived output size, room count, geometry strategy, resolved minimum/maximum radii, concrete taxation interval, and the provisional-room-count flag.
 
-Maximum-radius adjustments are additive. Cave reduces the magnitude of every individual maximum-radius adjustment by one. Minimum radius remains fixed at the Archetype's base minimum and is never changed by Scale or Geometry Modifier; maximum cannot resolve below it. Tax multipliers compose multiplicatively; the interval is calculated from room count × Archetype ratio × Scale multiplier × Modifier multiplier, rounded once, and clamped to at least `1`.
+All three starter Archetypes use the same base room-radius range of `4–12`. Maximum-radius adjustments are additive. Cave retains its one-point buffer, reducing the magnitude of every individual maximum-radius adjustment by one; it does not impose a smaller base room range. Minimum radius remains fixed at the Archetype's base minimum and is never changed by Scale or Geometry Modifier; maximum cannot resolve below it. Tax multipliers compose multiplicatively; the interval is calculated from room count × Archetype ratio × Scale multiplier × Modifier multiplier, rounded once, and clamped to at least `1`.
 
 Small and Large room counts (`44` and `176`) are provisional test-calibration values. Medium uses the `100`-room baseline. Calibration can update this Inspector data without changing resolver logic.
 
@@ -73,11 +73,15 @@ Generated room diameter is `(room_radius × 2) - 1`. X/Y radii are selected inde
 
 Taxation uses the concrete interval produced by the resolver. Rooms `1..interval` use the resolved maximum radius; the maximum falls by one for each completed interval and never below the resolved minimum.
 
-Cut selection computes the valid center range before selecting a coordinate and preserves one raw cell outside every cut edge. Invalid inputs refuse without partial output. Square wrapping overwrites the output perimeter as wall. Circular wrapping changes cells outside the radius to void and makes the inner circular edge wall.
+Dungeon/Tower cut selection computes the valid center range before selecting a coordinate and preserves one raw cell outside every cut edge. Invalid inputs refuse without partial output. Square wrapping overwrites the output perimeter as wall. Circular wrapping changes cells outside the radius to void and makes the inner circular edge wall.
 
-Dungeon and Tower share rectangular raw generation. Dungeon selects a square boundary; Tower selects a circular boundary. Cave's compound-circle boundary is pinned and explicitly refused until separately designed.
+All three Archetypes share the same rectangular raw generation. Dungeon selects a square boundary and Tower selects a circular boundary. Cave selects a compound-circle boundary without changing room stamping.
 
-Production generation owns internal randomized RNG state. `generate_with_rng()` permits deterministic injected RNG for testing without establishing a production seed contract.
+Cave uses 4/5/6 circles for Small/Medium/Large. Its circle radius is derived by integer-halving the Scale cut-window radius, producing radii 5/7/10. The planner randomly chooses a starting long-axis side and a safe position on that side, aims the chain through the raw-field center, and requires at least 20% diameter overlap rounded up to whole cells. Circle placement applies a perpendicular-only bounded random walk: each noise step changes by `-1`, `0`, or `+1`, and total displacement remains within ±3 of the baseline. Safety and overlap are validated while placing each circle.
+
+If no next circle can be placed, the valid partial chain is preserved. The wrapper unions the valid circle masks, calculates their bounds, expands by one cell, crops the raw field, converts every cell outside the union and every untouched void inside it to wall, and walls the union's inner perimeter. The returned Cave field is a variable-sized rectangle containing only floor and wall cells.
+
+Production generation owns internal randomized RNG state. `generate_with_rng()` permits deterministic injected RNG for testing without establishing a production seed contract. The F6 debug caller exposes optional fixed-seed controls strictly for reproducible visual inspection and defaults to Cave/Medium/Standard during the Cave validation checkpoint.
 
 ## Entry Points And Flow
 
@@ -175,7 +179,11 @@ On 2026-09-23, seed `4434` remained reproducible: 83 raw regions became 2 cross-
 
 On 2026-09-24, [`generation_parameter_resolver_test.gd`](../../Rooms/GeneratorRoom/Tests/GenerationParameterResolver/generation_parameter_resolver_test.gd) passed 107 checks covering all 27 starter combinations, representative resolved values, Cave buffering, percentage-based taxation, detached results, required request values, duplicate/missing profiles, invalid catalog data, explicit Standard identity, and the corrected separation of room-generation strategy from boundary strategy. The existing dungeon prototype also passed a headless regression execution after resolver and Base Geometry integration.
 
-This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, visual acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
+On 2026-09-24, [`base_geometry_generator_test.gd`](../../Rooms/GeneratorRoom/Tests/BaseGeometryGenerator/base_geometry_generator_test.gd) passed 63,793 checks after Cave's base room range was normalized to `4–12`. Coverage includes all supported catalog combinations, taxation, fixed minimum radius, Dungeon/Tower regression, Cave circle counts and radii, randomized safe starting sides/positions, center crossing, 20% overlap rounding, bounded perpendicular noise, one-cell union expansion, floor/wall-only Cave output, deterministic seeded generation, and valid partial-chain preservation. The Cave-default debug scene and existing prototype scene both executed headlessly without error.
+
+This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
+
+Human visual evidence recorded on 2026-09-24: all tested Dungeon seeds passed; all Cave Scale/Modifier variants passed; Tower Large and Medium passed; Tower Small/Confined was accepted as a yellow pass, with possible hole-punch improvement deferred to later connectivity/judgment work. Rob subsequently declared Base Geometry ready for closure, completing the Box.
 
 Current preservation limits:
 
@@ -186,4 +194,4 @@ Current preservation limits:
 - The GDScript test has no retained runnable owner scene.
 - The seed inspector's default harness filename is stale; it needs an explicit `--harness` path.
 
-[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Base Geometry implementation and automated checks are complete; human F6 visual validation remains required before the Box can close. No further Box implementation is currently authorized.
+[`GeneratorRoom/DOTS.md`](../../Rooms/GeneratorRoom/DOTS.md) defines the required compositional Boxes and dependencies. Base Geometry implementation, automated checks, human visual validation, and Box closure are complete. No further Box implementation is currently authorized.

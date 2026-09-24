@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" load_steps=13 format=3 uid="uid://bgufw44hkyxux"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nt0cw"]
-albedo_color = Color(0.260183, 0.389136, 0.118256, 1)
+albedo_color = Color(0.591449, 0.860345, 0.292007, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8mgbr"]
 material = SubResource("StandardMaterial3D_nt0cw")

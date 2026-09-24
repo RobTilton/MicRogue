@@ -9,6 +9,8 @@ const ERROR_ORIGIN := (
 @export var archetype: GenerationSemantics.Archetype = GenerationSemantics.Archetype.DUNGEON
 @export var layout_scale: GenerationSemantics.Scale = GenerationSemantics.Scale.MEDIUM
 @export var modifier: GenerationSemantics.GeometryModifier = GenerationSemantics.GeometryModifier.STANDARD
+@export var use_fixed_seed: bool = false
+@export var fixed_seed: int = 4434
 
 @onready var dungeon_renderer: DungeonRenderer = $DungeonRenderer
 @onready var camera: Camera3D = $Camera3D
@@ -23,9 +25,18 @@ func _ready() -> void:
 		push_error("%s: %s" % [ERROR_ORIGIN, parameter_resolution.error_message])
 		return
 
-	var geometry_resolution := BaseGeometryGenerator.generate(
-		parameter_resolution.parameters
-	)
+	var geometry_resolution: BaseGeometryResolution
+	if use_fixed_seed:
+		var rng := RandomNumberGenerator.new()
+		rng.seed = fixed_seed
+		geometry_resolution = BaseGeometryGenerator.generate_with_rng(
+			parameter_resolution.parameters,
+			rng
+		)
+	else:
+		geometry_resolution = BaseGeometryGenerator.generate(
+			parameter_resolution.parameters
+		)
 	if not geometry_resolution.is_success:
 		push_error("%s: %s" % [ERROR_ORIGIN, geometry_resolution.error_message])
 		return
