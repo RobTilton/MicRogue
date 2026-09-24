@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="GenerationCatalog" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/generation_catalog.gd" id="1_catalog"]
+[ext_resource type="Script" path="res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/generation_archetype_profile.gd" id="2_archetype"]
+[ext_resource type="Script" path="res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/generation_scale_profile.gd" id="3_scale"]
+[ext_resource type="Script" path="res://Workshop/Rooms/GeneratorRoom/LayoutGeneration/GenerationParameterResolver/generation_modifier_profile.gd" id="4_modifier"]
+
+[sub_resource type="Resource" id="Archetype_Dungeon"]
+script = ExtResource("2_archetype")
+archetype = 0
+geometry_strategy = 0
+base_min_radius = 4
+base_max_radius = 12
+radius_change_buffer = 0
+base_tax_interval_ratio = 0.2
+
+[sub_resource type="Resource" id="Archetype_Tower"]
+script = ExtResource("2_archetype")
+archetype = 1
+geometry_strategy = 1
+base_min_radius = 4
+base_max_radius = 12
+radius_change_buffer = 0
+base_tax_interval_ratio = 0.2
+
+[sub_resource type="Resource" id="Archetype_Cave"]
+script = ExtResource("2_archetype")
+archetype = 2
+geometry_strategy = 2
+base_min_radius = 4
+base_max_radius = 9
+radius_change_buffer = 1
+base_tax_interval_ratio = 0.2
+
+[sub_resource type="Resource" id="Scale_Small"]
+script = ExtResource("3_scale")
+scale = 0
+raw_field_size = Vector2i(41, 31)
+cut_window_radius = 10
+room_count = 22
+max_radius_adjustment = -2
+tax_interval_multiplier = 0.9
+room_count_is_provisional = true
+
+[sub_resource type="Resource" id="Scale_Medium"]
+script = ExtResource("3_scale")
+scale = 1
+raw_field_size = Vector2i(91, 63)
+cut_window_radius = 15
+room_count = 100
+max_radius_adjustment = 0
+tax_interval_multiplier = 1.0
+room_count_is_provisional = false
+
+[sub_resource type="Resource" id="Scale_Large"]
+script = ExtResource("3_scale")
+scale = 2
+raw_field_size = Vector2i(141, 95)
+cut_window_radius = 20
+room_count = 234
+max_radius_adjustment = 2
+tax_interval_multiplier = 1.1
+room_count_is_provisional = true
+
+[sub_resource type="Resource" id="Modifier_Exposed"]
+script = ExtResource("4_modifier")
+modifier = 0
+radius_adjustment = 2
+tax_interval_multiplier = 1.1
+
+[sub_resource type="Resource" id="Modifier_Standard"]
+script = ExtResource("4_modifier")
+modifier = 1
+radius_adjustment = 0
+tax_interval_multiplier = 1.0
+
+[sub_resource type="Resource" id="Modifier_Confined"]
+script = ExtResource("4_modifier")
+modifier = 2
+radius_adjustment = -2
+tax_interval_multiplier = 0.9
+
+[resource]
+script = ExtResource("1_catalog")
+archetypes = Array[ExtResource("2_archetype")]([SubResource("Archetype_Dungeon"), SubResource("Archetype_Tower"), SubResource("Archetype_Cave")])
+scales = Array[ExtResource("3_scale")]([SubResource("Scale_Small"), SubResource("Scale_Medium"), SubResource("Scale_Large")])
+modifiers = Array[ExtResource("4_modifier")]([SubResource("Modifier_Exposed"), SubResource("Modifier_Standard"), SubResource("Modifier_Confined")])

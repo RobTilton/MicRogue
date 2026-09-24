@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bkwn4j57hpj6u"]
 
-[ext_resource type="MeshLibrary" uid="uid://bgufw44hkyxux" path="res://Workshop/WorkshopAssets/DunGenMeshLibrary/GeneratorTestLibrary.tres" id="1_ekdaj"]
+[ext_resource type="MeshLibrary" uid="uid://bgufw44hkyxux" path="res://Workshop/Rooms/GeneratorRoom/Assets/DunGenMeshLibrary/GeneratorTestLibrary.tres" id="1_ekdaj"]
 
 [node name="GridMapTest" type="GridMap"]
 mesh_library = ExtResource("1_ekdaj")
