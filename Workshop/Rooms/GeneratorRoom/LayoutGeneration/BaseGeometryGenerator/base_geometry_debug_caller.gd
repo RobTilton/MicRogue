@@ -12,6 +12,7 @@ const ERROR_ORIGIN := (
 @export var use_fixed_seed: bool = false
 @export var fixed_seed: int = 4434
 @export var apply_connection_correction: bool = true
+@export var apply_pre_judgement_cull: bool = true
 
 @onready var dungeon_renderer: DungeonRenderer = $DungeonRenderer
 @onready var camera: Camera3D = $Camera3D
@@ -54,6 +55,12 @@ func _ready() -> void:
 			push_error("%s: %s" % [ERROR_ORIGIN, correction.error_message])
 			return
 		field = correction.field
+		if apply_pre_judgement_cull:
+			var cull_result := PreJudgementCull.apply(field, correction.rooms)
+			if not cull_result.is_success:
+				push_error("%s: %s" % [ERROR_ORIGIN, cull_result.error_message])
+				return
+			field = cull_result.field
 	dungeon_renderer.render_dungeon({
 		"width": field.size.x,
 		"height": field.size.y,

@@ -1,13 +1,13 @@
 # Generator Room Current State
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[ConnectionCorrection]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomJudgement]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the current Room-formatting changes
 
 ## Rapid Shape
 
 GeneratorRoom is active and incomplete. A working procedural dungeon-field prototype generates overlapping rooms, repairs most disconnected floor regions, and renders the result through a Godot `GridMap`.
 
-The typed Base Geometry Generator, Room Discovery, and ConnectionCorrection are complete and human-accepted. ConnectionCorrection ranks local punch candidates once, applies useful candidates, and directly merges and maintains affected rooms without rerunning flood fill.
+The typed pipeline through PreJudgementCull is complete and human-accepted. RoomJudgement is open for design discussion because 20 of 300 audited maps retained substantial disconnected rooms after the cheap stages.
 
 Durable technical detail is owned by the [Generator System Description](../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/GENERATOR_SYSTEM.md). Completed-game requirements are owned by [`Scope_Defined.md`](../Project_Core_Documentation/Scope_Defined.md).
 
@@ -20,6 +20,7 @@ Durable technical detail is owned by the [Generator System Description](../../AI
 | [`LayoutGeneration/BaseGeometryGenerator/`](LayoutGeneration/BaseGeometryGenerator/) | Completed bounded geometry generator, internal cut/wrap helpers, Cave boundary planner, tests, and F6 debug scene. |
 | [`LayoutGeneration/RoomDiscoveryFill/`](LayoutGeneration/RoomDiscoveryFill/) | Completed typed cardinal room discovery with explicitly optional frontier-wall collection; collection may be revisited if ConnectionCorrection proves it wasteful. |
 | [`LayoutGeneration/ConnectionCorrection/`](LayoutGeneration/ConnectionCorrection/) | Completed typed local punch patterns, direct room/frontier maintenance, mutation evidence, and result contract. |
+| [`LayoutGeneration/PreJudgementCull/`](LayoutGeneration/PreJudgementCull/) | Completed two-stage residual-room cull and explicit RoomJudgement gate. |
 | [`Assets/DunGenMeshLibrary/`](Assets/DunGenMeshLibrary/) | Required prototype rendering meshes; paths repaired and resolving. |
 | [`Scripts/`](Scripts/) | Python research and stress-test tools; not runtime dependencies. |
 | [`Tests/`](Tests/) | Godot test script and retained 10,000-seed evidence. |
@@ -42,6 +43,7 @@ Validated on 2026-09-23:
 - ConnectionCorrection tests pass 4,447 checks across all nine stamp orientations, focused selection/preservation behavior, direct room merging, unresolved cases, and all 27 generated catalog combinations.
 - Generated-map evidence used single 32 times, lines 82, elbows 98, plus 6, and 3×3 square 95. The latest worst measured correction was Cave/Large/Confined seed 7026 at 121,711 µs with 4,851 one-time candidate evaluations.
 - A separate 300-seed Dungeon/Confined audit (100 seeds per Scale) completed without failure and recorded 3,965 punches: single 318 (8.02%), lines 1,156 (29.16%), elbows 1,101 (27.77%), plus 61 (1.54%), and 3×3 square 1,329 (33.52%). Usage proves selection, not necessity; removal requires an ablation comparison.
+- PreJudgementCull passes 16 focused threshold checks. Applied to the same 300 maps, 20 required RoomJudgement, one map culled one 1-cell room, and 279 bypassed judgement with no residual cull required.
 - `BaseGeometryDebug.tscn` executes headlessly without reported errors.
 - All visually tested Dungeon seeds passed. All Cave variants passed visual testing. Tower Large and Medium passed; Tower Small/Confined remains a yellow pass pending later hole-punch confirmation.
 
@@ -58,4 +60,4 @@ The seed inspector currently requires an explicit harness path because its defau
 
 ## Next Required Action
 
-Reassess whether RoomJudgement has a demonstrated responsibility by auditing post-correction residual rooms and their percentage of total floor space. ConnectionCorrection is closed. RoomJudgement remains unopened and unauthorized; trivial residual fragments may justify deterministic culling rather than hallway judgment.
+Define RoomJudgement's substantial-room save-or-sunder rules, hallway-generation authority, result contract, and stopping behavior. The Box is open for design discussion only; implementation remains unauthorized pending alignment and explicit execution confirmation.

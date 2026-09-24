@@ -16,6 +16,10 @@ func _initialize() -> void:
 	var total_punches: int = 0
 	var total_maps: int = 0
 	var failed_maps: int = 0
+	var judgement_maps: int = 0
+	var culled_maps: int = 0
+	var culled_rooms: int = 0
+	var culled_floors: int = 0
 
 	for scale in GenerationSemantics.required_scales():
 		var scale_name: String = GenerationSemantics.Scale.keys()[scale + 1]
@@ -43,6 +47,13 @@ func _initialize() -> void:
 			if not correction.is_success:
 				failed_maps += 1
 				continue
+			var cull := PreJudgementCull.apply(correction.field, correction.rooms)
+			if cull.requires_judgement:
+				judgement_maps += 1
+			if not cull.culled_rooms.is_empty():
+				culled_maps += 1
+				culled_rooms += cull.culled_rooms.size()
+				culled_floors += cull.culled_floor_count
 			var used_this_map := {}
 			var families_this_map := {}
 			for punch in correction.punches:
@@ -61,6 +72,7 @@ func _initialize() -> void:
 
 	print("HOLE_PUNCH_SELECTION_AUDIT")
 	print("maps=", total_maps, " failed=", failed_maps, " total_punches=", total_punches)
+	print("PRE_JUDGEMENT maps_requiring_judgement=", judgement_maps, " maps_with_culls=", culled_maps, " culled_rooms=", culled_rooms, " culled_floors=", culled_floors)
 	print("ORIENTATION_USAGE")
 	for pattern in ConnectionCorrection.standard_patterns():
 		var count: int = usage.get(pattern.id, 0)

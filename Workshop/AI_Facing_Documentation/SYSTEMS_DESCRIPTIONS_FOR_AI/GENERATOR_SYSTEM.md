@@ -1,6 +1,6 @@
 # Generator System Description
 Updated: 2026-09-24
-Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[ConnectionCorrection]`
+Checkpoint: `[GeneratorRoom]+[LayoutGeneration]+[RoomJudgement]`
 Implementation baseline/evidence: Git `9cfce5ff6eebe2f1c7b1cecf6f7a31fd52b6059f` plus the GeneratorRoom directory reorganization
 
 ## Rapid Shape
@@ -27,6 +27,7 @@ The approved direction is modular, encapsulated, compositional, and reusable. La
 | [`BaseGeometryGenerator/`](../../Rooms/GeneratorRoom/LayoutGeneration/BaseGeometryGenerator/) | Typed bounded geometry generation, taxation, safe boundary planning, square/circular/compound-circle wrapping, and F6 debug scene. |
 | [`RoomDiscoveryFill/`](../../Rooms/GeneratorRoom/LayoutGeneration/RoomDiscoveryFill/) | Typed cardinal floor-room discovery with explicitly optional immediate frontier-wall collection. |
 | [`ConnectionCorrection/`](../../Rooms/GeneratorRoom/LayoutGeneration/ConnectionCorrection/) | Typed supplied punch patterns, iterative inexpensive connection correction, fresh-room return, and correction evidence. |
+| [`PreJudgementCull/`](../../Rooms/GeneratorRoom/LayoutGeneration/PreJudgementCull/) | Typed two-stage residual-room culling and explicit RoomJudgement gating. |
 | [`dungeon_generator_frontier.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_generator_frontier.gd) | Generation, field transformation, connectivity analysis, and repair. |
 | [`dun_gen_frontier_caller.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dun_gen_frontier_caller.gd) | Prototype startup and hard-coded generation request. |
 | [`dungeon_renderer.gd`](../../Rooms/GeneratorRoom/DungeonGeneration/dungeon_renderer.gd) | Translation from cell values to `GridMap` items. |
@@ -218,6 +219,14 @@ On 2026-09-24, [`connection_correction_test.gd`](../../Rooms/GeneratorRoom/Tests
 [`hole_punch_selection_audit.gd`](../../Rooms/GeneratorRoom/Tests/ConnectionCorrection/hole_punch_selection_audit.gd) ran 300 Dungeon/Confined maps on 2026-09-24: seeds 0–99 for each Scale. All maps completed. Across 3,965 punches, family usage was single 318 (8.02%, present in 56.00% of maps), line 1,156 (29.16%, 97.33% of maps), elbow 1,101 (27.77%, 96.33% of maps), plus 61 (1.54%, 18.00% of maps), and 3×3 square 1,329 (33.52%, 99.00% of maps). Orientation counts were horizontal line 604, vertical line 552, right-down elbow 949, right-up elbow 75, left-down elbow 73, left-up elbow 4. Selection frequency does not establish necessity; removing a pattern requires a same-seed ablation comparison of residual rooms and geometry cost.
 
 Rob visually accepted ConnectionCorrection for closure on 2026-09-24. In particular, the 3×3 pattern's 33.52% usage produced no visually objectionable or readily identifiable destructive artifacts across the reviewed maps; its unobtrusive high usage was accepted as evidence that the local correction blended successfully into generated geometry.
+
+## Pre-Judgement Cull
+
+`PreJudgementCull.apply(field, rooms)` preserves the largest room unconditionally. Let `N` be its floor count and `S` the combined lesser-room floor count. If `S > 15% of N`, all rooms survive and judgement is required. If `S <= 15% of N`, each lesser room owning below 40% of `S` is converted entirely to wall; exact 40% survives. Judgement is required only when a lesser room survives. Comparisons use integer multiplication, not floating-point thresholds. The helper copies geometry, uses maintained room data, and performs no flood fill or route work.
+
+Focused threshold tests passed 16 checks. In the 300-seed Dungeon/Confined audit, 20 maps required judgement, one map culled one 1-cell room, and 279 bypassed judgement without culling. The debug scene exposes `apply_pre_judgement_cull` for visual comparison.
+
+Rob accepted and closed PreJudgementCull on 2026-09-24. The 20 maps retaining substantial residual rooms were accepted as sufficient evidence that RoomJudgement has a real required responsibility. RoomJudgement is open for design discussion only; its hallway and save-or-sunder mechanics are not yet defined or authorized.
 
 This supports the current prototype and its dependencies. It does not establish Python/GDScript equivalence, complete Box acceptance, a single-region guarantee, production performance, the future controller contract, or world/Local Map/POI/town generation.
 
