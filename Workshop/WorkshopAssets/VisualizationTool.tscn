@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhnknmqf52rjc"]
+
+[ext_resource type="Script" uid="uid://osc3g1eacmu8" path="res://Workshop/WorkshopAssets/visualization_tool.gd" id="1_2boeb"]
+[ext_resource type="MeshLibrary" uid="uid://c8smcjcv4bfa0" path="res://Workshop/WorkshopAssets/VisualizationToolMeshLibrary.tres" id="1_38i5d"]
+
+[node name="VisualizationTool" type="Node3D"]
+script = ExtResource("1_2boeb")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_38i5d")
+cell_size = Vector3(1, 1, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15, 28, 20)

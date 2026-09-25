@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb13y4mv4uxm2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfjx3"]
+albedo_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+backlight = Color(0.0675683, 0.0136818, 0.172994, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jjru5"]
+material = SubResource("StandardMaterial3D_kfjx3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pu8t2"]
+albedo_color = Color(0.168627, 0.721569, 0.188235, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vha8i"]
+lightmap_size_hint = Vector2i(14, 13)
+material = SubResource("StandardMaterial3D_pu8t2")
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wq3tw"]
+albedo_color = Color(0.564706, 0.14902, 0.0509804, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s82n7"]
+material = SubResource("StandardMaterial3D_wq3tw")
+
+[node name="VisualizationMeshLibrary" type="Node3D"]
+
+[node name="Visualization_Abyss" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_jjru5")
+
+[node name="Visualization_Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02805, -0.555701, 0)
+mesh = SubResource("BoxMesh_vha8i")
+
+[node name="Visualization_Wall" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_s82n7")

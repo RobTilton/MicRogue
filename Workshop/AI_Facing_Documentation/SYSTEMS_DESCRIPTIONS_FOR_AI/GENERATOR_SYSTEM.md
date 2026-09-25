@@ -31,14 +31,14 @@ Production randomness is internal. The public contract exposes no seed or reprod
 
 ```text
 GeneratorCaller.make_map(MapParameters)
-    -> StarterGenerationCatalog
-    -> GenerationParameterResolver
-    -> BaseGeometryGenerator
-    -> RoomDiscoveryFill
-    -> ConnectionCorrection
-    -> PreJudgementCull
-    -> RoomJudgement only when required
-    -> MapData
+	-> StarterGenerationCatalog
+	-> GenerationParameterResolver
+	-> BaseGeometryGenerator
+	-> RoomDiscoveryFill
+	-> ConnectionCorrection
+	-> PreJudgementCull
+	-> RoomJudgement only when required
+	-> MapData
 ```
 
 `GenerationController` owns this order but none of the component internals. It trusts their typed contracts and does not perform a duplicated post-hoc validation pass.
