@@ -113,7 +113,6 @@ This contract owns the approved purpose vocabulary, required roles, multipliciti
 - how a value is selected within a count range;
 - route-analysis or Zone-claim algorithms;
 - the final generic coverage target;
-- tiny-fragment reconciliation thresholds;
 - randomness or determinism guarantees;
 - concrete Godot classes, dictionaries, Resources, or serialization;
 - doors, portals, stairs, traps, scenery, lighting, loot, actors, occupants, furnishings, decorations, or encounters.

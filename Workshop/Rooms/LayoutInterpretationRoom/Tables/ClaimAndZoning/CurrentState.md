@@ -103,6 +103,6 @@ Executed with Godot 4.4.1 on 2026-09-26:
 Current limits:
 
 - The measured timing is one observation, not a performance guarantee.
-- Fragment reconciliation does not exist. Small or structurally ineligible floor remnants are reported honestly as unzoned.
+- Small or structurally ineligible floor remnants are reported as unzoned for later decoration or population handling.
 - `PurposeCoverageResult` is a Room-local orchestration result, not the final public `InterpretationData` package or entry point.
 - Human implementation acceptance and Production adoption remain pending.
