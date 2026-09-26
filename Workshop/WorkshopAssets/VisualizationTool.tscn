@@ -5,10 +5,11 @@
 
 [node name="VisualizationTool" type="Node3D"]
 script = ExtResource("1_2boeb")
+layout_purpose = 1
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_38i5d")
 cell_size = Vector3(1, 1, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15, 28, 20)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15, 56, 20)
