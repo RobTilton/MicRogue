@@ -1,21 +1,22 @@
-# Universal Area Catalog Current State
-Updated: 2026-09-25
-Checkpoint: `[LayoutInterpretationRoom]+[ZoneCatalog]+[UniversalZones]`
+# Zone Catalog Current State
+Updated: 2026-09-26
+Checkpoint: `[LayoutInterpretationRoom]+[ZoneCatalog]+[PurposeAndFallbackZones]`
 Implementation baseline/evidence: Room-local GDScript implementation validated with Godot 4.4.1; no Production implementation or Git checkpoint is recorded here.
 
 ## Rapid Shape
 
-The Universal Area Catalog provides detached, validated profile data for `ENTRANCE_AREA` and `BOSS_AREA` plus their shared endpoint-selection policy. It contains no routing, flood-fill, endpoint-selection, or tile-claim algorithm.
+The Zone Catalog provides detached, validated profile data for all sixteen approved Area roles. It contains no placement or tile-claim algorithm.
 
 The profiles convert the approved Zone Contract into inert typed inputs for later Geometry Analysis and Zone Claim components. Tags remain downstream semantic instructions rather than evidence that content exists.
 
 ## Current Locations And Structure
 
-- [`Implementation/layout_area_semantics.gd`](Implementation/layout_area_semantics.gd): universal growth, tag, preference, connectivity, route-selection, endpoint-adjustment, endpoint-assignment, and tie-policy enums.
+- [`Implementation/layout_area_semantics.gd`](Implementation/layout_area_semantics.gd): growth, tag, and preference enums.
 - [`Implementation/layout_area_profile.gd`](Implementation/layout_area_profile.gd): typed Area-profile data and detached-copy behavior.
-- [`Implementation/universal_endpoint_policy.gd`](Implementation/universal_endpoint_policy.gd): typed endpoint-selection policy and detached-copy behavior.
 - [`Implementation/universal_area_catalog.gd`](Implementation/universal_area_catalog.gd): code-owned Entrance/Boss data, validation, lookup, and loud refusal.
+- [`Implementation/purpose_area_catalog.gd`](Implementation/purpose_area_catalog.gd): code-owned purpose-required and Generic Area data, geometry-clone validation, cross-catalog validation, lookup, and loud refusal.
 - [`Tests/test_universal_area_catalog.gd`](Tests/test_universal_area_catalog.gd): standalone headless Godot validation suite.
+- [`Tests/test_purpose_area_catalog.gd`](Tests/test_purpose_area_catalog.gd): purpose/fallback and cross-catalog validation suite.
 - [`ZoneContract.md`](ZoneContract.md): authoritative design input.
 - [`../ArchitectureCatalog/Implementation/layout_interpretation_semantics.gd`](../ArchitectureCatalog/Implementation/layout_interpretation_semantics.gd): shared approved Area-role vocabulary.
 
@@ -30,10 +31,20 @@ var catalog: UniversalAreaCatalog = UniversalAreaCatalog.create()
 var entrance: LayoutAreaProfile = catalog.get_profile(
 	LayoutInterpretationSemantics.AreaRole.ENTRANCE_AREA
 )
-var endpoint_policy: UniversalEndpointPolicy = catalog.get_endpoint_policy()
 ```
 
-`create()` constructs both profiles and the endpoint policy, validates the full set before storing it, and returns `null` after a loud error if validation fails. Supported lookups return detached data. Unsupported Area roles fail loudly and return `null`.
+`create()` constructs and validates both profiles before storing them. Supported lookups return detached data. Unsupported Area roles fail loudly and return `null`.
+
+Purpose/fallback use follows the same boundary:
+
+```gdscript
+var purpose_areas: PurposeAreaCatalog = PurposeAreaCatalog.create()
+var cell_area: LayoutAreaProfile = purpose_areas.get_profile(
+	LayoutInterpretationSemantics.AreaRole.CELL_AREA
+)
+```
+
+`PurposeAreaCatalog.validate_purpose_catalog()` verifies that every ordered requirement in the completed Initial Purpose Catalog resolves to an implemented Area profile.
 
 ## Component Contracts
 
@@ -55,16 +66,17 @@ Zero tile cap and zero bounding window mean no growth data applies; the selected
 - Preferences: largest usable connected space, then a single open area when available.
 - Tags: `BOSS`, `LIGHT`.
 
-### Endpoint Policy
+### Purpose And Generic Profiles
 
-- Four-directional connectivity.
-- Longest qualifying navigable route.
-- Qualifying endpoint capacity: `3x3`, `4x2`, or `2x4`.
-- Move an undersized endpoint inward to the next qualifying area.
-- Smaller qualifying end becomes Entrance; larger becomes Boss.
-- Equal endpoints use a random coin flip.
+The catalog implements the approved data for:
 
-This policy describes required behavior only. Later components own the search and mutation mechanics.
+- Guard Post, including non-blocking two-tile companion proximity.
+- Cell and Burial Chamber chain-capacity geometry within `12x12`; Burial Chamber copies geometry only and adds `SWARM` independently.
+- Shrine, Library, Scrying Chamber, Alchemy Lab, Armory, Barracks, Nesting/Resting, Food Storage, Depot, and Equipment Storage.
+- Equipment Storage geometry cloned from Armory without Armory tags or companion behavior.
+- Generic Area with a `2x2` seed, 30-tile cap, no bounding window, narrow-chain traversal, and no forced remainder absorption.
+
+The shared profile schema now expresses optional rotating non-square bounding windows, chain-unit geometry, geometry-clone provenance, non-blocking companion proximity, all approved preferences, and all approved tags. `NO_LIGHT` remains a distinct invariant tag value.
 
 ### Validation Boundary
 
@@ -76,19 +88,18 @@ The catalog validates:
 - absence of growth data on non-growing profiles;
 - positive tile and bounding limits on flood profiles;
 - unique supported preferences and tags;
-- exact approved endpoint-policy values.
 
 ## Validation And Current Limits
 
 Executed with Godot 4.4.1 on 2026-09-25:
 
 1. Headless editor import completed successfully and registered the four implementation classes plus the test script.
-2. `test_universal_area_catalog.gd` passed 36 checks covering exact Entrance/Boss data, endpoint policy, detached profile/policy state, unsupported-role refusal, and malformed-profile refusal.
-3. Expected refusal checks emitted exact-origin errors for `GENERIC_AREA` lookup and a zero-size minimum footprint; both returned the expected failure values and the suite exited successfully.
+2. `test_purpose_area_catalog.gd` passed 148 checks covering all fourteen purpose/fallback profiles, exact limits/preferences/tags, geometry-only clones, detached lookup, Purpose Catalog cross-resolution, and unsupported-role refusal.
+3. After endpoint-policy removal, `test_universal_area_catalog.gd` passed 30 regression checks covering exact Entrance/Boss data, detached profile state, unsupported-role refusal, and malformed-profile refusal.
+4. Expected refusal checks emitted exact-origin errors for unsupported cross-catalog lookups and a zero-size minimum footprint; all returned the expected failure values and both suites exited successfully.
 
 Current limits:
 
-- Purpose-required and Generic Area profiles are not implemented.
-- No route analysis, origin search, endpoint movement, area-size comparison, flood growth, tile claim, tag enforcement, or result packaging exists.
+- Placement and claim mechanics remain owned by Claim And Zoning rather than this catalog.
 - This is Room-local implementation, not Production runtime authority.
 - Human implementation acceptance and Production adoption remain pending.

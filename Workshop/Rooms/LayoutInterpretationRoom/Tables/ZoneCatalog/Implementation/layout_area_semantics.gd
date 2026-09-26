@@ -12,6 +12,16 @@ enum Tag {
 	BOSS,
 	NO_ENEMY,
 	LIGHT,
+	ENEMY,
+	LOCKABLE,
+	LOOTABLE,
+	TRAPPED,
+	SWARM,
+	ARCANE,
+	DIVINITY,
+	NO_LIGHT,
+	CROSS_FAMILY_ABERRATION,
+	CROSS_FAMILY_ELEMENTAL,
 }
 
 enum Preference {
@@ -19,36 +29,34 @@ enum Preference {
 	WALL_ADJACENCY,
 	LARGEST_USABLE_CONNECTED_SPACE,
 	SINGLE_OPEN_AREA,
+	CENTRAL_PATH,
+	LONG_WALLS,
+	OPEN_AREA,
+	MINIMIZE_WALL_CONTACT,
+	LONG_SHAPE,
+	SPRAWLING,
+	BALANCED_RECTANGLE,
+	COMPACT,
+	MIDDLE_PROGRESSION,
 }
-
-enum Connectivity {
-	INVALID = -1,
-	CARDINAL_FOUR,
-}
-
-enum RouteSelection {
-	INVALID = -1,
-	LONGEST_QUALIFYING_NAVIGABLE_ROUTE,
-}
-
-enum UndersizedEndpointPolicy {
-	INVALID = -1,
-	MOVE_INWARD_TO_NEXT_QUALIFYING_AREA,
-}
-
-enum EndpointAssignment {
-	INVALID = -1,
-	SMALLER_TO_ENTRANCE_LARGER_TO_BOSS,
-}
-
-enum EqualEndpointPolicy {
-	INVALID = -1,
-	RANDOM_COIN_FLIP,
-}
-
 
 static func supported_tags() -> Array[Tag]:
-	return [Tag.ENTRANCE, Tag.BOSS, Tag.NO_ENEMY, Tag.LIGHT]
+	return [
+		Tag.ENTRANCE,
+		Tag.BOSS,
+		Tag.NO_ENEMY,
+		Tag.LIGHT,
+		Tag.ENEMY,
+		Tag.LOCKABLE,
+		Tag.LOOTABLE,
+		Tag.TRAPPED,
+		Tag.SWARM,
+		Tag.ARCANE,
+		Tag.DIVINITY,
+		Tag.NO_LIGHT,
+		Tag.CROSS_FAMILY_ABERRATION,
+		Tag.CROSS_FAMILY_ELEMENTAL,
+	]
 
 
 static func supported_preferences() -> Array[Preference]:
@@ -56,4 +64,13 @@ static func supported_preferences() -> Array[Preference]:
 		Preference.WALL_ADJACENCY,
 		Preference.LARGEST_USABLE_CONNECTED_SPACE,
 		Preference.SINGLE_OPEN_AREA,
+		Preference.CENTRAL_PATH,
+		Preference.LONG_WALLS,
+		Preference.OPEN_AREA,
+		Preference.MINIMIZE_WALL_CONTACT,
+		Preference.LONG_SHAPE,
+		Preference.SPRAWLING,
+		Preference.BALANCED_RECTANGLE,
+		Preference.COMPACT,
+		Preference.MIDDLE_PROGRESSION,
 	]

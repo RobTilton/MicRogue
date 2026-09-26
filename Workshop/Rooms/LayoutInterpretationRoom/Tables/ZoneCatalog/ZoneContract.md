@@ -91,7 +91,7 @@ Role: `BOSS_AREA`
 Hard minimum:
 
 - Initial valid floor footprint: `3x3`.
-- Anchor the qualifying endpoint opposite Entrance on the longest navigable route.
+- Use the farthest valid claim geometry found from Entrance-distance ordering.
 
 Growth:
 
@@ -102,12 +102,12 @@ Growth:
 
 Preferences:
 
-- Prefer the largest usable connected space at the Boss endpoint.
+- Prefer the largest usable connected space at the selected distant location.
 - Prefer a single open area, but accept multiple connected smaller pockets.
 
 Relationships:
 
-- Opposite qualifying end of the longest navigable route from `ENTRANCE_AREA`.
+- Farthest valid Area found by descending cardinal distance from `ENTRANCE_AREA`.
 
 Tags:
 
@@ -447,21 +447,14 @@ Tags:
 - `SWARM`
 - `TRAPPED`
 
-## Endpoint Selection Contract
+## Universal Placement Contract
 
-Entrance and Boss anchor the opposite ends of the longest qualifying four-directional route through connected floor.
+Entrance claims first from geometry satisfying its profile. One four-directional distance flood begins from the completed Entrance Area. Boss candidates are attempted from greatest Entrance distance toward least distance, and the first complete valid Boss claim is accepted.
 
-- Endpoint validity uses available floor dimensions, not reconstructed rooms or total-tile proofs.
-- Each endpoint must support at least `3x3`, `4x2`, or `2x4` capacity.
-- If one end is undersized, move that endpoint inward along the route to the next farthest qualifying floor area.
-- Once both ends qualify, the smaller available endpoint area becomes Entrance and the larger becomes Boss.
-- Equal-sized endpoint areas are resolved by a random coin flip.
-
-The later Geometry Analysis and Zone Claim Boxes own the exact search and growth mechanics. They must preserve this result without introducing a room-reconstruction phase.
+There is no global longest-route calculation, reconstructed room model, endpoint comparison, or upstream connectivity confirmation. The closed generator pipeline guarantees a single connected floor region.
 
 ## Validation And Current Limits
 
 - Rob approved all Area requirements, limits, preferences, relationships, and tags in conversation on 2026-09-25.
 - The contract was checked against the approved Purpose Contract and Room DOTS.
-- This is design evidence only; no catalog, route analysis, flood fill, claim behavior, tag enforcement, or output package has been implemented or tested.
-- Exact origin selection, flood order, random behavior, failure handling, and geometric metadata remain later-Box decisions.
+- The Room-local catalogs and claim passes implement and test this contract. Public packaging and Production promotion remain later work.

@@ -4,18 +4,15 @@ extends RefCounted
 const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ZoneCatalog/Implementation/universal_area_catalog.gd"
 
 var _profiles: Dictionary = {}
-var _endpoint_policy: UniversalEndpointPolicy
 
 
 static func create() -> UniversalAreaCatalog:
 	var catalog := UniversalAreaCatalog.new()
 	var profiles: Array[LayoutAreaProfile] = [catalog._entrance_profile(), catalog._boss_profile()]
-	var endpoint_policy: UniversalEndpointPolicy = catalog._build_endpoint_policy()
-	if not catalog._validate_complete_catalog(profiles, endpoint_policy):
+	if not catalog._validate_complete_catalog(profiles):
 		return null
 	for profile: LayoutAreaProfile in profiles:
 		catalog._profiles[profile.area_role] = profile
-	catalog._endpoint_policy = endpoint_policy
 	return catalog
 
 
@@ -33,13 +30,6 @@ func get_profile(
 	return profile.duplicate_profile()
 
 
-func get_endpoint_policy() -> UniversalEndpointPolicy:
-	if _endpoint_policy == null:
-		push_error("%s: endpoint policy is unavailable." % ORIGIN)
-		return null
-	return _endpoint_policy.duplicate_policy()
-
-
 func _entrance_profile() -> LayoutAreaProfile:
 	return LayoutAreaProfile.new(
 		LayoutInterpretationSemantics.AreaRole.ENTRANCE_AREA,
@@ -47,6 +37,7 @@ func _entrance_profile() -> LayoutAreaProfile:
 		LayoutAreaSemantics.GrowthMode.NONE,
 		0,
 		Vector2i.ZERO,
+		false,
 		false,
 		1,
 		2,
@@ -66,6 +57,7 @@ func _boss_profile() -> LayoutAreaProfile:
 		LayoutAreaSemantics.GrowthMode.FLOOD,
 		50,
 		Vector2i(8, 8),
+		false,
 		true,
 		0,
 		0,
@@ -77,21 +69,7 @@ func _boss_profile() -> LayoutAreaProfile:
 	)
 
 
-func _build_endpoint_policy() -> UniversalEndpointPolicy:
-	return UniversalEndpointPolicy.new(
-		LayoutAreaSemantics.Connectivity.CARDINAL_FOUR,
-		LayoutAreaSemantics.RouteSelection.LONGEST_QUALIFYING_NAVIGABLE_ROUTE,
-		[Vector2i(3, 3), Vector2i(4, 2), Vector2i(2, 4)],
-		LayoutAreaSemantics.UndersizedEndpointPolicy.MOVE_INWARD_TO_NEXT_QUALIFYING_AREA,
-		LayoutAreaSemantics.EndpointAssignment.SMALLER_TO_ENTRANCE_LARGER_TO_BOSS,
-		LayoutAreaSemantics.EqualEndpointPolicy.RANDOM_COIN_FLIP
-	)
-
-
-func _validate_complete_catalog(
-	profiles: Array[LayoutAreaProfile],
-	endpoint_policy: UniversalEndpointPolicy
-) -> bool:
+func _validate_complete_catalog(profiles: Array[LayoutAreaProfile]) -> bool:
 	if profiles.size() != 2:
 		return _refuse("universal catalog has %d profiles; expected 2." % profiles.size())
 	var required_roles: Array[LayoutInterpretationSemantics.AreaRole] = LayoutInterpretationSemantics.universal_area_roles()
@@ -109,7 +87,7 @@ func _validate_complete_catalog(
 	for area_role: LayoutInterpretationSemantics.AreaRole in required_roles:
 		if not seen_roles.has(area_role):
 			return _refuse("universal catalog is missing Area role %d." % area_role)
-	return _validate_endpoint_policy(endpoint_policy)
+	return true
 
 
 func _validate_profile(profile: LayoutAreaProfile) -> bool:
@@ -130,37 +108,37 @@ func _validate_profile(profile: LayoutAreaProfile) -> bool:
 		return _refuse("Area role %d has invalid preferred wall adjacency." % profile.area_role)
 	match profile.growth_mode:
 		LayoutAreaSemantics.GrowthMode.NONE:
-			if profile.maximum_claimed_tiles != 0 or profile.maximum_bounding_size != Vector2i.ZERO or profile.permits_narrow_connections:
+			if profile.maximum_claimed_tiles != 0 or profile.maximum_bounding_size != Vector2i.ZERO or profile.bounding_window_may_rotate or profile.permits_narrow_connections:
 				return _refuse("non-growing Area role %d contains growth data." % profile.area_role)
 		LayoutAreaSemantics.GrowthMode.FLOOD:
-			if profile.maximum_claimed_tiles <= 0:
-				return _refuse("flood-growing Area role %d has no positive tile cap." % profile.area_role)
-			if profile.maximum_bounding_size.x <= 0 or profile.maximum_bounding_size.y <= 0:
-				return _refuse("flood-growing Area role %d has no positive bounding window." % profile.area_role)
+			var has_tile_cap: bool = profile.maximum_claimed_tiles > 0
+			var has_bounding_window: bool = profile.maximum_bounding_size.x > 0 and profile.maximum_bounding_size.y > 0
+			if not has_tile_cap and not has_bounding_window:
+				return _refuse("flood-growing Area role %d has neither a tile cap nor a bounding window." % profile.area_role)
+			if profile.maximum_claimed_tiles < 0:
+				return _refuse("flood-growing Area role %d has a negative tile cap." % profile.area_role)
+			if profile.maximum_bounding_size != Vector2i.ZERO and not has_bounding_window:
+				return _refuse("flood-growing Area role %d has a partial bounding window." % profile.area_role)
 		_:
 			return _refuse("Area role %d has unsupported growth mode %d." % [profile.area_role, profile.growth_mode])
 	if not _validate_unique_supported_values(profile.preferences, LayoutAreaSemantics.supported_preferences(), "preference", profile.area_role):
 		return false
 	if not _validate_unique_supported_values(profile.tags, LayoutAreaSemantics.supported_tags(), "tag", profile.area_role):
 		return false
-	return true
-
-
-func _validate_endpoint_policy(policy: UniversalEndpointPolicy) -> bool:
-	if policy == null:
-		return _refuse("endpoint policy is null.")
-	if policy.connectivity != LayoutAreaSemantics.Connectivity.CARDINAL_FOUR:
-		return _refuse("endpoint policy must use four-directional connectivity.")
-	if policy.route_selection != LayoutAreaSemantics.RouteSelection.LONGEST_QUALIFYING_NAVIGABLE_ROUTE:
-		return _refuse("endpoint policy has unsupported route selection.")
-	if policy.minimum_endpoint_footprints != [Vector2i(3, 3), Vector2i(4, 2), Vector2i(2, 4)]:
-		return _refuse("endpoint policy minimum footprints do not match the approved contract.")
-	if policy.undersized_endpoint_policy != LayoutAreaSemantics.UndersizedEndpointPolicy.MOVE_INWARD_TO_NEXT_QUALIFYING_AREA:
-		return _refuse("endpoint policy has unsupported undersized-endpoint behavior.")
-	if policy.endpoint_assignment != LayoutAreaSemantics.EndpointAssignment.SMALLER_TO_ENTRANCE_LARGER_TO_BOSS:
-		return _refuse("endpoint policy has unsupported Entrance/Boss assignment.")
-	if policy.equal_endpoint_policy != LayoutAreaSemantics.EqualEndpointPolicy.RANDOM_COIN_FLIP:
-		return _refuse("endpoint policy has unsupported equal-endpoint behavior.")
+	if profile.chain_unit_size != Vector2i.ZERO:
+		if profile.chain_unit_size.x <= 0 or profile.chain_unit_size.y <= 0:
+			return _refuse("Area role %d has an invalid chain unit size." % profile.area_role)
+		if profile.minimum_footprints != [profile.chain_unit_size]:
+			return _refuse("Area role %d chain unit does not match its minimum footprint." % profile.area_role)
+	if profile.geometry_clone_source_role != LayoutInterpretationSemantics.AreaRole.INVALID:
+		if profile.geometry_clone_source_role not in LayoutInterpretationSemantics.required_area_roles():
+			return _refuse("Area role %d has an unsupported geometry clone source." % profile.area_role)
+		if profile.geometry_clone_source_role == profile.area_role:
+			return _refuse("Area role %d clones its own geometry." % profile.area_role)
+	if profile.preferred_companion_max_path_distance < -1:
+		return _refuse("Area role %d has an invalid companion distance." % profile.area_role)
+	if profile.preferred_companion_max_path_distance == -1 and profile.companion_proximity_can_block:
+		return _refuse("Area role %d has blocking companion behavior without a companion distance." % profile.area_role)
 	return true
 
 
