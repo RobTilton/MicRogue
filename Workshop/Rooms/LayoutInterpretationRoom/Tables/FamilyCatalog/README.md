@@ -1,11 +1,13 @@
 # Family Catalog Table
 Updated: 2026-09-25
-Checkpoint: `[LayoutInterpretationRoom]+[FamilyCatalog]+[FamilyContract]`
-Implementation baseline/evidence: No Layout Interpretation implementation exists. Direction is established by Room discussion and [`../../Documents/FirstPassIdeation.md`](../../Documents/FirstPassIdeation.md); catalog contents remain unapproved.
+Checkpoint: `[LayoutInterpretationRoom]+[FamilyCatalog]+[FamilyContract]` (superseded)
+Implementation baseline/evidence: No Layout Interpretation implementation exists. This occupant-driven direction was superseded by architecture/site-purpose interpretation before catalog approval or implementation.
 
 ## Rapid Shape
 
-This Table discovers which family distinctions genuinely belong in Layout Interpretation, then derives the family input contract and initial catalog from those survivors. It does not begin by assuming a large schema or a family-specific random-room mechanism.
+This preserved Table records the former occupant-family direction. It is not an active dependency in Layout Interpretation. Current family ideation and its possible later ownership are retained in [`../../../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/Pseudo_System_Family_NOT_AUTHORITATIVE.md`](../../../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/Pseudo_System_Family_NOT_AUTHORITATIVE.md).
+
+The active Room direction is architecture/site-purpose interpretation under [`../ArchitectureCatalog/README.md`](../ArchitectureCatalog/README.md).
 
 A candidate space belongs here only when its identity changes a spatial decision. Naming, decoration, inhabitants, props, or narrative flavor without a layout consequence belong to downstream systems.
 
@@ -40,6 +42,7 @@ Conversational `ADD_*` and `REMOVE_*` language does not establish mutation-orien
 
 ## Current Limits
 
+- This Table and both of its DOTS Boxes are superseded.
 - No initial family list is approved.
 - No candidate space has passed the survival test yet.
 - Required/optional fields and preference weighting are not approved contracts.
