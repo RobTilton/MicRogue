@@ -5,7 +5,7 @@ Implementation baseline/evidence: Approved design contract only. No Layout Inter
 
 ## Rapid Shape
 
-Layout Interpretation receives completed generator-independent `MapData` plus one approved architectural purpose. It claims universal Zones first, then the purpose's required Zones in declared order, then distinct Generic Zones from useful remaining floor. It describes geometry and meaning without changing map cells or placing content.
+Layout Interpretation receives completed generator-independent `MapData` plus one approved architectural purpose. It claims universal Areas first, then the purpose's required Areas in declared order, then distinct `GENERIC_AREA` claims from useful remaining floor. It describes geometry and meaning without changing map cells or placing content.
 
 The initial catalog is clamped to six purposes: two for each current Map Generation Archetype. Occupant family does not define original architecture and is not an input to this contract.
 
@@ -13,8 +13,8 @@ The initial catalog is clamped to six purposes: two for each current Map Generat
 
 Every interpretation begins with exactly two universal claims:
 
-1. `ENTRANCE_ZONE` x1.
-2. `BOSS_ZONE` x1, grown from the valid floor region at the greatest navigable distance from Entrance.
+1. `ENTRANCE_AREA` x1.
+2. `BOSS_AREA` x1, grown from the valid floor region at the greatest navigable distance from Entrance.
 
 Entrance is the semantic spawn area but places no player, door, stairs, portal, or other content. Boss identifies the major destination but places no boss, loot, furniture, encounter, or other content. Boss growth may encompass multiple visually room-like pockets; later systems may differentiate their contents.
 
@@ -36,9 +36,9 @@ No additional purpose belongs to the initial catalog.
 
 Purpose key: `PRISON`
 
-1. `GUARD_POST` x1 near `ENTRANCE_ZONE`.
-2. `GUARD_POST` x1 designated as the Cell-area anchor.
-3. `CELL` x1-3, related spatially to the Cell-area Guard Post.
+1. `GUARD_POST_AREA` x1 near `ENTRANCE_AREA`.
+2. `GUARD_POST_AREA` x1 designated as the Cell-area anchor.
+3. `CELL_AREA` x1-3, related spatially to the Cell-area Guard Post.
 
 The later Claim and Zoning work owns the mechanics that place the second Guard Post and grow the Cell Zones around it. This contract establishes the relationship, not its algorithm.
 
@@ -46,8 +46,8 @@ The later Claim and Zoning work owns the mechanics that place the second Guard P
 
 Purpose key: `CATACOMB`
 
-1. `SHRINE` x1.
-2. `BURIAL_CHAMBER` x1-4.
+1. `SHRINE_AREA` x1.
+2. `BURIAL_CHAMBER_AREA` x1-4.
 
 A size-dependent second Shrine is outside the initial contract.
 
@@ -55,9 +55,9 @@ A size-dependent second Shrine is outside the initial contract.
 
 Purpose key: `MAGE_TOWER`
 
-1. `LIBRARY` x1.
-2. `SCRYING_CHAMBER` x1.
-3. `ALCHEMY_LAB` x1.
+1. `LIBRARY_AREA` x1.
+2. `SCRYING_CHAMBER_AREA` x1.
+3. `ALCHEMY_LAB_AREA` x1.
 
 Multi-level Tower additions are deferred until multi-level layouts are an actual supported requirement.
 
@@ -65,10 +65,10 @@ Multi-level Tower additions are deferred until multi-level layouts are an actual
 
 Purpose key: `GUARD_TOWER`
 
-1. `GUARD_POST` x1 near `ENTRANCE_ZONE`.
-2. `ARMORY` x1 near `ENTRANCE_ZONE`.
-3. `ARMORY` x1 pushed toward the middle of navigable Entrance-to-Boss progression.
-4. `BARRACKS` x1 adjacent to the middle Armory.
+1. `GUARD_POST_AREA` x1 near `ENTRANCE_AREA`.
+2. `ARMORY_AREA` x1 near `ENTRANCE_AREA`.
+3. `ARMORY_AREA` x1 pushed toward the middle of navigable Entrance-to-Boss progression.
+4. `BARRACKS_AREA` x1 adjacent to the middle Armory Area.
 
 The initial contract requires exactly two Armories.
 
@@ -77,7 +77,7 @@ The initial contract requires exactly two Armories.
 Purpose key: `BURROW_NEST`
 
 1. `NESTING_RESTING_AREA` x1, preferring the middle region of navigable Entrance-to-Boss progression.
-2. `FOOD_STORAGE` x1.
+2. `FOOD_STORAGE_AREA` x1.
 
 `REFUGE` is not a separate required Zone. The universal Boss Zone fulfills that spatial function for the initial scope.
 
@@ -85,9 +85,9 @@ Purpose key: `BURROW_NEST`
 
 Purpose key: `MINE_SHAFT`
 
-1. `GUARD_POST` x1 near `ENTRANCE_ZONE`.
-2. `DEPOT` x1.
-3. `EQUIPMENT_STORAGE` x2, distributed at target positions near 35% and 70% of navigable Entrance-to-Boss progression.
+1. `GUARD_POST_AREA` x1 near `ENTRANCE_AREA`.
+2. `DEPOT_AREA` x1.
+3. `EQUIPMENT_STORAGE_AREA` x2, distributed at target positions near 35% and 70% of navigable Entrance-to-Boss progression.
 
 The percentage targets are approximate placement intent, not exact coordinate-distance requirements.
 
@@ -95,14 +95,14 @@ The percentage targets are approximate placement intent, not exact coordinate-di
 
 After all universal and purpose-required claims succeed, the interpreter claims distinct `GENERIC_ZONE` instances from useful remaining floor. Every instance has a unique Zone ID and explicit tile membership but no invented architectural or gameplay purpose.
 
-The initial system does not add Patrol, Storage, Hallway, or other speculative generic roles. Later systems may interpret or use Generic Zones without requiring Layout Interpretation to predict their contents.
+The initial system does not add Patrol, Storage, Hallway, or other speculative generic roles. Later systems may interpret or use `GENERIC_AREA` claims without requiring Layout Interpretation to predict their contents.
 
 The complete successful output contains:
 
 - exactly one Entrance Zone;
 - exactly one Boss Zone;
 - every required Zone for the selected purpose;
-- zero or more uniquely identified Generic Zones;
+- zero or more uniquely identified `GENERIC_AREA` claims;
 - honest information about any remaining unzoned floor.
 
 ## Ownership And Deferred Mechanics
