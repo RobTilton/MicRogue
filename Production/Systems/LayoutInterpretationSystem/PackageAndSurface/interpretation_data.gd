@@ -1,7 +1,7 @@
 class_name InterpretationData
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/PackageAndSurface/Implementation/interpretation_data.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/PackageAndSurface/interpretation_data.gd"
 
 var map_data: MapData
 var purpose: LayoutInterpretationSemantics.Purpose

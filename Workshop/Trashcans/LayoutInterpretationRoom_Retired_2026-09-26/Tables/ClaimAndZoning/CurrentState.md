@@ -55,7 +55,7 @@ The analyzer collects floor coordinates in stable row-major order and returns de
 1. Trusts the catalog-owned Area profile and completed geometry/claim-state contracts.
 2. Uses caller-ranked origins when supplied; otherwise ranks available floor using applicable soft preferences and internal random tie values.
 3. Requires an origin surrounded by floor in all eight neighboring directions.
-4. Finds a complete unclaimed minimum footprint containing the origin.
+4. Finds a complete unclaimed minimum footprint containing the origin. Balanced, compact, and sprawling growing Areas may use an equal-capacity connected fallback inside their window when the preferred rectangle is unavailable.
 5. Returns that footprint directly for non-growing Areas.
 6. Flood-grows other Areas cardinally within their tile cap and oriented bounding window.
 7. Allows one-tile connections only when the profile permits them; otherwise growth cells must participate in open `2x2` floor.
@@ -73,14 +73,16 @@ If either claim fails, the temporary state is discarded and the call returns `nu
 
 ### Purpose And Coverage Pass
 
-Purpose/Coverage Pass trusts the three completed catalogs, runs Universal Pass, and works from a duplicate of its claim state. Requirements execute strictly in catalog order. Count ranges choose a desired count through the supplied random source: the minimum is mandatory, while additional ranged instances are attempted until the desired count or available-geometry terminal condition. Exact-count requirements remain mandatory in full.
+Purpose/Coverage Pass trusts the three completed catalogs, runs Universal Pass, and works from a duplicate of its claim state. Universal Pass reserves the Boss minimum rather than greedily expanding it. Purpose requirements then reserve their minimum foundations strictly in catalog order. Only after every hard Area exists do Boss and purpose Areas grow into remaining floor; Generic coverage runs last. Count ranges choose a desired count through the supplied random source: the minimum is mandatory, while additional ranged instances are attempted until the desired count or available-geometry terminal condition. Exact-count requirements remain mandatory in full.
 
 Relationship behavior is semantic and deliberately loose:
 
 - `NEAR_AREA` ranks origins by cardinal distance to the named universal claim.
-- `AROUND_REQUIREMENT` and `ADJACENT_REQUIREMENT` reference already-completed requirement claims. Required relationships are tried transactionally and accept a completed claim only within two or one cardinal tiles respectively.
+- `AROUND_REQUIREMENT` and `ADJACENT_REQUIREMENT` reference already-completed requirement claims and rank origins nearest those claims.
 - `PROGRESSION_TARGETS` converts the requested percentage into a target distance between zero and the maximum Entrance distance, then ranks origins by proximity to that distance band.
 - Relationship kind, strength, target claim IDs, and progression target are preserved on each completed claim for downstream use.
+
+All relationship placement is soft: preferred distance is attempted first, then the closest valid origin is accepted. Area presence and required multiplicity—not ideal spacing—control failure.
 
 A failure before the required minimum—or within an exact-count requirement—discards the temporary composition and returns `null`; source `MapData` and caller-visible prior results remain unchanged. Failure of an additional ranged instance stops that requirement at its already-valid count. After all required Areas succeed, Generic Areas repeatedly claim eligible unowned floor under their 30-tile cap. The loop is bounded by floor-count-derived attempts and also stops at the first terminal no-claim result. Remaining floor is reported in `unzoned_floor`; it is not silently absorbed or treated as failure.
 

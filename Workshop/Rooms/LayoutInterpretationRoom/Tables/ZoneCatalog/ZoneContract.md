@@ -1,7 +1,7 @@
 # Layout Interpretation Zone Contract
-Updated: 2026-09-25
+Updated: 2026-09-26
 Checkpoint: `[LayoutInterpretationRoom]+[ZoneCatalog]+[ZoneContract]`
-Implementation baseline/evidence: Approved design contract only. No Layout Interpretation implementation exists; Git checkpoint is intentionally not recorded here.
+Implementation baseline/evidence: Implemented in `Production/Systems/LayoutInterpretationSystem/ZoneCatalog/`; Production promotion validated on 2026-09-26; Git checkpoint unknown.
 
 ## Rapid Shape
 
@@ -278,7 +278,7 @@ Role: `ARMORY_AREA`
 
 Hard minimum:
 
-- `5x5` floor footprint.
+- `3x3` floor footprint.
 
 Growth:
 
@@ -288,7 +288,7 @@ Growth:
 Preferences:
 
 - Prefer rectangular claims whose side lengths are as close as possible.
-- Prefer proportions such as `5x5`, `5x6`, or `6x7` over `4x8`.
+- Prefer proportions such as `3x3`, `4x4`, `5x5`, or `5x6` over `4x8`.
 - When a companion Area is defined, prefer placement within two walkable tiles of it.
 - If two-tile proximity is unavailable, place as close as valid geometry permits.
 - Companion proximity can never prevent an otherwise valid claim.
@@ -379,17 +379,18 @@ Role: `DEPOT_AREA`
 
 Hard minimum:
 
-- `5x5` floor footprint.
+- `3x3` floor footprint.
 
 Growth:
 
 - Maximum claimed tiles: 40.
-- Bounding window: `12x12`.
+- Bounding window: `15x15`.
+- May sprawl through narrow connected floor within that window.
 
 Preferences:
 
-- Prefer a condensed claim.
-- Minimize wall contact.
+- Prefer a sprawling claim.
+- No wall-contact preference.
 
 Tags:
 
@@ -452,6 +453,14 @@ Tags:
 Entrance claims first from geometry satisfying its profile. One four-directional distance flood begins from the completed Entrance Area. Boss candidates are attempted from greatest Entrance distance toward least distance, and the first complete valid Boss claim is accepted.
 
 There is no global longest-route calculation, reconstructed room model, endpoint comparison, or upstream connectivity confirmation. The closed generator pipeline guarantees a single connected floor region.
+
+## Reservation And Growth Contract
+
+Universal and purpose-required Areas reserve their minimum valid foundations before any of them expand. After every hard Area exists, Boss and purpose Areas grow into remaining unclaimed floor under their individual caps and windows. Generic coverage runs last.
+
+Minimum rectangles remain preferred evidence of usable geometry. Balanced, compact, and sprawling growing Areas may fall back to the same minimum tile capacity as a connected shape inside their approved bounding window when a perfect rectangle is unavailable. Strict chain-unit Areas retain their exact chain seed geometry.
+
+Spatial placement relationships are soft. The system tries the preferred distance or progression band first and then accepts the closest valid placement. Relationship distance alone never invalidates a complete layout.
 
 ## Validation And Current Limits
 

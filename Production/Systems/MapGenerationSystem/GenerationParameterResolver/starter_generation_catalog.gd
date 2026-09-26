@@ -10,7 +10,7 @@ static func create() -> GenerationCatalog:
 		_archetype(GenerationSemantics.Archetype.CAVE, GenerationSemantics.BoundaryStrategy.COMPOUND_CIRCLES, 1),
 	]
 	catalog.scales = [
-		_scale(GenerationSemantics.Scale.SMALL, Vector2i(41, 31), 10, 44, -2, 0.9, true),
+		# _scale(GenerationSemantics.Scale.SMALL, Vector2i(41, 31), 10, 44, -2, 0.9, true), # Pinned for future rework; not currently requestable.
 		_scale(GenerationSemantics.Scale.MEDIUM, Vector2i(91, 63), 15, 100, 0, 1.0, false),
 		_scale(GenerationSemantics.Scale.LARGE, Vector2i(141, 95), 20, 176, 2, 1.1, true),
 	]

@@ -52,7 +52,7 @@ func _test_profile_contracts(catalog: PurposeAreaCatalog) -> void:
 	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.ALCHEMY_LAB_AREA, [Vector2i(3, 5), Vector2i(5, 3)], 40, Vector2i(8, 8), false, [LayoutAreaSemantics.Preference.SPRAWLING], [LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.SWARM, LayoutAreaSemantics.Tag.ARCANE])
 	_check(catalog.get_profile(LayoutInterpretationSemantics.AreaRole.ALCHEMY_LAB_AREA).permits_narrow_connections, "Alchemy Lab may span connected pockets")
 
-	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, [Vector2i(5, 5)], 36, Vector2i(8, 8), false, [LayoutAreaSemantics.Preference.BALANCED_RECTANGLE], [LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.TRAPPED, LayoutAreaSemantics.Tag.ENEMY])
+	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, [Vector2i(3, 3)], 36, Vector2i(8, 8), false, [LayoutAreaSemantics.Preference.BALANCED_RECTANGLE], [LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.TRAPPED, LayoutAreaSemantics.Tag.ENEMY])
 	var armory: LayoutAreaProfile = catalog.get_profile(LayoutInterpretationSemantics.AreaRole.ARMORY_AREA)
 	_check(armory.preferred_companion_max_path_distance == 2, "Armory companion distance matches")
 	_check(not armory.companion_proximity_can_block, "Armory companion preference cannot block")
@@ -60,8 +60,9 @@ func _test_profile_contracts(catalog: PurposeAreaCatalog) -> void:
 	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.BARRACKS_AREA, [Vector2i(3, 5), Vector2i(5, 3)], 30, Vector2i(6, 10), true, [LayoutAreaSemantics.Preference.SPRAWLING], [LayoutAreaSemantics.Tag.SWARM, LayoutAreaSemantics.Tag.ENEMY, LayoutAreaSemantics.Tag.LIGHT, LayoutAreaSemantics.Tag.LOCKABLE])
 	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.NESTING_RESTING_AREA, [Vector2i(3, 3)], 20, Vector2i(5, 5), false, [LayoutAreaSemantics.Preference.COMPACT, LayoutAreaSemantics.Preference.MIDDLE_PROGRESSION], [LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.SWARM, LayoutAreaSemantics.Tag.NO_LIGHT, LayoutAreaSemantics.Tag.TRAPPED])
 	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.FOOD_STORAGE_AREA, [Vector2i(3, 3)], 50, Vector2i(10, 10), false, [], [LayoutAreaSemantics.Tag.SWARM, LayoutAreaSemantics.Tag.NO_LIGHT, LayoutAreaSemantics.Tag.CROSS_FAMILY_ABERRATION])
-	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.DEPOT_AREA, [Vector2i(5, 5)], 40, Vector2i(12, 12), false, [LayoutAreaSemantics.Preference.COMPACT, LayoutAreaSemantics.Preference.MINIMIZE_WALL_CONTACT], [LayoutAreaSemantics.Tag.CROSS_FAMILY_ELEMENTAL])
-	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.EQUIPMENT_STORAGE_AREA, [Vector2i(5, 5)], 36, Vector2i(8, 8), false, [LayoutAreaSemantics.Preference.BALANCED_RECTANGLE], [LayoutAreaSemantics.Tag.LOOTABLE])
+	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.DEPOT_AREA, [Vector2i(3, 3)], 40, Vector2i(15, 15), false, [LayoutAreaSemantics.Preference.SPRAWLING], [LayoutAreaSemantics.Tag.CROSS_FAMILY_ELEMENTAL])
+	_check(catalog.get_profile(LayoutInterpretationSemantics.AreaRole.DEPOT_AREA).permits_narrow_connections, "Depot may sprawl through narrow connections")
+	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.EQUIPMENT_STORAGE_AREA, [Vector2i(3, 3)], 36, Vector2i(8, 8), false, [LayoutAreaSemantics.Preference.BALANCED_RECTANGLE], [LayoutAreaSemantics.Tag.LOOTABLE])
 	_check_profile(catalog, LayoutInterpretationSemantics.AreaRole.GENERIC_AREA, [Vector2i(2, 2)], 30, Vector2i.ZERO, false, [], [LayoutAreaSemantics.Tag.ENEMY, LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.SWARM, LayoutAreaSemantics.Tag.TRAPPED])
 	_check(catalog.get_profile(LayoutInterpretationSemantics.AreaRole.GENERIC_AREA).permits_narrow_connections, "Generic Area may traverse narrow chains")
 
@@ -92,7 +93,7 @@ func _test_detached_lookup(catalog: PurposeAreaCatalog) -> void:
 	first.minimum_footprints.clear()
 	first.tags.clear()
 	var second: LayoutAreaProfile = catalog.get_profile(LayoutInterpretationSemantics.AreaRole.ARMORY_AREA)
-	_check(second.minimum_footprints == [Vector2i(5, 5)], "Area profile footprints are detached")
+	_check(second.minimum_footprints == [Vector2i(3, 3)], "Area profile footprints are detached")
 	_check(second.tags == [LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.TRAPPED, LayoutAreaSemantics.Tag.ENEMY], "Area profile tags are detached")
 
 

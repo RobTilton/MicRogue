@@ -1,7 +1,7 @@
 class_name AreaClaimState
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ClaimAndZoning/Implementation/area_claim_state.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ClaimAndZoning/area_claim_state.gd"
 
 var geometry: GeometryAnalysisResult
 var _claim_id_by_coordinate: Dictionary = {}
@@ -105,3 +105,39 @@ func apply_complete_claim(
 	_claims.append(claim)
 	_next_claim_id += 1
 	return claim.duplicate_claim()
+
+
+func replace_claim_cells(claim_id: int, coordinates: Array[Vector2i]) -> AreaClaim:
+	var claim_index: int = -1
+	for index: int in range(_claims.size()):
+		if _claims[index].id == claim_id:
+			claim_index = index
+			break
+	if claim_index < 0:
+		return null
+	var existing: AreaClaim = _claims[claim_index]
+	for coordinate: Vector2i in coordinates:
+		if not geometry.is_floor(coordinate):
+			return null
+		var owner: int = claim_id_at(coordinate)
+		if owner != 0 and owner != claim_id:
+			return null
+	for coordinate: Vector2i in existing.cells:
+		if coordinate not in coordinates:
+			_claim_id_by_coordinate.erase(coordinate)
+	for coordinate: Vector2i in coordinates:
+		_claim_id_by_coordinate[coordinate] = claim_id
+	var replacement := AreaClaim.new(
+		existing.id,
+		existing.area_role,
+		existing.requirement_id,
+		existing.origin,
+		coordinates,
+		existing.tags,
+		existing.relationship_kind,
+		existing.relationship_strength,
+		existing.target_claim_ids,
+		existing.progression_target_percent
+	)
+	_claims[claim_index] = replacement
+	return replacement.duplicate_claim()

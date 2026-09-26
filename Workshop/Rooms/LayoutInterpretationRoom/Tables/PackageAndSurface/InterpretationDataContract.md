@@ -1,6 +1,7 @@
 # Interpretation Data Contract
 Updated: 2026-09-26
 Checkpoint: `[LayoutInterpretationRoom]+[PackageAndSurface]+[InterpretationData]`
+Implementation baseline/evidence: Implemented in `Production/Systems/LayoutInterpretationSystem/PackageAndSurface/`; Production promotion validated on 2026-09-26; Git checkpoint unknown.
 
 ## Purpose
 

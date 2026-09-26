@@ -1,18 +1,19 @@
 class_name PurposeCoveragePass
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ClaimAndZoning/Implementation/purpose_coverage_pass.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ClaimAndZoning/purpose_coverage_pass.gd"
 
 
 static func run(
 	map_data: MapData,
 	purpose: LayoutInterpretationSemantics.Purpose,
+	scale: GenerationSemantics.Scale,
 	purpose_catalog: InitialPurposeCatalog,
 	universal_catalog: UniversalAreaCatalog,
 	area_catalog: PurposeAreaCatalog,
 	random: RandomNumberGenerator = null
 ) -> PurposeCoverageResult:
-	var definition: LayoutPurposeDefinition = purpose_catalog.get_definition(purpose)
+	var definition: LayoutPurposeDefinition = purpose_catalog.get_definition(purpose, scale)
 	var effective_random: RandomNumberGenerator = random if random != null else RandomNumberGenerator.new()
 	if random == null:
 		effective_random.randomize()
@@ -30,7 +31,7 @@ static func run(
 		var requirement_claim_ids := PackedInt32Array()
 		for instance_index: int in range(count):
 			var claim_result: Dictionary = _claim_requirement_instance(
-				profile,
+				_seed_only_profile(profile),
 				requirement,
 				instance_index,
 				state,
@@ -47,6 +48,7 @@ static func run(
 			var claim: AreaClaim = claim_result["claim"]
 			requirement_claim_ids.append(claim.id)
 		claims_by_requirement[requirement.id] = requirement_claim_ids
+	_grow_required_areas(state, universal_catalog, area_catalog, effective_random)
 	_claim_generic_areas(state, area_catalog, effective_random)
 	var leftovers: Array[Vector2i] = []
 	for coordinate: Vector2i in state.geometry.floor_coordinates:
@@ -56,10 +58,50 @@ static func run(
 		purpose,
 		universal.geometry,
 		state,
-		universal.entrance_claim,
-		universal.boss_claim,
+		state.get_claim(universal.entrance_claim.id),
+		state.get_claim(universal.boss_claim.id),
 		leftovers
 	)
+
+
+static func _seed_only_profile(profile: LayoutAreaProfile) -> LayoutAreaProfile:
+	var minimum_tiles: int = 2_147_483_647
+	for footprint: Vector2i in profile.minimum_footprints:
+		minimum_tiles = min(minimum_tiles, footprint.x * footprint.y)
+	return LayoutAreaProfile.new(
+		profile.area_role,
+		profile.minimum_footprints,
+		LayoutAreaSemantics.GrowthMode.FLOOD,
+		minimum_tiles,
+		profile.maximum_bounding_size,
+		profile.bounding_window_may_rotate,
+		profile.permits_narrow_connections,
+		profile.minimum_wall_adjacent_sides,
+		profile.preferred_wall_adjacent_sides,
+		profile.preferences,
+		profile.tags,
+		profile.chain_unit_size,
+		profile.geometry_clone_source_role,
+		profile.preferred_companion_max_path_distance,
+		profile.companion_proximity_can_block
+	)
+
+
+static func _grow_required_areas(
+	state: AreaClaimState,
+	universal_catalog: UniversalAreaCatalog,
+	area_catalog: PurposeAreaCatalog,
+	random: RandomNumberGenerator
+) -> void:
+	for claim: AreaClaim in state.get_claims():
+		if claim.requirement_id == &"entrance":
+			continue
+		var profile: LayoutAreaProfile = (
+			universal_catalog.get_profile(claim.area_role)
+			if claim.requirement_id == &"boss"
+			else area_catalog.get_profile(claim.area_role)
+		)
+		ZoneClaimEngine.grow_existing_claim(profile, state, claim.id, random)
 
 
 static func _claim_requirement_instance(
@@ -106,40 +148,8 @@ static func _claim_requirement_instance(
 		target_claim_ids,
 		progression_target
 	)
-	if requirement.relationship_strength == LayoutInterpretationSemantics.RelationshipStrength.REQUIRED and not target_claim_ids.is_empty():
-		return _try_required_relationship_claim(profile, request, state, random)
 	var claim: AreaClaim = ZoneClaimEngine.try_claim(profile, state, request, random)
 	return {"state": state, "claim": claim} if claim != null else {}
-
-
-static func _try_required_relationship_claim(
-	profile: LayoutAreaProfile,
-	request: AreaClaimRequest,
-	state: AreaClaimState,
-	random: RandomNumberGenerator
-) -> Dictionary:
-	for origin: Vector2i in request.candidate_origins:
-		var trial: AreaClaimState = state.duplicate_state()
-		var single_request := AreaClaimRequest.new(
-			request.requirement_id,
-			[origin],
-			request.relationship_kind,
-			request.relationship_strength,
-			request.target_claim_ids,
-			request.progression_target_percent
-		)
-		var claim: AreaClaim = ZoneClaimEngine.try_claim(profile, trial, single_request, random)
-		if claim == null:
-			continue
-		var target_claims: Array[AreaClaim] = []
-		for target_id: int in request.target_claim_ids:
-			var target: AreaClaim = trial.get_claim(target_id)
-			if target != null:
-				target_claims.append(target)
-		var maximum_distance: int = 1 if request.relationship_kind == LayoutInterpretationSemantics.RelationshipKind.ADJACENT_REQUIREMENT else 2
-		if _minimum_claim_distance(claim, target_claims) <= maximum_distance:
-			return {"state": trial, "claim": claim}
-	return {}
 
 
 static func _claim_generic_areas(
@@ -229,15 +239,3 @@ static func _multi_source_distances(
 			distances[neighbor] = next_distance
 			queue.append(neighbor)
 	return distances
-
-
-static func _minimum_claim_distance(
-	claim: AreaClaim,
-	target_claims: Array[AreaClaim]
-) -> int:
-	var best: int = 2_147_483_647
-	for coordinate: Vector2i in claim.cells:
-		for target: AreaClaim in target_claims:
-			for target_coordinate: Vector2i in target.cells:
-				best = min(best, absi(coordinate.x - target_coordinate.x) + absi(coordinate.y - target_coordinate.y))
-	return best

@@ -1,11 +1,11 @@
 # Layout Interpretation Purpose Contract
-Updated: 2026-09-25
+Updated: 2026-09-26
 Checkpoint: `[LayoutInterpretationRoom]+[ArchitectureCatalog]+[PurposeContract]`
-Implementation baseline/evidence: Approved design contract only. No Layout Interpretation implementation exists; Git checkpoint is unknown.
+Implementation baseline/evidence: Implemented in `Production/Systems/LayoutInterpretationSystem/ArchitectureCatalog/`; Production promotion validated on 2026-09-26; Git checkpoint unknown.
 
 ## Rapid Shape
 
-Layout Interpretation receives completed generator-independent `MapData` plus one approved architectural purpose. It claims universal Areas first, then the purpose's required Areas in declared order, then distinct `GENERIC_AREA` claims from useful remaining floor. It describes geometry and meaning without changing map cells or placing content.
+Layout Interpretation receives completed generator-independent `MapData`, one approved architectural purpose, and the Scale used to generate that map. Purpose plus Scale resolves the required-Area program. It claims universal Areas first, then the resolved required Areas in declared order, then distinct `GENERIC_AREA` claims from useful remaining floor. It describes geometry and meaning without changing map cells or placing content.
 
 The initial catalog is clamped to six purposes: two for each current Map Generation Archetype. Occupant family does not define original architecture and is not an input to this contract.
 
@@ -31,6 +31,8 @@ After universal claims, the selected purpose's requirements execute in their dec
 No additional purpose belongs to the initial catalog.
 
 ## Ordered Purpose Requirements
+
+The lists below are the Medium baseline. Small removes requirements that do not fit its intended architectural program; Large expands repeated Areas. Area geometry contracts do not otherwise change by Scale.
 
 ### Prison
 
@@ -65,12 +67,14 @@ Multi-level Tower additions are deferred until multi-level layouts are an actual
 
 Purpose key: `GUARD_TOWER`
 
-1. `GUARD_POST_AREA` x1 near `ENTRANCE_AREA`.
-2. `ARMORY_AREA` x1 near `ENTRANCE_AREA`.
-3. `ARMORY_AREA` x1 pushed toward the middle of navigable Entrance-to-Boss progression.
-4. `BARRACKS_AREA` x1 adjacent to the middle Armory Area.
+1. `ARMORY_AREA` x1 near `ENTRANCE_AREA`.
+2. `ARMORY_AREA` x1 pushed toward the middle of navigable Entrance-to-Boss progression.
+3. `BARRACKS_AREA` x1 adjacent to the middle Armory Area.
+4. `GUARD_POST_AREA` x1 preferring `ENTRANCE_AREA` after the more constrained foundations are reserved.
 
 The initial contract requires exactly two Armories.
+
+All spatial relationships are placement preferences, not failure conditions. Within two tiles, adjacency, and progression targets rank candidate geometry; when the ideal position is unavailable, the closest valid placement is accepted. Required Area presence and multiplicity remain hard.
 
 ### Burrow / Nest
 
@@ -90,6 +94,19 @@ Purpose key: `MINE_SHAFT`
 3. `EQUIPMENT_STORAGE_AREA` x2, distributed at target positions near 35% and 70% of navigable Entrance-to-Boss progression.
 
 The percentage targets are approximate placement intent, not exact coordinate-distance requirements.
+
+## Scale Variations
+
+Universal `ENTRANCE_AREA` and `BOSS_AREA` remain exactly once at every Scale.
+
+| Purpose | Small | Medium | Large |
+|---|---|---|---|
+| `PRISON` | Entrance Guard x1; Cell Area x1; no Cell-area Guard | Baseline | Entrance Guard x1; Cell-area Guards x2; Cell Areas x2-4 around those Guards |
+| `CATACOMB` | Baseline | Baseline | Shrines x2; Burial Chambers x2-5 |
+| `MAGE_TOWER` | Library x1; Alchemy Lab x1; no Scrying Chamber | Baseline | Libraries x2; Scrying Chamber x1; Alchemy Lab x1 |
+| `GUARD_TOWER` | Entrance Armory x1; Entrance Guard x1; no middle Armory or Barracks | Baseline | Baseline plus a second Barracks; both Barracks prefer the middle Armory |
+| `BURROW_NEST` | Baseline | Baseline | Nesting/Resting x2; Food Storage x2 |
+| `MINE_SHAFT` | Entrance Guard x1; Depot x1; Equipment Storage x1 near 50% progression | Baseline | Entrance Guard x1; Depot x1; Equipment Storage x3 near 25%, 50%, and 75% progression |
 
 ## Generic Completion
 

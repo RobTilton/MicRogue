@@ -1,7 +1,7 @@
 # Package And Surface Current State
 Updated: 2026-09-26
-Checkpoint: `[LayoutInterpretationRoom]+[PackageAndSurface]+[PublicEntryPoint]`
-Implementation baseline/evidence: Room-local mutable interpretation package and seedless public entry point validated with Godot 4.4.1; no Production implementation or Git checkpoint is recorded here.
+Checkpoint: `[LayoutInterpretationRoom]+[PackageAndSurface]+[SystemIntegration]`
+Implementation baseline/evidence: Complete Room-local generator-to-interpreter pipeline validated with Godot 4.4.1; no Production promotion or Git checkpoint is recorded here.
 
 ## Implemented Surface
 
@@ -9,9 +9,11 @@ Implementation baseline/evidence: Room-local mutable interpretation package and 
 - [`Implementation/interpretation_zone.gd`](Implementation/interpretation_zone.gd): mutable semantic Zone record with protected coordinate replacement and automatic bounds refresh.
 - [`Tests/test_interpretation_data.gd`](Tests/test_interpretation_data.gd): composed package construction and mutation suite.
 - [`InterpretationDataContract.md`](InterpretationDataContract.md): authoritative package and mutation contract.
-- [`Implementation/layout_interpreter.gd`](Implementation/layout_interpreter.gd): two-argument public composition surface with internally cached catalogs and internal per-call randomness.
+- [`Implementation/layout_interpreter.gd`](Implementation/layout_interpreter.gd): three-argument map/purpose/Scale public composition surface with internally cached catalogs and internal per-call randomness.
 - [`Tests/test_layout_interpreter.gd`](Tests/test_layout_interpreter.gd): successful full composition, exact map carriage, physical-cell preservation, output surface, and no-partial failure checks.
 - [`PublicEntryPointContract.md`](PublicEntryPointContract.md): authoritative caller boundary.
+- [`Tests/test_system_integration.gd`](Tests/test_system_integration.gd): hard 18-run real-generator integration gate.
+- [`SystemIntegrationEvidence.md`](SystemIntegrationEvidence.md): retained matrix results, timing evidence, and gate-driven corrections.
 
 ## Construction
 
@@ -34,7 +36,7 @@ Door detection, disconnected-piece detection, destination choice, Zone creation/
 ## Public Entry Point
 
 ```gdscript
-var data: InterpretationData = LayoutInterpreter.interpret(map_data, purpose)
+var data: InterpretationData = LayoutInterpreter.interpret(map_data, purpose, scale)
 ```
 
 The public caller supplies no catalogs, passes, tuning values, random generator, or seed. Catalogs are cached internally after class initialization. Every interpretation call owns one randomized internal generator and returns either the complete mutable blueprint or `null`.
@@ -55,4 +57,6 @@ Executed with Godot 4.4.1 on 2026-09-26:
 - The public failure fixture emitted the expected Entrance refusal, returned `null`, and preserved physical cells.
 - Final public-surface regressions passed Geometry Analysis (13), Zone Claim (32), Universal Pass (17), Purpose/Coverage (84), Interpretation Data (34), and Public Entry Point (11): 191 checks total. The final composed `45x45` observation completed in `782,633 microseconds`; expected negative fixtures continued to fail loudly.
 
-Composed system integration remains the final planned Box.
+The current active System Integration matrix passed 168 checks across 12 of 12 Medium/Large generator-purpose-scale runs after Small generation was pinned for future rework. The interpretation catalog still retains all 18 purpose/Scale definitions and passed 187 catalog checks. Earlier 18-run and Small stress observations remain historical evidence, not current Small support.
+
+The Room implementation is complete and awaiting human system acceptance or separately authorized Production promotion.

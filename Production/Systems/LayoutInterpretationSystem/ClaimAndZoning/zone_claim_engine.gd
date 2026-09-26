@@ -1,7 +1,7 @@
 class_name ZoneClaimEngine
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ClaimAndZoning/Implementation/zone_claim_engine.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ClaimAndZoning/zone_claim_engine.gd"
 const EIGHT_DIRECTIONS: Array[Vector2i] = [
 	Vector2i(-1, -1), Vector2i(0, -1), Vector2i(1, -1),
 	Vector2i(-1, 0), Vector2i(1, 0),
@@ -35,7 +35,7 @@ static func try_claim(
 				state,
 				effective_random
 			)
-			if claimed_cells.is_empty():
+			if claimed_cells.size() < engine._minimum_required_tiles(profile):
 				continue
 			var claim: AreaClaim = state.apply_complete_claim(
 				profile.area_role,
@@ -51,6 +51,25 @@ static func try_claim(
 			if claim != null:
 				return claim
 	return null
+
+
+static func grow_existing_claim(
+	profile: LayoutAreaProfile,
+	state: AreaClaimState,
+	claim_id: int,
+	random: RandomNumberGenerator
+) -> AreaClaim:
+	var claim: AreaClaim = state.get_claim(claim_id)
+	if claim == null or profile.growth_mode == LayoutAreaSemantics.GrowthMode.NONE:
+		return claim
+	var engine := ZoneClaimEngine.new()
+	var seed_option: Dictionary = {
+		"top_left": claim.bounds.position,
+		"size": claim.bounds.size,
+		"cells": claim.cells,
+	}
+	var grown_cells: Array[Vector2i] = engine._build_complete_claim(seed_option, profile, state, random)
+	return state.replace_claim_cells(claim_id, grown_cells)
 
 
 func _ordered_origins(
@@ -131,7 +150,20 @@ func _valid_seed_options(
 				if not _meets_minimum_wall_sides(top_left, footprint, profile.minimum_wall_adjacent_sides, state.geometry):
 					continue
 				options.append({"top_left": top_left, "size": footprint, "cells": cells})
+	if options.is_empty() and not state.is_claimed(origin) and profile.growth_mode == LayoutAreaSemantics.GrowthMode.FLOOD and profile.chain_unit_size == Vector2i.ZERO and (
+		LayoutAreaSemantics.Preference.BALANCED_RECTANGLE in profile.preferences
+		or LayoutAreaSemantics.Preference.COMPACT in profile.preferences
+		or LayoutAreaSemantics.Preference.SPRAWLING in profile.preferences
+	):
+		options.append({"top_left": origin, "size": Vector2i.ONE, "cells": [origin]})
 	return options
+
+
+func _minimum_required_tiles(profile: LayoutAreaProfile) -> int:
+	var minimum_tiles: int = 2_147_483_647
+	for footprint: Vector2i in profile.minimum_footprints:
+		minimum_tiles = min(minimum_tiles, footprint.x * footprint.y)
+	return minimum_tiles
 
 
 func _build_complete_claim(

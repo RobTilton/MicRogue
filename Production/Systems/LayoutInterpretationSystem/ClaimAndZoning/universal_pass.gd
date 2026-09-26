@@ -1,7 +1,7 @@
 class_name UniversalPass
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ClaimAndZoning/Implementation/universal_pass.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ClaimAndZoning/universal_pass.gd"
 
 
 static func run(
@@ -34,7 +34,7 @@ static func run(
 		return distance_a > distance_b
 	)
 	var boss: AreaClaim = ZoneClaimEngine.try_claim(
-		universal_catalog.get_profile(LayoutInterpretationSemantics.AreaRole.BOSS_AREA),
+		_seed_only_profile(universal_catalog.get_profile(LayoutInterpretationSemantics.AreaRole.BOSS_AREA)),
 		state,
 		AreaClaimRequest.new(&"boss", boss_origins),
 		effective_random
@@ -57,3 +57,19 @@ static func _maximum_distance(distances: Dictionary) -> int:
 	for distance: Variant in distances.values():
 		maximum = max(maximum, int(distance))
 	return maximum
+
+
+static func _seed_only_profile(profile: LayoutAreaProfile) -> LayoutAreaProfile:
+	return LayoutAreaProfile.new(
+		profile.area_role,
+		profile.minimum_footprints,
+		LayoutAreaSemantics.GrowthMode.NONE,
+		0,
+		Vector2i.ZERO,
+		false,
+		false,
+		profile.minimum_wall_adjacent_sides,
+		profile.preferred_wall_adjacent_sides,
+		profile.preferences,
+		profile.tags
+	)

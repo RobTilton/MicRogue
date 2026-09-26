@@ -37,6 +37,7 @@ func _test_all_purposes(
 		var result: PurposeCoverageResult = PurposeCoveragePass.run(
 			map_data,
 			purpose,
+			GenerationSemantics.Scale.MEDIUM,
 			purpose_catalog,
 			universal_catalog,
 			area_catalog,
@@ -54,8 +55,8 @@ func _test_all_purposes(
 		_check(result.coverage_ratio > 0.0 and result.coverage_ratio <= 1.0, "purpose %d coverage ratio is valid" % purpose)
 		_check(map_data.cells == original_cells, "purpose %d does not mutate MapData" % purpose)
 		_check(_claims_are_exclusive(result), "purpose %d claims remain exclusive" % purpose)
-		_check(_required_counts_match(result, purpose_catalog.get_definition(purpose)), "purpose %d required counts match selected ranges" % purpose)
-		_check(_required_relationships_resolve(result), "purpose %d required relationship metadata resolves" % purpose)
+		_check(_required_counts_match(result, purpose_catalog.get_definition(purpose, GenerationSemantics.Scale.MEDIUM)), "purpose %d required counts match selected ranges" % purpose)
+		_check(_relationship_targets_resolve(result), "purpose %d relationship metadata resolves" % purpose)
 		_check(_progression_claims_follow_distance_bands(result), "purpose %d progression claims follow Entrance-distance bands" % purpose)
 		if purpose == LayoutInterpretationSemantics.Purpose.MINE_SHAFT:
 			_check(_progression_targets(result, &"equipment_storage") == PackedInt32Array([35, 70]), "Mine equipment progression metadata matches")
@@ -66,11 +67,12 @@ func _test_required_failure_is_atomic(
 	universal_catalog: UniversalAreaCatalog,
 	area_catalog: PurposeAreaCatalog
 ) -> void:
-	var map_data: MapData = _open_map(13, 13)
+	var map_data: MapData = _open_map(9, 9)
 	var original_cells: PackedInt32Array = map_data.cells.duplicate()
 	var result: PurposeCoverageResult = PurposeCoveragePass.run(
 		map_data,
 		LayoutInterpretationSemantics.Purpose.GUARD_TOWER,
+		GenerationSemantics.Scale.MEDIUM,
 		purpose_catalog,
 		universal_catalog,
 		area_catalog,
@@ -132,9 +134,9 @@ func _required_counts_match(
 	return true
 
 
-func _required_relationships_resolve(result: PurposeCoverageResult) -> bool:
+func _relationship_targets_resolve(result: PurposeCoverageResult) -> bool:
 	for claim: AreaClaim in result.claim_state.get_claims():
-		if claim.relationship_strength != LayoutInterpretationSemantics.RelationshipStrength.REQUIRED:
+		if claim.relationship_kind == LayoutInterpretationSemantics.RelationshipKind.NONE or claim.relationship_kind == LayoutInterpretationSemantics.RelationshipKind.PROGRESSION_TARGETS:
 			continue
 		if claim.target_claim_ids.is_empty():
 			return false

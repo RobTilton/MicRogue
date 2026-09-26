@@ -17,6 +17,7 @@ func _init() -> void:
 		_test_guard_tower(catalog)
 		_test_burrow_nest(catalog)
 		_test_mine_shaft(catalog)
+		_test_scale_tiers(catalog)
 		_test_detached_lookup(catalog)
 		_test_unsupported_lookup(catalog)
 	if _failures == 0:
@@ -34,7 +35,7 @@ func _test_complete_keys(catalog: InitialPurposeCatalog) -> void:
 
 
 func _test_prison(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.DUNGEON, 3, "prison")
 	_check_requirement(definition.requirements[0], &"entrance_guard", LayoutInterpretationSemantics.AreaRole.GUARD_POST_AREA, 1, 1)
 	_check(definition.requirements[0].target_area_role == LayoutInterpretationSemantics.AreaRole.ENTRANCE_AREA, "prison entrance guard targets Entrance")
@@ -44,14 +45,14 @@ func _test_prison(catalog: InitialPurposeCatalog) -> void:
 
 
 func _test_catacomb(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.CATACOMB)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.CATACOMB, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.DUNGEON, 2, "catacomb")
 	_check_requirement(definition.requirements[0], &"shrine", LayoutInterpretationSemantics.AreaRole.SHRINE_AREA, 1, 1)
 	_check_requirement(definition.requirements[1], &"burial_chambers", LayoutInterpretationSemantics.AreaRole.BURIAL_CHAMBER_AREA, 1, 4)
 
 
 func _test_mage_tower(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.MAGE_TOWER)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.MAGE_TOWER, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.TOWER, 3, "mage tower")
 	_check_requirement(definition.requirements[0], &"library", LayoutInterpretationSemantics.AreaRole.LIBRARY_AREA, 1, 1)
 	_check_requirement(definition.requirements[1], &"scrying_chamber", LayoutInterpretationSemantics.AreaRole.SCRYING_CHAMBER_AREA, 1, 1)
@@ -59,18 +60,18 @@ func _test_mage_tower(catalog: InitialPurposeCatalog) -> void:
 
 
 func _test_guard_tower(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.GUARD_TOWER)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.GUARD_TOWER, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.TOWER, 4, "guard tower")
-	_check_requirement(definition.requirements[0], &"entrance_guard", LayoutInterpretationSemantics.AreaRole.GUARD_POST_AREA, 1, 1)
-	_check_requirement(definition.requirements[1], &"entrance_armory", LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, 1, 1)
-	_check_requirement(definition.requirements[2], &"middle_armory", LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, 1, 1)
-	_check(definition.requirements[2].progression_targets_percent == PackedInt32Array([50]), "guard tower middle Armory targets 50 percent")
-	_check_requirement(definition.requirements[3], &"barracks", LayoutInterpretationSemantics.AreaRole.BARRACKS_AREA, 1, 1)
-	_check(definition.requirements[3].target_requirement_id == &"middle_armory", "guard tower Barracks targets middle Armory")
+	_check_requirement(definition.requirements[0], &"entrance_armory", LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, 1, 1)
+	_check_requirement(definition.requirements[1], &"middle_armory", LayoutInterpretationSemantics.AreaRole.ARMORY_AREA, 1, 1)
+	_check(definition.requirements[1].progression_targets_percent == PackedInt32Array([50]), "guard tower middle Armory targets 50 percent")
+	_check_requirement(definition.requirements[2], &"barracks", LayoutInterpretationSemantics.AreaRole.BARRACKS_AREA, 1, 1)
+	_check(definition.requirements[2].target_requirement_id == &"middle_armory", "guard tower Barracks targets middle Armory")
+	_check_requirement(definition.requirements[3], &"entrance_guard", LayoutInterpretationSemantics.AreaRole.GUARD_POST_AREA, 1, 1)
 
 
 func _test_burrow_nest(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.BURROW_NEST)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.BURROW_NEST, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.CAVE, 2, "burrow/nest")
 	_check_requirement(definition.requirements[0], &"nesting_resting", LayoutInterpretationSemantics.AreaRole.NESTING_RESTING_AREA, 1, 1)
 	_check(definition.requirements[0].progression_targets_percent == PackedInt32Array([50]), "burrow nesting/resting targets 50 percent")
@@ -78,7 +79,7 @@ func _test_burrow_nest(catalog: InitialPurposeCatalog) -> void:
 
 
 func _test_mine_shaft(catalog: InitialPurposeCatalog) -> void:
-	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.MINE_SHAFT)
+	var definition: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.MINE_SHAFT, GenerationSemantics.Scale.MEDIUM)
 	_check_definition(definition, LayoutInterpretationSemantics.GeometryArchetype.CAVE, 3, "mine shaft")
 	_check_requirement(definition.requirements[0], &"entrance_guard", LayoutInterpretationSemantics.AreaRole.GUARD_POST_AREA, 1, 1)
 	_check_requirement(definition.requirements[1], &"depot", LayoutInterpretationSemantics.AreaRole.DEPOT_AREA, 1, 1)
@@ -86,17 +87,60 @@ func _test_mine_shaft(catalog: InitialPurposeCatalog) -> void:
 	_check(definition.requirements[2].progression_targets_percent == PackedInt32Array([35, 70]), "mine equipment storage targets 35 and 70 percent")
 
 
+func _test_scale_tiers(catalog: InitialPurposeCatalog) -> void:
+	for purpose: LayoutInterpretationSemantics.Purpose in LayoutInterpretationSemantics.required_purposes():
+		for scale: GenerationSemantics.Scale in InitialPurposeCatalog.supported_catalog_scales():
+			var definition: LayoutPurposeDefinition = catalog.get_definition(purpose, scale)
+			_check(definition != null, "purpose/scale %d/%d exists" % [purpose, scale])
+			if definition != null:
+				_check(definition.scale == scale, "purpose/scale %d/%d preserves scale" % [purpose, scale])
+
+	var prison_small := catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON, GenerationSemantics.Scale.SMALL)
+	_check(prison_small.requirements.size() == 2, "small Prison omits Cell-area Guard")
+	_check_requirement(prison_small.requirements[1], &"cell_areas", LayoutInterpretationSemantics.AreaRole.CELL_AREA, 1, 1)
+	var prison_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON, GenerationSemantics.Scale.LARGE)
+	_check_requirement(prison_large.requirements[1], &"cell_area_guard", LayoutInterpretationSemantics.AreaRole.GUARD_POST_AREA, 2, 2)
+	_check_requirement(prison_large.requirements[2], &"cell_areas", LayoutInterpretationSemantics.AreaRole.CELL_AREA, 2, 4)
+
+	var catacomb_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.CATACOMB, GenerationSemantics.Scale.LARGE)
+	_check_requirement(catacomb_large.requirements[0], &"shrine", LayoutInterpretationSemantics.AreaRole.SHRINE_AREA, 2, 2)
+	_check_requirement(catacomb_large.requirements[1], &"burial_chambers", LayoutInterpretationSemantics.AreaRole.BURIAL_CHAMBER_AREA, 2, 5)
+
+	var mage_small := catalog.get_definition(LayoutInterpretationSemantics.Purpose.MAGE_TOWER, GenerationSemantics.Scale.SMALL)
+	_check(mage_small.requirements.size() == 2, "small Mage Tower omits Scrying Chamber")
+	_check(mage_small.requirements[1].id == &"alchemy_lab", "small Mage Tower retains Alchemy Lab")
+	var mage_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.MAGE_TOWER, GenerationSemantics.Scale.LARGE)
+	_check_requirement(mage_large.requirements[0], &"library", LayoutInterpretationSemantics.AreaRole.LIBRARY_AREA, 2, 2)
+
+	var guard_small := catalog.get_definition(LayoutInterpretationSemantics.Purpose.GUARD_TOWER, GenerationSemantics.Scale.SMALL)
+	_check(guard_small.requirements.size() == 2, "small Guard Tower has two requirements")
+	_check(guard_small.requirements[0].id == &"entrance_armory" and guard_small.requirements[1].id == &"entrance_guard", "small Guard Tower omits middle Armory and Barracks")
+	var guard_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.GUARD_TOWER, GenerationSemantics.Scale.LARGE)
+	_check_requirement(guard_large.requirements[2], &"barracks", LayoutInterpretationSemantics.AreaRole.BARRACKS_AREA, 2, 2)
+
+	var nest_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.BURROW_NEST, GenerationSemantics.Scale.LARGE)
+	_check(nest_large.requirements.size() == 3, "large Burrow/Nest doubles both Area roles")
+	_check_requirement(nest_large.requirements[2], &"food_storage", LayoutInterpretationSemantics.AreaRole.FOOD_STORAGE_AREA, 2, 2)
+
+	var mine_small := catalog.get_definition(LayoutInterpretationSemantics.Purpose.MINE_SHAFT, GenerationSemantics.Scale.SMALL)
+	_check_requirement(mine_small.requirements[2], &"equipment_storage", LayoutInterpretationSemantics.AreaRole.EQUIPMENT_STORAGE_AREA, 1, 1)
+	_check(mine_small.requirements[2].progression_targets_percent == PackedInt32Array([50]), "small Mine has one middle Equipment Storage")
+	var mine_large := catalog.get_definition(LayoutInterpretationSemantics.Purpose.MINE_SHAFT, GenerationSemantics.Scale.LARGE)
+	_check_requirement(mine_large.requirements[2], &"equipment_storage", LayoutInterpretationSemantics.AreaRole.EQUIPMENT_STORAGE_AREA, 3, 3)
+	_check(mine_large.requirements[2].progression_targets_percent == PackedInt32Array([25, 50, 75]), "large Mine targets 25, 50, and 75 percent")
+
+
 func _test_detached_lookup(catalog: InitialPurposeCatalog) -> void:
-	var first: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON)
+	var first: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON, GenerationSemantics.Scale.MEDIUM)
 	first.requirements[0].minimum_count = 99
 	first.requirements.append(LayoutAreaRequirement.new(&"mutation", LayoutInterpretationSemantics.AreaRole.GENERIC_AREA))
-	var second: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON)
+	var second: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.PRISON, GenerationSemantics.Scale.MEDIUM)
 	_check(second.requirements.size() == 3, "lookup returns detached requirement array")
 	_check(second.requirements[0].minimum_count == 1, "lookup returns detached requirement objects")
 
 
 func _test_unsupported_lookup(catalog: InitialPurposeCatalog) -> void:
-	var unsupported: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.INVALID)
+	var unsupported: LayoutPurposeDefinition = catalog.get_definition(LayoutInterpretationSemantics.Purpose.INVALID, GenerationSemantics.Scale.MEDIUM)
 	_check(unsupported == null, "unsupported lookup returns null")
 
 

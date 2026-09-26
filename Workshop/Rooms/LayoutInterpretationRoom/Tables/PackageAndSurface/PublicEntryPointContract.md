@@ -1,14 +1,15 @@
 # Public Entry Point Contract
 Updated: 2026-09-26
 Checkpoint: `[LayoutInterpretationRoom]+[PackageAndSurface]+[PublicEntryPoint]`
+Implementation baseline/evidence: `Production/Systems/LayoutInterpretationSystem/PackageAndSurface/layout_interpreter.gd`; active 12-case integration validated on 2026-09-26; Git checkpoint unknown.
 
 ## Surface
 
 ```gdscript
-var data: InterpretationData = LayoutInterpreter.interpret(map_data, purpose)
+var data: InterpretationData = LayoutInterpreter.interpret(map_data, purpose, scale)
 ```
 
-The caller supplies only the completed `MapData` and one supported architectural/site purpose. The call returns a mutable `InterpretationData` blueprint or `null` when required Areas cannot be satisfied.
+The caller supplies only the completed `MapData`, one supported architectural/site purpose, and the Scale used to generate that map. The call returns a mutable `InterpretationData` blueprint or `null` when required Areas cannot be satisfied.
 
 ## Ownership
 

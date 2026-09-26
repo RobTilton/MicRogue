@@ -1,7 +1,7 @@
 class_name UniversalAreaCatalog
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ZoneCatalog/Implementation/universal_area_catalog.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ZoneCatalog/universal_area_catalog.gd"
 
 var _profiles: Dictionary = {}
 

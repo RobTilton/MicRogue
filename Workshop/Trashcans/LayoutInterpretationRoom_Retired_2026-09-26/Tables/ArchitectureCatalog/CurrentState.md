@@ -1,11 +1,11 @@
 # Initial Purpose Catalog Current State
-Updated: 2026-09-25
+Updated: 2026-09-26
 Checkpoint: `[LayoutInterpretationRoom]+[ArchitectureCatalog]+[InitialPurposes]`
 Implementation baseline/evidence: Room-local GDScript implementation validated with Godot 4.4.1; no Production implementation or Git checkpoint is recorded here.
 
 ## Rapid Shape
 
-The Initial Purpose Catalog is a private, code-owned, generator-independent catalog for the six approved architectural purposes. A caller supplies an explicit purpose key; the catalog returns a detached typed definition containing that purpose's ordered Area requirements, counts, identities, and purpose-level relationships.
+The Initial Purpose Catalog is a private, code-owned, generator-independent catalog for the six approved architectural purposes across Small, Medium, and Large Scale. A caller supplies explicit purpose and Scale keys; the catalog returns a detached typed definition containing that combination's ordered Area requirements, counts, identities, and purpose-level relationships.
 
 The catalog does not infer purpose from `MapData`, own Area geometry, or claim floor. It is ready as a validated Room-local dependency for later Layout Interpretation components.
 
@@ -28,11 +28,12 @@ Conceptual use:
 ```gdscript
 var catalog: InitialPurposeCatalog = InitialPurposeCatalog.create()
 var definition: LayoutPurposeDefinition = catalog.get_definition(
-	LayoutInterpretationSemantics.Purpose.PRISON
+	LayoutInterpretationSemantics.Purpose.PRISON,
+	GenerationSemantics.Scale.SMALL
 )
 ```
 
-`create()` constructs all six definitions, validates the complete catalog before storing any entry, and returns `null` after a loud error if validation fails. `get_definition()` rejects unsupported keys loudly and returns a deep copy for supported keys. Callers cannot mutate the stored catalog through a returned definition.
+`create()` constructs all eighteen purpose/Scale definitions, validates the complete catalog before storing any entry, and returns `null` after a loud error if validation fails. `get_definition()` rejects unsupported combinations loudly and returns a deep copy for supported keys. Callers cannot mutate the stored catalog through a returned definition.
 
 ## Component Contracts
 
@@ -56,11 +57,11 @@ Relationship targets are explicit. Requirement-to-requirement relationships may 
 
 ### LayoutPurposeDefinition
 
-Owns one purpose key, its approved Geometry Archetype grouping, and an ordered typed requirement array. Construction and lookup duplicate the requirement records.
+Owns one purpose key, Scale, approved Geometry Archetype grouping, and an ordered typed requirement array. Construction and lookup duplicate the requirement records.
 
 ### InitialPurposeCatalog
 
-Owns the six approved definitions and validates:
+Owns the eighteen approved purpose/Scale definitions and validates:
 
 - exact catalog completeness and uniqueness;
 - supported Purpose and Area-role keys;
@@ -75,14 +76,14 @@ The catalog contains no Area shapes, growth limits, tags, route logic, floor dat
 
 ## Validation And Current Limits
 
-Executed with Godot 4.4.1 on 2026-09-25:
+Executed with Godot 4.4.1 on 2026-09-26:
 
 1. Headless editor import completed successfully and registered all four implementation classes plus the test script.
-2. `test_initial_purpose_catalog.gd` passed 103 checks covering all six keys, exact ordered roles and counts, approved Geometry Archetype mapping, Prison relationships, Guard Tower relationships and midpoint, Burrow midpoint, Mine Shaft 35%/70% targets, detached lookup state, and unsupported-purpose refusal.
+2. `test_initial_purpose_catalog.gd` passed 187 checks covering all eighteen purpose/Scale combinations, exact tiered roles and counts, approved Geometry Archetype mapping, relationships and progression targets, detached lookup state, and unsupported-combination refusal.
 3. The unsupported-purpose check intentionally emitted the exact-origin error from `initial_purpose_catalog.gd`, returned `null`, and did not change the successful test exit.
 
 Current limits:
 
 - This is Room-local implementation, not Production runtime authority.
-- Area-profile objects, tags, geometry requirements, universal-Area implementation, route analysis, floor claims, generic partitioning, result packaging, and public caller do not exist yet.
+- Scale-tiered catalog resolution is implemented and consumed by the complete Room-local interpreter pipeline.
 - Human implementation acceptance and Production adoption remain pending.

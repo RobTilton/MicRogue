@@ -1,7 +1,7 @@
 class_name PurposeAreaCatalog
 extends RefCounted
 
-const ORIGIN: String = "Workshop/Rooms/LayoutInterpretationRoom/Tables/ZoneCatalog/Implementation/purpose_area_catalog.gd"
+const ORIGIN: String = "Production/Systems/LayoutInterpretationSystem/ZoneCatalog/purpose_area_catalog.gd"
 
 var _profiles: Dictionary = {}
 
@@ -36,12 +36,13 @@ func validate_purpose_catalog(purpose_catalog: InitialPurposeCatalog) -> bool:
 	if purpose_catalog == null:
 		return _refuse("purpose catalog is null.")
 	for purpose: LayoutInterpretationSemantics.Purpose in LayoutInterpretationSemantics.required_purposes():
-		var definition: LayoutPurposeDefinition = purpose_catalog.get_definition(purpose)
-		if definition == null:
-			return _refuse("purpose %d has no definition." % purpose)
-		for requirement: LayoutAreaRequirement in definition.requirements:
-			if not _profiles.has(requirement.area_role):
-				return _refuse("purpose %d references missing Area role %d." % [purpose, requirement.area_role])
+		for scale: GenerationSemantics.Scale in InitialPurposeCatalog.supported_catalog_scales():
+			var definition: LayoutPurposeDefinition = purpose_catalog.get_definition(purpose, scale)
+			if definition == null:
+				return _refuse("purpose/scale %d/%d has no definition." % [purpose, scale])
+			for requirement: LayoutAreaRequirement in definition.requirements:
+				if not _profiles.has(requirement.area_role):
+					return _refuse("purpose/scale %d/%d references missing Area role %d." % [purpose, scale, requirement.area_role])
 	return true
 
 
@@ -130,7 +131,7 @@ func _alchemy_lab() -> LayoutAreaProfile:
 func _armory() -> LayoutAreaProfile:
 	return _profile(
 		LayoutInterpretationSemantics.AreaRole.ARMORY_AREA,
-		[Vector2i(5, 5)], 36, Vector2i(8, 8), false, false,
+		[Vector2i(3, 3)], 36, Vector2i(8, 8), false, false,
 		[LayoutAreaSemantics.Preference.BALANCED_RECTANGLE],
 		[LayoutAreaSemantics.Tag.LOOTABLE, LayoutAreaSemantics.Tag.TRAPPED, LayoutAreaSemantics.Tag.ENEMY],
 		Vector2i.ZERO, LayoutInterpretationSemantics.AreaRole.INVALID, 2
@@ -167,8 +168,8 @@ func _food_storage() -> LayoutAreaProfile:
 func _depot() -> LayoutAreaProfile:
 	return _profile(
 		LayoutInterpretationSemantics.AreaRole.DEPOT_AREA,
-		[Vector2i(5, 5)], 40, Vector2i(12, 12), false, false,
-		[LayoutAreaSemantics.Preference.COMPACT, LayoutAreaSemantics.Preference.MINIMIZE_WALL_CONTACT],
+		[Vector2i(3, 3)], 40, Vector2i(15, 15), false, true,
+		[LayoutAreaSemantics.Preference.SPRAWLING],
 		[LayoutAreaSemantics.Tag.CROSS_FAMILY_ELEMENTAL]
 	)
 
@@ -176,7 +177,7 @@ func _depot() -> LayoutAreaProfile:
 func _equipment_storage() -> LayoutAreaProfile:
 	return _profile(
 		LayoutInterpretationSemantics.AreaRole.EQUIPMENT_STORAGE_AREA,
-		[Vector2i(5, 5)], 36, Vector2i(8, 8), false, false,
+		[Vector2i(3, 3)], 36, Vector2i(8, 8), false, false,
 		[LayoutAreaSemantics.Preference.BALANCED_RECTANGLE],
 		[LayoutAreaSemantics.Tag.LOOTABLE], Vector2i.ZERO,
 		LayoutInterpretationSemantics.AreaRole.ARMORY_AREA

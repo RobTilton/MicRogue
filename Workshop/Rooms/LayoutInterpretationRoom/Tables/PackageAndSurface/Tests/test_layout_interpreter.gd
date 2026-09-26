@@ -23,7 +23,8 @@ func _test_public_composition() -> void:
 	var started_microseconds: int = Time.get_ticks_usec()
 	var data: InterpretationData = LayoutInterpreter.interpret(
 		map_data,
-		LayoutInterpretationSemantics.Purpose.MAGE_TOWER
+		LayoutInterpretationSemantics.Purpose.MAGE_TOWER,
+		GenerationSemantics.Scale.MEDIUM
 	)
 	var elapsed_microseconds: int = Time.get_ticks_usec() - started_microseconds
 	_check(data != null, "public interpretation succeeds")
@@ -45,7 +46,8 @@ func _test_failure_surface() -> void:
 	var original_cells: PackedInt32Array = map_data.cells.duplicate()
 	var data: InterpretationData = LayoutInterpreter.interpret(
 		map_data,
-		LayoutInterpretationSemantics.Purpose.MAGE_TOWER
+		LayoutInterpretationSemantics.Purpose.MAGE_TOWER,
+		GenerationSemantics.Scale.MEDIUM
 	)
 	_check(data == null, "unsatisfied interpretation returns null")
 	_check(map_data.cells == original_cells, "failed public call preserves physical cells")

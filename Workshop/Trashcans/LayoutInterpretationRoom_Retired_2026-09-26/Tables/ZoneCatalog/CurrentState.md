@@ -74,6 +74,8 @@ The catalog implements the approved data for:
 - Cell and Burial Chamber chain-capacity geometry within `12x12`; Burial Chamber copies geometry only and adds `SWARM` independently.
 - Shrine, Library, Scrying Chamber, Alchemy Lab, Armory, Barracks, Nesting/Resting, Food Storage, Depot, and Equipment Storage.
 - Equipment Storage geometry cloned from Armory without Armory tags or companion behavior.
+- Armory and cloned Equipment Storage use a `3x3` minimum foundation, 36-tile cap, and `8x8` window.
+- Depot uses a `3x3` minimum foundation, 40-tile cap, `15x15` window, sprawling growth through narrow connections, and no wall-contact preference.
 - Generic Area with a `2x2` seed, 30-tile cap, no bounding window, narrow-chain traversal, and no forced remainder absorption.
 
 The shared profile schema now expresses optional rotating non-square bounding windows, chain-unit geometry, geometry-clone provenance, non-blocking companion proximity, all approved preferences, and all approved tags. `NO_LIGHT` remains a distinct invariant tag value.

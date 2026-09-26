@@ -20,7 +20,7 @@ var map_data: MapData = GeneratorCaller.make_map(
 All three semantic values are mandatory. `Standard` is explicit and is never inferred. Supported values are:
 
 - Archetype: Dungeon, Tower, Cave.
-- Scale: Small, Medium, Large.
+- Scale: Medium, Large. Small is pinned from active requests for future rework; its enum and calibration values are retained.
 - Geometry Modifier: Exposed, Standard, Confined.
 
 A successful call returns detached `MapData` containing `width`, `height`, and row-major `cells`. The authoritative cell legend is `ABYSS = 0`, `FLOOR = 1`, and `WALL = 2`; `cell_legend()` exposes the same mapping. Failure is loud, returns `null`, and never returns partial data.
@@ -63,11 +63,11 @@ Starter Scale data:
 
 | Scale | Raw field | Cut radius | Room count | Max-radius adjustment | Tax multiplier |
 |---|---:|---:|---:|---:|---:|
-| Small | `41 × 31` | `10` | `44` | `-2` | `0.9` |
+| Small (pinned) | `41 × 31` | `10` | `44` | `-2` | `0.9` |
 | Medium | `91 × 63` | `15` | `100` | `0` | `1.0` |
 | Large | `141 × 95` | `20` | `176` | `+2` | `1.1` |
 
-Small and Large room counts remain provisional calibration values. Changes belong in `StarterGenerationCatalog`; resolver logic should not absorb calibration data.
+Small is not currently requestable. Its preserved calibration row is future-rework context, not an active runtime promise. Large room count remains provisional calibration data. Changes belong in `StarterGenerationCatalog`; resolver logic should not absorb calibration data.
 
 Modifier data:
 

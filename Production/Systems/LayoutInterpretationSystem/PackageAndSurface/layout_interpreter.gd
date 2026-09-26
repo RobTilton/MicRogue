@@ -8,13 +8,15 @@ static var _area_catalog: PurposeAreaCatalog = PurposeAreaCatalog.create()
 
 static func interpret(
 	map_data: MapData,
-	purpose: LayoutInterpretationSemantics.Purpose
+	purpose: LayoutInterpretationSemantics.Purpose,
+	scale: GenerationSemantics.Scale
 ) -> InterpretationData:
 	var random := RandomNumberGenerator.new()
 	random.randomize()
 	var result: PurposeCoverageResult = PurposeCoveragePass.run(
 		map_data,
 		purpose,
+		scale,
 		_purpose_catalog,
 		_universal_catalog,
 		_area_catalog,

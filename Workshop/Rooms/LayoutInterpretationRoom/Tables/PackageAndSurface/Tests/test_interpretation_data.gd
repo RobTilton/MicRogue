@@ -16,6 +16,7 @@ func _init() -> void:
 	var result: PurposeCoverageResult = PurposeCoveragePass.run(
 		map_data,
 		LayoutInterpretationSemantics.Purpose.MAGE_TOWER,
+		GenerationSemantics.Scale.MEDIUM,
 		purpose_catalog,
 		universal_catalog,
 		area_catalog,

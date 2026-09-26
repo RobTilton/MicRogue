@@ -40,7 +40,11 @@ static func required_archetypes() -> Array[Archetype]:
 
 
 static func required_scales() -> Array[Scale]:
-	return [Scale.SMALL, Scale.MEDIUM, Scale.LARGE]
+	return [
+		# Scale.SMALL, # Pinned for future rework; not currently requestable.
+		Scale.MEDIUM,
+		Scale.LARGE,
+	]
 
 
 static func required_modifiers() -> Array[GeometryModifier]:
