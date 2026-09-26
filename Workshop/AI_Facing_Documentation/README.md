@@ -1,5 +1,5 @@
 # AI-Facing Documentation
-Updated: 2026-09-09
+Updated: 2026-09-26
 
 Keep current architectural summaries and preservation contracts here. Task-specific progress belongs in Rooms; reusable tool contracts belong with ToolShed tools. These documents describe intent and verified behavior, not execution authority.
 
@@ -8,4 +8,4 @@ Keep current architectural summaries and preservation contracts here. Task-speci
 - [Shader descriptions](SHADER_LIBRARY_FOR_AI/README.md).
 - [Documentation format](../Documentation_Format_README.md).
 
-The system and shader libraries have no project entries. Add only descriptions needed by the new project. Link current authoritative files; do not copy historical investigation narratives into active contracts.
+The system library contains current Production project entries. Add only descriptions needed by the project. Link current authoritative files; do not copy historical investigation narratives into active contracts.

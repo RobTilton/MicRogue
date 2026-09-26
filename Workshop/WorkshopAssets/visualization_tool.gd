@@ -10,6 +10,7 @@ const UNZONED_ROLE_KEY: int = -1
 @export var wall_mesh_id: int = 2
 
 var _floor_mesh_id_by_role: Dictionary = {}
+var _door_floor_mesh_id: int = -1
 
 func _ready() -> void:
 	var archetype: GenerationSemantics.Archetype = _archetype_for_purpose(layout_purpose)
@@ -39,11 +40,15 @@ func _ready() -> void:
 		push_error("%s: Layout interpretation failed." % ORIGIN)
 		return
 
+	var doorways: Array[DoorwayPlacement] = DoorwayPlacer.place_doors(map_data)
 	_prepare_colored_floor_meshes(interpretation)
-	render_interpretation(interpretation)
+	render_interpretation(interpretation, doorways)
 
 
-func render_interpretation(interpretation: InterpretationData) -> void:
+func render_interpretation(
+	interpretation: InterpretationData,
+	doorways: Array[DoorwayPlacement] = []
+) -> void:
 	grid_map.clear()
 	var map_data: MapData = interpretation.map_data
 
@@ -69,6 +74,13 @@ func render_interpretation(interpretation: InterpretationData) -> void:
 				MapData.ABYSS:
 					pass
 
+	for doorway: DoorwayPlacement in doorways:
+		var coordinate: Vector2i = doorway.coordinate
+		grid_map.set_cell_item(
+			Vector3i(coordinate.x, 0, coordinate.y),
+			_door_floor_mesh_id
+		)
+
 
 func _prepare_colored_floor_meshes(interpretation: InterpretationData) -> void:
 	_floor_mesh_id_by_role.clear()
@@ -81,9 +93,17 @@ func _prepare_colored_floor_meshes(interpretation: InterpretationData) -> void:
 		if _floor_mesh_id_by_role.has(role_key):
 			continue
 		_create_colored_floor_mesh(role_key, _color_for_area_role(zone.area_role))
+	_door_floor_mesh_id = _create_floor_mesh("Doorway", Color(1.0, 0.0, 0.0))
 
 
 func _create_colored_floor_mesh(role_key: int, color: Color) -> void:
+	_floor_mesh_id_by_role[role_key] = _create_floor_mesh(
+		"AreaRole_%d" % role_key,
+		color
+	)
+
+
+func _create_floor_mesh(item_name: String, color: Color) -> int:
 	var source_mesh: Mesh = grid_map.mesh_library.get_item_mesh(floor_mesh_id)
 	var colored_mesh: Mesh = source_mesh.duplicate(true)
 	var colored_material: StandardMaterial3D = source_mesh.surface_get_material(0).duplicate(true)
@@ -92,9 +112,9 @@ func _create_colored_floor_mesh(role_key: int, color: Color) -> void:
 
 	var item_id: int = grid_map.mesh_library.get_last_unused_item_id()
 	grid_map.mesh_library.create_item(item_id)
-	grid_map.mesh_library.set_item_name(item_id, "AreaRole_%d" % role_key)
+	grid_map.mesh_library.set_item_name(item_id, item_name)
 	grid_map.mesh_library.set_item_mesh(item_id, colored_mesh)
-	_floor_mesh_id_by_role[role_key] = item_id
+	return item_id
 
 
 func _color_for_area_role(area_role: LayoutInterpretationSemantics.AreaRole) -> Color:
