@@ -1,7 +1,7 @@
 # Architecture Catalog Table
 Updated: 2026-09-25
-Checkpoint: `[LayoutInterpretationRoom]+[ArchitectureCatalog]+[PurposeContract]`
-Implementation baseline/evidence: No Layout Interpretation implementation exists. The occupant-driven catalog direction was superseded after establishing that occupants do not define original architecture.
+Checkpoint: `[LayoutInterpretationRoom]+[ArchitectureCatalog]+[InitialPurposes]`
+Implementation baseline/evidence: Room-local typed catalog validated with Godot 4.4.1; no Production implementation exists.
 
 ## Rapid Shape
 
@@ -24,6 +24,8 @@ The Archetype describes the broad generated geometry. The purpose describes why 
 
 The completed authoritative Room-local definition is [`PurposeContract.md`](PurposeContract.md).
 
+The current Room-local implementation and validation evidence are summarized in [`CurrentState.md`](CurrentState.md).
+
 ## Purpose Contract Discovery
 
 The first Box proceeds in this order:
@@ -45,5 +47,6 @@ A future occupant-family pass may adapt the interpreted architecture by layering
 
 - The initial six-purpose list and Archetype mapping are approved.
 - Required roles, multiplicities, order, and relationships are approved in [`PurposeContract.md`](PurposeContract.md).
-- Concrete catalog representation, Zone geometry, selection mechanics, and runtime behavior remain unimplemented.
+- The concrete typed Purpose Catalog is implemented and validated in the Room.
+- Area-profile objects, Zone geometry implementation, selection mechanics, and runtime behavior remain unimplemented.
 - Detailed Box dependencies and Room-wide unresolved decisions remain authoritative in [`../../DOTS.md`](../../DOTS.md).
