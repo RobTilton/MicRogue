@@ -24,6 +24,6 @@ For reproducible tests:
 var reproducible: RapidRoomMapData = RapidRoomGenerator.make_seeded_map(5, 42)
 ```
 
-The seeded entry changes randomness ownership only; it does not enable a separate runtime-validation path. The system validates caller-owned input and trusts all intermediate data it exclusively produces.
+The seeded entry changes randomness ownership only; it does not enable a separate runtime-validation path. The system validates caller-owned input and trusts all intermediate data it exclusively produces. Connected top-room walks and four-sided shared-doorway authorship guarantee one cardinally connected final floor network without repair.
 
 The package has no scene, renderer, autoload, existing Map Generation, Layout Interpretation, Doorway Placement, GridMap, or gameplay dependency. Copy the complete directory into a Godot 4 project and allow Godot to import its scripts.
