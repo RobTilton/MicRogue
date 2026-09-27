@@ -4,6 +4,7 @@ Updated: 2026-09-26
 Current Production system contracts:
 
 - [Map Generation System](GENERATOR_SYSTEM.md)
+- [Rapid Room Generation System](RAPID_ROOM_GENERATION_SYSTEM.md)
 - [Layout Interpretation System](LAYOUT_INTERPRETATION_SYSTEM.md)
 - [Doorway Placement System](DOORWAY_PLACEMENT_SYSTEM.md)
 
