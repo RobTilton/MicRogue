@@ -1,22 +1,22 @@
 # Rapid Room Generation System
 Updated: 2026-09-27
-Checkpoint: `[OneOffRapidRnDRoom]+[ProductionPromotion]+[AdoptSystem]`
-Implementation baseline/evidence: Git `6d933948c8dca290cab4321def786179c5bc28d4`; promoted Production files are uncommitted.
+Implementation baseline/evidence: post-cleanup working tree based on Git `9a4f60b71fcf34e961c23b9c5449b6a68e6028e9`; focused contract suite passed 153,922 checks across 1,250 generated maps on 2026-09-27.
 
 ## Rapid Shape
 
-The Rapid Room Generation System is Production authority for Microgue's fast, catalog-driven room geometry. It accepts one square top-board side length and returns detached `RapidRoomMapData` containing final floor/wall geometry and explicit doorway tags.
+Rapid Room Generation is the sole current Production system. It accepts one square layer-one board side length and returns exactly the mutable layer-three physical cells, generated room records, explicit room count, and realized doorway placement/orientation required by later systems.
 
-The system owns its full pipeline and trusts every intermediate structure it creates. Its room walk and four-sided shared-doorway rules produce one cardinally connected floor network by construction; it performs no connectivity repair, retry, or rejection sampling. It also performs no Layout Interpretation, rendering, or gameplay work. Ordinary runtime randomness is internal; a separate seeded entry exists for reproducible tests.
+The generator owns its complete geometry pipeline. Internal template choice, sealed exterior requests, wall-edge erosion accounting, dimensions, and timing are not part of the returned Production contract. Future tagging, decoration, and population systems are separate consumers.
 
 ## Current Locations And Structure
 
 Runtime authority is [`Production/Systems/RapidRoomGenerationSystem/`](../../../Production/Systems/RapidRoomGenerationSystem/):
 
-- `rapid_room_generator.gd`: public boundary, complete generation pipeline, catalogs, and internal working state.
-- `rapid_room_map_data.gd`: detached result contract and ASCII representation.
-- `rapid_room_doorway.gd`: detached realized-doorway metadata.
-- `README.md`: portable package usage contract.
+- `rapid_room_generator.gd`: public entry points and complete generation pipeline.
+- `rapid_room_map_data.gd`: exact mutable result package.
+- `rapid_room.gd`: detached room ID and panel-count record.
+- `rapid_room_doorway.gd`: detached final placement and traversal-axis record.
+- `README.md`: portable package contract.
 
 ## Entry Points And Flow
 
@@ -34,57 +34,56 @@ var map_data: RapidRoomMapData = RapidRoomGenerator.make_seeded_map(size, seed)
 
 Generation proceeds in this order:
 
-1. Partition the open `size × size` top board in row-major order. Each unassigned cell seeds a room and receives zero through three self-avoiding Manhattan steps through unassigned cells.
-2. Expand every top cell into a 3×3 middle-layer floor block carrying its room ID. One unowned wall cell separates neighboring blocks.
-3. From an immutable pre-merge state, open ordinary dividers whose opposing room IDs match. Open a divider intersection only when all four cardinal neighbors are walls and all four diagonal room IDs match.
-4. Process rooms sequentially. Existing shared doorway tags satisfy the neighbor's corresponding side; every missing cardinal side authors one eligible non-corner extreme request. Real neighboring structures are updated immediately, so no room can remain isolated. Exterior requests are allowed and later sealed without invalidating the room network.
-5. Add the unconditional exterior wall ring.
-6. Expand every middle cell into final 3×3 geometry. Room-owned cells are empty floor, ordinary walls are solid, and realized doors choose one of seven legal seeded-random templates rotated to their traversal axis.
-7. Apply one immutable-snapshot wall-noise pass. Each outer tile of an ordinary non-door wall block that touches floor by Manhattan adjacency independently has a 40% chance to become floor. Wall-block centers remain wall and erosion does not cascade.
-8. Return detached map geometry and doorway records.
+1. Partition the square layer-one board. Each unassigned panel seeds a stable room ID and receives zero through three successful self-avoiding cardinal walk steps. The room's panel count increments with each successful assignment.
+2. Expand each panel into the internal middle blueprint and merge dividers belonging to the same room.
+3. Author shared doorway cells at missing room sides; requests reaching the exterior are sealed internally.
+4. Add the exterior wall ring.
+5. Resolve the mutable layer-three floor/wall cells and realized doorway templates.
+6. Apply the internal immutable-snapshot wall-edge erosion pass.
+7. Return detached room and doorway records with the mutable layer-three cells.
 
-The final square side length is `(12 × size) + 3`; `size = 5` returns `63 × 63` geometry.
-
-## Component Contracts
-
-### `RapidRoomGenerator`
-
-Owns generation order, internal randomness, top-room assignment, middle blueprint, doorway authorship, template selection, and wall noise. `make_map(size)` is the ordinary public boundary. `make_seeded_map(size, seed)` exists only to reproduce output. `size < 1` fails loudly and returns null.
-
-Every top-board cell belongs to one connected room. Every room authors doorway intent at all four cardinal extremes, and realized shared walls propagate the connection to both rooms. Requests into the exterior are sealed only after shared connections are resolved. Consequently every room participates in one cardinally connected final floor network without a flood fill or repair pass.
-
-The generator has no phase-validation mode. Because it is the sole producer of its intermediate state, each phase trusts the guarantees of the preceding phase. Unexpected absence of an eligible doorway or opposite floor fails loudly rather than returning partial data.
+## Result Contract
 
 ### `RapidRoomMapData`
 
-Owns detached final output. `cells` is row-major with `FLOOR = 1` and `WALL = 2`. Width and height match the final grid. Diagnostics describe the completed request and do not control generation.
+- `cells: PackedInt32Array`: mutable row-major layer-three physical data; `FLOOR = 1`, `WALL = 2`.
+- `rooms: Array[RapidRoom]`: detached records ordered by stable contiguous room ID.
+- `room_count: int`: exact explicit count equal to `rooms.size()`.
+- `doorways: Array[RapidRoomDoorway]`: detached realized shared doorways.
 
-The doorway collection is a separate semantic channel because a doorway template contains both floor and wall pixels. Consumers must use doorway records rather than attempting to rediscover doorway ownership from cell values.
+It exposes no width, height, generation time, sealed-request count, erosion count, or other diagnostics. The internal final map remains square with side length `(12 × size) + 3`.
+
+### `RapidRoom`
+
+- `id: int`: stable contiguous ID beginning at zero.
+- `panel_count: int`: number of layer-one panels assigned to the room, always one through four.
+
+Across one result, all panel counts sum exactly to `size × size`.
 
 ### `RapidRoomDoorway`
 
-Represents one realized shared doorway. It exposes:
+- `position: Vector2i`: center coordinate of the final layer-three 3×3 doorway footprint.
+- `axis`: horizontal or vertical traversal orientation.
 
-- `blueprint_position`: coordinate of the owning middle-layer doorway cell after the exterior ring is added;
-- `final_origin`: top-left coordinate of its final 3×3 footprint;
-- `axis`: horizontal or vertical traversal;
-- `template_index`: selected catalog entry.
+Template choice and middle-blueprint coordinates remain generator-internal. Exterior requests do not create doorway records.
 
-Requests into the exterior are deliberately sealed and do not produce doorway records.
+## Ownership And Dependencies
 
-## Required Outside Data
+Rapid owns room partitioning, physical geometry, and realized doorway metadata. Downstream systems may mutate `cells` in the same returned package and may add their own room semantics in later approved contracts. Rapid does not tag rooms, interpret archetypes, decorate, populate, render, or coordinate the wider pipeline.
 
-The only required input is an integer square-board side length. The package uses Godot core types and `RandomNumberGenerator`; it has no project-specific runtime dependency outside its own directory.
-
-The package is self-contained. It neither calls nor depends on the existing `MapGenerationSystem` or another Production system.
+The package depends only on Godot core types and `RandomNumberGenerator`.
 
 ## Validation And Current Limits
 
-Production validation passed:
+The retained contract suite passed 153,922 checks across 1,250 seeded maps: 250 maps at each input size 1, 2, 3, 5, and 10. It established:
 
-- Godot editor import registered `RapidRoomGenerator`, `RapidRoomMapData`, and `RapidRoomDoorway` from the Production package without script errors.
-- The retained external suite passed 1,000 size-5 results and 100 results each at sizes 1, 2, and 10. The size-5 set averaged 5.860 ms and 19.705 realized doorways; its observed maximum was 25.530 ms.
-- Seed-42 size-3 ASCII evidence preserved the accepted 39 × 39 geometry, 4 rooms, 5 realized doorways, 9 sealed outward requests, and 98 eroded tiles.
-- The final uncontended Production benchmark, after 100 warmups, passed 2,000 size-5 samples: mean 6.230 ms, median 5.915 ms, p95 9.301 ms, p99 12.871 ms, and maximum 16.254 ms. Engine startup and ASCII printing were excluded.
+- the exact approved public property surfaces;
+- successful generation and expected layer-three cell count;
+- unique contiguous room IDs, one-to-four panel counts, exact layer-one panel conservation, and explicit count agreement;
+- doorway placement at final-footprint centers and openings across the declared traversal axis;
+- in-place cell mutation;
+- complete seeded reproduction of cells, rooms, and doorways.
 
-The system guarantees global cardinal floor connectivity within each returned map. It does not interpret architectural purpose, paint a GridMap, render, populate gameplay objects, or integrate itself with a controller. Those are separate systems or future authority boundaries.
+Godot's import pass registered all four Rapid classes.
+
+No tagging system or controller exists yet. Their contracts must consume this result without expanding Rapid's responsibility implicitly.

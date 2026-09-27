@@ -30,6 +30,7 @@ class RoomState:
 	extends RefCounted
 
 	var room_id: int
+	var panel_count: int = 1
 	var door_mask: int = 0
 
 	func _init(requested_room_id: int) -> void:
@@ -46,7 +47,6 @@ class BuildState:
 	var kinds: PackedByteArray
 	var room_ids: PackedInt32Array
 	var door_axes: PackedByteArray
-	var sealed_outward_requests: int = 0
 
 
 static func make_map(size: int) -> RapidRoomMapData:
@@ -65,7 +65,6 @@ static func _generate(size: int, rng: RandomNumberGenerator) -> RapidRoomMapData
 	if size < 1:
 		push_error("%s: size must be at least 1" % ERROR_ORIGIN)
 		return null
-	var started_usec := Time.get_ticks_usec()
 	var state := _partition_top_layer(size, rng)
 	_build_premerge_blueprint(state)
 	_merge_same_room_dividers(state)
@@ -75,17 +74,13 @@ static func _generate(size: int, rng: RandomNumberGenerator) -> RapidRoomMapData
 	var resolution := _resolve_final_tiles(state, rng)
 	var final_cells: PackedInt32Array = resolution.cells
 	var doorways: Array[RapidRoomDoorway] = resolution.doorways
-	var eroded_wall_tiles: int = resolution.eroded_wall_tiles
-	var elapsed_usec := Time.get_ticks_usec() - started_usec
+	var rooms: Array[RapidRoom] = []
+	for room: RoomState in state.rooms:
+		rooms.append(RapidRoom.new(room.room_id, room.panel_count))
 	return RapidRoomMapData.new(
-		state.blueprint_size * 3,
-		state.blueprint_size * 3,
 		final_cells,
-		doorways,
-		elapsed_usec,
-		state.rooms.size(),
-		state.sealed_outward_requests,
-		eroded_wall_tiles
+		rooms,
+		doorways
 	)
 
 
@@ -115,6 +110,7 @@ static func _partition_top_layer(size: int, rng: RandomNumberGenerator) -> Build
 					break
 				current = candidates[rng.randi_range(0, candidates.size() - 1)]
 				state.top_room_ids[current.y * size + current.x] = room.room_id
+				room.panel_count += 1
 			state.rooms.append(room)
 	return state
 
@@ -227,11 +223,9 @@ static func _author_doorways(state: BuildState, rng: RandomNumberGenerator) -> b
 			var direction := DIRECTIONS[side]
 			var wall_position := approach + direction
 			if not _in_square(wall_position, state.blueprint_size):
-				state.sealed_outward_requests += 1
 				continue
 			var opposite_floor := approach + direction * 2
 			if not _in_square(opposite_floor, state.blueprint_size):
-				state.sealed_outward_requests += 1
 				continue
 			var wall_index := _index(wall_position, state.blueprint_size)
 			var opposite_index := _index(opposite_floor, state.blueprint_size)
@@ -330,16 +324,13 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 				var axis: int = state.door_axes[blueprint_index]
 				_write_doorway_template(final_cells, final_size, blueprint_position, template_index, axis)
 				doorways.append(RapidRoomDoorway.new(
-					blueprint_position,
-					blueprint_position * 3,
-					axis as RapidRoomDoorway.Axis,
-					template_index
+					blueprint_position * 3 + Vector2i.ONE,
+					axis as RapidRoomDoorway.Axis
 				))
-	var eroded_wall_tiles := _erode_floor_facing_wall_tiles(state, final_cells, final_size, rng)
+	_erode_floor_facing_wall_tiles(state, final_cells, final_size, rng)
 	return {
 		&"cells": final_cells,
 		&"doorways": doorways,
-		&"eroded_wall_tiles": eroded_wall_tiles,
 	}
 
 
@@ -377,7 +368,7 @@ static func _erode_floor_facing_wall_tiles(
 	cells: PackedInt32Array,
 	final_size: int,
 	rng: RandomNumberGenerator
-) -> int:
+) -> void:
 	var snapshot := cells.duplicate()
 	var replacements := PackedInt32Array()
 	for blueprint_y: int in range(state.blueprint_size):
@@ -404,7 +395,6 @@ static func _erode_floor_facing_wall_tiles(
 						replacements.append(final_index)
 	for replacement_index: int in replacements:
 		cells[replacement_index] = RapidRoomMapData.FLOOR
-	return replacements.size()
 
 
 static func _same_room_floor(state: BuildState, position: Vector2i, room_id: int) -> bool:
