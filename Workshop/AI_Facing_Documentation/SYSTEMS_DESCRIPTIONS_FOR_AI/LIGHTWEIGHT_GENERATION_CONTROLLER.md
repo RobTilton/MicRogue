@@ -1,6 +1,5 @@
 # Lightweight Generation Controller
 Updated: 2026-09-28
-Implementation baseline/evidence: working tree based on Git `25117b113d25deab9f46db68c75c0dd536f37b33`; expanded composed suite passed 44,057 checks and retained visualization painting passed 29 checks on 2026-09-28.
 
 ## Rapid Shape
 
@@ -33,8 +32,6 @@ No explicit `await`, thread, signal, scene, or scheduler participates.
 
 Programmatic size values below 4 remain safe because Rapid silently normalizes them to 4.
 
-## Validation And Limits
-
-The expanded suite passed 44,057 checks and verified the silent minimum-size clamp, exact four dropdown labels, and successful full composition for all Archetypes. Catalog, coordinate ownership, and multi-map behavior are validated at their owning boundaries. The retained visualization scene also passed 29 painting-contract checks across all four Archetypes.
+## Limits
 
 The controller does not render, decorate, populate, persist, retry, or select gameplay content.

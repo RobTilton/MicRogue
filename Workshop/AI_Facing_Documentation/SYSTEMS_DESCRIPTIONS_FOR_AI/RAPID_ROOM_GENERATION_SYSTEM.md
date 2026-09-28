@@ -1,10 +1,9 @@
 # Rapid Room Generation System
 Updated: 2026-09-28
-Implementation baseline/evidence: working tree based on Git `25117b113d25deab9f46db68c75c0dd536f37b33`; expanded composed validation passed 44,057 checks and visualization painting passed 29 checks on 2026-09-28.
 
 ## Rapid Shape
 
-Rapid Room Generation is the sole current Production system. It accepts one square layer-one board side length and returns exactly the mutable layer-three physical cells, generated room records, explicit room count, and realized doorway placement/orientation required by later systems.
+Rapid Room Generation is Production authority for physical room generation. It accepts one square layer-one board side length and returns exactly the mutable layer-three physical cells, generated room records, explicit room count, and realized doorway placement/orientation required by later systems.
 
 The minimum effective side length is 4. Requests below 4 are silently normalized to 4 at the shared ordinary/seeded generation boundary.
 
@@ -42,7 +41,7 @@ Generation proceeds in this order:
 2. Expand each panel into the internal middle blueprint and merge dividers belonging to the same room.
 3. Author shared doorway cells at missing room sides; requests reaching the exterior are sealed internally.
 4. Add the exterior wall ring.
-5. Resolve the mutable layer-three floor/wall cells and realized doorway templates.
+5. Resolve the mutable layer-three floor/wall cells and one of six realized doorway templates. Each template carries one canonical straight-span door-item offset; horizontal resolution rotates the geometry and offset together.
 6. Apply the internal immutable-snapshot wall-edge erosion pass.
 7. Return detached room and doorway records with the mutable layer-three cells.
 
@@ -71,30 +70,14 @@ Floor coordinates are collected from room-owned middle-blueprint floor before wa
 
 ### `RapidRoomDoorway`
 
-- `position: Vector2i`: center coordinate of the final layer-three 3×3 doorway footprint.
+- `position: Vector2i`: exact final layer-three coordinate for one door item, guaranteed to have floor immediately before and after it along the traversal axis.
+- `footprint_center: Vector2i`: center coordinate of the final 3×3 doorway footprint.
 - `axis`: horizontal or vertical traversal orientation.
 
-Template choice and middle-blueprint coordinates remain generator-internal. Exterior requests do not create doorway records.
+Template choice and middle-blueprint coordinates remain generator-internal. The former two-parallel-lane template is excluded because one single-cell door could not gate it. Exterior requests do not create doorway records.
 
 ## Ownership And Dependencies
 
 Rapid owns room partitioning, physical geometry, and realized doorway metadata. It carries empty mutable room-semantic fields so the owning Layout system can tag the same package without a parallel record graph. Rapid does not choose room types or tags, interpret Archetypes, decorate, populate, render, or coordinate the wider pipeline.
 
 The package depends only on Godot core types and `RandomNumberGenerator`.
-
-## Validation And Current Limits
-
-The retained contract suite passed 153,922 checks across 1,250 seeded maps: 250 maps at each input size 1, 2, 3, 5, and 10. It established:
-
-- the exact approved public property surfaces;
-- successful generation and expected layer-three cell count;
-- unique contiguous room IDs, one-to-four panel counts, exact layer-one panel conservation, and explicit count agreement;
-- doorway placement at final-footprint centers and openings across the declared traversal axis;
-- in-place cell mutation;
-- complete seeded reproduction of cells, rooms, and doorways.
-
-Expanded validation additionally established nonempty in-bounds physical floor coordinates, unique ownership across rooms, doorway-footprint exclusion, and exact preservation through Layout.
-
-Godot's import pass registered all four Rapid classes.
-
-Room Layout and the lightweight controller now consume this result. Rapid's generation responsibility remains unchanged.

@@ -17,13 +17,12 @@ const OPPOSITE_SIDE := [2, 3, 0, 1]
 
 # Canonical doorway templates traverse from top to bottom.
 const DOORWAY_TEMPLATES := [
-	["##.", "...", ".##"],
-	["#.#", "#.#", "..."],
-	["..#", "#.#", "..."],
-	["...", "#.#", "..."],
-	[".#.", "...", "#.#"],
-	[".#.", "..#", "#.."],
-	[".#.", ".#.", ".#."],
+	{"cells": ["##.", "...", ".##"], "door_offset": Vector2i(2, 0)},
+	{"cells": ["#.#", "#.#", "..."], "door_offset": Vector2i(1, 0)},
+	{"cells": ["..#", "#.#", "..."], "door_offset": Vector2i(1, 0)},
+	{"cells": ["...", "#.#", "..."], "door_offset": Vector2i(1, 1)},
+	{"cells": [".#.", "...", "#.#"], "door_offset": Vector2i(1, 2)},
+	{"cells": [".#.", "..#", "#.."], "door_offset": Vector2i(1, 2)},
 ]
 
 
@@ -330,8 +329,14 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 				var template_index := rng.randi_range(0, DOORWAY_TEMPLATES.size() - 1)
 				var axis: int = state.door_axes[blueprint_index]
 				_write_doorway_template(final_cells, final_size, blueprint_position, template_index, axis)
+				var template: Dictionary = DOORWAY_TEMPLATES[template_index]
+				var door_offset: Vector2i = template["door_offset"]
+				if axis == AXIS_HORIZONTAL:
+					door_offset = Vector2i(2 - door_offset.y, door_offset.x)
+				var footprint_center: Vector2i = blueprint_position * 3 + Vector2i.ONE
 				doorways.append(RapidRoomDoorway.new(
-					blueprint_position * 3 + Vector2i.ONE,
+					blueprint_position * 3 + door_offset,
+					footprint_center,
 					axis as RapidRoomDoorway.Axis
 				))
 	_erode_floor_facing_wall_tiles(state, final_cells, final_size, rng)
@@ -349,7 +354,7 @@ static func _write_doorway_template(
 	template_index: int,
 	axis: int
 ) -> void:
-	var template: Array = DOORWAY_TEMPLATES[template_index]
+	var template: Array = DOORWAY_TEMPLATES[template_index]["cells"]
 	var origin := blueprint_position * 3
 	for local_y: int in range(3):
 		for local_x: int in range(3):

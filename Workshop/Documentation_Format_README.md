@@ -1,17 +1,17 @@
 # MCA Documentation Format
-Updated: 2026-09-09
+Updated: 2026-09-28
 
 ## Purpose and authority
 
 This is the standalone writing guide for MCA documents. Use it directly rather than deriving conventions from an older project's documents. It explains the existing [shared operating contract](AI_AGENTS_README/SHARED/.AGENTS.md) and [Room/documentation contract](AI_AGENTS_README/SHARED/MCA_ROOM_AND_DOCUMENTATION_CONTRACT.md); those contracts own authority and completion rules. This guide adds no execution gates.
 
-Documents provide current intent, ownership, interfaces, evidence and the next valid action. Implementation establishes actual behavior. Report and reconcile differences; do not silently treat an outdated description as runtime truth.
+Each document type has a distinct purpose. Current-state documents carry execution state, evidence, and the next valid action. System descriptions provide concise, present-tense understanding of architecture and behavior. Implementation establishes actual behavior. Report and reconcile differences; do not silently treat an outdated description as runtime truth.
 
 ## Common header
 
 Every newly created or updated active MCA document starts with a descriptive title and `Updated: YYYY-MM-DD` immediately below it. Use the actual edit date. A date alone is not evidence that behavior was revalidated.
 
-Task and system state documents also identify their applicable checkpoint and implementation baseline near the top. Shared contracts, general READMEs and indexes need no invented Room checkpoint. In blank templates, placeholders are explicitly unfilled and grant no authority.
+Task-state documents, including DOTS, CurrentState and Handoff documents, also identify their applicable checkpoint and implementation baseline near the top. System descriptions, shared contracts, general READMEs and indexes do not carry Room checkpoints or implementation-evidence headers. In blank templates, placeholders are explicitly unfilled and grant no authority.
 
 ```markdown
 # Descriptive Document Title
@@ -19,6 +19,8 @@ Updated: YYYY-MM-DD
 Checkpoint: [RoomName]+[TableName]+[BoxName]
 Implementation baseline/evidence: <known revision, files or evidence; unknown if unavailable>
 ```
+
+The checkpoint and implementation-baseline lines in this example apply only to document types that carry execution state or evidence.
 
 A checkpoint is a traversal identity, not a Git commit. Keep names stable. Distinguish a known commit from uncommitted changes and from an unknown baseline.
 
@@ -31,7 +33,7 @@ A checkpoint is a traversal identity, not a Git commit. Keep names stable. Disti
 | DOTS.md | Each execution Room | Outcome, scope, authority evidence, baseline, Box/dependency table, traversal, unresolved state and disposition. |
 | CurrentState.md | Owning Room | Current result, paths, behavior, component contracts, evidence, limits and next work. |
 | Handoff.md | Owning Room, for mid-execution transfer | Authority, exact checkpoint/status, implementation, evidence and next eligible action; receiver validation. |
-| System description | AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI | Durable architecture and component/preservation contracts. |
+| System description | AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI | Present-tense system purpose, behavior, ownership, interfaces, invariants, dependencies and current limits; no execution history or evidence log. |
 | Shader description | AI_Facing_Documentation/SHADER_LIBRARY_FOR_AI | Material/shader ownership, inputs, outputs, coordinate/value contracts, dependencies and validation. |
 | Workflow reference | AI_AGENTS_README/SHARED/Workflow_References | A specific trigger, reusable lesson, assumptions and failure boundaries; no independent authority. |
 | ToolReadme.md / BuildReadme.md | ToolShed storage unit / completed build | Reusable capability, use, inputs/outputs, assumptions, proof and limits. |
@@ -40,7 +42,7 @@ A checkpoint is a traversal identity, not a Git commit. Keep names stable. Disti
 
 Use the established [ToolShed schema](ToolShed/Ledger/ToolShed_Format.md) for tool READMEs and catalog fields. These example filenames are defaults; preserve an established current-state filename rather than renaming it merely for style.
 
-## Current-state and system-document structure
+## Current-state document structure
 
 Use the [current-state template](AI_AGENTS_README/SHARED/Templates/CURRENT_STATE_TEMPLATE.md). Include the sections that apply, in this order:
 
@@ -53,7 +55,20 @@ Use the [current-state template](AI_AGENTS_README/SHARED/Templates/CURRENT_STATE
 
 Omit sections that do not apply; do not fill them with speculative architecture. Keep the document useful to someone who has not read the conversation. Reference an authoritative inventory rather than maintaining another volatile copy.
 
-A coupled system description must additionally identify every relevant owner, coordinate/value/ordering contract, what each contributes, consequences of independent changes, and required composed validation. Use the `FRAGILE_` filename prefix only when that coupling is a material preservation boundary. Follow the [fragile-system reference](AI_AGENTS_README/SHARED/Workflow_References/when_working_with_fragile_system_documentation.md).
+## System-description structure
+
+A system description includes only sections that provide immediate understanding of the current system:
+
+1. **Rapid Shape:** what the system is, what it produces and its main ownership rule.
+2. **Current Locations And Structure:** authoritative runtime files and component relationships.
+3. **Entry Points And Flow:** how the system starts and the ordered behavior that produces its result.
+4. **Component Contracts:** inputs, outputs, mutation boundaries, required values or ordering, and current guarantees.
+5. **Required Outside Data:** runtime dependencies, assets, configuration and authoritative references.
+6. **Ownership And Current Limits:** what the system owns, what it deliberately does not own, and current behavioral limits.
+
+Omit sections that do not apply. Do not add checkpoints, implementation baselines, test runs, pass counts, benchmark results, acceptance history, development history, or next actions. Current guarantees and limits may be stated directly; their supporting evidence belongs in the owning Room, current-state document, handoff, audit report, or reusable tool documentation.
+
+A coupled system description must additionally identify every relevant owner, coordinate/value/ordering contract, what each contributes, consequences of independent changes, and the cross-system invariants that must remain true during composed use. Use the `FRAGILE_` filename prefix only when that coupling is a material preservation boundary. Follow the [fragile-system reference](AI_AGENTS_README/SHARED/Workflow_References/when_working_with_fragile_system_documentation.md).
 
 ## DOTS format
 
@@ -99,6 +114,8 @@ Use the [Astra handoff template](AI_AGENTS_README/SHARED/Templates/ASTRA_HANDOFF
 Do not mark a transfer valid merely because a handoff file exists. Do not infer human acceptance or missing authorization. Recovery reads are allowed; dependent writes still require the established scope.
 
 ## Evidence and uncertainty
+
+This section applies to documents whose purpose includes evidence, such as DOTS, CurrentState, Handoff, audit reports and reusable tool documentation. It does not instruct authors to add evidence history to system descriptions.
 
 State what was tested and what that test establishes. Include conditions such as input/seed, version or environment when they affect reproducibility. Link the actual log/report/artifact when available. Report meaningful failures and their current disposition; do not substitute the final pass count for the entire development history.
 

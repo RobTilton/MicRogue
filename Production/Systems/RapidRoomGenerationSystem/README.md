@@ -18,7 +18,9 @@ The minimum effective `size` is 4. Any lower integer is silently normalized to 4
 
 Each `RapidRoom` contains its stable contiguous `id`, `panel_count`, authoritative `floor_coordinates`, mutable `room_type`, and duplicate-preserving mutable `tags`. Rapid initializes the Layout-owned fields empty. `floor_coordinates` contains safe layer-three floor owned by the room: ordinary room blocks and merged same-room divider blocks. Doorway footprints and erosion-created floor remain unowned. Panel count is always one through four, and all room panel counts sum to `size × size`.
 
-Each `RapidRoomDoorway` contains `position`, the center coordinate of its final layer-three 3×3 doorway footprint, and `axis`, its horizontal or vertical traversal orientation. Exterior requests are sealed internally and are not returned as usable doorways.
+Each `RapidRoomDoorway` contains `position`, the template-owned layer-three coordinate for one door item; `footprint_center`, the center of its final 3×3 doorway footprint; and `axis`, its horizontal or vertical traversal orientation. Every retained template places the item on a straight floor span. Exterior requests are sealed internally and are not returned as usable doorways.
+
+The six hard-coded templates pair their 3×3 geometry with a canonical placement offset. Horizontal resolution rotates geometry and placement together. The former two-parallel-lane template is intentionally excluded because one single-cell door could not gate it correctly.
 
 The returned package deliberately excludes dimensions and generator diagnostics. The final map is square; its internal side length is `(12 × size) + 3`. Door template choice, wall-edge erosion accounting, sealed exterior requests, and elapsed generation time remain implementation details.
 

@@ -1,6 +1,5 @@
 # Room Layout System
 Updated: 2026-09-28
-Implementation baseline/evidence: working tree based on Git `25117b113d25deab9f46db68c75c0dd536f37b33`; expanded focused suite passed 44,057 checks on 2026-09-28.
 
 ## Rapid Shape
 
@@ -36,7 +35,3 @@ Catalog authority is `room_layout_catalog.gd`. Repeated tags are deliberate inte
 Layout owns Archetypes, room-type vocabulary, catalog entries, selection, and tag assignment. Rapid owns room creation and panel count. The controller owns orchestration. Decoration and SpawnPointPopulation are later consumers.
 
 Mandatory validation occurs before mutation. Layout does not modify physical cells, floor coordinates, doorways, room IDs, or panel counts. Decoration and SpawnPointPopulation may consume `floor_coordinates` directly instead of rediscovering room boundaries.
-
-## Validation
-
-The expanded focused suite passed 44,057 checks across all four Archetypes. It covered exact catalog content, duplicate weight, deterministic Entrance/Boss rules, panel eligibility, named-entry uniqueness, complete tagging and Default coverage, same-package mutation, physical-cell preservation, exact coordinate preservation, and composition after minimum-size normalization.

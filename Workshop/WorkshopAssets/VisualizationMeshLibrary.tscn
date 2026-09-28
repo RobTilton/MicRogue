@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb13y4mv4uxm2"]
+[gd_scene load_steps=8 format=3 uid="uid://bb13y4mv4uxm2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfjx3"]
 albedo_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
@@ -21,6 +21,9 @@ albedo_color = Color(0.564706, 0.14902, 0.0509804, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_s82n7"]
 material = SubResource("StandardMaterial3D_wq3tw")
 
+[sub_resource type="BoxMesh" id="BoxMesh_y6y31"]
+size = Vector3(0.2, 1, 0.8)
+
 [node name="VisualizationMeshLibrary" type="Node3D"]
 
 [node name="Visualization_Abyss" type="MeshInstance3D" parent="."]
@@ -32,3 +35,7 @@ mesh = SubResource("BoxMesh_vha8i")
 
 [node name="Visualization_Wall" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_s82n7")
+
+[node name="Visualization_Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38327, 0, 0)
+mesh = SubResource("BoxMesh_y6y31")

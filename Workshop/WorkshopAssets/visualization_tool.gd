@@ -9,10 +9,10 @@ const ORIGIN: String = "Workshop/WorkshopAssets/visualization_tool.gd"
 @export_enum("Cave:0", "Catacomb:1", "Nest:2", "SubPassage:3") var archetype: int = RoomLayoutSemantics.Archetype.CAVE
 @export var floor_mesh_id: int = 1
 @export var wall_mesh_id: int = 2
+@export var door_mesh_id: int = 3
 
 var _floor_mesh_id_by_room_type: Dictionary = {}
 var _unowned_floor_mesh_id: int = -1
-var _door_floor_mesh_id: int = -1
 var rendered_map_data: RapidRoomMapData
 
 
@@ -49,12 +49,14 @@ func render_map_data(map_data: RapidRoomMapData) -> bool:
 		for coordinate: Vector2i in room.floor_coordinates:
 			grid_map.set_cell_item(Vector3i(coordinate.x, 0, coordinate.y), room_mesh_id)
 	for doorway: RapidRoomDoorway in map_data.doorways:
-		var top_left: Vector2i = doorway.position - Vector2i.ONE
-		for local_y: int in range(3):
-			for local_x: int in range(3):
-				var coordinate := top_left + Vector2i(local_x, local_y)
-				if map_data.cells[coordinate.y * map_side + coordinate.x] == RapidRoomMapData.FLOOR:
-					grid_map.set_cell_item(Vector3i(coordinate.x, 0, coordinate.y), _door_floor_mesh_id)
+		var orientation: int = 0
+		if doorway.axis == RapidRoomDoorway.Axis.VERTICAL:
+			orientation = grid_map.get_orthogonal_index_from_basis(Basis(Vector3.UP, PI * 0.5))
+		grid_map.set_cell_item(
+			Vector3i(doorway.position.x, 0, doorway.position.y),
+			door_mesh_id,
+			orientation
+		)
 	_frame_camera(map_side)
 	return true
 
@@ -63,7 +65,6 @@ func _prepare_colored_floor_meshes(rooms: Array[RapidRoom]) -> void:
 	_floor_mesh_id_by_room_type.clear()
 	grid_map.mesh_library = grid_map.mesh_library.duplicate(true)
 	_unowned_floor_mesh_id = _create_floor_mesh("UnownedFloor", Color(0.28, 0.28, 0.28))
-	_door_floor_mesh_id = _create_floor_mesh("Doorway", Color(1.0, 0.0, 0.0))
 	var color_index: int = 0
 	for room: RapidRoom in rooms:
 		if _floor_mesh_id_by_room_type.has(room.room_type):
