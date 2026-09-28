@@ -1,5 +1,5 @@
 # Rapid Room Generation System
-Updated: 2026-09-27
+Updated: 2026-09-28
 
 This directory is the complete portable runtime package for Microgue's rapid room generator. It accepts one square layer-one board side length and returns exactly the mutable layer-three map, generated room records, explicit room count, and realized doorway placements needed downstream:
 
@@ -7,7 +7,7 @@ This directory is the complete portable runtime package for Microgue's rapid roo
 var map_data: RapidRoomMapData = RapidRoomGenerator.make_map(5)
 ```
 
-`size` must be at least one. Invalid input or an impossible internal doorway state fails loudly and returns `null`; partial data is never returned.
+The minimum effective `size` is 4. Any lower integer is silently normalized to 4, so requests 1–4 all generate a 4×4 layer-one board. An impossible internal doorway state fails loudly and returns `null`; partial data is never returned.
 
 `RapidRoomMapData` exposes:
 
@@ -16,7 +16,7 @@ var map_data: RapidRoomMapData = RapidRoomGenerator.make_map(5)
 - explicit `room_count`, equal to `rooms.size()`;
 - detached `Array[RapidRoomDoorway] doorways`.
 
-Each `RapidRoom` contains its stable contiguous `id` and `panel_count`. Panel count is the number of layer-one board panels assigned by that room's self-avoiding walk and is always one through four. Room panel counts sum to `size × size`.
+Each `RapidRoom` contains its stable contiguous `id`, `panel_count`, authoritative `floor_coordinates`, mutable `room_type`, and duplicate-preserving mutable `tags`. Rapid initializes the Layout-owned fields empty. `floor_coordinates` contains safe layer-three floor owned by the room: ordinary room blocks and merged same-room divider blocks. Doorway footprints and erosion-created floor remain unowned. Panel count is always one through four, and all room panel counts sum to `size × size`.
 
 Each `RapidRoomDoorway` contains `position`, the center coordinate of its final layer-three 3×3 doorway footprint, and `axis`, its horizontal or vertical traversal orientation. Exterior requests are sealed internally and are not returned as usable doorways.
 

@@ -5,7 +5,6 @@
 
 [node name="VisualizationTool" type="Node3D"]
 script = ExtResource("1_2boeb")
-layout_purpose = 5
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_38i5d")

@@ -1,10 +1,12 @@
 # Rapid Room Generation System
-Updated: 2026-09-27
-Implementation baseline/evidence: post-cleanup working tree based on Git `9a4f60b71fcf34e961c23b9c5449b6a68e6028e9`; focused contract suite passed 153,922 checks across 1,250 generated maps on 2026-09-27.
+Updated: 2026-09-28
+Implementation baseline/evidence: working tree based on Git `25117b113d25deab9f46db68c75c0dd536f37b33`; expanded composed validation passed 44,057 checks and visualization painting passed 29 checks on 2026-09-28.
 
 ## Rapid Shape
 
 Rapid Room Generation is the sole current Production system. It accepts one square layer-one board side length and returns exactly the mutable layer-three physical cells, generated room records, explicit room count, and realized doorway placement/orientation required by later systems.
+
+The minimum effective side length is 4. Requests below 4 are silently normalized to 4 at the shared ordinary/seeded generation boundary.
 
 The generator owns its complete geometry pipeline. Internal template choice, sealed exterior requests, wall-edge erosion accounting, dimensions, and timing are not part of the returned Production contract. Future tagging, decoration, and population systems are separate consumers.
 
@@ -32,6 +34,8 @@ Tests may call:
 var map_data: RapidRoomMapData = RapidRoomGenerator.make_seeded_map(size, seed)
 ```
 
+With the same seed, requested sizes 1, 2, 3, and 4 produce identical size-4 output.
+
 Generation proceeds in this order:
 
 1. Partition the square layer-one board. Each unassigned panel seeds a stable room ID and receives zero through three successful self-avoiding cardinal walk steps. The room's panel count increments with each successful assignment.
@@ -57,8 +61,13 @@ It exposes no width, height, generation time, sealed-request count, erosion coun
 
 - `id: int`: stable contiguous ID beginning at zero.
 - `panel_count: int`: number of layer-one panels assigned to the room, always one through four.
+- `floor_coordinates: Array[Vector2i]`: exact safe layer-three floor owned by the room.
+- `room_type: StringName`: initialized empty by Rapid and assigned by Layout.
+- `tags: Array[StringName]`: initialized empty by Rapid; Layout assignment preserves order and duplicates.
 
 Across one result, all panel counts sum exactly to `size × size`.
+
+Floor coordinates are collected from room-owned middle-blueprint floor before wall erosion. They include ordinary room blocks and merged same-room divider blocks. Doorway footprints are a separate channel, and erosion-created floor remains unowned. Coordinates are detached with their room record.
 
 ### `RapidRoomDoorway`
 
@@ -69,7 +78,7 @@ Template choice and middle-blueprint coordinates remain generator-internal. Exte
 
 ## Ownership And Dependencies
 
-Rapid owns room partitioning, physical geometry, and realized doorway metadata. Downstream systems may mutate `cells` in the same returned package and may add their own room semantics in later approved contracts. Rapid does not tag rooms, interpret archetypes, decorate, populate, render, or coordinate the wider pipeline.
+Rapid owns room partitioning, physical geometry, and realized doorway metadata. It carries empty mutable room-semantic fields so the owning Layout system can tag the same package without a parallel record graph. Rapid does not choose room types or tags, interpret Archetypes, decorate, populate, render, or coordinate the wider pipeline.
 
 The package depends only on Godot core types and `RandomNumberGenerator`.
 
@@ -84,6 +93,8 @@ The retained contract suite passed 153,922 checks across 1,250 seeded maps: 250 
 - in-place cell mutation;
 - complete seeded reproduction of cells, rooms, and doorways.
 
+Expanded validation additionally established nonempty in-bounds physical floor coordinates, unique ownership across rooms, doorway-footprint exclusion, and exact preservation through Layout.
+
 Godot's import pass registered all four Rapid classes.
 
-No tagging system or controller exists yet. Their contracts must consume this result without expanding Rapid's responsibility implicitly.
+Room Layout and the lightweight controller now consume this result. Rapid's generation responsibility remains unchanged.

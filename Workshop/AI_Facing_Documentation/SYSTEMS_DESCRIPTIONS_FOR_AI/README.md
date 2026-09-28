@@ -1,12 +1,11 @@
 # System Descriptions
-Updated: 2026-09-26
+Updated: 2026-09-28
 
 Current Production system contracts:
 
-- [Map Generation System](GENERATOR_SYSTEM.md)
 - [Rapid Room Generation System](RAPID_ROOM_GENERATION_SYSTEM.md)
-- [Layout Interpretation System](LAYOUT_INTERPRETATION_SYSTEM.md)
-- [Doorway Placement System](DOORWAY_PLACEMENT_SYSTEM.md)
+- [Room Layout System](ROOM_LAYOUT_SYSTEM.md)
+- [Lightweight Generation Controller](LIGHTWEIGHT_GENERATION_CONTROLLER.md)
 
 Create a stable descriptive Markdown filename when another system needs a durable contract. Include purpose, ownership, entry points, inputs/outputs, invariants, source paths, validation, and limits using [Documentation Format](../../Documentation_Format_README.md).
 

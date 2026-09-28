@@ -2,6 +2,7 @@ class_name RapidRoomGenerator
 extends RefCounted
 
 const ERROR_ORIGIN := "Production/Systems/RapidRoomGenerationSystem/rapid_room_generator.gd"
+const MINIMUM_SIZE: int = 4
 
 const KIND_WALL: int = 0
 const KIND_FLOOR: int = 1
@@ -62,10 +63,8 @@ static func make_seeded_map(size: int, seed: int) -> RapidRoomMapData:
 
 
 static func _generate(size: int, rng: RandomNumberGenerator) -> RapidRoomMapData:
-	if size < 1:
-		push_error("%s: size must be at least 1" % ERROR_ORIGIN)
-		return null
-	var state := _partition_top_layer(size, rng)
+	var effective_size: int = maxi(size, MINIMUM_SIZE)
+	var state := _partition_top_layer(effective_size, rng)
 	_build_premerge_blueprint(state)
 	_merge_same_room_dividers(state)
 	if not _author_doorways(state, rng):
@@ -74,9 +73,12 @@ static func _generate(size: int, rng: RandomNumberGenerator) -> RapidRoomMapData
 	var resolution := _resolve_final_tiles(state, rng)
 	var final_cells: PackedInt32Array = resolution.cells
 	var doorways: Array[RapidRoomDoorway] = resolution.doorways
+	var room_floor_coordinates: Array = resolution.room_floor_coordinates
 	var rooms: Array[RapidRoom] = []
 	for room: RoomState in state.rooms:
-		rooms.append(RapidRoom.new(room.room_id, room.panel_count))
+		var coordinates: Array[Vector2i] = []
+		coordinates.assign(room_floor_coordinates[room.room_id])
+		rooms.append(RapidRoom.new(room.room_id, room.panel_count, coordinates))
 	return RapidRoomMapData.new(
 		final_cells,
 		rooms,
@@ -312,6 +314,9 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 	final_cells.resize(final_size * final_size)
 	final_cells.fill(RapidRoomMapData.WALL)
 	var doorways: Array[RapidRoomDoorway] = []
+	var room_floor_coordinates: Array = []
+	for _room: RoomState in state.rooms:
+		room_floor_coordinates.append([])
 	for blueprint_y: int in range(state.blueprint_size):
 		for blueprint_x: int in range(state.blueprint_size):
 			var blueprint_position := Vector2i(blueprint_x, blueprint_y)
@@ -319,6 +324,8 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 			var kind := state.kinds[blueprint_index]
 			if kind == KIND_FLOOR:
 				_fill_final_block(final_cells, final_size, blueprint_position, RapidRoomMapData.FLOOR)
+				var room_id: int = state.room_ids[blueprint_index]
+				_append_final_block_coordinates(room_floor_coordinates[room_id], blueprint_position)
 			elif kind == KIND_DOOR:
 				var template_index := rng.randi_range(0, DOORWAY_TEMPLATES.size() - 1)
 				var axis: int = state.door_axes[blueprint_index]
@@ -331,6 +338,7 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 	return {
 		&"cells": final_cells,
 		&"doorways": doorways,
+		&"room_floor_coordinates": room_floor_coordinates,
 	}
 
 
@@ -361,6 +369,16 @@ static func _fill_final_block(
 	for local_y: int in range(3):
 		for local_x: int in range(3):
 			cells[(origin.y + local_y) * final_size + origin.x + local_x] = value
+
+
+static func _append_final_block_coordinates(
+	coordinates: Array,
+	blueprint_position: Vector2i
+) -> void:
+	var origin := blueprint_position * 3
+	for local_y: int in range(3):
+		for local_x: int in range(3):
+			coordinates.append(origin + Vector2i(local_x, local_y))
 
 
 static func _erode_floor_facing_wall_tiles(
