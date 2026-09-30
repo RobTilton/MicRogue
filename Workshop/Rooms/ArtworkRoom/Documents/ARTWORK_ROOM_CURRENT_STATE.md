@@ -1,11 +1,11 @@
 # ArtworkRoom Current State
-Updated: 2026-09-29
-Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]`
-Implementation baseline/evidence: Uncommitted Room files, validated intake/classification outputs, and human-validated selection tool with exact snapshot `atlas_selection_001.json` as of 2026-09-29; the source atlas SHA-256 remains unchanged.
+Updated: 2026-09-30
+Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]`
+Implementation baseline/evidence: Uncommitted Room files, validated intake/classification and selection tooling, plus human-accepted resolved snapshot `003` and its derived 497-entry catalog; source atlas and prior snapshot hashes remain unchanged.
 
 ## Rapid Shape
 
-ArtworkRoom contains a preserved setup scene, atlas candidates, validated review evidence, and a completed F6 selection tool. Rob's first human snapshot contains 497 exact cells and is technically valid. It remains a broad candidate pool rather than a final catalog because Rob has not resolved whether some cells are useless pieces of larger kits. No Godot consumer resource is implemented. `DOTS.md` is authoritative for authorization, dependencies, and traversal.
+ArtworkRoom contains a preserved setup scene, validated review evidence, completed human-validated selection tooling, and a human-accepted catalog of 497 exact atlas cells. Snapshot `003` resolves every cell to keep and the derived catalog gives each entry a stable coordinate ID and honest broad category. Godot consumer resources remain unimplemented and require a separate contract. `DOTS.md` is authoritative for authorization, dependencies, and traversal.
 
 ## Current Locations And Structure
 
@@ -28,12 +28,16 @@ Workshop/Rooms/ArtworkRoom/
 └── Tables/
     ├── AtlasCatalogTable/
     │   ├── AtlasSelectionTool.tscn
+    │   ├── Catalog/
+    │   │   └── fantasy_sprite_catalog.json
     │   ├── Evidence/
     │   │   ├── atlas_cells.csv
     │   │   └── ContactSheets/ (four labeled PNGs)
     │   ├── Selections/
     │   │   ├── .gitkeep
-    │   │   └── atlas_selection_001.json
+    │   │   ├── atlas_selection_001.json
+    │   │   ├── atlas_selection_002.json
+    │   │   └── atlas_selection_003.json
     │   └── Tools/
     │       ├── atlas_selection_tool.gd
     │       └── generate_atlas_intake.gd
@@ -45,7 +49,7 @@ The two `SpriteTest.tscn` files are distinct current files. The Table scene is t
 
 ## Entry Points And Flow
 
-The intake generator reads the packed atlas, validates its exact dimensions, emits per-cell geometry evidence, and renders four enlarged review sheets. Classification provides optional review context. The F6 tool now owns exact human input: Rob clicks cells, Space writes a new lossless snapshot, Cody validates that snapshot, and only then can catalog reconciliation and a separate consumer-resource contract proceed.
+The intake generator reads the packed atlas, validates its exact dimensions, emits per-cell geometry evidence, and renders four enlarged review sheets. Classification provides optional review context. The F6 tool owns exact human input: it validates and preloads the newest snapshot, Rob distinguishes keep from uncertain cells, Space writes a new lossless snapshot, and Cody validates that snapshot before catalog reconciliation.
 
 ## Component Contracts
 
@@ -58,9 +62,13 @@ The intake generator reads the packed atlas, validates its exact dimensions, emi
 - `Tables/AtlasCatalogTable/Tools/generate_atlas_intake.gd`: validated generation tool for contact sheets and cell geometry evidence; it is editor/workshop tooling, not runtime code.
 - `Tables/AtlasCatalogTable/Evidence/`: retained review evidence consisting of four labeled PNGs and a 1,078-row cell manifest.
 - `Documents/FANTASY_CANDIDATES.md`: current human-review packet containing 31 candidate clusters, confidence boundaries, exclusions, and the selection contract.
-- `Tables/AtlasCatalogTable/AtlasSelectionTool.tscn` and `Tools/atlas_selection_tool.gd`: F6 selection surface and implementation. They validate the atlas contract, map direct clicks to cells, render selection evidence, and save append-only numbered JSON snapshots.
+- `Tables/AtlasCatalogTable/AtlasSelectionTool.tscn` and `Tools/atlas_selection_tool.gd`: F6 selection surface and implementation. They validate the atlas and newest snapshot before preload, map clicks to cells and keep/uncertain states, render distinct overlays, and save append-only schema-2 snapshots.
 - `Documents/ATLAS_SELECTION_TOOL.md`: authoritative use, saved-data, validation, and current human-check contract.
 - `Tables/AtlasCatalogTable/Selections/atlas_selection_001.json`: first human-produced broad candidate pool; 497 exact, unique, sorted, in-bounds cells with validated frames, regions, schema, and atlas hash. It is not yet the accepted final catalog.
+- `Tables/AtlasCatalogTable/Selections/atlas_selection_002.json`: current authoritative review snapshot; schema 2 with the same 497 coordinates, 495 `keep`, and uncertain cells `(16, 0)` and `(17, 0)`.
+- `Tables/AtlasCatalogTable/Selections/atlas_selection_003.json`: accepted resolved selection; schema 2 with all 497 coordinates set to `keep`.
+- `Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json`: accepted membership catalog with 497 unique `atlas_xXX_yYY` identifiers, broad `curated_fantasy` category, and exact coordinate/frame/region mappings.
+- `Documents/FINAL_FANTASY_CATALOG.md`: authoritative human-selection result, mapping contract, evidence, and remaining consumer limits.
 
 ## Required Outside Data
 
@@ -73,5 +81,9 @@ Rob's visual judgment is required to accept or reject candidate sprites and to r
 - Four derived contact sheets and the cell manifest were generated successfully; the source image hash remained unchanged.
 - Thirty-one sprite clusters have been classified for review; none has been human-accepted, assigned a final game-facing identifier, or wired into a Godot consumer.
 - The selection tool's headless self-test and scene-start check passed. Rob's F6 test then created snapshot `001`, which passed full structural and source-contract validation.
-- Human Catalog Selection is active. Snapshot `001` is preserved exactly, but Rob's uncertainty about kit-support and useless cells prevents final catalog acceptance.
+- Refinement self-test passed schema-1 preload, schema-2 review states and round-trip, invalid duplicate refusal, and unique target naming. Actual scene startup loaded all 497 cells from snapshot `001`.
+- Rob confirmed all refined F6 functionality and saved snapshot `002`; it passed full structural and source-contract validation.
+- Snapshot `001` and the atlas remain byte-identical. Snapshot `002` preserves all 497 coordinates while identifying two uncertain cells.
+- Rob resolved both uncertain marks as interaction tests and directed that both remain kept. Snapshot `003` and the derived 497-entry catalog passed exact validation.
+- Human Catalog Selection is complete. Consumer roles and Godot resources remain pending a separate Alignment/Execute contract.
 - Human acceptance and Git checkpointing remain pending.

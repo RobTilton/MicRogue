@@ -1,7 +1,9 @@
 # ArtworkRoom Fantasy Candidate Selection
-Updated: 2026-09-29
+Updated: 2026-09-30
 Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[FantasyCandidateClassification]`
 Implementation baseline/evidence: Visual classification from the four validated Atlas Intake contact sheets derived from `colored-transparent_packed.png`, SHA-256 `801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74`.
+
+Status: Supporting classification evidence only. Direct human selection superseded this document as catalog authority. The accepted membership contract is [FINAL_FANTASY_CATALOG.md](FINAL_FANTASY_CATALOG.md); `Pending` values below were never treated as acceptance.
 
 ## Rapid Shape
 

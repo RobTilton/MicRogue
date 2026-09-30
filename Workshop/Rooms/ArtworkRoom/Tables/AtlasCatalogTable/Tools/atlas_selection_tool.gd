@@ -10,6 +10,8 @@ const ROW_COUNT := 22
 const ATLAS_SIZE := Vector2i(COLUMN_COUNT * CELL_SIZE, ROW_COUNT * CELL_SIZE)
 const ZOOM_LEVELS: Array[int] = [1, 2, 4, 8]
 const INITIAL_ORIGIN := Vector2(24.0, 96.0)
+const STATE_KEEP := "keep"
+const STATE_UNCERTAIN := "uncertain"
 
 @onready var help_label: Label = %HelpLabel
 @onready var status_label: Label = %StatusLabel
@@ -22,16 +24,21 @@ var zoom_index := 1
 var selected_cells: Dictionary = {}
 var atlas_is_valid := false
 var is_panning := false
+var loaded_snapshot_filename := "none"
 
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	set_process_unhandled_key_input(true)
 	atlas_is_valid = _validate_atlas()
-	_update_status("Ready" if atlas_is_valid else "Atlas validation failed; saving disabled")
-	queue_redraw()
 	if OS.get_cmdline_user_args().has("--self-test"):
 		call_deferred("_run_self_test")
+	elif atlas_is_valid:
+		_load_latest_snapshot()
+		_update_status("Ready")
+	else:
+		_update_status("Atlas validation failed; saving disabled")
+	queue_redraw()
 
 
 func _draw() -> void:
@@ -54,8 +61,11 @@ func _draw() -> void:
 			atlas_origin + Vector2(coordinate * CELL_SIZE) * zoom,
 			Vector2(CELL_SIZE, CELL_SIZE) * zoom
 		)
-		draw_rect(selection_rect, Color(0.05, 0.85, 1.0, 0.42), true)
-		draw_rect(selection_rect.grow(-1.0), Color(0.2, 0.95, 1.0, 1.0), false, 2.0)
+		var is_uncertain: bool = selected_cells[coordinate] == STATE_UNCERTAIN
+		var fill_color := Color(1.0, 0.72, 0.05, 0.48) if is_uncertain else Color(0.05, 0.85, 1.0, 0.42)
+		var border_color := Color(1.0, 0.9, 0.2, 1.0) if is_uncertain else Color(0.2, 0.95, 1.0, 1.0)
+		draw_rect(selection_rect, fill_color, true)
+		draw_rect(selection_rect.grow(-1.0), border_color, false, 2.0)
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -63,6 +73,9 @@ func _gui_input(event: InputEvent) -> void:
 		var mouse_event := event as InputEventMouseButton
 		if mouse_event.button_index == MOUSE_BUTTON_LEFT and mouse_event.pressed:
 			_toggle_cell_at(mouse_event.position)
+			accept_event()
+		elif mouse_event.button_index == MOUSE_BUTTON_RIGHT and mouse_event.pressed:
+			_toggle_uncertain_at(mouse_event.position)
 			accept_event()
 		elif mouse_event.button_index == MOUSE_BUTTON_MIDDLE:
 			is_panning = mouse_event.pressed
@@ -107,6 +120,41 @@ func _validate_atlas() -> bool:
 	return true
 
 
+func _latest_snapshot_path() -> String:
+	var highest_sequence := -1
+	var highest_path := ""
+	for filename in DirAccess.get_files_at(SELECTION_DIRECTORY):
+		if not filename.begins_with("atlas_selection_") or not filename.ends_with(".json"):
+			continue
+		var sequence_text := filename.trim_prefix("atlas_selection_").trim_suffix(".json")
+		if not sequence_text.is_valid_int():
+			continue
+		var sequence := sequence_text.to_int()
+		if sequence > highest_sequence:
+			highest_sequence = sequence
+			highest_path = SELECTION_DIRECTORY.path_join(filename)
+	return highest_path
+
+
+func _load_latest_snapshot() -> void:
+	var snapshot_path := _latest_snapshot_path()
+	if snapshot_path.is_empty():
+		loaded_snapshot_filename = "none"
+		return
+	var snapshot_text := FileAccess.get_file_as_string(snapshot_path)
+	var payload = JSON.parse_string(snapshot_text)
+	var validation := _validate_payload(payload)
+	if not validation.valid:
+		selected_cells.clear()
+		atlas_is_valid = false
+		loaded_snapshot_filename = "INVALID"
+		_report_error("newest snapshot was rejected without fallback: %s: %s" % [snapshot_path, validation.error])
+		return
+	selected_cells = validation.cells.duplicate()
+	loaded_snapshot_filename = snapshot_path.get_file()
+	print("%s: loaded %d cells from %s" % [TOOL_ORIGIN, selected_cells.size(), snapshot_path])
+
+
 func _toggle_cell_at(screen_position: Vector2) -> void:
 	if not atlas_is_valid:
 		return
@@ -116,8 +164,23 @@ func _toggle_cell_at(screen_position: Vector2) -> void:
 	if selected_cells.has(coordinate):
 		selected_cells.erase(coordinate)
 	else:
-		selected_cells[coordinate] = true
+		selected_cells[coordinate] = STATE_KEEP
 	_update_status("Selection changed")
+	_update_hover(screen_position)
+	queue_redraw()
+
+
+func _toggle_uncertain_at(screen_position: Vector2) -> void:
+	if not atlas_is_valid:
+		return
+	var coordinate := _coordinate_for_screen(screen_position)
+	if not _coordinate_is_valid(coordinate):
+		return
+	if not selected_cells.has(coordinate) or selected_cells[coordinate] == STATE_KEEP:
+		selected_cells[coordinate] = STATE_UNCERTAIN
+	else:
+		selected_cells[coordinate] = STATE_KEEP
+	_update_status("Review state changed")
 	_update_hover(screen_position)
 	queue_redraw()
 
@@ -150,12 +213,19 @@ func _update_hover(screen_position: Vector2) -> void:
 		hover_label.text = "Hover: outside atlas"
 		return
 	var frame := coordinate.y * COLUMN_COUNT + coordinate.x
-	var state := "selected" if selected_cells.has(coordinate) else "not selected"
+	var state: String = selected_cells.get(coordinate, "not selected")
 	hover_label.text = "Hover: (%d, %d)    frame %d    %s" % [coordinate.x, coordinate.y, frame, state]
 
 
 func _update_status(prefix: String) -> void:
-	status_label.text = "%s    Selected: %d    Zoom: %dx" % [prefix, selected_cells.size(), _zoom()]
+	var uncertain_count := 0
+	for review_state: String in selected_cells.values():
+		if review_state == STATE_UNCERTAIN:
+			uncertain_count += 1
+	var keep_count := selected_cells.size() - uncertain_count
+	status_label.text = "%s    Total: %d    Keep: %d    Uncertain: %d    Zoom: %dx    Loaded: %s" % [
+		prefix, selected_cells.size(), keep_count, uncertain_count, _zoom(), loaded_snapshot_filename,
+	]
 
 
 func _zoom() -> int:
@@ -182,9 +252,10 @@ func _build_payload(sequence: int) -> Dictionary:
 			"y": coordinate.y,
 			"frame": coordinate.y * COLUMN_COUNT + coordinate.x,
 			"region": [coordinate.x * CELL_SIZE, coordinate.y * CELL_SIZE, CELL_SIZE, CELL_SIZE],
+			"review_state": selected_cells[coordinate],
 		})
 	return {
-		"schema_version": 1,
+		"schema_version": 2,
 		"atlas_path": SOURCE_PATH,
 		"atlas_sha256": atlas_hash,
 		"atlas_size": [ATLAS_SIZE.x, ATLAS_SIZE.y],
@@ -219,6 +290,9 @@ func _save_selection_snapshot() -> void:
 		if not _coordinate_is_valid(coordinate):
 			_report_error("refused save because selection contains invalid coordinate %s" % coordinate)
 			return
+		if selected_cells[coordinate] != STATE_KEEP and selected_cells[coordinate] != STATE_UNCERTAIN:
+			_report_error("refused save because %s has invalid review state: %s" % [coordinate, selected_cells[coordinate]])
+			return
 	var directory_error := DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(SELECTION_DIRECTORY))
 	if directory_error != OK and directory_error != ERR_ALREADY_EXISTS:
 		_report_error("could not create selection directory (error %d): %s" % [directory_error, SELECTION_DIRECTORY])
@@ -230,8 +304,9 @@ func _save_selection_snapshot() -> void:
 	var payload := _build_payload(target.sequence)
 	var serialized := JSON.stringify(payload, "\t", true)
 	var parsed = JSON.parse_string(serialized)
-	if not _payload_matches(parsed, payload.selected_count):
-		_report_error("refused save because in-memory JSON round-trip validation failed")
+	var parsed_validation := _validate_payload(parsed)
+	if not parsed_validation.valid or parsed_validation.cells.size() != payload.selected_count:
+		_report_error("refused save because in-memory JSON round-trip validation failed: %s" % parsed_validation.error)
 		return
 	var temporary_path: String = target.path + ".tmp"
 	var output := FileAccess.open(temporary_path, FileAccess.WRITE)
@@ -243,8 +318,9 @@ func _save_selection_snapshot() -> void:
 	output.close()
 	var written_text := FileAccess.get_file_as_string(temporary_path)
 	var written_payload = JSON.parse_string(written_text)
-	if not _payload_matches(written_payload, payload.selected_count):
-		_report_error("temporary snapshot failed read-back validation and was retained for inspection: %s" % temporary_path)
+	var written_validation := _validate_payload(written_payload)
+	if not written_validation.valid or written_validation.cells.size() != payload.selected_count:
+		_report_error("temporary snapshot failed read-back validation and was retained for inspection: %s: %s" % [temporary_path, written_validation.error])
 		return
 	var rename_error := DirAccess.rename_absolute(
 		ProjectSettings.globalize_path(temporary_path),
@@ -257,31 +333,65 @@ func _save_selection_snapshot() -> void:
 	print("%s: saved %d selected cells to %s" % [TOOL_ORIGIN, selected_cells.size(), target.path])
 
 
-func _payload_matches(payload, expected_count: int) -> bool:
+func _validate_payload(payload) -> Dictionary:
 	if not payload is Dictionary:
-		return false
+		return {"valid": false, "error": "root is not a dictionary", "cells": {}}
+	var schema_version := int(payload.get("schema_version", -1))
+	if schema_version != 1 and schema_version != 2:
+		return {"valid": false, "error": "unsupported schema version %d" % schema_version, "cells": {}}
 	var atlas_size_value = payload.get("atlas_size")
 	var cell_size_value = payload.get("cell_size")
 	var selected_cells_value = payload.get("selected_cells")
 	if not atlas_size_value is Array or atlas_size_value.size() != 2:
-		return false
+		return {"valid": false, "error": "atlas_size is invalid", "cells": {}}
 	if not cell_size_value is Array or cell_size_value.size() != 2:
-		return false
+		return {"valid": false, "error": "cell_size is invalid", "cells": {}}
 	if not selected_cells_value is Array:
-		return false
-	return (
-		int(payload.get("schema_version", -1)) == 1
-		and payload.get("atlas_path") == SOURCE_PATH
-		and payload.get("atlas_sha256") == EXPECTED_SOURCE_SHA256
-		and int(atlas_size_value[0]) == ATLAS_SIZE.x
-		and int(atlas_size_value[1]) == ATLAS_SIZE.y
-		and int(cell_size_value[0]) == CELL_SIZE
-		and int(cell_size_value[1]) == CELL_SIZE
-		and int(payload.get("columns", -1)) == COLUMN_COUNT
-		and int(payload.get("rows", -1)) == ROW_COUNT
-		and int(payload.get("selected_count", -1)) == expected_count
-		and selected_cells_value.size() == expected_count
-	)
+		return {"valid": false, "error": "selected_cells is not an array", "cells": {}}
+	if payload.get("atlas_path") != SOURCE_PATH:
+		return {"valid": false, "error": "atlas_path does not match", "cells": {}}
+	if payload.get("atlas_sha256") != EXPECTED_SOURCE_SHA256:
+		return {"valid": false, "error": "atlas_sha256 does not match", "cells": {}}
+	if int(atlas_size_value[0]) != ATLAS_SIZE.x or int(atlas_size_value[1]) != ATLAS_SIZE.y:
+		return {"valid": false, "error": "atlas_size does not match", "cells": {}}
+	if int(cell_size_value[0]) != CELL_SIZE or int(cell_size_value[1]) != CELL_SIZE:
+		return {"valid": false, "error": "cell_size does not match", "cells": {}}
+	if int(payload.get("columns", -1)) != COLUMN_COUNT or int(payload.get("rows", -1)) != ROW_COUNT:
+		return {"valid": false, "error": "grid dimensions do not match", "cells": {}}
+	if int(payload.get("save_sequence", -1)) < 1:
+		return {"valid": false, "error": "save_sequence is invalid", "cells": {}}
+	if int(payload.get("selected_count", -1)) != selected_cells_value.size():
+		return {"valid": false, "error": "selected_count does not match selected_cells", "cells": {}}
+
+	var validated_cells: Dictionary = {}
+	var previous_coordinate := Vector2i(-1, -1)
+	for index in range(selected_cells_value.size()):
+		var cell = selected_cells_value[index]
+		if not cell is Dictionary:
+			return {"valid": false, "error": "cell %d is not a dictionary" % index, "cells": {}}
+		var coordinate := Vector2i(int(cell.get("x", -1)), int(cell.get("y", -1)))
+		if not _coordinate_is_valid(coordinate):
+			return {"valid": false, "error": "cell %d is out of bounds: %s" % [index, coordinate], "cells": {}}
+		if validated_cells.has(coordinate):
+			return {"valid": false, "error": "cell %d duplicates %s" % [index, coordinate], "cells": {}}
+		if index > 0 and (coordinate.y < previous_coordinate.y or (coordinate.y == previous_coordinate.y and coordinate.x <= previous_coordinate.x)):
+			return {"valid": false, "error": "cell %d is not strictly y-then-x sorted" % index, "cells": {}}
+		var expected_frame := coordinate.y * COLUMN_COUNT + coordinate.x
+		if int(cell.get("frame", -1)) != expected_frame:
+			return {"valid": false, "error": "cell %d frame is invalid" % index, "cells": {}}
+		var region = cell.get("region")
+		if not region is Array or region.size() != 4:
+			return {"valid": false, "error": "cell %d region is invalid" % index, "cells": {}}
+		var expected_region := [coordinate.x * CELL_SIZE, coordinate.y * CELL_SIZE, CELL_SIZE, CELL_SIZE]
+		for region_index in range(4):
+			if int(region[region_index]) != expected_region[region_index]:
+				return {"valid": false, "error": "cell %d region values are invalid" % index, "cells": {}}
+		var review_state := STATE_KEEP if schema_version == 1 else str(cell.get("review_state", ""))
+		if review_state != STATE_KEEP and review_state != STATE_UNCERTAIN:
+			return {"valid": false, "error": "cell %d review_state is invalid" % index, "cells": {}}
+		validated_cells[coordinate] = review_state
+		previous_coordinate = coordinate
+	return {"valid": true, "error": "", "cells": validated_cells, "schema_version": schema_version}
 
 
 func _run_self_test() -> void:
@@ -289,36 +399,82 @@ func _run_self_test() -> void:
 		_report_error("self-test cannot run because atlas validation failed")
 		get_tree().quit(1)
 		return
+	var schema_one_path := SELECTION_DIRECTORY.path_join("atlas_selection_001.json")
+	if not FileAccess.file_exists(schema_one_path):
+		_report_error("self-test requires protected schema-1 snapshot: %s" % schema_one_path)
+		get_tree().quit(1)
+		return
+	var schema_one_payload = JSON.parse_string(FileAccess.get_file_as_string(schema_one_path))
+	var schema_one_validation := _validate_payload(schema_one_payload)
+	if not schema_one_validation.valid or schema_one_validation.schema_version != 1 or schema_one_validation.cells.size() != 497:
+		_report_error("self-test schema-1 loading failed: %s" % schema_one_validation.error)
+		get_tree().quit(1)
+		return
+	for loaded_state: String in schema_one_validation.cells.values():
+		if loaded_state != STATE_KEEP:
+			_report_error("self-test schema-1 conversion did not produce keep state")
+			get_tree().quit(1)
+			return
+	var latest_path := _latest_snapshot_path()
+	var latest_payload = JSON.parse_string(FileAccess.get_file_as_string(latest_path))
+	var latest_validation := _validate_payload(latest_payload)
+	if not latest_validation.valid:
+		_report_error("self-test newest-snapshot validation failed: %s" % latest_validation.error)
+		get_tree().quit(1)
+		return
 	var original_origin := atlas_origin
 	var original_zoom_index := zoom_index
 	atlas_origin = Vector2(100.0, 120.0)
 	zoom_index = 2
-	var mapped := _coordinate_for_screen(atlas_origin + Vector2(5 * CELL_SIZE * _zoom() + 1, 3 * CELL_SIZE * _zoom() + 1))
+	var test_screen_position := atlas_origin + Vector2(5 * CELL_SIZE * _zoom() + 1, 3 * CELL_SIZE * _zoom() + 1)
+	var mapped := _coordinate_for_screen(test_screen_position)
 	if mapped != Vector2i(5, 3):
 		_report_error("self-test click mapping failed: got %s" % mapped)
 		get_tree().quit(1)
 		return
 	selected_cells.clear()
-	selected_cells[Vector2i(48, 21)] = true
-	selected_cells[Vector2i(5, 3)] = true
-	selected_cells[Vector2i(1, 1)] = true
+	selected_cells[Vector2i(48, 21)] = STATE_KEEP
+	selected_cells[Vector2i(5, 3)] = STATE_KEEP
+	selected_cells[Vector2i(1, 1)] = STATE_KEEP
+	_toggle_uncertain_at(test_screen_position)
+	if selected_cells[Vector2i(5, 3)] != STATE_UNCERTAIN:
+		_report_error("self-test keep-to-uncertain transition failed")
+		get_tree().quit(1)
+		return
+	_toggle_uncertain_at(test_screen_position)
+	if selected_cells[Vector2i(5, 3)] != STATE_KEEP:
+		_report_error("self-test uncertain-to-keep transition failed")
+		get_tree().quit(1)
+		return
+	_toggle_uncertain_at(test_screen_position)
 	var payload := _build_payload(42)
 	var cells: Array = payload.selected_cells
 	if cells.size() != 3 or cells[0].x != 1 or cells[0].y != 1 or cells[1].x != 5 or cells[1].y != 3 or cells[2].x != 48 or cells[2].y != 21:
 		_report_error("self-test deterministic selection sorting failed")
 		get_tree().quit(1)
 		return
-	if cells[1].frame != 152 or cells[1].region != [80, 48, 16, 16]:
-		_report_error("self-test frame or region derivation failed: %s" % cells[1])
+	if payload.schema_version != 2 or cells[1].frame != 152 or cells[1].region != [80, 48, 16, 16] or cells[1].review_state != STATE_UNCERTAIN:
+		_report_error("self-test schema-2 state, frame, or region derivation failed: %s" % cells[1])
 		get_tree().quit(1)
 		return
 	var round_trip = JSON.parse_string(JSON.stringify(payload, "\t", true))
-	if not _payload_matches(round_trip, 3):
-		_report_error("self-test JSON round-trip failed")
+	var round_trip_validation := _validate_payload(round_trip)
+	if not round_trip_validation.valid or round_trip_validation.cells.size() != 3 or round_trip_validation.cells[Vector2i(5, 3)] != STATE_UNCERTAIN:
+		_report_error("self-test schema-2 JSON round-trip failed: %s" % round_trip_validation.error)
+		get_tree().quit(1)
+		return
+	var invalid_payload: Dictionary = payload.duplicate(true)
+	invalid_payload.selected_cells.append(invalid_payload.selected_cells[0].duplicate(true))
+	invalid_payload.selected_count = 4
+	var invalid_validation := _validate_payload(invalid_payload)
+	if invalid_validation.valid:
+		_report_error("self-test invalid duplicate snapshot was not refused")
 		get_tree().quit(1)
 		return
 	var target := _next_snapshot_target()
-	if target.is_empty() or FileAccess.file_exists(target.path):
+	var expected_next_sequence := int(latest_payload.save_sequence) + 1
+	var expected_next_filename := "atlas_selection_%03d.json" % expected_next_sequence
+	if target.is_empty() or target.sequence != expected_next_sequence or target.path.get_file() != expected_next_filename or FileAccess.file_exists(target.path):
 		_report_error("self-test unique snapshot target allocation failed")
 		get_tree().quit(1)
 		return

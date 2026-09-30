@@ -1,11 +1,11 @@
 # ArtworkRoom Atlas Selection Tool
-Updated: 2026-09-29
-Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]`
-Implementation baseline/evidence: `AtlasSelectionTool.tscn` and `atlas_selection_tool.gd` agent-validated with Godot 4.4.1; Rob's F6 interaction produced validated `atlas_selection_001.json` on 2026-09-29.
+Updated: 2026-09-30
+Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionToolRefinement]`
+Implementation baseline/evidence: Original tool and schema-2 refinement human-validated; snapshot `002` structurally validated on 2026-09-30.
 
 ## Rapid Shape
 
-The tool converts Rob's direct visual choices into lossless, append-only selection snapshots. It displays the validated packed atlas, maps each click to one exact 16-by-16 cell, and saves sorted coordinates plus derived frames and pixel regions. Descriptive candidate prose is supporting context only; a human-produced validated snapshot is authoritative for Human Catalog Selection.
+The tool converts Rob's direct visual choices into lossless, append-only selection snapshots. It validates and preloads the highest-numbered snapshot, preserving prior selections for refinement. Each selected cell is either `keep` or `uncertain`; both states retain exact coordinates, frames, and regions. Descriptive candidate prose is supporting context only; a human-produced validated snapshot is authoritative for Human Catalog Selection.
 
 ## Current Locations And Structure
 
@@ -17,11 +17,14 @@ The tool converts Rob's direct visual choices into lossless, append-only selecti
 ## Entry Points And Flow
 
 1. Open `AtlasSelectionTool.tscn` in Godot and press F6.
-2. Left-click a sprite cell to select it; left-click it again to deselect it.
-3. Middle-drag to pan. Use the mouse wheel for bounded integer zoom levels `1x`, `2x`, `4x`, and `8x`.
-4. Read the hover line for exact `(x, y)`, derived frame, and selection state.
-5. Press Space to save the entire current selection to the next unused `atlas_selection_NNN.json` path.
-6. Report the saved filename to Cody for exact validation and catalog reconciliation.
+2. The newest snapshot is fully validated and loaded before its cells may populate the tool. Snapshot `001` should report 497 total and 497 keep cells.
+3. Left-click a sprite cell to select it as `keep`; left-click a selected cell to deselect it.
+4. Right-click a selected cell to toggle between `keep` and `uncertain`. Right-clicking an unselected cell selects it as `uncertain`.
+5. Cyan means `keep`; yellow means `uncertain`.
+6. Middle-drag to pan. Use the mouse wheel for bounded integer zoom levels `1x`, `2x`, `4x`, and `8x`.
+7. Read the HUD for total, keep, uncertain, zoom, and loaded-snapshot values. Hover reports exact `(x, y)`, derived frame, and review state.
+8. Press Space to save the entire current selection to the next unused `atlas_selection_NNN.json` path.
+9. Report the saved filename to Cody for exact validation and catalog reconciliation.
 
 ## Component Contracts
 
@@ -29,7 +32,10 @@ The tool converts Rob's direct visual choices into lossless, append-only selecti
 - `(0, 0)` is the top-left cell. `x` increases rightward and `y` increases downward.
 - `frame = y * 49 + x`.
 - `region = [x * 16, y * 16, 16, 16]`.
-- Selection snapshots record schema version, source path/hash, atlas and cell dimensions, grid dimensions, save sequence, selected count, and cells sorted by `y` then `x`.
+- Schema-1 snapshots remain readable; every schema-1 selected cell loads as `keep`.
+- New schema-2 snapshots record source path/hash, atlas and cell dimensions, grid dimensions, save sequence, selected count, and cells sorted by `y` then `x`.
+- Each schema-2 selected cell records `review_state` as exactly `keep` or `uncertain`.
+- The highest-numbered snapshot is authoritative for preload. If it is invalid, the tool refuses it, does not fall back silently, clears in-memory selection, and disables saving.
 - Space allocates a new filename and never overwrites an existing snapshot or temporary file.
 - Before finalization, output JSON is validated in memory, written to a unique temporary path, read back and parsed, then renamed to its final numbered path. A failed temporary artifact is retained and reported rather than silently discarded.
 - An empty selection may be intentionally saved and is recorded with a zero count.
@@ -43,4 +49,12 @@ The tool converts Rob's direct visual choices into lossless, append-only selecti
 - Automated tests intentionally created no selection snapshot; they do not impersonate human selection.
 - Rob confirmed actual F6 selection and saved `atlas_selection_001.json` with 497 selected cells.
 - Snapshot validation found 497 declared, present, and unique entries; correct `y`-then-`x` ordering; valid bounds; exact derived frames and pixel regions; matching schema and source hash; and SHA-256 `c76bffb4a3fa17342275cc84d39ec6fb608dba0d9a6ba242a90f6b817e389f1f` for the snapshot itself.
-- The Selection Tool Box is complete. Rob has not accepted snapshot `001` as the final catalog because some selected cells may be useless pieces of larger kits; that uncertainty belongs to Human Catalog Selection.
+- Refinement self-test passed schema-1 loading and conversion of all 497 cells to `keep`, keep/uncertain transitions, count/state preservation, schema-2 sorting and JSON round-trip, duplicate-cell refusal, and allocation of `atlas_selection_002.json` as the next target.
+- The actual scene launch preloaded 497 cells from snapshot `001` successfully.
+- Snapshot `001` and the packed atlas remained byte-identical after agent validation; no schema-2 snapshot was fabricated.
+- Rob confirmed all refined F6 functionality and saved `atlas_selection_002.json`.
+- Snapshot `002` passed schema, sequence, count, uniqueness, bounds, ordering, frame, region, state, and atlas-hash validation. It contains 497 cells: 495 `keep` and 2 `uncertain` at `(16, 0)` and `(17, 0)`.
+- Snapshot `002` preserved exactly the coordinate set from snapshot `001`. Snapshot `001` retained SHA-256 `c76bffb4a3fa17342275cc84d39ec6fb608dba0d9a6ba242a90f6b817e389f1f`; snapshot `002` has SHA-256 `6bdf3c63aab5345bd1fba3f38fc238a8ebaba46b7bb9c34e1a965273e10df2af`; the atlas hash remains unchanged.
+- Atlas Selection Tool Refinement is complete. Human Catalog Selection now owns the two uncertain-cell decisions and final catalog acceptance.
+- Rob identified the two uncertain states as interaction tests and directed that both remain kept. Resolved snapshot `003` contains 497 keep cells, loads successfully through the actual scene, and is the accepted selection input recorded by `FINAL_FANTASY_CATALOG.md`.
+- The self-test now checks protected schema-1 snapshot `001` directly while validating whichever legitimate snapshot is newest; it no longer assumes `001` must remain newest.

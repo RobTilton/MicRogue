@@ -26,7 +26,7 @@ offset_top = 8.0
 offset_right = 1128.0
 offset_bottom = 31.0
 theme_override_colors/font_color = Color(0.88, 0.92, 0.96, 1)
-text = "Left click: toggle sprite    Middle drag: pan    Wheel: zoom    Space: save numbered snapshot"
+text = "Left: select/deselect    Right: keep/uncertain    Middle drag: pan    Wheel: zoom    Space: save new snapshot"
 
 [node name="StatusLabel" type="Label" parent="."]
 unique_name_in_owner = true

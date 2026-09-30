@@ -1,6 +1,6 @@
 # ArtworkRoom DOTS
-Updated: 2026-09-29
-Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]`
+Updated: 2026-09-30
+Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]`
 Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29; exact paths, dimensions, scene wiring, and SHA-256 values are recorded below.
 
 ## Room Contract
@@ -14,10 +14,10 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 
 ## Current Traversal
 
-- Last completed checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]`
-- Active/interrupted checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` awaiting refinement or explicit acceptance of snapshot `atlas_selection_001.json`
-- Next eligible action: preserve snapshot `001` as the exact broad candidate pool, then resolve Rob's stated uncertainty about kit-support and possibly useless cells before declaring the retained catalog final
-- Human acceptance / Git checkpoint: Atlas Selection Tool is human-validated; snapshot `001` is exact but Rob has not accepted its 497 cells as the final retained catalog; no Git checkpoint is known
+- Last completed checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]`
+- Active/interrupted checkpoint: none
+- Next eligible action: establish a separate Alignment/Execute contract for `[ArtworkRoom]+[AtlasCatalogTable]+[GodotConsumerResources]`, defining which accepted entries serve TileSet terrain, static art, animation, effects, or other concrete consumers
+- Human acceptance / Git checkpoint: Rob directed that test-marked cells `(16, 0)` and `(17, 0)` remain kept; all 497 cells in resolved snapshot `003` are accepted catalog members; no Git checkpoint is known
 
 ## Mandatory Box List
 
@@ -27,7 +27,8 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasIntake]` | Verify the packed atlas contract and produce a labeled visual reference suitable for coordinate-based review. | `[ArtworkRoom]+[SpriteTestTable]+[BasicDirectorySetup]` | The canonical candidate atlas, dimensions, 16-by-16 grid, coordinate convention, and derived contact-sheet evidence are documented; source assets remain unchanged. | complete | `Documents/ATLAS_INTAKE.md`; four labeled contact sheets; `atlas_cells.csv` with 1,078 cells; source hash unchanged |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[FantasyCandidateClassification]` | Identify only likely in-scope fantasy sprites and classify ambiguous entries honestly. | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasIntake]` | A reviewable candidate list covers the approved subject categories using exact atlas coordinates, excludes obvious dead weight, and marks uncertainty instead of inventing semantics. | complete | `Documents/FANTASY_CANDIDATES.md`; 31 bounded candidate clusters; four source review sheets inspected at original detail |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]` | Provide a lossless F6 visual selector that records Rob's exact cell choices in preserved numbered snapshots. | `[ArtworkRoom]+[AtlasCatalogTable]+[FantasyCandidateClassification]` | Atlas/hash validation, click mapping, selection overlay, hover evidence, bounded zoom/pan, deterministic unique snapshots, sorted coordinate/frame/region data, JSON round-trip, and source preservation are agent-validated; Rob then confirms actual F6 interaction. | complete | Self-test and scene launch passed; Rob selected/deselected cells and saved `Selections/atlas_selection_001.json`; 497 declared/present/unique cells; bounds, ordering, frames, regions, schema, and atlas hash all validated |
-| `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` | Reconcile Rob's exact saved selection into the retained game-facing catalog. | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]` | A human-produced validated snapshot is recorded; every retained entry has a stable identifier, category, and exact atlas coordinate; human acceptance scope is explicit. | active | `atlas_selection_001.json` is a valid broad candidate pool; Rob reports that some cells may be useless kit pieces, so final acceptance remains unresolved |
+| `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionToolRefinement]` | Load the newest valid snapshot and preserve exact selections while allowing keep versus uncertain review states in append-only schema-2 snapshots. | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionTool]` | Schema-1 loading, full pre-mutation validation, state transitions/counts, schema-2 output, invalid-input refusal, unique naming, source/snapshot preservation, and scene startup are agent-validated; Rob confirms preload and saves a reviewed snapshot. | complete | Rob confirmed all refined functionality and saved `atlas_selection_002.json`; schema 2/sequence 2; 497 declared/present/unique cells; 495 keep and 2 uncertain; exact coordinate preservation from `001`; all bounds/order/frame/region/hash checks passed |
+| `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` | Reconcile Rob's exact saved selection into the retained game-facing catalog. | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasSelectionToolRefinement]` | A human-produced validated snapshot is recorded; every retained entry has a stable identifier, category, exact atlas coordinate, and resolved review state; human acceptance scope is explicit. | complete | Rob directed that both test-marked cells remain kept; `atlas_selection_003.json` has 497 keep cells; `Catalog/fantasy_sprite_catalog.json` has 497 unique stable IDs and exact mappings; `Documents/FINAL_FANTASY_CATALOG.md` records acceptance and limits |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[GodotConsumerResources]` | Build only the TileSet, static atlas-region, animation, or lookup resources required by approved consumers. | `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` | A separately approved consumer contract is implemented and validated against the accepted catalog without modifying source atlas pixels. | planned | Requires later Alignment/Execute and an approved consumer contract; no output yet |
 
 ## Current References And Unresolved State
@@ -37,6 +38,10 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 - Candidate-selection reference: [Documents/FANTASY_CANDIDATES.md](Documents/FANTASY_CANDIDATES.md)
 - Selection-tool reference: [Documents/ATLAS_SELECTION_TOOL.md](Documents/ATLAS_SELECTION_TOOL.md)
 - Human selection candidate: [Tables/AtlasCatalogTable/Selections/atlas_selection_001.json](Tables/AtlasCatalogTable/Selections/atlas_selection_001.json), SHA-256 `c76bffb4a3fa17342275cc84d39ec6fb608dba0d9a6ba242a90f6b817e389f1f`
+- Current human review snapshot: [Tables/AtlasCatalogTable/Selections/atlas_selection_002.json](Tables/AtlasCatalogTable/Selections/atlas_selection_002.json), SHA-256 `6bdf3c63aab5345bd1fba3f38fc238a8ebaba46b7bb9c34e1a965273e10df2af`
+- Accepted selection snapshot: [Tables/AtlasCatalogTable/Selections/atlas_selection_003.json](Tables/AtlasCatalogTable/Selections/atlas_selection_003.json), SHA-256 `a3059f94824af3d9e8d37b7206283317e6950802a876d03f38d0e2700cf8baa6`
+- Accepted catalog: [Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json](Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json), SHA-256 `d532acd66182a71c3b555972f71cf079413838f1f1795cc2a7cf3ababa07c0a5`
+- Catalog reference: [Documents/FINAL_FANTASY_CATALOG.md](Documents/FINAL_FANTASY_CATALOG.md)
 - Preserved setup scene: [Tables/SpriteTestTable/SpriteTest.tscn](Tables/SpriteTestTable/SpriteTest.tscn)
 - User-added test scene: [SpriteTest.tscn](SpriteTest.tscn), SHA-256 `4b9ded4716e87a44eadb262f474786f3b1d5b190be73a04ece37bc0e586e6301`
 - Original atlas candidate: [Assets/Possible_Artwork/colored-transparent.png](Assets/Possible_Artwork/colored-transparent.png), `832x373`, SHA-256 `532cf2ec79419cfabc6a757611737bcba43e24aed61d810aa6dda7ce69307b9b`
