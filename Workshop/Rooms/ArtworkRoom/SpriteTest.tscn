@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://boymia3hacuc6"]
 
-[ext_resource type="Texture2D" uid="uid://do0tuq43tsdlu" path="res://Workshop/Rooms/ArtworkRoom/Assets/Possible_Artwork/colored-transparent.png" id="1_o0g7j"]
+[ext_resource type="Texture2D" uid="uid://cbkktuubutlil" path="res://Workshop/Rooms/ArtworkRoom/Assets/Possible_Artwork/colored-transparent_packed.png" id="1_o0g7j"]
 
 [node name="SpriteTest" type="Node2D"]
 

@@ -5,6503 +5,6003 @@
 		784,
 		352
 	],
-	"catalog_id": "artwork_room_fantasy_sprite_catalog",
 	"cell_size": [
 		16,
 		16
 	],
 	"columns": 49,
-	"entries": [
+	"rows": 22,
+	"save_sequence": 4,
+	"schema_version": 2,
+	"selected_cells": [
 		{
-			"category": "curated_fantasy",
 			"frame": 1,
-			"id": "atlas_x01_y00",
 			"region": [
 				16,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 2,
-			"id": "atlas_x02_y00",
 			"region": [
 				32,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 3,
-			"id": "atlas_x03_y00",
 			"region": [
 				48,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 4,
-			"id": "atlas_x04_y00",
 			"region": [
 				64,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 5,
-			"id": "atlas_x05_y00",
 			"region": [
 				80,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 6,
-			"id": "atlas_x06_y00",
 			"region": [
 				96,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 7,
-			"id": "atlas_x07_y00",
 			"region": [
 				112,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 8,
-			"id": "atlas_x08_y00",
 			"region": [
 				128,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 9,
-			"id": "atlas_x09_y00",
 			"region": [
 				144,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 10,
-			"id": "atlas_x10_y00",
 			"region": [
 				160,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 11,
-			"id": "atlas_x11_y00",
 			"region": [
 				176,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 12,
-			"id": "atlas_x12_y00",
 			"region": [
 				192,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 16,
-			"id": "atlas_x16_y00",
 			"region": [
 				256,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 17,
-			"id": "atlas_x17_y00",
 			"region": [
 				272,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 18,
-			"id": "atlas_x18_y00",
 			"region": [
 				288,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 19,
-			"id": "atlas_x19_y00",
 			"region": [
 				304,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 20,
-			"id": "atlas_x20_y00",
 			"region": [
 				320,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 21,
-			"id": "atlas_x21_y00",
 			"region": [
 				336,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 24,
-			"id": "atlas_x24_y00",
 			"region": [
 				384,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 25,
-			"id": "atlas_x25_y00",
 			"region": [
 				400,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 25,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 26,
-			"id": "atlas_x26_y00",
 			"region": [
 				416,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 27,
-			"id": "atlas_x27_y00",
 			"region": [
 				432,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 28,
-			"id": "atlas_x28_y00",
 			"region": [
 				448,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 29,
-			"id": "atlas_x29_y00",
 			"region": [
 				464,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 30,
-			"id": "atlas_x30_y00",
 			"region": [
 				480,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 31,
-			"id": "atlas_x31_y00",
 			"region": [
 				496,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 32,
-			"id": "atlas_x32_y00",
 			"region": [
 				512,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 33,
-			"id": "atlas_x33_y00",
 			"region": [
 				528,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 34,
-			"id": "atlas_x34_y00",
 			"region": [
 				544,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 35,
-			"id": "atlas_x35_y00",
 			"region": [
 				560,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 36,
-			"id": "atlas_x36_y00",
 			"region": [
 				576,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 39,
-			"id": "atlas_x39_y00",
 			"region": [
 				624,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 40,
-			"id": "atlas_x40_y00",
 			"region": [
 				640,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 41,
-			"id": "atlas_x41_y00",
 			"region": [
 				656,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 42,
-			"id": "atlas_x42_y00",
 			"region": [
 				672,
 				0,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 0
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 49,
-			"id": "atlas_x00_y01",
 			"region": [
 				0,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 50,
-			"id": "atlas_x01_y01",
 			"region": [
 				16,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 51,
-			"id": "atlas_x02_y01",
 			"region": [
 				32,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 52,
-			"id": "atlas_x03_y01",
 			"region": [
 				48,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 53,
-			"id": "atlas_x04_y01",
 			"region": [
 				64,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 54,
-			"id": "atlas_x05_y01",
 			"region": [
 				80,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 55,
-			"id": "atlas_x06_y01",
 			"region": [
 				96,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 56,
-			"id": "atlas_x07_y01",
 			"region": [
 				112,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 57,
-			"id": "atlas_x08_y01",
 			"region": [
 				128,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 58,
-			"id": "atlas_x09_y01",
 			"region": [
 				144,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 59,
-			"id": "atlas_x10_y01",
 			"region": [
 				160,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 60,
-			"id": "atlas_x11_y01",
 			"region": [
 				176,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 61,
-			"id": "atlas_x12_y01",
 			"region": [
 				192,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 67,
-			"id": "atlas_x18_y01",
 			"region": [
 				288,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 68,
-			"id": "atlas_x19_y01",
 			"region": [
 				304,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 69,
-			"id": "atlas_x20_y01",
 			"region": [
 				320,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 70,
-			"id": "atlas_x21_y01",
 			"region": [
 				336,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 73,
-			"id": "atlas_x24_y01",
 			"region": [
 				384,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 74,
-			"id": "atlas_x25_y01",
 			"region": [
 				400,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 25,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 75,
-			"id": "atlas_x26_y01",
 			"region": [
 				416,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 76,
-			"id": "atlas_x27_y01",
 			"region": [
 				432,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 77,
-			"id": "atlas_x28_y01",
 			"region": [
 				448,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 78,
-			"id": "atlas_x29_y01",
 			"region": [
 				464,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 79,
-			"id": "atlas_x30_y01",
 			"region": [
 				480,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 80,
-			"id": "atlas_x31_y01",
 			"region": [
 				496,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 81,
-			"id": "atlas_x32_y01",
 			"region": [
 				512,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 82,
-			"id": "atlas_x33_y01",
 			"region": [
 				528,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 83,
-			"id": "atlas_x34_y01",
 			"region": [
 				544,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 84,
-			"id": "atlas_x35_y01",
 			"region": [
 				560,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 85,
-			"id": "atlas_x36_y01",
 			"region": [
 				576,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 86,
-			"id": "atlas_x37_y01",
 			"region": [
 				592,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 87,
-			"id": "atlas_x38_y01",
 			"region": [
 				608,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 88,
-			"id": "atlas_x39_y01",
 			"region": [
 				624,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 89,
-			"id": "atlas_x40_y01",
 			"region": [
 				640,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 90,
-			"id": "atlas_x41_y01",
 			"region": [
 				656,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 91,
-			"id": "atlas_x42_y01",
 			"region": [
 				672,
 				16,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 1
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 98,
-			"id": "atlas_x00_y02",
 			"region": [
 				0,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 101,
-			"id": "atlas_x03_y02",
 			"region": [
 				48,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 102,
-			"id": "atlas_x04_y02",
 			"region": [
 				64,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 103,
-			"id": "atlas_x05_y02",
 			"region": [
 				80,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 104,
-			"id": "atlas_x06_y02",
 			"region": [
 				96,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 106,
-			"id": "atlas_x08_y02",
 			"region": [
 				128,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 107,
-			"id": "atlas_x09_y02",
 			"region": [
 				144,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 108,
-			"id": "atlas_x10_y02",
 			"region": [
 				160,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 109,
-			"id": "atlas_x11_y02",
 			"region": [
 				176,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 110,
-			"id": "atlas_x12_y02",
 			"region": [
 				192,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 116,
-			"id": "atlas_x18_y02",
 			"region": [
 				288,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 117,
-			"id": "atlas_x19_y02",
 			"region": [
 				304,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 118,
-			"id": "atlas_x20_y02",
 			"region": [
 				320,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 122,
-			"id": "atlas_x24_y02",
 			"region": [
 				384,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 123,
-			"id": "atlas_x25_y02",
 			"region": [
 				400,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 25,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 124,
-			"id": "atlas_x26_y02",
 			"region": [
 				416,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 125,
-			"id": "atlas_x27_y02",
 			"region": [
 				432,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 126,
-			"id": "atlas_x28_y02",
 			"region": [
 				448,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 127,
-			"id": "atlas_x29_y02",
 			"region": [
 				464,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 128,
-			"id": "atlas_x30_y02",
 			"region": [
 				480,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 130,
-			"id": "atlas_x32_y02",
 			"region": [
 				512,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 131,
-			"id": "atlas_x33_y02",
 			"region": [
 				528,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 132,
-			"id": "atlas_x34_y02",
 			"region": [
 				544,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 135,
-			"id": "atlas_x37_y02",
 			"region": [
 				592,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 136,
-			"id": "atlas_x38_y02",
 			"region": [
 				608,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 137,
-			"id": "atlas_x39_y02",
 			"region": [
 				624,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 138,
-			"id": "atlas_x40_y02",
 			"region": [
 				640,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 141,
-			"id": "atlas_x43_y02",
 			"region": [
 				688,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 43,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 142,
-			"id": "atlas_x44_y02",
 			"region": [
 				704,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 44,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 145,
-			"id": "atlas_x47_y02",
 			"region": [
 				752,
 				32,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 47,
 			"y": 2
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 147,
-			"id": "atlas_x00_y03",
 			"region": [
 				0,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 148,
-			"id": "atlas_x01_y03",
 			"region": [
 				16,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 149,
-			"id": "atlas_x02_y03",
 			"region": [
 				32,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 150,
-			"id": "atlas_x03_y03",
 			"region": [
 				48,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 151,
-			"id": "atlas_x04_y03",
 			"region": [
 				64,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 152,
-			"id": "atlas_x05_y03",
 			"region": [
 				80,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 153,
-			"id": "atlas_x06_y03",
 			"region": [
 				96,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 154,
-			"id": "atlas_x07_y03",
 			"region": [
 				112,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 155,
-			"id": "atlas_x08_y03",
 			"region": [
 				128,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 156,
-			"id": "atlas_x09_y03",
 			"region": [
 				144,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 157,
-			"id": "atlas_x10_y03",
 			"region": [
 				160,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 158,
-			"id": "atlas_x11_y03",
 			"region": [
 				176,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 159,
-			"id": "atlas_x12_y03",
 			"region": [
 				192,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 165,
-			"id": "atlas_x18_y03",
 			"region": [
 				288,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 166,
-			"id": "atlas_x19_y03",
 			"region": [
 				304,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 167,
-			"id": "atlas_x20_y03",
 			"region": [
 				320,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 168,
-			"id": "atlas_x21_y03",
 			"region": [
 				336,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 175,
-			"id": "atlas_x28_y03",
 			"region": [
 				448,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 176,
-			"id": "atlas_x29_y03",
 			"region": [
 				464,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 179,
-			"id": "atlas_x32_y03",
 			"region": [
 				512,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 180,
-			"id": "atlas_x33_y03",
 			"region": [
 				528,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 181,
-			"id": "atlas_x34_y03",
 			"region": [
 				544,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 182,
-			"id": "atlas_x35_y03",
 			"region": [
 				560,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 183,
-			"id": "atlas_x36_y03",
 			"region": [
 				576,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 184,
-			"id": "atlas_x37_y03",
 			"region": [
 				592,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 185,
-			"id": "atlas_x38_y03",
 			"region": [
 				608,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 186,
-			"id": "atlas_x39_y03",
 			"region": [
 				624,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 187,
-			"id": "atlas_x40_y03",
 			"region": [
 				640,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 189,
-			"id": "atlas_x42_y03",
 			"region": [
 				672,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 190,
-			"id": "atlas_x43_y03",
 			"region": [
 				688,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 43,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 191,
-			"id": "atlas_x44_y03",
 			"region": [
 				704,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 44,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 192,
-			"id": "atlas_x45_y03",
 			"region": [
 				720,
 				48,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 3
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 196,
-			"id": "atlas_x00_y04",
 			"region": [
 				0,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 197,
-			"id": "atlas_x01_y04",
 			"region": [
 				16,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 198,
-			"id": "atlas_x02_y04",
 			"region": [
 				32,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 199,
-			"id": "atlas_x03_y04",
 			"region": [
 				48,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 200,
-			"id": "atlas_x04_y04",
 			"region": [
 				64,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 201,
-			"id": "atlas_x05_y04",
 			"region": [
 				80,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 202,
-			"id": "atlas_x06_y04",
 			"region": [
 				96,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 203,
-			"id": "atlas_x07_y04",
 			"region": [
 				112,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 204,
-			"id": "atlas_x08_y04",
 			"region": [
 				128,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 205,
-			"id": "atlas_x09_y04",
 			"region": [
 				144,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 206,
-			"id": "atlas_x10_y04",
 			"region": [
 				160,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 207,
-			"id": "atlas_x11_y04",
 			"region": [
 				176,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 208,
-			"id": "atlas_x12_y04",
 			"region": [
 				192,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 214,
-			"id": "atlas_x18_y04",
 			"region": [
 				288,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 215,
-			"id": "atlas_x19_y04",
 			"region": [
 				304,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 216,
-			"id": "atlas_x20_y04",
 			"region": [
 				320,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 217,
-			"id": "atlas_x21_y04",
 			"region": [
 				336,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 218,
-			"id": "atlas_x22_y04",
 			"region": [
 				352,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 22,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 219,
-			"id": "atlas_x23_y04",
 			"region": [
 				368,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 23,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 225,
-			"id": "atlas_x29_y04",
 			"region": [
 				464,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 227,
-			"id": "atlas_x31_y04",
 			"region": [
 				496,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 228,
-			"id": "atlas_x32_y04",
 			"region": [
 				512,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 229,
-			"id": "atlas_x33_y04",
 			"region": [
 				528,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 230,
-			"id": "atlas_x34_y04",
 			"region": [
 				544,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 231,
-			"id": "atlas_x35_y04",
 			"region": [
 				560,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 232,
-			"id": "atlas_x36_y04",
 			"region": [
 				576,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 233,
-			"id": "atlas_x37_y04",
 			"region": [
 				592,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 234,
-			"id": "atlas_x38_y04",
 			"region": [
 				608,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 235,
-			"id": "atlas_x39_y04",
 			"region": [
 				624,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 236,
-			"id": "atlas_x40_y04",
 			"region": [
 				640,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 237,
-			"id": "atlas_x41_y04",
 			"region": [
 				656,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 241,
-			"id": "atlas_x45_y04",
 			"region": [
 				720,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 242,
-			"id": "atlas_x46_y04",
 			"region": [
 				736,
 				64,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 46,
 			"y": 4
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 245,
-			"id": "atlas_x00_y05",
 			"region": [
 				0,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 246,
-			"id": "atlas_x01_y05",
 			"region": [
 				16,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 247,
-			"id": "atlas_x02_y05",
 			"region": [
 				32,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 248,
-			"id": "atlas_x03_y05",
 			"region": [
 				48,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 249,
-			"id": "atlas_x04_y05",
 			"region": [
 				64,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 250,
-			"id": "atlas_x05_y05",
 			"region": [
 				80,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 251,
-			"id": "atlas_x06_y05",
 			"region": [
 				96,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 252,
-			"id": "atlas_x07_y05",
 			"region": [
 				112,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 253,
-			"id": "atlas_x08_y05",
 			"region": [
 				128,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 254,
-			"id": "atlas_x09_y05",
 			"region": [
 				144,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 255,
-			"id": "atlas_x10_y05",
 			"region": [
 				160,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 256,
-			"id": "atlas_x11_y05",
 			"region": [
 				176,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 257,
-			"id": "atlas_x12_y05",
 			"region": [
 				192,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 258,
-			"id": "atlas_x13_y05",
 			"region": [
 				208,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 13,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 259,
-			"id": "atlas_x14_y05",
 			"region": [
 				224,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 260,
-			"id": "atlas_x15_y05",
 			"region": [
 				240,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 261,
-			"id": "atlas_x16_y05",
 			"region": [
 				256,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 262,
-			"id": "atlas_x17_y05",
 			"region": [
 				272,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 269,
-			"id": "atlas_x24_y05",
 			"region": [
 				384,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 271,
-			"id": "atlas_x26_y05",
 			"region": [
 				416,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 273,
-			"id": "atlas_x28_y05",
 			"region": [
 				448,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 274,
-			"id": "atlas_x29_y05",
 			"region": [
 				464,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 275,
-			"id": "atlas_x30_y05",
 			"region": [
 				480,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 276,
-			"id": "atlas_x31_y05",
 			"region": [
 				496,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 277,
-			"id": "atlas_x32_y05",
 			"region": [
 				512,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 278,
-			"id": "atlas_x33_y05",
 			"region": [
 				528,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 279,
-			"id": "atlas_x34_y05",
 			"region": [
 				544,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 280,
-			"id": "atlas_x35_y05",
 			"region": [
 				560,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 281,
-			"id": "atlas_x36_y05",
 			"region": [
 				576,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 282,
-			"id": "atlas_x37_y05",
 			"region": [
 				592,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 283,
-			"id": "atlas_x38_y05",
 			"region": [
 				608,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 284,
-			"id": "atlas_x39_y05",
 			"region": [
 				624,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 285,
-			"id": "atlas_x40_y05",
 			"region": [
 				640,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 286,
-			"id": "atlas_x41_y05",
 			"region": [
 				656,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 290,
-			"id": "atlas_x45_y05",
 			"region": [
 				720,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 293,
-			"id": "atlas_x48_y05",
 			"region": [
 				768,
 				80,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 48,
 			"y": 5
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 294,
-			"id": "atlas_x00_y06",
 			"region": [
 				0,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 295,
-			"id": "atlas_x01_y06",
 			"region": [
 				16,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 296,
-			"id": "atlas_x02_y06",
 			"region": [
 				32,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 297,
-			"id": "atlas_x03_y06",
 			"region": [
 				48,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 298,
-			"id": "atlas_x04_y06",
 			"region": [
 				64,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 299,
-			"id": "atlas_x05_y06",
 			"region": [
 				80,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 300,
-			"id": "atlas_x06_y06",
 			"region": [
 				96,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 301,
-			"id": "atlas_x07_y06",
 			"region": [
 				112,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 302,
-			"id": "atlas_x08_y06",
 			"region": [
 				128,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 303,
-			"id": "atlas_x09_y06",
 			"region": [
 				144,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 306,
-			"id": "atlas_x12_y06",
 			"region": [
 				192,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 318,
-			"id": "atlas_x24_y06",
 			"region": [
 				384,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 319,
-			"id": "atlas_x25_y06",
 			"region": [
 				400,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 25,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 320,
-			"id": "atlas_x26_y06",
 			"region": [
 				416,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 321,
-			"id": "atlas_x27_y06",
 			"region": [
 				432,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 322,
-			"id": "atlas_x28_y06",
 			"region": [
 				448,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 323,
-			"id": "atlas_x29_y06",
 			"region": [
 				464,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 324,
-			"id": "atlas_x30_y06",
 			"region": [
 				480,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 325,
-			"id": "atlas_x31_y06",
 			"region": [
 				496,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 326,
-			"id": "atlas_x32_y06",
 			"region": [
 				512,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 327,
-			"id": "atlas_x33_y06",
 			"region": [
 				528,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 328,
-			"id": "atlas_x34_y06",
 			"region": [
 				544,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 329,
-			"id": "atlas_x35_y06",
 			"region": [
 				560,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 330,
-			"id": "atlas_x36_y06",
 			"region": [
 				576,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 331,
-			"id": "atlas_x37_y06",
 			"region": [
 				592,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 332,
-			"id": "atlas_x38_y06",
 			"region": [
 				608,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 333,
-			"id": "atlas_x39_y06",
 			"region": [
 				624,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 334,
-			"id": "atlas_x40_y06",
 			"region": [
 				640,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 335,
-			"id": "atlas_x41_y06",
 			"region": [
 				656,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 336,
-			"id": "atlas_x42_y06",
 			"region": [
 				672,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 337,
-			"id": "atlas_x43_y06",
 			"region": [
 				688,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 43,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 338,
-			"id": "atlas_x44_y06",
 			"region": [
 				704,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 44,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 339,
-			"id": "atlas_x45_y06",
 			"region": [
 				720,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 340,
-			"id": "atlas_x46_y06",
 			"region": [
 				736,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 46,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 342,
-			"id": "atlas_x48_y06",
 			"region": [
 				768,
 				96,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 48,
 			"y": 6
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 343,
-			"id": "atlas_x00_y07",
 			"region": [
 				0,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 344,
-			"id": "atlas_x01_y07",
 			"region": [
 				16,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 345,
-			"id": "atlas_x02_y07",
 			"region": [
 				32,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 346,
-			"id": "atlas_x03_y07",
 			"region": [
 				48,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 347,
-			"id": "atlas_x04_y07",
 			"region": [
 				64,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 348,
-			"id": "atlas_x05_y07",
 			"region": [
 				80,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 349,
-			"id": "atlas_x06_y07",
 			"region": [
 				96,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 350,
-			"id": "atlas_x07_y07",
 			"region": [
 				112,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 351,
-			"id": "atlas_x08_y07",
 			"region": [
 				128,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 352,
-			"id": "atlas_x09_y07",
 			"region": [
 				144,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 353,
-			"id": "atlas_x10_y07",
 			"region": [
 				160,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 357,
-			"id": "atlas_x14_y07",
 			"region": [
 				224,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 358,
-			"id": "atlas_x15_y07",
 			"region": [
 				240,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 359,
-			"id": "atlas_x16_y07",
 			"region": [
 				256,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 360,
-			"id": "atlas_x17_y07",
 			"region": [
 				272,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 367,
-			"id": "atlas_x24_y07",
 			"region": [
 				384,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 375,
-			"id": "atlas_x32_y07",
 			"region": [
 				512,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 376,
-			"id": "atlas_x33_y07",
 			"region": [
 				528,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 377,
-			"id": "atlas_x34_y07",
 			"region": [
 				544,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 378,
-			"id": "atlas_x35_y07",
 			"region": [
 				560,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 379,
-			"id": "atlas_x36_y07",
 			"region": [
 				576,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 380,
-			"id": "atlas_x37_y07",
 			"region": [
 				592,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 381,
-			"id": "atlas_x38_y07",
 			"region": [
 				608,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 382,
-			"id": "atlas_x39_y07",
 			"region": [
 				624,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 383,
-			"id": "atlas_x40_y07",
 			"region": [
 				640,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 384,
-			"id": "atlas_x41_y07",
 			"region": [
 				656,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 385,
-			"id": "atlas_x42_y07",
 			"region": [
 				672,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 386,
-			"id": "atlas_x43_y07",
 			"region": [
 				688,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 43,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 387,
-			"id": "atlas_x44_y07",
 			"region": [
 				704,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 44,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 388,
-			"id": "atlas_x45_y07",
 			"region": [
 				720,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 389,
-			"id": "atlas_x46_y07",
 			"region": [
 				736,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 46,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 391,
-			"id": "atlas_x48_y07",
 			"region": [
 				768,
 				112,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 48,
 			"y": 7
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 392,
-			"id": "atlas_x00_y08",
 			"region": [
 				0,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 393,
-			"id": "atlas_x01_y08",
 			"region": [
 				16,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 394,
-			"id": "atlas_x02_y08",
 			"region": [
 				32,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 395,
-			"id": "atlas_x03_y08",
 			"region": [
 				48,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 396,
-			"id": "atlas_x04_y08",
 			"region": [
 				64,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 397,
-			"id": "atlas_x05_y08",
 			"region": [
 				80,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 398,
-			"id": "atlas_x06_y08",
 			"region": [
 				96,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 399,
-			"id": "atlas_x07_y08",
 			"region": [
 				112,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 400,
-			"id": "atlas_x08_y08",
 			"region": [
 				128,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 401,
-			"id": "atlas_x09_y08",
 			"region": [
 				144,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 402,
-			"id": "atlas_x10_y08",
 			"region": [
 				160,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 406,
-			"id": "atlas_x14_y08",
 			"region": [
 				224,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 407,
-			"id": "atlas_x15_y08",
 			"region": [
 				240,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 408,
-			"id": "atlas_x16_y08",
 			"region": [
 				256,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 409,
-			"id": "atlas_x17_y08",
 			"region": [
 				272,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 416,
-			"id": "atlas_x24_y08",
 			"region": [
 				384,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 418,
-			"id": "atlas_x26_y08",
 			"region": [
 				416,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 419,
-			"id": "atlas_x27_y08",
 			"region": [
 				432,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 420,
-			"id": "atlas_x28_y08",
 			"region": [
 				448,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 421,
-			"id": "atlas_x29_y08",
 			"region": [
 				464,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 422,
-			"id": "atlas_x30_y08",
 			"region": [
 				480,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 423,
-			"id": "atlas_x31_y08",
 			"region": [
 				496,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 424,
-			"id": "atlas_x32_y08",
 			"region": [
 				512,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 425,
-			"id": "atlas_x33_y08",
 			"region": [
 				528,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 426,
-			"id": "atlas_x34_y08",
 			"region": [
 				544,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 427,
-			"id": "atlas_x35_y08",
 			"region": [
 				560,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 428,
-			"id": "atlas_x36_y08",
 			"region": [
 				576,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 429,
-			"id": "atlas_x37_y08",
 			"region": [
 				592,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 430,
-			"id": "atlas_x38_y08",
 			"region": [
 				608,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 431,
-			"id": "atlas_x39_y08",
 			"region": [
 				624,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 39,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 432,
-			"id": "atlas_x40_y08",
 			"region": [
 				640,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 40,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 433,
-			"id": "atlas_x41_y08",
 			"region": [
 				656,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 41,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 434,
-			"id": "atlas_x42_y08",
 			"region": [
 				672,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 42,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 435,
-			"id": "atlas_x43_y08",
 			"region": [
 				688,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 43,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 436,
-			"id": "atlas_x44_y08",
 			"region": [
 				704,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 44,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 437,
-			"id": "atlas_x45_y08",
 			"region": [
 				720,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 45,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 438,
-			"id": "atlas_x46_y08",
 			"region": [
 				736,
 				128,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 46,
 			"y": 8
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 441,
-			"id": "atlas_x00_y09",
 			"region": [
 				0,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 442,
-			"id": "atlas_x01_y09",
 			"region": [
 				16,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 443,
-			"id": "atlas_x02_y09",
 			"region": [
 				32,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 444,
-			"id": "atlas_x03_y09",
 			"region": [
 				48,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 445,
-			"id": "atlas_x04_y09",
 			"region": [
 				64,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 446,
-			"id": "atlas_x05_y09",
 			"region": [
 				80,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 447,
-			"id": "atlas_x06_y09",
 			"region": [
 				96,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 448,
-			"id": "atlas_x07_y09",
 			"region": [
 				112,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 449,
-			"id": "atlas_x08_y09",
 			"region": [
 				128,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 450,
-			"id": "atlas_x09_y09",
 			"region": [
 				144,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 451,
-			"id": "atlas_x10_y09",
 			"region": [
 				160,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 457,
-			"id": "atlas_x16_y09",
 			"region": [
 				256,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 458,
-			"id": "atlas_x17_y09",
 			"region": [
 				272,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 467,
-			"id": "atlas_x26_y09",
 			"region": [
 				416,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 471,
-			"id": "atlas_x30_y09",
 			"region": [
 				480,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 473,
-			"id": "atlas_x32_y09",
 			"region": [
 				512,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 474,
-			"id": "atlas_x33_y09",
 			"region": [
 				528,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 475,
-			"id": "atlas_x34_y09",
 			"region": [
 				544,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 476,
-			"id": "atlas_x35_y09",
 			"region": [
 				560,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 477,
-			"id": "atlas_x36_y09",
 			"region": [
 				576,
 				144,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 9
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 493,
-			"id": "atlas_x03_y10",
 			"region": [
 				48,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 494,
-			"id": "atlas_x04_y10",
 			"region": [
 				64,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 498,
-			"id": "atlas_x08_y10",
 			"region": [
 				128,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 504,
-			"id": "atlas_x14_y10",
 			"region": [
 				224,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 505,
-			"id": "atlas_x15_y10",
 			"region": [
 				240,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 506,
-			"id": "atlas_x16_y10",
 			"region": [
 				256,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 507,
-			"id": "atlas_x17_y10",
 			"region": [
 				272,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 511,
-			"id": "atlas_x21_y10",
 			"region": [
 				336,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 522,
-			"id": "atlas_x32_y10",
 			"region": [
 				512,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 523,
-			"id": "atlas_x33_y10",
 			"region": [
 				528,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 524,
-			"id": "atlas_x34_y10",
 			"region": [
 				544,
 				160,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 10
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 540,
-			"id": "atlas_x01_y11",
 			"region": [
 				16,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 541,
-			"id": "atlas_x02_y11",
 			"region": [
 				32,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 542,
-			"id": "atlas_x03_y11",
 			"region": [
 				48,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 544,
-			"id": "atlas_x05_y11",
 			"region": [
 				80,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 545,
-			"id": "atlas_x06_y11",
 			"region": [
 				96,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 546,
-			"id": "atlas_x07_y11",
 			"region": [
 				112,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 547,
-			"id": "atlas_x08_y11",
 			"region": [
 				128,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 549,
-			"id": "atlas_x10_y11",
 			"region": [
 				160,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 550,
-			"id": "atlas_x11_y11",
 			"region": [
 				176,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 551,
-			"id": "atlas_x12_y11",
 			"region": [
 				192,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 552,
-			"id": "atlas_x13_y11",
 			"region": [
 				208,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 13,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 553,
-			"id": "atlas_x14_y11",
 			"region": [
 				224,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 554,
-			"id": "atlas_x15_y11",
 			"region": [
 				240,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 555,
-			"id": "atlas_x16_y11",
 			"region": [
 				256,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 556,
-			"id": "atlas_x17_y11",
 			"region": [
 				272,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 563,
-			"id": "atlas_x24_y11",
 			"region": [
 				384,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 24,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 564,
-			"id": "atlas_x25_y11",
 			"region": [
 				400,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 25,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 565,
-			"id": "atlas_x26_y11",
 			"region": [
 				416,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 26,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 566,
-			"id": "atlas_x27_y11",
 			"region": [
 				432,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 567,
-			"id": "atlas_x28_y11",
 			"region": [
 				448,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 568,
-			"id": "atlas_x29_y11",
 			"region": [
 				464,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 569,
-			"id": "atlas_x30_y11",
 			"region": [
 				480,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 570,
-			"id": "atlas_x31_y11",
 			"region": [
 				496,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 574,
-			"id": "atlas_x35_y11",
 			"region": [
 				560,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 35,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 575,
-			"id": "atlas_x36_y11",
 			"region": [
 				576,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 36,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 576,
-			"id": "atlas_x37_y11",
 			"region": [
 				592,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 37,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 577,
-			"id": "atlas_x38_y11",
 			"region": [
 				608,
 				176,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 38,
 			"y": 11
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 588,
-			"id": "atlas_x00_y12",
 			"region": [
 				0,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 589,
-			"id": "atlas_x01_y12",
 			"region": [
 				16,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 590,
-			"id": "atlas_x02_y12",
 			"region": [
 				32,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 591,
-			"id": "atlas_x03_y12",
 			"region": [
 				48,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 592,
-			"id": "atlas_x04_y12",
 			"region": [
 				64,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 593,
-			"id": "atlas_x05_y12",
 			"region": [
 				80,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 594,
-			"id": "atlas_x06_y12",
 			"region": [
 				96,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 595,
-			"id": "atlas_x07_y12",
 			"region": [
 				112,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 600,
-			"id": "atlas_x12_y12",
 			"region": [
 				192,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 606,
-			"id": "atlas_x18_y12",
 			"region": [
 				288,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 607,
-			"id": "atlas_x19_y12",
 			"region": [
 				304,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 608,
-			"id": "atlas_x20_y12",
 			"region": [
 				320,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 609,
-			"id": "atlas_x21_y12",
 			"region": [
 				336,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 610,
-			"id": "atlas_x22_y12",
 			"region": [
 				352,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 22,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 611,
-			"id": "atlas_x23_y12",
 			"region": [
 				368,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 23,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 615,
-			"id": "atlas_x27_y12",
 			"region": [
 				432,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 27,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 616,
-			"id": "atlas_x28_y12",
 			"region": [
 				448,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 28,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 617,
-			"id": "atlas_x29_y12",
 			"region": [
 				464,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 29,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 618,
-			"id": "atlas_x30_y12",
 			"region": [
 				480,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 30,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 619,
-			"id": "atlas_x31_y12",
 			"region": [
 				496,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 31,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 620,
-			"id": "atlas_x32_y12",
 			"region": [
 				512,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 621,
-			"id": "atlas_x33_y12",
 			"region": [
 				528,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 622,
-			"id": "atlas_x34_y12",
 			"region": [
 				544,
 				192,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 12
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 637,
-			"id": "atlas_x00_y13",
 			"region": [
 				0,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 638,
-			"id": "atlas_x01_y13",
 			"region": [
 				16,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 639,
-			"id": "atlas_x02_y13",
 			"region": [
 				32,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 640,
-			"id": "atlas_x03_y13",
 			"region": [
 				48,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 641,
-			"id": "atlas_x04_y13",
 			"region": [
 				64,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 642,
-			"id": "atlas_x05_y13",
 			"region": [
 				80,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 643,
-			"id": "atlas_x06_y13",
 			"region": [
 				96,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 644,
-			"id": "atlas_x07_y13",
 			"region": [
 				112,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 652,
-			"id": "atlas_x15_y13",
 			"region": [
 				240,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 653,
-			"id": "atlas_x16_y13",
 			"region": [
 				256,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 654,
-			"id": "atlas_x17_y13",
 			"region": [
 				272,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 655,
-			"id": "atlas_x18_y13",
 			"region": [
 				288,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 656,
-			"id": "atlas_x19_y13",
 			"region": [
 				304,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 19,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 657,
-			"id": "atlas_x20_y13",
 			"region": [
 				320,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 20,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 658,
-			"id": "atlas_x21_y13",
 			"region": [
 				336,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 21,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 659,
-			"id": "atlas_x22_y13",
 			"region": [
 				352,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 22,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 660,
-			"id": "atlas_x23_y13",
 			"region": [
 				368,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 23,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 669,
-			"id": "atlas_x32_y13",
 			"region": [
 				512,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 670,
-			"id": "atlas_x33_y13",
 			"region": [
 				528,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 671,
-			"id": "atlas_x34_y13",
 			"region": [
 				544,
 				208,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 13
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 686,
-			"id": "atlas_x00_y14",
 			"region": [
 				0,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 687,
-			"id": "atlas_x01_y14",
 			"region": [
 				16,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 688,
-			"id": "atlas_x02_y14",
 			"region": [
 				32,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 689,
-			"id": "atlas_x03_y14",
 			"region": [
 				48,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 690,
-			"id": "atlas_x04_y14",
 			"region": [
 				64,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 691,
-			"id": "atlas_x05_y14",
 			"region": [
 				80,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 692,
-			"id": "atlas_x06_y14",
 			"region": [
 				96,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 693,
-			"id": "atlas_x07_y14",
 			"region": [
 				112,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 701,
-			"id": "atlas_x15_y14",
 			"region": [
 				240,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 702,
-			"id": "atlas_x16_y14",
 			"region": [
 				256,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 703,
-			"id": "atlas_x17_y14",
 			"region": [
 				272,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 704,
-			"id": "atlas_x18_y14",
 			"region": [
 				288,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 718,
-			"id": "atlas_x32_y14",
 			"region": [
 				512,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 32,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 719,
-			"id": "atlas_x33_y14",
 			"region": [
 				528,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 720,
-			"id": "atlas_x34_y14",
 			"region": [
 				544,
 				224,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 14
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 735,
-			"id": "atlas_x00_y15",
 			"region": [
 				0,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 736,
-			"id": "atlas_x01_y15",
 			"region": [
 				16,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 737,
-			"id": "atlas_x02_y15",
 			"region": [
 				32,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 738,
-			"id": "atlas_x03_y15",
 			"region": [
 				48,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 739,
-			"id": "atlas_x04_y15",
 			"region": [
 				64,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 740,
-			"id": "atlas_x05_y15",
 			"region": [
 				80,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 741,
-			"id": "atlas_x06_y15",
 			"region": [
 				96,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 742,
-			"id": "atlas_x07_y15",
 			"region": [
 				112,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 745,
-			"id": "atlas_x10_y15",
 			"region": [
 				160,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 746,
-			"id": "atlas_x11_y15",
 			"region": [
 				176,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 747,
-			"id": "atlas_x12_y15",
 			"region": [
 				192,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 748,
-			"id": "atlas_x13_y15",
 			"region": [
 				208,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 13,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 751,
-			"id": "atlas_x16_y15",
 			"region": [
 				256,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 752,
-			"id": "atlas_x17_y15",
 			"region": [
 				272,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 753,
-			"id": "atlas_x18_y15",
 			"region": [
 				288,
 				240,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 15
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 791,
-			"id": "atlas_x07_y16",
 			"region": [
 				112,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 793,
-			"id": "atlas_x09_y16",
 			"region": [
 				144,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 794,
-			"id": "atlas_x10_y16",
 			"region": [
 				160,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 795,
-			"id": "atlas_x11_y16",
 			"region": [
 				176,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 796,
-			"id": "atlas_x12_y16",
 			"region": [
 				192,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 797,
-			"id": "atlas_x13_y16",
 			"region": [
 				208,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 13,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 798,
-			"id": "atlas_x14_y16",
 			"region": [
 				224,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 14,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 799,
-			"id": "atlas_x15_y16",
 			"region": [
 				240,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 15,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 800,
-			"id": "atlas_x16_y16",
 			"region": [
 				256,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 801,
-			"id": "atlas_x17_y16",
 			"region": [
 				272,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 802,
-			"id": "atlas_x18_y16",
 			"region": [
 				288,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 817,
-			"id": "atlas_x33_y16",
 			"region": [
 				528,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 33,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 818,
-			"id": "atlas_x34_y16",
 			"region": [
 				544,
 				256,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 34,
 			"y": 16
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 840,
-			"id": "atlas_x07_y17",
 			"region": [
 				112,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 842,
-			"id": "atlas_x09_y17",
 			"region": [
 				144,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 843,
-			"id": "atlas_x10_y17",
 			"region": [
 				160,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 844,
-			"id": "atlas_x11_y17",
 			"region": [
 				176,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 845,
-			"id": "atlas_x12_y17",
 			"region": [
 				192,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 12,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 846,
-			"id": "atlas_x13_y17",
 			"region": [
 				208,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 13,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 849,
-			"id": "atlas_x16_y17",
 			"region": [
 				256,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 850,
-			"id": "atlas_x17_y17",
 			"region": [
 				272,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 851,
-			"id": "atlas_x18_y17",
 			"region": [
 				288,
 				272,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 17
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 891,
-			"id": "atlas_x09_y18",
 			"region": [
 				144,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 892,
-			"id": "atlas_x10_y18",
 			"region": [
 				160,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 893,
-			"id": "atlas_x11_y18",
 			"region": [
 				176,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 898,
-			"id": "atlas_x16_y18",
 			"region": [
 				256,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 899,
-			"id": "atlas_x17_y18",
 			"region": [
 				272,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 900,
-			"id": "atlas_x18_y18",
 			"region": [
 				288,
 				288,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 18
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 931,
-			"id": "atlas_x00_y19",
 			"region": [
 				0,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 932,
-			"id": "atlas_x01_y19",
 			"region": [
 				16,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 933,
-			"id": "atlas_x02_y19",
 			"region": [
 				32,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 934,
-			"id": "atlas_x03_y19",
 			"region": [
 				48,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 3,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 935,
-			"id": "atlas_x04_y19",
 			"region": [
 				64,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 936,
-			"id": "atlas_x05_y19",
 			"region": [
 				80,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 5,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 937,
-			"id": "atlas_x06_y19",
 			"region": [
 				96,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 6,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 938,
-			"id": "atlas_x07_y19",
 			"region": [
 				112,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 939,
-			"id": "atlas_x08_y19",
 			"region": [
 				128,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 940,
-			"id": "atlas_x09_y19",
 			"region": [
 				144,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 941,
-			"id": "atlas_x10_y19",
 			"region": [
 				160,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 942,
-			"id": "atlas_x11_y19",
 			"region": [
 				176,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 947,
-			"id": "atlas_x16_y19",
 			"region": [
 				256,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 948,
-			"id": "atlas_x17_y19",
 			"region": [
 				272,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 949,
-			"id": "atlas_x18_y19",
 			"region": [
 				288,
 				304,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 19
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 980,
-			"id": "atlas_x00_y20",
 			"region": [
 				0,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 981,
-			"id": "atlas_x01_y20",
 			"region": [
 				16,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 982,
-			"id": "atlas_x02_y20",
 			"region": [
 				32,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 984,
-			"id": "atlas_x04_y20",
 			"region": [
 				64,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 4,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 987,
-			"id": "atlas_x07_y20",
 			"region": [
 				112,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 7,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 988,
-			"id": "atlas_x08_y20",
 			"region": [
 				128,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 996,
-			"id": "atlas_x16_y20",
 			"region": [
 				256,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 997,
-			"id": "atlas_x17_y20",
 			"region": [
 				272,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 998,
-			"id": "atlas_x18_y20",
 			"region": [
 				288,
 				320,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 20
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1029,
-			"id": "atlas_x00_y21",
 			"region": [
 				0,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 0,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1030,
-			"id": "atlas_x01_y21",
 			"region": [
 				16,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 1,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1031,
-			"id": "atlas_x02_y21",
 			"region": [
 				32,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 2,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1037,
-			"id": "atlas_x08_y21",
 			"region": [
 				128,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 8,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1038,
-			"id": "atlas_x09_y21",
 			"region": [
 				144,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 9,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1039,
-			"id": "atlas_x10_y21",
 			"region": [
 				160,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 10,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1040,
-			"id": "atlas_x11_y21",
 			"region": [
 				176,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 11,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1045,
-			"id": "atlas_x16_y21",
 			"region": [
 				256,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 16,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1046,
-			"id": "atlas_x17_y21",
 			"region": [
 				272,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 17,
 			"y": 21
 		},
 		{
-			"category": "curated_fantasy",
 			"frame": 1047,
-			"id": "atlas_x18_y21",
 			"region": [
 				288,
 				336,
 				16,
 				16
 			],
+			"review_state": "keep",
 			"x": 18,
 			"y": 21
 		}
 	],
-	"entry_count": 499,
-	"rows": 22,
-	"schema_version": 1,
-	"source_snapshot": "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Selections/atlas_selection_004.json"
+	"selected_count": 499
 }
