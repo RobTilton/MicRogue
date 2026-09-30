@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://8biob1hs0yxj"]
+
+[ext_resource type="Script" uid="uid://fqcoab3xjt3c" path="res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Tools/atlas_selection_tool.gd" id="1_tool"]
+
+[node name="AtlasSelectionTool" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tool")
+
+[node name="HeaderBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 84.0
+mouse_filter = 2
+color = Color(0.047, 0.055, 0.067, 0.96)
+
+[node name="HelpLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 1128.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.88, 0.92, 0.96, 1)
+text = "Left click: toggle sprite    Middle drag: pan    Wheel: zoom    Space: save numbered snapshot"
+
+[node name="StatusLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 31.0
+offset_right = 1128.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.42, 0.9, 1, 1)
+text = "Validating atlas…"
+
+[node name="HoverLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 54.0
+offset_right = 1128.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.72, 0.76, 0.82, 1)
+text = "Hover: outside atlas"

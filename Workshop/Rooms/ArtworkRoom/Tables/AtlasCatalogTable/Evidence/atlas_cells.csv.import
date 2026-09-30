@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://g6afvxbs8e8"
+
+[deps]
+
+files=["res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.y.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.frame.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.nontransparent.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation"]
+
+source_file="res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.csv"
+dest_files=["res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.y.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.frame.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.nontransparent.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation", "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Evidence/atlas_cells.bbox.translation"]
+
+[params]
+
+compress=true
+delimiter=0
