@@ -281,7 +281,7 @@ func _rebuild_list() -> void:
 		var address := str(entry.id)
 		var semantic: Dictionary = aliases_by_address.get(address, {})
 		var alias := str(semantic.get("alias", ""))
-		var searchable := " ".join([address, alias, str(semantic.get("category", "")), str(semantic.get("family", "")), ",".join(semantic.get("tags", []))]).to_lower()
+		var searchable := " ".join([address, alias, str(semantic.get("category", "")), str(semantic.get("family", "")), ",".join(semantic.get("tags", [])), str(semantic.get("note", ""))]).to_lower()
 		if not query.is_empty() and not searchable.contains(query):
 			continue
 		visible_indices.append(index)
@@ -428,9 +428,14 @@ func _next_sequence() -> int:
 
 
 func _navigate(offset: int) -> void:
-	if catalog_entries.is_empty():
+	if visible_indices.is_empty():
 		return
-	_select_catalog_index(clampi(current_index + offset, 0, catalog_entries.size() - 1))
+	var visible_position := visible_indices.find(current_index)
+	if visible_position < 0:
+		visible_position = 0 if offset >= 0 else visible_indices.size() - 1
+	else:
+		visible_position = clampi(visible_position + offset, 0, visible_indices.size() - 1)
+	_select_catalog_index(visible_indices[visible_position])
 
 
 func _on_item_selected(visible_index: int) -> void:

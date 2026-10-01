@@ -1,0 +1,368 @@
+{
+	"alias_count": 29,
+	"aliases": [
+		{
+			"address": "atlas_x18_y00",
+			"alias": "floor_outer_stone_a_nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y00",
+			"alias": "floor_outer_stone_a_n",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y00",
+			"alias": "floor_outer_stone_a_ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x01_y01",
+			"alias": "",
+			"category": "",
+			"family": "",
+			"note": "Tree number 2",
+			"tags": []
+		},
+		{
+			"address": "atlas_x18_y01",
+			"alias": "floor_outer_stone_a_w",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y01",
+			"alias": "floor_inner_stone_a_center",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y01",
+			"alias": "floor_outer_stone_a_e",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x18_y02",
+			"alias": "floor_outer_stone_a_sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y02",
+			"alias": "floor_outer_stone_a_s",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y02",
+			"alias": "floor_outer_stone_a_se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x37_y02",
+			"alias": "shield_round_brown_000",
+			"category": "shield",
+			"family": "shield_round_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x38_y02",
+			"alias": "shield_round_gray_000",
+			"category": "shield",
+			"family": "shield_round_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x39_y02",
+			"alias": "shield_round_brown_001",
+			"category": "shield",
+			"family": "shield_round_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x40_y02",
+			"alias": "shield_round_gray_001",
+			"category": "shield",
+			"family": "shield_round_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x43_y02",
+			"alias": "armor_crown_000",
+			"category": "armor",
+			"family": "armor_crown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"armor",
+				"crown",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x44_y02",
+			"alias": "armor_crown_001",
+			"category": "armor",
+			"family": "armor_crown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"armor",
+				"crown",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x47_y02",
+			"alias": "armor_hood_000",
+			"category": "armor",
+			"family": "armor_hood",
+			"note": "Added in selection snapshot 004.",
+			"tags": [
+				"armor",
+				"equipment",
+				"hood"
+			]
+		},
+		{
+			"address": "atlas_x18_y03",
+			"alias": "floor_inner_stone_a_se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y03",
+			"alias": "floor_inner_stone_a_sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y03",
+			"alias": "floor_outer_stone_a_sw2ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y03",
+			"alias": "floor_outer_stone_a_nw2se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x37_y03",
+			"alias": "shield_tall_brown_000",
+			"category": "shield",
+			"family": "shield_tall_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x38_y03",
+			"alias": "shield_tall_gray_000",
+			"category": "shield",
+			"family": "shield_tall_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x39_y03",
+			"alias": "shield_tall_gray_001",
+			"category": "shield",
+			"family": "shield_tall_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x40_y03",
+			"alias": "shield_tall_brown_001",
+			"category": "shield",
+			"family": "shield_tall_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x45_y03",
+			"alias": "armor_belt_000",
+			"category": "armor",
+			"family": "armor_belt",
+			"note": "Added in selection snapshot 004.",
+			"tags": [
+				"armor",
+				"belt",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x18_y04",
+			"alias": "floor_inner_stone_a_ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y04",
+			"alias": "floor_inner_stone_a_nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y04",
+			"alias": "floor_outer_stone_a_se2nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y04",
+			"alias": "floor_outer_stone_a_ne2sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		}
+	],
+	"catalog_entry_count": 499.0,
+	"catalog_path": "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json",
+	"catalog_sha256": "438b01aebe34ed75e5720a70eb129adb0c48273f31eb4cb42ad965a6f12597f2",
+	"naming_contract": "semantic_aliases_v1",
+	"record_count": 30,
+	"save_sequence": 4,
+	"schema_version": 1.0
+}

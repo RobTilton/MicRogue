@@ -1,11 +1,15 @@
 # ArtworkRoom Current State
 Updated: 2026-09-30
-Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticSpriteAliases]`
+Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingFullPass]`
 Implementation baseline/evidence: Human-accepted 499-entry catalog, deterministic typed static lookup, and human-validated semantic naming workflow with 19 confirmed aliases and one note-only record as of 2026-09-30.
 
 ## Rapid Shape
 
 ArtworkRoom contains a preserved setup scene, validated review evidence, completed human selection tooling, and a human-accepted catalog of 499 exact atlas cells. A typed static Godot lookup returns cached 16-by-16 `AtlasTexture` regions for every accepted ID. Optional semantic aliases are now recorded in append-only snapshots and edited through an F6 tool; 19 user-confirmed names are seeded. Runtime alias lookup, TileSet composition, and animation consumers remain unimplemented. `DOTS.md` is authoritative for authorization, dependencies, and traversal.
+
+Naming Pass 01 adds a separate ten-name equipment draft in snapshot `004`. Snapshot `003` remains the last human-validated semantic authority until Rob reviews the batch.
+
+Robert found the bounded method workable and authorized a complete pass. Snapshot `005` now contains one unique draft alias for every accepted address. It remains review evidence, not final human semantic authority, until Robert completes the once-over.
 
 ## Current Locations And Structure
 
@@ -24,6 +28,8 @@ Workshop/Rooms/ArtworkRoom/
 │   ├── ATLAS_SELECTION_TOOL.md
 │   ├── FANTASY_CANDIDATES.md
 │   ├── FINAL_FANTASY_CATALOG.md
+│   ├── SEMANTIC_NAMING_PASS_01.md
+│   ├── SEMANTIC_NAMING_FULL_PASS.md
 │   ├── SEMANTIC_SPRITE_ALIASES.md
 │   └── STATIC_ATLAS_LOOKUP.md
 ├── DOTS.md
@@ -46,7 +52,8 @@ Workshop/Rooms/ArtworkRoom/
     │   │       └── validate_static_atlas_lookup.gd
     │   ├── Evidence/
     │   │   ├── atlas_cells.csv
-    │   │   └── ContactSheets/ (four labeled PNGs)
+    │   │   ├── ContactSheets/ (four labeled PNGs)
+    │   │   └── SelectedReviewSheets/ (four accepted-only PNGs)
     │   ├── Selections/
     │   │   ├── .gitkeep
     │   │   ├── atlas_selection_001.json
@@ -56,11 +63,16 @@ Workshop/Rooms/ArtworkRoom/
     │   ├── SemanticAliases/
     │   │   ├── semantic_aliases_001.json
     │   │   ├── semantic_aliases_002.json
-    │   │   └── semantic_aliases_003.json
+    │   │   ├── semantic_aliases_003.json
+    │   │   ├── semantic_aliases_004.json
+    │   │   └── semantic_aliases_005.json
     │   └── Tools/
     │       ├── atlas_selection_tool.gd
     │       ├── generate_atlas_intake.gd
     │       ├── generate_static_atlas_lookup.gd
+    │       ├── generate_semantic_naming_batch_01.gd
+    │       ├── generate_selected_review_sheets.gd
+    │       ├── generate_semantic_naming_full_pass.gd
     │       └── semantic_naming_tool.gd
     └── SpriteTestTable/
         └── SpriteTest.tscn
@@ -100,6 +112,10 @@ The intake generator reads the packed atlas, validates its exact dimensions, emi
 - `Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_002.json`: preserved first human save test; its unchanged semantic values exposed the original note-only persistence defect.
 - `Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_003.json`: current human snapshot with 19 aliases and one exact note-only record, `atlas_x01_y01` / `Tree number 2`.
 - `Documents/SEMANTIC_SPRITE_ALIASES.md`: naming syntax, tool workflow, seed mapping, evidence, and current human-validation boundary.
+- `Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_004.json`: agent-validated ten-name equipment draft; it is not yet human semantic authority.
+- `Documents/SEMANTIC_NAMING_PASS_01.md`: exact crop, draft names, validation, and F6 review boundary for the first naming batch.
+- `Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_005.json`: complete 499-record semantic draft; it preserves 29 existing aliases and supplies 470 new reviewable aliases.
+- `Documents/SEMANTIC_NAMING_FULL_PASS.md`: full-pass strategy, status counts, review workflow, validation, and remaining human gate.
 
 ## Required Outside Data
 
@@ -121,4 +137,5 @@ Rob's visual judgment is required to accept or reject candidate sprites and to r
 - Static lookup generation and deterministic rerun passed. Exhaustive Godot validation passed all 499 entries, exact textures, caching, and unknown-ID refusal; the preview scene starts cleanly.
 - Rob confirmed all six titled F6 preview sprites were visually clear and free of neighboring-cell bleed. Static Atlas Lookup is complete; its titles remain coordinate IDs by approved scope.
 - The semantic validator passed the 499-entry membership chain, all 19 exact alias mappings, and the note-only round trip. Rob confirmed visible enlarged/context imagery and tracking, then produced snapshot `003`; the tool reloads it cleanly.
+- The full-pass validator passed 499 unique aliases in exact catalog order, preservation of all 29 prior named records, lossless enrichment of the note-only record, and the 157/313 draft-status partition. The F6 tool loads snapshot `005` cleanly.
 - Git checkpointing remains pending.

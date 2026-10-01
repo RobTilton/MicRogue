@@ -1,6 +1,6 @@
 # ArtworkRoom DOTS
 Updated: 2026-09-30
-Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticSpriteAliases]`
+Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingFullPass]`
 Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29; exact paths, dimensions, scene wiring, and SHA-256 values are recorded below.
 
 ## Room Contract
@@ -14,10 +14,10 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 
 ## Current Traversal
 
-- Last completed checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticSpriteAliases]`
-- Active/interrupted checkpoint: none
-- Next eligible action: continue human semantic naming in append-only snapshots, or establish a separately bounded Alignment/Execute contract for a runtime alias lookup, terrain TileSet composition, or effect animation groups
-- Human acceptance / Git checkpoint: Rob confirmed the enlarged sprite, atlas context, and tracking indicator; snapshot `003` proves the corrected note-only round trip with 19 aliases and 20 semantic records; no Git checkpoint is known
+- Last completed checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingPass01]`
+- Active/interrupted checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingFullPass]` — snapshot `005` provides 499 validated draft aliases and awaits Robert's comprehensive F6 once-over
+- Next eligible action: review snapshot `005` in `SemanticNamingTool.tscn`, save as often as needed, then report the final numbered snapshot after all 499 records have been reviewed
+- Human acceptance / Git checkpoint: Robert found Batch 01 workable and authorized expansion to the full pass; snapshot `005` remains draft evidence until his once-over is complete; no Git checkpoint is known
 
 ## Mandatory Box List
 
@@ -32,6 +32,8 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 | `[ArtworkRoom]+[SpriteTestTable]+[PackedAtlasReferenceFix]` | Correct the user-added root test scene to use the validated packed atlas while preserving all other scene settings. | `[ArtworkRoom]+[AtlasCatalogTable]+[AtlasIntake]` | The scene references the packed atlas path and UID, retains its node/frame settings, loads through Godot, and resolves its 49-by-22 grid to exact 16-by-16 frames. | complete | Root `SpriteTest.tscn` now uses `colored-transparent_packed.png` UID `uid://cbkktuubutlil`; Godot scene launch passed; `784/49 = 16`, `352/22 = 16`; only the ext-resource line changed; atlas and preserved Table scene hashes unchanged |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[StaticAtlasLookup]` | Generate a typed, cached Godot lookup that returns exact packed-atlas regions for all accepted stable IDs, with a representative F6 preview. | `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` | Generator validates the full accepted catalog before deterministic output; API count/IDs/coordinates/frames/regions/textures/cache/unknown-ID behavior pass; preview and source preservation are agent-validated; Rob confirms the F6 visuals. | complete | `Documents/STATIC_ATLAS_LOOKUP.md`; deterministic 499-entry generated output; typed cached API; exhaustive validator passed; Rob confirmed six titled sprites were clear and isolated with no bleed |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticSpriteAliases]` | Layer optional human-readable names and review metadata over immutable accepted coordinate IDs through an append-only F6 workflow. | `[ArtworkRoom]+[AtlasCatalogTable]+[StaticAtlasLookup]` | Snapshot `004` is reconciled exactly to 499 members; naming syntax and topology rules are documented; 19 confirmed aliases map to exact frames; duplicate/invalid aliases are refused; numbered snapshots round-trip; scene startup passes; Rob confirms actual F6 editing and saving. | complete | `Documents/SEMANTIC_SPRITE_ALIASES.md`; visual preview/tracking passed; `semantic_aliases_003.json` reloads with 19 aliases plus exact note-only record `atlas_x01_y01` / `Tree number 2`; all validation passed |
+| `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingPass01]` | Draft and human-review a first small equipment-region naming batch without visually rereading the full atlas. | `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticSpriteAliases]` | Existing records remain exact; only region-bounded, visually defensible names are drafted; validation passes; Rob reviews the method and determines whether it is workable for expansion. | complete | `Documents/SEMANTIC_NAMING_PASS_01.md`; snapshot `004` has ten exact additions; Robert reported the result was workable and requested a full pass |
+| `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingFullPass]` | Produce a one-time complete semantic draft for Robert's comprehensive review without repeated full-atlas analysis. | `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingPass01]` | All 499 accepted addresses have unique validated aliases; prior semantics are preserved; ambiguity is visibly tagged; F6 loads the complete draft; Robert reviews every record and identifies the final saved snapshot. | awaiting human validation | `Documents/SEMANTIC_NAMING_FULL_PASS.md`; snapshot `005` has 499 aliases; 29 preserved and 470 generated; 157 `draft`, 313 `review_required`; validator and scene load passed |
 | `[ArtworkRoom]+[AtlasCatalogTable]+[GodotConsumerResources]` | Build only the TileSet, static atlas-region, animation, or lookup resources required by approved consumers. | `[ArtworkRoom]+[AtlasCatalogTable]+[HumanCatalogSelection]` | A separately approved consumer contract is implemented and validated against the accepted catalog without modifying source atlas pixels. | planned | Requires later Alignment/Execute and an approved consumer contract; no output yet |
 
 ## Current References And Unresolved State
@@ -48,8 +50,12 @@ Implementation baseline/evidence: Uncommitted Room files inspected on 2026-09-29
 - Catalog reference: [Documents/FINAL_FANTASY_CATALOG.md](Documents/FINAL_FANTASY_CATALOG.md)
 - Static lookup reference: [Documents/STATIC_ATLAS_LOOKUP.md](Documents/STATIC_ATLAS_LOOKUP.md)
 - Semantic alias reference: [Documents/SEMANTIC_SPRITE_ALIASES.md](Documents/SEMANTIC_SPRITE_ALIASES.md)
+- Naming Pass 01 reference: [Documents/SEMANTIC_NAMING_PASS_01.md](Documents/SEMANTIC_NAMING_PASS_01.md)
+- Full naming pass reference: [Documents/SEMANTIC_NAMING_FULL_PASS.md](Documents/SEMANTIC_NAMING_FULL_PASS.md)
 - Initial semantic snapshot: [Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_001.json](Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_001.json), SHA-256 `96a084a0924a7a9955f90fb0cab29e94a68d1d502dbd8c202f55280f3c178719`
 - Latest human semantic snapshot: [Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_003.json](Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_003.json), SHA-256 `5c5fc50ae99b44ccb5315ba915ac22deab7ca7ea3e883cbc5a6a1ffd63dcef51`
+- Current draft semantic snapshot: [Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_004.json](Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_004.json), SHA-256 `2dfe06388be1ce6ea84eca8ed88254bac4e4fadd84390ef97bdd7e95b7004262`
+- Full-pass draft snapshot: [Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_005.json](Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_005.json), SHA-256 `407ab8ec2f71744bc3a8ccb10fd890c4e1eebd7c607cb1d396672ec09b34c670`
 - Preserved setup scene: [Tables/SpriteTestTable/SpriteTest.tscn](Tables/SpriteTestTable/SpriteTest.tscn)
 - User-added test scene: [SpriteTest.tscn](SpriteTest.tscn), corrected SHA-256 `b17b1340e7aa01934156fc957652d02421beb43edba2313bcb9e631aa359b58d`
 - Original atlas candidate: [Assets/Possible_Artwork/colored-transparent.png](Assets/Possible_Artwork/colored-transparent.png), `832x373`, SHA-256 `532cf2ec79419cfabc6a757611737bcba43e24aed61d810aa6dda7ce69307b9b`
