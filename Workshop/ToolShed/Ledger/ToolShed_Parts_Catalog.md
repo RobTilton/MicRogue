@@ -1,17 +1,13 @@
 # Reusable Parts Catalog
-Updated: 2026-09-09
+Updated: 2026-10-01
 
-No entries. Follow [ToolShed Format](ToolShed_Format.md). The following is a schema example, not an installed capability or validation claim.
-
-```text
-Name: <stable name>
-Status: <Proven | Experimental | Archived>
-Kind: <Tool / Script / Reusable Rule / Scene Utility / Format Contract>
-StorageUnit: <current directory>
-Authority: <current README/contract>
-Keywords: <search terms>
-Summary: <capability>
-UseWhen: <appropriate conditions>
-DoNotUseWhen: <unsupported conditions>
-KeyRules: <invariants and limits>
-```
+Name: Decoration Pipeline Components
+Status: Proven
+Kind: Script
+StorageUnit: `Workshop/ToolShed/StorageUnits/DecorationPipeline/`
+Authority: [ToolReadme](../StorageUnits/DecorationPipeline/ToolReadme.md)
+Keywords: Decoration, topology, catalog, detached map, deterministic stickers, TileMapLayer, Godot
+Summary: Independently owned catalog adapter, result contract, topology painter, fantasy profile and layered renderer for Layout-completed Rapid maps.
+UseWhen: A tagged RapidRoomMapData needs deterministic catalog-backed visual assignment and base/sticker rendering.
+DoNotUseWhen: Inputs are not Layout-completed Rapid maps, the bound catalog authority differs, or Production integration is assumed.
+KeyRules: Preserve source data and duplicate tags; validate at boundaries; keep artwork in profiles and atlas coordinates in adapters; exclude sacred doorway footprints from rounded 3% floor stickers.

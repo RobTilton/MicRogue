@@ -1,15 +1,15 @@
 class_name DecorationCatalogAdapter
 extends RefCounted
 
-const IMPLEMENTATION_ORIGIN := "res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_catalog_adapter.gd"
+const IMPLEMENTATION_ORIGIN := "res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd"
 const CATALOG_PATH := "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Data/fantasy_sprite_catalog.json"
 const SEMANTIC_PATH := "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Data/semantic_aliases_001.json"
 const EXPECTED_CATALOG_SHA256 := "6e2d93232faebf9ea7ce5cd0623d312156ff80f8d4f3f061a2788eb1c549df71"
 const EXPECTED_SEMANTIC_SHA256 := "7199e90a6247dcf72f5b646d8cb7cd6a355216787a3f1b15a8ec1ae7dabf7d52"
 const EXPECTED_ENTRY_COUNT := 486
 const Catalog := preload("res://Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_catalog.gd")
-const Query := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_sprite_query.gd")
-const Record := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_sprite_record.gd")
+const Query := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_query.gd")
+const Record := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_record.gd")
 
 var _records_by_id: Dictionary = {}
 var _ids_by_alias: Dictionary = {}
@@ -76,6 +76,9 @@ func record(id: StringName) -> Record:
 
 func has(id: StringName) -> bool:
 	return _is_ready and _records_by_id.has(id)
+
+func atlas_coords_for(id: StringName) -> Vector2i:
+	return Catalog.atlas_coords_for(id) if has(id) else Vector2i(-1, -1)
 
 
 func entry_count() -> int:

@@ -1,6 +1,6 @@
 # Codex Collaboration Primer
 
-Updated: 2026-09-21
+Updated: 2026-10-01
 
 ## Rapid Shape
 
@@ -25,3 +25,6 @@ Astra is non-executing unless Rob explicitly restores execution authority. Astra
 MCA documentation is primarily AI-facing contextual offloading. Current actionable state matters more than how it was reached. Load relevant contracts and applicable preservation lessons, not abandoned approaches or history. Rob supplies or approves durable intent; agents maintain accurate documents within approved scope. Most saved workflow prose was agent-authored through collaboration; do not attribute every document personally to Rob.
 
 Use concise updates and report outcome, evidence, and material limitations. After compaction recover material facts from DOTS, current documents, and available approval evidence. Do not repeat approval merely because context was compacted. If authority cannot be established, ask only for the missing authority. Mundane choices may be remade without ceremony.
+## Workflow Documentation Write Boundary
+
+Rob accepted the 2026-10-01 MCA Room-contract additions establishing temporary Rooms and mandatory project composition/modularity. Preserve those additions. Future Cody-initiated workflow documentation changes belong only in this primer; modify MCA core documentation only when Rob requests those writes. This boundary does not prohibit authorized task documentation, system descriptions or ToolShed records.

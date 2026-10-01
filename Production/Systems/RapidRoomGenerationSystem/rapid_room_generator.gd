@@ -10,19 +10,17 @@ const KIND_DOOR: int = 2
 const AXIS_HORIZONTAL: int = RapidRoomDoorway.Axis.HORIZONTAL
 const AXIS_VERTICAL: int = RapidRoomDoorway.Axis.VERTICAL
 const NO_AXIS: int = 255
-const WALL_EROSION_CHANCE: float = 0.4
 
 const DIRECTIONS: Array[Vector2i] = [Vector2i.UP, Vector2i.RIGHT, Vector2i.DOWN, Vector2i.LEFT]
 const OPPOSITE_SIDE := [2, 3, 0, 1]
 
 # Canonical doorway templates traverse from top to bottom.
 const DOORWAY_TEMPLATES := [
-	{"cells": ["##.", "...", ".##"], "door_offset": Vector2i(2, 0)},
-	{"cells": ["#.#", "#.#", "..."], "door_offset": Vector2i(1, 0)},
-	{"cells": ["..#", "#.#", "..."], "door_offset": Vector2i(1, 0)},
-	{"cells": ["...", "#.#", "..."], "door_offset": Vector2i(1, 1)},
-	{"cells": [".#.", "...", "#.#"], "door_offset": Vector2i(1, 2)},
-	{"cells": [".#.", "..#", "#.."], "door_offset": Vector2i(1, 2)},
+	{"cells": ["##.", "...", ".##"], "door_offset": Vector2i(1, 1), "door_axis": AXIS_HORIZONTAL},
+	{"cells": ["#.#", "#.#", "..."], "door_offset": Vector2i(1, 0), "door_axis": AXIS_VERTICAL},
+	{"cells": ["..#", "#.#", "..."], "door_offset": Vector2i(1, 1), "door_axis": AXIS_VERTICAL},
+	{"cells": ["...", "#.#", "..."], "door_offset": Vector2i(1, 1), "door_axis": AXIS_VERTICAL},
+	{"cells": [".#.", "...", "#.#"], "door_offset": Vector2i(1, 2), "door_axis": AXIS_VERTICAL},
 ]
 
 
@@ -331,15 +329,17 @@ static func _resolve_final_tiles(state: BuildState, rng: RandomNumberGenerator) 
 				_write_doorway_template(final_cells, final_size, blueprint_position, template_index, axis)
 				var template: Dictionary = DOORWAY_TEMPLATES[template_index]
 				var door_offset: Vector2i = template["door_offset"]
+				var door_item_axis: int = template["door_axis"]
 				if axis == AXIS_HORIZONTAL:
 					door_offset = Vector2i(2 - door_offset.y, door_offset.x)
+					door_item_axis = AXIS_VERTICAL if door_item_axis == AXIS_HORIZONTAL else AXIS_HORIZONTAL
 				var footprint_center: Vector2i = blueprint_position * 3 + Vector2i.ONE
 				doorways.append(RapidRoomDoorway.new(
 					blueprint_position * 3 + door_offset,
 					footprint_center,
-					axis as RapidRoomDoorway.Axis
+					axis as RapidRoomDoorway.Axis,
+					door_item_axis as RapidRoomDoorway.Axis
 				))
-	_erode_floor_facing_wall_tiles(state, final_cells, final_size, rng)
 	return {
 		&"cells": final_cells,
 		&"doorways": doorways,
@@ -384,40 +384,6 @@ static func _append_final_block_coordinates(
 	for local_y: int in range(3):
 		for local_x: int in range(3):
 			coordinates.append(origin + Vector2i(local_x, local_y))
-
-
-static func _erode_floor_facing_wall_tiles(
-	state: BuildState,
-	cells: PackedInt32Array,
-	final_size: int,
-	rng: RandomNumberGenerator
-) -> void:
-	var snapshot := cells.duplicate()
-	var replacements := PackedInt32Array()
-	for blueprint_y: int in range(state.blueprint_size):
-		for blueprint_x: int in range(state.blueprint_size):
-			var blueprint_index := blueprint_y * state.blueprint_size + blueprint_x
-			if state.kinds[blueprint_index] != KIND_WALL:
-				continue
-			var origin := Vector2i(blueprint_x * 3, blueprint_y * 3)
-			for local_y: int in range(3):
-				for local_x: int in range(3):
-					if local_x == 1 and local_y == 1:
-						continue
-					var position := origin + Vector2i(local_x, local_y)
-					var final_index := _index(position, final_size)
-					if snapshot[final_index] != RapidRoomMapData.WALL:
-						continue
-					var touches_floor := false
-					for direction: Vector2i in DIRECTIONS:
-						var neighbor := position + direction
-						if _in_square(neighbor, final_size) and snapshot[_index(neighbor, final_size)] == RapidRoomMapData.FLOOR:
-							touches_floor = true
-							break
-					if touches_floor and rng.randf() < WALL_EROSION_CHANCE:
-						replacements.append(final_index)
-	for replacement_index: int in replacements:
-		cells[replacement_index] = RapidRoomMapData.FLOOR
 
 
 static func _same_room_floor(state: BuildState, position: Vector2i, room_id: int) -> bool:

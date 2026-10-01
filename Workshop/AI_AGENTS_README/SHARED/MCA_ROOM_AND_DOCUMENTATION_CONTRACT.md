@@ -1,7 +1,9 @@
 # MCA Room And Documentation Contract
-Updated: 2026-09-09
+Updated: 2026-10-01
 
 ## Rapid Shape
+
+Rooms are temporary execution surfaces. The project must remain compositional and modular: independently understandable components expose explicit interfaces, and composed builds preserve their ownership boundaries. Durable implementation, reusable tools, and authoritative system documentation must have owners outside a Room before that Room can be removed.
 
 Each execution Room has one `DOTS.md`: the mandatory Box list and authoritative traversal record. Current-state references describe the result. Together they establish where work stands and what can happen next. The [shared contract](.AGENTS.md) governs permission.
 
@@ -50,7 +52,9 @@ Omit inapplicable sections. Front-load information that changes the correct next
 
 At each completed Box, update affected references and DOTS in the same work batch. These are companion changes for the next human Git checkpoint, not an automated commit. A date alone does not establish agreement. If interrupted between updates, leave the Box incomplete and reconcile the mismatch before claiming a valid transfer.
 
-At Table closeout, validate the composed components and reconcile interface/dependency limits. At Room closeout, record final outputs, acceptance status, integration evidence, and disposition: retain in Room, preserve reusable work in ToolShed, or promote only when explicitly authorized. Closeout never grants deletion or Production authority. Preserve useful independent results even if another Box remains incomplete.
+At Table closeout, validate the composed components and reconcile interface/dependency limits. At Room closeout, record final outputs, acceptance status, integration evidence, and disposition: retain in Room, preserve reusable work in ToolShed, or promote only when explicitly authorized. Before proposing Room removal, identify every retained output and its durable owner, preserve required implementation and evidence outside the Room, update consumers and authoritative references, and validate the relocated composition. Confirm that no required code, asset, documentation, or entry point depends on the Room. Record the exact proposed removal path and remaining limits. A completed implementation alone does not establish removal safety.
+
+Closeout never grants deletion or Production authority. Preserve useful independent results even if another Box remains incomplete.
 
 ## Handoff Validity
 

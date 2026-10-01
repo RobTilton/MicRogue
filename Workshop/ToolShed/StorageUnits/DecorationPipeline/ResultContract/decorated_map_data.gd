@@ -1,7 +1,7 @@
 class_name DecoratedMapData
 extends RefCounted
 
-const IMPLEMENTATION_ORIGIN := "res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/ResultContract/decorated_map_data.gd"
+const IMPLEMENTATION_ORIGIN := "res://Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/decorated_map_data.gd"
 const MapData := preload("res://Production/Systems/RapidRoomGenerationSystem/rapid_room_map_data.gd")
 const Room := preload("res://Production/Systems/RapidRoomGenerationSystem/rapid_room.gd")
 const Doorway := preload("res://Production/Systems/RapidRoomGenerationSystem/rapid_room_doorway.gd")
@@ -35,25 +35,36 @@ static func validate_inputs(
 	assignments: Array[StringName],
 	catalog_adapter: RefCounted
 ) -> String:
-	if source == null:
-		return "source RapidRoomMapData is null"
+	var source_error := validate_source(source)
+	if not source_error.is_empty():
+		return source_error
 	if catalog_adapter == null or not catalog_adapter.has_method("entry_count") or not catalog_adapter.has_method("has"):
 		return "catalog adapter is null or does not expose the validated adapter contract"
 	if catalog_adapter.entry_count() <= 0:
 		return "catalog adapter is null or has not passed authority validation"
 	var cell_count := source.cells.size()
+	if assignments.size() != cell_count:
+		return "sprite assignment count %d does not equal physical cell count %d" % [assignments.size(), cell_count]
+	for index: int in range(cell_count):
+		var sprite_id := assignments[index]
+		if sprite_id.is_empty():
+			if source.cells[index] == MapData.WALL: return "wall sticker assignment %d is empty" % index
+			continue
+		if not catalog_adapter.has(sprite_id): return "sticker assignment %d is absent from the accepted catalog: %s" % [index, sprite_id]
+	return ""
+
+
+static func validate_source(source: MapData) -> String:
+	if source == null:
+		return "source RapidRoomMapData is null"
+	var cell_count := source.cells.size()
 	var side_length := int(round(sqrt(float(cell_count))))
 	if cell_count <= 0 or side_length * side_length != cell_count:
 		return "physical cells do not form a non-empty square map"
-	if assignments.size() != cell_count:
-		return "sprite assignment count %d does not equal physical cell count %d" % [assignments.size(), cell_count]
 	for index: int in range(cell_count):
 		var physical_cell := source.cells[index]
 		if physical_cell != MapData.FLOOR and physical_cell != MapData.WALL:
 			return "physical cell %d has unsupported value %d" % [index, physical_cell]
-		var sprite_id := assignments[index]
-		if sprite_id.is_empty() or not catalog_adapter.has(sprite_id):
-			return "sprite assignment %d is empty or absent from the accepted catalog: %s" % [index, sprite_id]
 	if source.room_count != source.rooms.size() or source.room_count <= 0:
 		return "room_count does not equal a non-empty rooms array"
 	var owned_floor_coordinates: Dictionary = {}
@@ -90,9 +101,11 @@ static func validate_inputs(
 			return center_error
 		if doorway.axis != Doorway.Axis.HORIZONTAL and doorway.axis != Doorway.Axis.VERTICAL:
 			return "doorway %d has unsupported axis %d" % [index, doorway.axis]
+		if doorway.door_item_axis != Doorway.Axis.HORIZONTAL and doorway.door_item_axis != Doorway.Axis.VERTICAL:
+			return "doorway %d has unsupported local door-item axis %d" % [index, doorway.door_item_axis]
 		if source.cells[doorway.position.y * side_length + doorway.position.x] != MapData.FLOOR:
 			return "doorway %d position is not floor" % index
-		var traversal_step := Vector2i.RIGHT if doorway.axis == Doorway.Axis.HORIZONTAL else Vector2i.DOWN
+		var traversal_step := Vector2i.RIGHT if doorway.door_item_axis == Doorway.Axis.HORIZONTAL else Vector2i.DOWN
 		for adjacent: Vector2i in [doorway.position - traversal_step, doorway.position + traversal_step]:
 			var adjacent_error := _validate_coordinate(adjacent, side_length, "doorway %d traversal neighbor" % index)
 			if not adjacent_error.is_empty():

@@ -7,7 +7,7 @@ Rapid Room Generation is Production authority for physical room generation. It a
 
 The minimum effective side length is 4. Requests below 4 are silently normalized to 4 at the shared ordinary/seeded generation boundary.
 
-The generator owns its complete geometry pipeline. Internal template choice, sealed exterior requests, wall-edge erosion accounting, dimensions, and timing are not part of the returned Production contract. Future tagging, decoration, and population systems are separate consumers.
+The generator owns its complete geometry pipeline. Internal template choice, sealed exterior requests, dimensions, and timing are not part of the returned Production contract. Future tagging, decoration, and population systems are separate consumers.
 
 ## Current Locations And Structure
 
@@ -41,9 +41,8 @@ Generation proceeds in this order:
 2. Expand each panel into the internal middle blueprint and merge dividers belonging to the same room.
 3. Author shared doorway cells at missing room sides; requests reaching the exterior are sealed internally.
 4. Add the exterior wall ring.
-5. Resolve the mutable layer-three floor/wall cells and one of six realized doorway templates. Each template carries one canonical straight-span door-item offset; horizontal resolution rotates the geometry and offset together.
-6. Apply the internal immutable-snapshot wall-edge erosion pass.
-7. Return detached room and doorway records with the mutable layer-three cells.
+5. Resolve the mutable layer-three floor/wall cells and one of five realized doorway templates. Each sacred, non-eroded 3×3 template carries one canonical straight-span door-item offset and local orientation; horizontal resolution rotates geometry, offset, and local orientation together.
+6. Return detached room and doorway records with the mutable layer-three cells.
 
 ## Result Contract
 
@@ -54,7 +53,7 @@ Generation proceeds in this order:
 - `room_count: int`: exact explicit count equal to `rooms.size()`.
 - `doorways: Array[RapidRoomDoorway]`: detached realized shared doorways.
 
-It exposes no width, height, generation time, sealed-request count, erosion count, or other diagnostics. The internal final map remains square with side length `(12 × size) + 3`.
+It exposes no width, height, generation time, sealed-request count, or other diagnostics. The internal final map remains square with side length `(12 × size) + 3`.
 
 ### `RapidRoom`
 
@@ -66,15 +65,16 @@ It exposes no width, height, generation time, sealed-request count, erosion coun
 
 Across one result, all panel counts sum exactly to `size × size`.
 
-Floor coordinates are collected from room-owned middle-blueprint floor before wall erosion. They include ordinary room blocks and merged same-room divider blocks. Doorway footprints are a separate channel, and erosion-created floor remains unowned. Coordinates are detached with their room record.
+Floor coordinates include ordinary room blocks and merged same-room divider blocks. Doorway footprints are a separate unowned channel. Coordinates are detached with their room record.
 
 ### `RapidRoomDoorway`
 
 - `position: Vector2i`: exact final layer-three coordinate for one door item, guaranteed to have floor immediately before and after it along the traversal axis.
 - `footprint_center: Vector2i`: center coordinate of the final 3×3 doorway footprint.
 - `axis`: horizontal or vertical traversal orientation.
+- `door_item_axis`: local horizontal or vertical floor-span orientation used to rotate the door item so it blocks its immediate passage.
 
-Template choice and middle-blueprint coordinates remain generator-internal. The former two-parallel-lane template is excluded because one single-cell door could not gate it. Exterior requests do not create doorway records.
+Template choice and middle-blueprint coordinates remain generator-internal. The former diagonal template is excluded because its passage and single-cell door relationship was not visually reliable. Exterior requests do not create doorway records.
 
 ## Ownership And Dependencies
 

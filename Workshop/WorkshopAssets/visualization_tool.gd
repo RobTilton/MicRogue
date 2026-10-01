@@ -7,6 +7,7 @@ const ORIGIN: String = "Workshop/WorkshopAssets/visualization_tool.gd"
 
 @export_range(4, 100, 1) var size: int = 5
 @export_enum("Cave:0", "Catacomb:1", "Nest:2", "SubPassage:3") var archetype: int = RoomLayoutSemantics.Archetype.CAVE
+@export var seed: int = 8105
 @export var floor_mesh_id: int = 1
 @export var wall_mesh_id: int = 2
 @export var door_mesh_id: int = 3
@@ -17,13 +18,9 @@ var rendered_map_data: RapidRoomMapData
 
 
 func _ready() -> void:
-	var controller := LightweightGenerationController.new()
-	controller.size = size
-	controller.archetype = archetype
-	var map_data: RapidRoomMapData = controller.generate_map()
-	controller.free()
-	if map_data == null:
-		push_error("%s: lightweight generation pipeline failed." % ORIGIN)
+	var map_data: RapidRoomMapData = RapidRoomGenerator.make_seeded_map(size, seed)
+	if map_data == null or not RoomLayoutTagger.tag_rooms_seeded(map_data, archetype, seed):
+		push_error("%s: seeded Rapid/Layout generation failed for size %d, archetype %d, seed %d." % [ORIGIN, size, archetype, seed])
 		return
 	render_map_data(map_data)
 
@@ -50,7 +47,7 @@ func render_map_data(map_data: RapidRoomMapData) -> bool:
 			grid_map.set_cell_item(Vector3i(coordinate.x, 0, coordinate.y), room_mesh_id)
 	for doorway: RapidRoomDoorway in map_data.doorways:
 		var orientation: int = 0
-		if doorway.axis == RapidRoomDoorway.Axis.VERTICAL:
+		if doorway.door_item_axis == RapidRoomDoorway.Axis.VERTICAL:
 			orientation = grid_map.get_orthogonal_index_from_basis(Basis(Vector3.UP, PI * 0.5))
 		grid_map.set_cell_item(
 			Vector3i(doorway.position.x, 0, doorway.position.y),

@@ -26,13 +26,13 @@ func _validate_map(data: RapidRoomMapData) -> void:
 	var side: int = int(round(sqrt(float(data.cells.size()))))
 	var positions: Dictionary = {}
 	for doorway: RapidRoomDoorway in data.doorways:
-		var direction: Vector2i = Vector2i.RIGHT if doorway.axis == RapidRoomDoorway.Axis.HORIZONTAL else Vector2i.DOWN
+		var direction: Vector2i = Vector2i.RIGHT if doorway.door_item_axis == RapidRoomDoorway.Axis.HORIZONTAL else Vector2i.DOWN
 		_expect(abs(doorway.position.x - doorway.footprint_center.x) <= 1 and abs(doorway.position.y - doorway.footprint_center.y) <= 1, "placement is inside its footprint")
 		_expect(_is_floor(data, side, doorway.position - direction) and _is_floor(data, side, doorway.position) and _is_floor(data, side, doorway.position + direction), "placement has straight traversal floor")
 		_expect(not positions.has(doorway.position), "placement is unique")
 		positions[doorway.position] = true
 		var detached: RapidRoomDoorway = doorway.duplicate_detached()
-		_expect(detached.position == doorway.position and detached.footprint_center == doorway.footprint_center and detached.axis == doorway.axis, "detached record preserves placement")
+		_expect(detached.position == doorway.position and detached.footprint_center == doorway.footprint_center and detached.axis == doorway.axis and detached.door_item_axis == doorway.door_item_axis, "detached record preserves placement and local door orientation")
 
 
 func _validate_visualization() -> void:
@@ -52,7 +52,7 @@ func _validate_visualization() -> void:
 	var vertical_orientation: int = grid_map.get_orthogonal_index_from_basis(Basis(Vector3.UP, PI * 0.5))
 	for doorway: RapidRoomDoorway in data.doorways:
 		var coordinate := Vector3i(doorway.position.x, 0, doorway.position.y)
-		var expected_orientation: int = 0 if doorway.axis == RapidRoomDoorway.Axis.HORIZONTAL else vertical_orientation
+		var expected_orientation: int = 0 if doorway.door_item_axis == RapidRoomDoorway.Axis.HORIZONTAL else vertical_orientation
 		_expect(grid_map.get_cell_item(coordinate) == 3, "door uses mesh-library item 3")
 		_expect(grid_map.get_cell_item_orientation(coordinate) == expected_orientation, "door orientation matches traversal")
 	visualization.queue_free()

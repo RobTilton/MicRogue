@@ -1,11 +1,15 @@
 # System Descriptions
-Updated: 2026-09-28
+Updated: 2026-10-01
 
 Current Production system contracts:
 
 - [Rapid Room Generation System](RAPID_ROOM_GENERATION_SYSTEM.md)
 - [Room Layout System](ROOM_LAYOUT_SYSTEM.md)
 - [Lightweight Generation Controller](LIGHTWEIGHT_GENERATION_CONTROLLER.md)
+
+Durable Workshop system contracts:
+
+- [Decoration Pipeline](FRAGILE_DECORATION_PIPELINE.md)
 
 System descriptions provide immediate, present-tense understanding of what a system is and how it works. Include only the system's purpose, ownership, current source locations, entry points, ordered behavior, inputs, outputs, invariants, dependencies, mutation boundaries, guarantees, and current limits.
 

@@ -1,11 +1,11 @@
 extends SceneTree
 
-const ORIGIN := "res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/ResultContract/validate_decorated_map_data.gd"
+const ORIGIN := "res://Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/validate_decorated_map_data.gd"
 const Generator := preload("res://Production/Systems/RapidRoomGenerationSystem/rapid_room_generator.gd")
 const Layout := preload("res://Production/Systems/RoomLayoutSystem/room_layout_tagger.gd")
 const Semantics := preload("res://Production/Systems/RoomLayoutSystem/room_layout_semantics.gd")
-const CatalogAdapter := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_catalog_adapter.gd")
-const Result := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/ResultContract/decorated_map_data.gd")
+const CatalogAdapter := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd")
+const Result := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/decorated_map_data.gd")
 
 
 func _initialize() -> void:
@@ -66,5 +66,5 @@ func _snapshot(source: RapidRoomMapData) -> Array:
 		room_values.append([room.id, room.panel_count, room.floor_coordinates.duplicate(), room.room_type, room.tags.duplicate()])
 	var doorway_values: Array = []
 	for doorway: RapidRoomDoorway in source.doorways:
-		doorway_values.append([doorway.position, doorway.footprint_center, doorway.axis])
+		doorway_values.append([doorway.position, doorway.footprint_center, doorway.axis, doorway.door_item_axis])
 	return [source.cells.duplicate(), source.room_count, room_values, doorway_values]

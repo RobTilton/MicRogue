@@ -1,8 +1,8 @@
 extends SceneTree
 
-const ORIGIN := "res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/validate_decoration_catalog_adapter.gd"
-const Adapter := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_catalog_adapter.gd")
-const Query := preload("res://Workshop/Rooms/DecorationPassRoom/Tables/DecorationPassTable/CatalogAdapter/decoration_sprite_query.gd")
+const ORIGIN := "res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/validate_decoration_catalog_adapter.gd"
+const Adapter := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd")
+const Query := preload("res://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_query.gd")
 
 
 func _initialize() -> void:
