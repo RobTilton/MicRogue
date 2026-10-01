@@ -1,7 +1,7 @@
 # ArtworkRoom Semantic Naming Full Pass
-Updated: 2026-09-30
+Updated: 2026-10-01
 Checkpoint: `[ArtworkRoom]+[AtlasCatalogTable]+[SemanticNamingFullPass]`
-Implementation baseline/evidence: Selected-only evidence was generated from the 499-entry accepted catalog. Draft snapshot `005` supplies a unique alias and complete semantic record for every accepted address; automated validation and scene loading pass. Robert's comprehensive review remains pending.
+Implementation baseline/evidence: Selected-only evidence and draft snapshot `005` supported Robert's complete first once-over. Human snapshot `024` passes exhaustive validation and is the semantic authority for Full Pass 1.
 
 ## Rapid Shape
 
@@ -12,6 +12,9 @@ This is a complete review draft, not final semantic authority. It preserves the 
 - Accepted catalog: [`../Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json`](../Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json), 499 entries
 - Preserved source: [`../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_004.json`](../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_004.json), SHA-256 `2dfe06388be1ce6ea84eca8ed88254bac4e4fadd84390ef97bdd7e95b7004262`
 - Full draft: [`../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_005.json`](../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_005.json), SHA-256 `407ab8ec2f71744bc3a8ccb10fd890c4e1eebd7c607cb1d396672ec09b34c670`
+- Initial human working snapshot: [`../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_006.json`](../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_006.json), SHA-256 `480aec14d3a2d597118a17506bc501c49df9d193083e6873fb3ea5340f64dcec`
+- Completed Full Pass 1 snapshot: [`../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_024.json`](../Tables/AtlasCatalogTable/SemanticAliases/semantic_aliases_024.json), SHA-256 `cc3d0dd62f49ff0524c3b55b305957e01336c13aec07f11c841ddc7aa5ec2c95`
+- Alias-derived group reference: [`SEMANTIC_ALIAS_GROUPS_024.md`](SEMANTIC_ALIAS_GROUPS_024.md)
 - Selected-only evidence: [`../Tables/AtlasCatalogTable/Evidence/SelectedReviewSheets/`](../Tables/AtlasCatalogTable/Evidence/SelectedReviewSheets/)
 - Evidence generator: [`../Tables/AtlasCatalogTable/Tools/generate_selected_review_sheets.gd`](../Tables/AtlasCatalogTable/Tools/generate_selected_review_sheets.gd)
 - Draft generator: [`../Tables/AtlasCatalogTable/Tools/generate_semantic_naming_full_pass.gd`](../Tables/AtlasCatalogTable/Tools/generate_semantic_naming_full_pass.gd)
@@ -55,12 +58,13 @@ The status is carried as a searchable tag. It indicates semantic confidence only
 
 ## One-Pass F6 Review
 
-1. Open `SemanticNamingTool.tscn` and press F6. It loads snapshot `005` automatically.
+1. Open `SemanticNamingTool.tscn` and press F6. It loads the newest valid snapshot automatically; completed Full Pass 1 now reloads snapshot `024`.
 2. Leave the filter empty to review all 499 records in atlas order.
 3. Filter `review_required` to inspect the 313 least-specific names first, or `full_pass` to isolate all 470 newly generated records.
 4. Previous/Next and Ctrl+Left/Ctrl+Right follow the filtered list.
 5. Correct alias, category, family, tags, or notes as needed. Keep aliases lowercase `snake_case` and unique.
-6. Save periodically if desired; each Ctrl+S produces a new immutable numbered snapshot. The last saved snapshot after the complete once-over becomes the human candidate.
+6. Use `Request Remove` for sprites that should be reconsidered after close inspection; this creates a review request rather than deleting anything.
+7. Save periodically if desired; each Ctrl+S produces a new immutable numbered snapshot. The last saved snapshot after the complete once-over becomes the human candidate.
 
 ## Validation And Current Limits
 
@@ -72,4 +76,7 @@ The status is carried as a searchable tag. It indicates semantic confidence only
 - Counts are 157 `draft` and 313 `review_required`.
 - The generator refuses changed hashes and overwrite of snapshot `005`. The validator passed and the F6 tool loads the full snapshot without errors.
 - Broad family assignment is not a claim of exact subtype. Runtime alias lookup and Production adoption remain outside this checkpoint.
-- The checkpoint remains incomplete until Robert finishes the once-over and identifies the final saved snapshot.
+- Robert completed the first once-over and identified snapshot `024` as its final save.
+- Snapshot `006` preserves Robert's first 20 naming edits. Removal-request fields begin with its successor; all older missing values mean `false`.
+- Snapshot `024` contains all 499 unique aliases, 172 alias changes relative to generated draft `005`, and 13 explicit removal requests. Godot validation and scene reload passed.
+- Full Pass 1 is complete. Requested removal and category/family normalization remain separate work.

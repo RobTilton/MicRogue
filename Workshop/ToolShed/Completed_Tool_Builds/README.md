@@ -1,4 +1,8 @@
 # Completed Tool Builds
-Updated: 2026-09-09
+Updated: 2026-10-01
 
-Empty. Add `<BuildName>/BuildReadme.md` and the composed workflow when validated for its stated scope. Follow the [schema](../Ledger/ToolShed_Format.md) and register it in the [build catalog](../Ledger/Completed_Tool_Builds_Catalog.md). Do not imply human acceptance or broader proof than the recorded checks support.
+Installed builds:
+
+- [Sprite Atlas Curation](SpriteAtlasCuration/BuildReadme.md): configurable visual selection, stable catalog derivation, and semantic naming for a uniform rectangular sprite atlas.
+
+Follow the [schema](../Ledger/ToolShed_Format.md) and register each build in the [build catalog](../Ledger/Completed_Tool_Builds_Catalog.md). Do not imply human acceptance or broader proof than the recorded checks support.

@@ -2,8 +2,8 @@ extends Control
 
 const TOOL_ORIGIN := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Tools/semantic_naming_tool.gd"
 const CATALOG_PATH := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json"
-const EXPECTED_CATALOG_SHA256 := "438b01aebe34ed75e5720a70eb129adb0c48273f31eb4cb42ad965a6f12597f2"
-const EXPECTED_CATALOG_COUNT := 499
+const EXPECTED_CATALOG_SHA256 := "48e5a186b5ea1abdc666c4d4ec911ddd956aed668552259e735cb7ec3a809285"
+const EXPECTED_CATALOG_COUNT := 486
 const ATLAS_PATH := "res://Workshop/Rooms/ArtworkRoom/Assets/Possible_Artwork/colored-transparent_packed.png"
 const EXPECTED_ATLAS_SHA256 := "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
 const ALIAS_DIRECTORY := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/SemanticAliases"
@@ -28,6 +28,7 @@ var category_edit: LineEdit
 var family_edit: LineEdit
 var tags_edit: LineEdit
 var note_edit: TextEdit
+var remove_checkbox: CheckBox
 var status_label: Label
 var named_label: Label
 
@@ -122,6 +123,13 @@ func _build_ui() -> void:
 	note_edit.size = Vector2(470, 136)
 	note_edit.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
 	add_child(note_edit)
+	remove_checkbox = CheckBox.new()
+	remove_checkbox.position = Vector2(704, 590)
+	remove_checkbox.size = Vector2(220, 32)
+	remove_checkbox.text = "Request Remove"
+	remove_checkbox.tooltip_text = "Flags this accepted address for later catalog-removal reconciliation; does not delete it."
+	remove_checkbox.toggled.connect(_on_remove_toggled)
+	add_child(remove_checkbox)
 
 	var previous_button := Button.new()
 	previous_button.position = Vector2(402, 660)
@@ -262,7 +270,10 @@ func _validate_alias_payload(payload) -> Dictionary:
 			parsed_alias_count += 1
 		if not entry.get("tags") is Array:
 			return _invalid("tags are not an array: %s" % address)
-		if alias.is_empty() and str(entry.get("category", "")).is_empty() and str(entry.get("family", "")).is_empty() and entry.tags.is_empty() and str(entry.get("note", "")).is_empty():
+		if entry.has("remove_requested") and typeof(entry.remove_requested) != TYPE_BOOL:
+			return _invalid("remove_requested is not Boolean: %s" % address)
+		var remove_requested := bool(entry.get("remove_requested", false))
+		if alias.is_empty() and str(entry.get("category", "")).is_empty() and str(entry.get("family", "")).is_empty() and entry.tags.is_empty() and str(entry.get("note", "")).is_empty() and not remove_requested:
 			return _invalid("empty semantic record: %s" % address)
 		parsed[address] = entry.duplicate(true)
 	if int(payload.get("alias_count", -1)) != parsed_alias_count:
@@ -281,7 +292,8 @@ func _rebuild_list() -> void:
 		var address := str(entry.id)
 		var semantic: Dictionary = aliases_by_address.get(address, {})
 		var alias := str(semantic.get("alias", ""))
-		var searchable := " ".join([address, alias, str(semantic.get("category", "")), str(semantic.get("family", "")), ",".join(semantic.get("tags", [])), str(semantic.get("note", ""))]).to_lower()
+		var remove_requested := bool(semantic.get("remove_requested", false))
+		var searchable := " ".join([address, alias, str(semantic.get("category", "")), str(semantic.get("family", "")), ",".join(semantic.get("tags", [])), str(semantic.get("note", "")), "remove_requested" if remove_requested else ""]).to_lower()
 		if not query.is_empty() and not searchable.contains(query):
 			continue
 		visible_indices.append(index)
@@ -290,6 +302,8 @@ func _rebuild_list() -> void:
 			suffix = "  •  " + alias
 		elif not str(semantic.get("note", "")).is_empty():
 			suffix = "  •  note"
+		if remove_requested:
+			suffix += "  [REMOVE]"
 		item_list.add_item("%03d  %s%s" % [int(entry.frame), address, suffix])
 	if current_index >= 0:
 		var visible_position := visible_indices.find(current_index)
@@ -311,6 +325,7 @@ func _select_catalog_index(index: int) -> void:
 	family_edit.text = str(semantic.get("family", ""))
 	tags_edit.text = ", ".join(semantic.get("tags", []))
 	note_edit.text = str(semantic.get("note", ""))
+	remove_checkbox.set_pressed_no_signal(bool(semantic.get("remove_requested", false)))
 	var visible_position := visible_indices.find(current_index)
 	if visible_position >= 0:
 		item_list.select(visible_position)
@@ -331,7 +346,8 @@ func _commit_current_form() -> void:
 	var category := category_edit.text.strip_edges()
 	var family := family_edit.text.strip_edges()
 	var note := note_edit.text.strip_edges()
-	if alias.is_empty() and category.is_empty() and family.is_empty() and tags.is_empty() and note.is_empty():
+	var remove_requested := remove_checkbox.button_pressed
+	if alias.is_empty() and category.is_empty() and family.is_empty() and tags.is_empty() and note.is_empty() and not remove_requested:
 		aliases_by_address.erase(address)
 		return
 	aliases_by_address[address] = {
@@ -341,6 +357,7 @@ func _commit_current_form() -> void:
 		"family": family,
 		"tags": tags,
 		"note": note,
+		"remove_requested": remove_requested,
 	}
 
 
@@ -362,7 +379,9 @@ func _save_snapshot() -> void:
 	for entry: Dictionary in catalog_entries:
 		var address := str(entry.id)
 		if aliases_by_address.has(address):
-			serialized.append(aliases_by_address[address].duplicate(true))
+			var semantic_record: Dictionary = aliases_by_address[address].duplicate(true)
+			semantic_record["remove_requested"] = bool(semantic_record.get("remove_requested", false))
+			serialized.append(semantic_record)
 	var named_count := _named_count()
 	var payload := {
 		"alias_count": named_count,
@@ -460,6 +479,13 @@ func _clear_current_alias() -> void:
 	_set_status("Alias cleared in working memory; save to preserve the change")
 
 
+func _on_remove_toggled(requested: bool) -> void:
+	_commit_current_form()
+	_rebuild_list()
+	_update_named_count()
+	_set_status("Removal requested in working memory" if requested else "Removal request cleared in working memory")
+
+
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		var key := event as InputEventKey
@@ -475,7 +501,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 
 func _update_named_count() -> void:
-	named_label.text = "Named: %d / %d    Records: %d    Loaded: %s" % [_named_count(), EXPECTED_CATALOG_COUNT, aliases_by_address.size(), loaded_snapshot]
+	named_label.text = "Named: %d / %d    Records: %d    Remove: %d    Loaded: %s" % [_named_count(), EXPECTED_CATALOG_COUNT, aliases_by_address.size(), _remove_requested_count(), loaded_snapshot]
 
 
 func _named_count() -> int:
@@ -486,13 +512,21 @@ func _named_count() -> int:
 	return count
 
 
+func _remove_requested_count() -> int:
+	var count := 0
+	for entry: Dictionary in aliases_by_address.values():
+		if bool(entry.get("remove_requested", false)):
+			count += 1
+	return count
+
+
 func _set_status(message: String) -> void:
 	if status_label != null:
 		status_label.text = message
 
 
 func _set_editor_enabled(enabled: bool) -> void:
-	for control in [item_list, filter_edit, alias_edit, category_edit, family_edit, tags_edit, note_edit]:
+	for control in [item_list, filter_edit, alias_edit, category_edit, family_edit, tags_edit, note_edit, remove_checkbox]:
 		if control != null:
 			control.mouse_filter = Control.MOUSE_FILTER_STOP if enabled else Control.MOUSE_FILTER_IGNORE
 

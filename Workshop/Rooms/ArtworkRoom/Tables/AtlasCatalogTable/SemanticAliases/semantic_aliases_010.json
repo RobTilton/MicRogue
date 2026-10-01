@@ -1,0 +1,6997 @@
+{
+	"alias_count": 499,
+	"aliases": [
+		{
+			"address": "atlas_x01_y00",
+			"alias": "overworld_detail_000",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x02_y00",
+			"alias": "overworld_detail_001",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x03_y00",
+			"alias": "overworld_detail_002",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x04_y00",
+			"alias": "overworld_detail_003",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x05_y00",
+			"alias": "overworld_detail_004",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x06_y00",
+			"alias": "overworld_detail_005",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y00",
+			"alias": "overworld_detail_006",
+			"category": "terrain",
+			"family": "overworld_detail",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x08_y00",
+			"alias": "overworld_remove_000",
+			"category": "terrain",
+			"family": "Overworld",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y00",
+			"alias": "overworld_remove_001",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y00",
+			"alias": "overworld_remove_002",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y00",
+			"alias": "overworld_remove_003",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y00",
+			"alias": "overworld_remove_004",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y00",
+			"alias": "dungeon_floor_pattern_000",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y00",
+			"alias": "dungeon_floor_pattern_001",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y00",
+			"alias": "floor_outer_stone_a_nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y00",
+			"alias": "floor_outer_stone_a_n",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y00",
+			"alias": "floor_outer_stone_a_ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y00",
+			"alias": "ladder_top_000",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x24_y00",
+			"alias": "actor_000_priest",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x25_y00",
+			"alias": "actor_001_zombie",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y00",
+			"alias": "actor_002_spearman",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x27_y00",
+			"alias": "actor_003_warrior",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y00",
+			"alias": "actor_004_manatarms",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y00",
+			"alias": "actor_005_pikeman",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y00",
+			"alias": "actor_006_brute",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y00",
+			"alias": "actor_007_champion",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y00",
+			"alias": "armor_headgear_000",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x33_y00",
+			"alias": "armor_headgear_001",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x34_y00",
+			"alias": "armor_headgear_002",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x35_y00",
+			"alias": "armor_headgear_003",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x36_y00",
+			"alias": "armor_headgear_004",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y00",
+			"alias": "equipment_boots_000",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y00",
+			"alias": "equipment_boots_001",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y00",
+			"alias": "equipment_gloves_000",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x42_y00",
+			"alias": "equipment_gloves_001",
+			"category": "armor",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y01",
+			"alias": "forest_vegetation_000",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x01_y01",
+			"alias": "forest_vegetation_001",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Tree number 2",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x02_y01",
+			"alias": "forest_vegetation_002",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x03_y01",
+			"alias": "forest_vegetation_003",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x04_y01",
+			"alias": "forest_vegetation_004",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x05_y01",
+			"alias": "forest_vegetation_005",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x06_y01",
+			"alias": "forest_vegetation_006",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x07_y01",
+			"alias": "forest_vegetation_007",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x08_y01",
+			"alias": "dungeon_tile_008",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y01",
+			"alias": "dungeon_tile_009",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y01",
+			"alias": "dungeon_tile_010",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y01",
+			"alias": "dungeon_tile_011",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y01",
+			"alias": "dungeon_tile_012",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y01",
+			"alias": "floor_outer_stone_a_w",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y01",
+			"alias": "floor_inner_stone_a_center",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y01",
+			"alias": "floor_outer_stone_a_e",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y01",
+			"alias": "ladder_middle_000",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x24_y01",
+			"alias": "actor_008_druid",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x25_y01",
+			"alias": "actor_009_peasant",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y01",
+			"alias": "actor_010_female1",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x27_y01",
+			"alias": "actor_011_male1",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y01",
+			"alias": "actor_012_brawler",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y01",
+			"alias": "actor_013_golem",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y01",
+			"alias": "actor_014_alcolyte",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y01",
+			"alias": "actor_015_mage",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y01",
+			"alias": "armor_headgear_005",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x33_y01",
+			"alias": "armor_headgear_006",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x34_y01",
+			"alias": "armor_headgear_007",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x35_y01",
+			"alias": "armor_headgear_008",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x36_y01",
+			"alias": "armor_headgear_009",
+			"category": "armor",
+			"family": "armor_headgear",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"headgear",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x37_y01",
+			"alias": "equipment_piece_003",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y01",
+			"alias": "equipment_piece_004",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y01",
+			"alias": "equipment_boots_005",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y01",
+			"alias": "equipment_boots_006",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y01",
+			"alias": "equipment_gloves_007",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x42_y01",
+			"alias": "equipment_gloves_006",
+			"category": "armor",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y02",
+			"alias": "forest_vegetation_008",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x03_y02",
+			"alias": "forest_vegetation_009",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x04_y02",
+			"alias": "forest_vegetation_010",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x05_y02",
+			"alias": "ground_decoration_000",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x06_y02",
+			"alias": "forest_vegetation_012",
+			"category": "terrain",
+			"family": "forest_vegetation",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"draft",
+				"forest",
+				"full_pass",
+				"overworld",
+				"vegetation"
+			]
+		},
+		{
+			"address": "atlas_x08_y02",
+			"alias": "dungeon_tile_014",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y02",
+			"alias": "dungeon_tile_015",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y02",
+			"alias": "dungeon_tile_016",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y02",
+			"alias": "dungeon_tile_017",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y02",
+			"alias": "dungeon_tile_018",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y02",
+			"alias": "floor_outer_stone_a_sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y02",
+			"alias": "floor_outer_stone_a_s",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y02",
+			"alias": "floor_outer_stone_a_se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x24_y02",
+			"alias": "actor_016_sage",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x25_y02",
+			"alias": "actor_017_goblin",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y02",
+			"alias": "actor_018_hobgoblin",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x27_y02",
+			"alias": "actor_019_demon",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y02",
+			"alias": "actor_020_butcher",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y02",
+			"alias": "actor_021_gremlin",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y02",
+			"alias": "actor_022_durvish",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y02",
+			"alias": "weapon_club_000",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y02",
+			"alias": "weapon_club_001",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y02",
+			"alias": "weapon_club_002",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y02",
+			"alias": "shield_round_brown_000",
+			"category": "shield",
+			"family": "shield_round_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x38_y02",
+			"alias": "shield_round_gray_000",
+			"category": "shield",
+			"family": "shield_round_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x39_y02",
+			"alias": "shield_round_brown_001",
+			"category": "shield",
+			"family": "shield_round_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x40_y02",
+			"alias": "shield_round_gray_001",
+			"category": "shield",
+			"family": "shield_round_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x43_y02",
+			"alias": "armor_crown_000",
+			"category": "armor",
+			"family": "armor_crown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"crown",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x44_y02",
+			"alias": "armor_crown_001",
+			"category": "armor",
+			"family": "armor_crown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"crown",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x47_y02",
+			"alias": "armor_hood_000",
+			"category": "armor",
+			"family": "armor_hood",
+			"note": "Added in selection snapshot 004.",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"hood"
+			]
+		},
+		{
+			"address": "atlas_x00_y03",
+			"alias": "deco_structure_000",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y03",
+			"alias": "deco_structure_001",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y03",
+			"alias": "deco_structure_002",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y03",
+			"alias": "deco_structure_door_003",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y03",
+			"alias": "deco_structure_door_004",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y03",
+			"alias": "deco_structure_005",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y03",
+			"alias": "deco_structure_006",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y03",
+			"alias": "deco_structure_007",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y03",
+			"alias": "dungeon_tile_019",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y03",
+			"alias": "dungeon_tile_020",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y03",
+			"alias": "dungeon_tile_021",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y03",
+			"alias": "dungeon_tile_022",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y03",
+			"alias": "dungeon_tile_023",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y03",
+			"alias": "floor_inner_stone_a_se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y03",
+			"alias": "floor_inner_stone_a_sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y03",
+			"alias": "floor_outer_stone_a_sw2ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y03",
+			"alias": "floor_outer_stone_a_nw2se",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x28_y03",
+			"alias": "actor_023_king",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y03",
+			"alias": "actor_024_queen",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y03",
+			"alias": "weapon_wand_003",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y03",
+			"alias": "weapon_wand_004",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y03",
+			"alias": "weapon_wand_005",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y03",
+			"alias": "weapon_wand_006",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y03",
+			"alias": "weapon_wand_007",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y03",
+			"alias": "shield_tall_brown_000",
+			"category": "shield",
+			"family": "shield_tall_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x38_y03",
+			"alias": "shield_tall_gray_000",
+			"category": "shield",
+			"family": "shield_tall_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x39_y03",
+			"alias": "shield_tall_gray_001",
+			"category": "shield",
+			"family": "shield_tall_gray",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"gray",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x40_y03",
+			"alias": "shield_tall_brown_001",
+			"category": "shield",
+			"family": "shield_tall_brown",
+			"note": "Batch 01 conservative visual draft.",
+			"remove_requested": false,
+			"tags": [
+				"brown",
+				"equipment",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x42_y03",
+			"alias": "deco_torch_000",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x43_y03",
+			"alias": "deco_tourch_001",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x44_y03",
+			"alias": "deco_torch_002",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x45_y03",
+			"alias": "armor_belt_000",
+			"category": "armor",
+			"family": "armor_belt",
+			"note": "Added in selection snapshot 004.",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"belt",
+				"equipment"
+			]
+		},
+		{
+			"address": "atlas_x00_y04",
+			"alias": "deco_structure_008",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y04",
+			"alias": "deco_structure_009",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y04",
+			"alias": "deco_structure_010",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y04",
+			"alias": "deco_structure_door_011",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y04",
+			"alias": "deco_structure_door_012",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y04",
+			"alias": "deco_structure_013",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y04",
+			"alias": "deco_structure_014",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y04",
+			"alias": "deco_structure_015",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y04",
+			"alias": "dungeon_tile_024",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y04",
+			"alias": "dungeon_tile_025",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y04",
+			"alias": "dungeon_tile_026",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y04",
+			"alias": "dungeon_tile_027",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y04",
+			"alias": "dungeon_tile_028",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y04",
+			"alias": "floor_inner_stone_a_ne",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x19_y04",
+			"alias": "floor_inner_stone_a_nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x20_y04",
+			"alias": "floor_outer_stone_a_se2nw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x21_y04",
+			"alias": "floor_outer_stone_a_ne2sw",
+			"category": "terrain",
+			"family": "floor_stone_a",
+			"note": "",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"floor",
+				"stone"
+			]
+		},
+		{
+			"address": "atlas_x22_y04",
+			"alias": "dungeon_tile_029",
+			"category": "deco",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x23_y04",
+			"alias": "deco_object_000",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y04",
+			"alias": "actor_025_centuar",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y04",
+			"alias": "actor_026_monster",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y04",
+			"alias": "weapon_staff_008",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y04",
+			"alias": "weapon_staff_009",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y04",
+			"alias": "weapon_staff_010",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y04",
+			"alias": "weapon_staff_011",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y04",
+			"alias": "weapon_club_012",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y04",
+			"alias": "equipment_piece_008",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y04",
+			"alias": "equipment_piece_009",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y04",
+			"alias": "equipment_piece_010",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y04",
+			"alias": "equipment_piece_011",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y04",
+			"alias": "deco_piece_999",
+			"category": "deco",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x45_y04",
+			"alias": "deco_piece_998",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x46_y04",
+			"alias": "deco_piece_997",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y05",
+			"alias": "deco_structure_016",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y05",
+			"alias": "deco_structure_017",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y05",
+			"alias": "deco_structure_018",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y05",
+			"alias": "deco_structure_019",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y05",
+			"alias": "deco_structure_020",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y05",
+			"alias": "deco_structure_021",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y05",
+			"alias": "deco_structure_022",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y05",
+			"alias": "deco_structure_023",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y05",
+			"alias": "dungeon_tile_030",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y05",
+			"alias": "dungeon_tile_031",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y05",
+			"alias": "dungeon_tile_032",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y05",
+			"alias": "dungeon_tile_033",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y05",
+			"alias": "dungeon_tile_034",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x13_y05",
+			"alias": "dungeon_tile_035",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x14_y05",
+			"alias": "dungeon_tile_036",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x15_y05",
+			"alias": "dungeon_tile_037",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y05",
+			"alias": "dungeon_tile_038",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y05",
+			"alias": "dungeon_tile_039",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x24_y05",
+			"alias": "actor_027_scorpion",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y05",
+			"alias": "actor_028_mothra",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y05",
+			"alias": "actor_029_spider",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y05",
+			"alias": "actor_030_ant",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y05",
+			"alias": "actor_031_soldierant",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y05",
+			"alias": "actor_032_fairy",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y05",
+			"alias": "weapon_staff_013",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y05",
+			"alias": "weapon_staff_014",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y05",
+			"alias": "weapon_spear_015",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y05",
+			"alias": "weapon_axe_016",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y05",
+			"alias": "weapon_spear_017",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y05",
+			"alias": "equipment_bow_013",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y05",
+			"alias": "equipment_crossbow_014",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y05",
+			"alias": "equipment_crossbow_015",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y05",
+			"alias": "equipment_arrow_016",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y05",
+			"alias": "equipment_firearrow_017",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x45_y05",
+			"alias": "weapon_tome_007",
+			"category": "armor",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x48_y05",
+			"alias": "deco_piece_990",
+			"category": "deco",
+			"family": "armor_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"armor",
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y06",
+			"alias": "deco_structure_024",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y06",
+			"alias": "deco_structure_025",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y06",
+			"alias": "deco_structure_026",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y06",
+			"alias": "deco_structure_027",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y06",
+			"alias": "deco_structure_028",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y06",
+			"alias": "deco_structure_029",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y06",
+			"alias": "deco_structure_030",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y06",
+			"alias": "deco_structure_031",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y06",
+			"alias": "dungeon_tile_040",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y06",
+			"alias": "dungeon_tile_041",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y06",
+			"alias": "dungeon_tile_042",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x24_y06",
+			"alias": "actor_033_hermit",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x25_y06",
+			"alias": "actor_034_orc",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y06",
+			"alias": "actor_035_ghost",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x27_y06",
+			"alias": "actor_036_ghast",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y06",
+			"alias": "actor_037_troll",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y06",
+			"alias": "actor_038_skeleton",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y06",
+			"alias": "actor_039_ogre",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y06",
+			"alias": "actor_040_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": true,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y06",
+			"alias": "weapon_blade_018",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y06",
+			"alias": "weapon_blade_019",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y06",
+			"alias": "weapon_blade_020",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y06",
+			"alias": "weapon_blade_021",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y06",
+			"alias": "weapon_blade_022",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y06",
+			"alias": "equipment_bow_018",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y06",
+			"alias": "equipment_bow_019",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y06",
+			"alias": "equipment_bow_020",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y06",
+			"alias": "equipment_bow_021",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y06",
+			"alias": "equipment_bow_022",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x42_y06",
+			"alias": "deco_quiver_001",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x43_y06",
+			"alias": "equipment_ring_000",
+			"category": "equipment",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x44_y06",
+			"alias": "equipment_ring_001",
+			"category": "equipment",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x45_y06",
+			"alias": "equipment_ring_002",
+			"category": "equipment",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x46_y06",
+			"alias": "equipment_ring_003",
+			"category": "equipment",
+			"family": "deco_container",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x48_y06",
+			"alias": "deco_container_001",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y07",
+			"alias": "deco_structure_032",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y07",
+			"alias": "deco_structure_033",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y07",
+			"alias": "deco_structure_034",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y07",
+			"alias": "deco_structure_035",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y07",
+			"alias": "deco_structure_036",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y07",
+			"alias": "deco_structure_037",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y07",
+			"alias": "deco_structure_038",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y07",
+			"alias": "deco_structure_039",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y07",
+			"alias": "deco_furniture_000",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x09_y07",
+			"alias": "deco_furniture_001",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x10_y07",
+			"alias": "deco_furniture_002",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x14_y07",
+			"alias": "deco_furniture_003",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x15_y07",
+			"alias": "deco_furniture_004",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x16_y07",
+			"alias": "deco_furniture_005",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x17_y07",
+			"alias": "deco_furniture_006",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x24_y07",
+			"alias": "actor_041_shade",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y07",
+			"alias": "weapon_blade_023",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y07",
+			"alias": "weapon_blade_024",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y07",
+			"alias": "weapon_blade_025",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y07",
+			"alias": "weapon_blade_026",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y07",
+			"alias": "weapon_blade_027",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y07",
+			"alias": "weapon_hammer_023",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y07",
+			"alias": "weapon_battleaxe_023",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y07",
+			"alias": "weapon_battleaxe_028",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y07",
+			"alias": "weapon_battleaxe_026",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y07",
+			"alias": "weapon_hammer_027",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x42_y07",
+			"alias": "weapon_axe_029",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x43_y07",
+			"alias": "effect_guard_001",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x44_y07",
+			"alias": "effect_guard_002",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x45_y07",
+			"alias": "effect_guard_003",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x46_y07",
+			"alias": "effect_guard_004",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x48_y07",
+			"alias": "deco_container_002",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y08",
+			"alias": "deco_structure_040",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y08",
+			"alias": "deco_structure_041",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y08",
+			"alias": "deco_structure_042",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y08",
+			"alias": "deco_structure_043",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y08",
+			"alias": "deco_structure_044",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y08",
+			"alias": "deco_structure_045",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y08",
+			"alias": "deco_structure_046",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y08",
+			"alias": "deco_structure_047",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y08",
+			"alias": "deco_furniture_007",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x09_y08",
+			"alias": "deco_furniture_008",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x10_y08",
+			"alias": "deco_furniture_009",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x14_y08",
+			"alias": "deco_furniture_010",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x15_y08",
+			"alias": "deco_furniture_011",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x16_y08",
+			"alias": "deco_furniture_012",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x17_y08",
+			"alias": "deco_furniture_013",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x24_y08",
+			"alias": "actor_042_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x26_y08",
+			"alias": "actor_043_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x27_y08",
+			"alias": "actor_044_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y08",
+			"alias": "actor_045_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y08",
+			"alias": "actor_046_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y08",
+			"alias": "actor_047_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y08",
+			"alias": "actor_048_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y08",
+			"alias": "weapon_blade_028",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y08",
+			"alias": "weapon_blade_029",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y08",
+			"alias": "weapon_blade_030",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y08",
+			"alias": "weapon_blade_031",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y08",
+			"alias": "weapon_blade_032",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x37_y08",
+			"alias": "equipment_piece_028",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y08",
+			"alias": "equipment_piece_029",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x39_y08",
+			"alias": "equipment_piece_030",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x40_y08",
+			"alias": "equipment_piece_031",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x41_y08",
+			"alias": "equipment_piece_032",
+			"category": "equipment",
+			"family": "equipment_piece",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x42_y08",
+			"alias": "effect_guard_005",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x43_y08",
+			"alias": "effect_guard_006",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x44_y08",
+			"alias": "effect_guard_007",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x45_y08",
+			"alias": "effect_guard_008",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x46_y08",
+			"alias": "effect_guard_009",
+			"category": "effect",
+			"family": "effect_guard",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"effect",
+				"full_pass",
+				"guard",
+				"review_required",
+				"shield"
+			]
+		},
+		{
+			"address": "atlas_x00_y09",
+			"alias": "deco_structure_048",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y09",
+			"alias": "deco_structure_049",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y09",
+			"alias": "deco_structure_050",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y09",
+			"alias": "deco_structure_051",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y09",
+			"alias": "deco_structure_052",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y09",
+			"alias": "deco_structure_053",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y09",
+			"alias": "deco_structure_054",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y09",
+			"alias": "deco_structure_055",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y09",
+			"alias": "deco_furniture_014",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x09_y09",
+			"alias": "deco_furniture_015",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x10_y09",
+			"alias": "deco_furniture_016",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x16_y09",
+			"alias": "deco_furniture_017",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x17_y09",
+			"alias": "deco_furniture_018",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x26_y09",
+			"alias": "actor_049_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y09",
+			"alias": "actor_050_unnamed",
+			"category": "actor",
+			"family": "actor_unnamed",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"actor",
+				"fantasy",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y09",
+			"alias": "weapon_blade_033",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y09",
+			"alias": "weapon_blade_034",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y09",
+			"alias": "weapon_blade_035",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y09",
+			"alias": "weapon_blade_036",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x36_y09",
+			"alias": "weapon_blade_037",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x03_y10",
+			"alias": "deco_structure_056",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y10",
+			"alias": "deco_structure_057",
+			"category": "deco",
+			"family": "deco_structure",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y10",
+			"alias": "deco_furniture_019",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x14_y10",
+			"alias": "deco_furniture_020",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x15_y10",
+			"alias": "deco_furniture_021",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x16_y10",
+			"alias": "deco_furniture_022",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x17_y10",
+			"alias": "deco_furniture_023",
+			"category": "deco",
+			"family": "deco_furniture",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"draft",
+				"full_pass",
+				"furniture"
+			]
+		},
+		{
+			"address": "atlas_x21_y10",
+			"alias": "deco_object_005",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y10",
+			"alias": "weapon_blade_038",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x33_y10",
+			"alias": "weapon_blade_039",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x34_y10",
+			"alias": "weapon_blade_040",
+			"category": "weapon",
+			"family": "weapon_blade",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"blade",
+				"draft",
+				"equipment",
+				"full_pass",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x01_y11",
+			"alias": "dungeon_tile_043",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x02_y11",
+			"alias": "dungeon_tile_044",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x03_y11",
+			"alias": "dungeon_tile_045",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x05_y11",
+			"alias": "dungeon_tile_046",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x06_y11",
+			"alias": "dungeon_tile_047",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y11",
+			"alias": "dungeon_tile_048",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x08_y11",
+			"alias": "dungeon_tile_049",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y11",
+			"alias": "dungeon_tile_050",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y11",
+			"alias": "dungeon_tile_051",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y11",
+			"alias": "dungeon_tile_052",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x13_y11",
+			"alias": "dungeon_tile_053",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x14_y11",
+			"alias": "dungeon_tile_054",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x15_y11",
+			"alias": "dungeon_tile_055",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y11",
+			"alias": "dungeon_tile_056",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y11",
+			"alias": "dungeon_tile_057",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x24_y11",
+			"alias": "dungeon_tile_058",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x25_y11",
+			"alias": "weapon_unknown_000",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x26_y11",
+			"alias": "weapon_unknown_001",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x27_y11",
+			"alias": "weapon_unknown_002",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x28_y11",
+			"alias": "weapon_unknown_003",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x29_y11",
+			"alias": "weapon_unknown_004",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x30_y11",
+			"alias": "weapon_unknown_005",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x31_y11",
+			"alias": "weapon_unknown_006",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x35_y11",
+			"alias": "deco_object_006",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x36_y11",
+			"alias": "deco_object_007",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x37_y11",
+			"alias": "deco_object_008",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x38_y11",
+			"alias": "deco_object_009",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x00_y12",
+			"alias": "dungeon_tile_059",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x01_y12",
+			"alias": "dungeon_tile_060",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x02_y12",
+			"alias": "dungeon_tile_061",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x03_y12",
+			"alias": "dungeon_tile_062",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x04_y12",
+			"alias": "dungeon_tile_063",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x05_y12",
+			"alias": "dungeon_tile_064",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x06_y12",
+			"alias": "dungeon_tile_065",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y12",
+			"alias": "dungeon_tile_066",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y12",
+			"alias": "dungeon_tile_067",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y12",
+			"alias": "deco_container_003",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x19_y12",
+			"alias": "deco_container_004",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x20_y12",
+			"alias": "deco_container_005",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x21_y12",
+			"alias": "deco_container_006",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x22_y12",
+			"alias": "deco_container_007",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x23_y12",
+			"alias": "deco_container_008",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x27_y12",
+			"alias": "deco_object_010",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x28_y12",
+			"alias": "deco_object_011",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x29_y12",
+			"alias": "deco_object_012",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x30_y12",
+			"alias": "deco_object_013",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x31_y12",
+			"alias": "deco_object_014",
+			"category": "deco",
+			"family": "deco_object",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x32_y12",
+			"alias": "item_consumable_000",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x33_y12",
+			"alias": "item_consumable_001",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x34_y12",
+			"alias": "item_consumable_002",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x00_y13",
+			"alias": "dungeon_tile_068",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x01_y13",
+			"alias": "dungeon_tile_069",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x02_y13",
+			"alias": "dungeon_tile_070",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x03_y13",
+			"alias": "dungeon_tile_071",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x04_y13",
+			"alias": "dungeon_tile_072",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x05_y13",
+			"alias": "dungeon_tile_073",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x06_y13",
+			"alias": "dungeon_tile_074",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y13",
+			"alias": "dungeon_tile_075",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x15_y13",
+			"alias": "dungeon_tile_076",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y13",
+			"alias": "dungeon_tile_077",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y13",
+			"alias": "dungeon_tile_078",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y13",
+			"alias": "deco_container_009",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x19_y13",
+			"alias": "deco_container_010",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x20_y13",
+			"alias": "deco_container_011",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x21_y13",
+			"alias": "deco_container_012",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x22_y13",
+			"alias": "deco_container_013",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x23_y13",
+			"alias": "deco_container_014",
+			"category": "deco",
+			"family": "deco_container",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"container",
+				"deco",
+				"draft",
+				"full_pass"
+			]
+		},
+		{
+			"address": "atlas_x32_y13",
+			"alias": "item_consumable_003",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x33_y13",
+			"alias": "item_consumable_004",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x34_y13",
+			"alias": "item_consumable_005",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x00_y14",
+			"alias": "dungeon_tile_079",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x01_y14",
+			"alias": "dungeon_tile_080",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x02_y14",
+			"alias": "dungeon_tile_081",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x03_y14",
+			"alias": "dungeon_tile_082",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x04_y14",
+			"alias": "dungeon_tile_083",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x05_y14",
+			"alias": "dungeon_tile_084",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x06_y14",
+			"alias": "dungeon_tile_085",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y14",
+			"alias": "dungeon_tile_086",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x15_y14",
+			"alias": "dungeon_tile_087",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y14",
+			"alias": "dungeon_tile_088",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y14",
+			"alias": "dungeon_tile_089",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y14",
+			"alias": "dungeon_tile_090",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x32_y14",
+			"alias": "item_consumable_006",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x33_y14",
+			"alias": "item_consumable_007",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x34_y14",
+			"alias": "item_consumable_008",
+			"category": "item",
+			"family": "item_consumable",
+			"note": "Full Pass draft | draft",
+			"remove_requested": false,
+			"tags": [
+				"consumable",
+				"draft",
+				"full_pass",
+				"item"
+			]
+		},
+		{
+			"address": "atlas_x00_y15",
+			"alias": "weapon_unknown_007",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x01_y15",
+			"alias": "weapon_unknown_008",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x02_y15",
+			"alias": "weapon_unknown_009",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x03_y15",
+			"alias": "weapon_unknown_010",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x04_y15",
+			"alias": "weapon_unknown_011",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x05_y15",
+			"alias": "weapon_unknown_012",
+			"category": "weapon",
+			"family": "weapon_unknown",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"equipment",
+				"full_pass",
+				"review_required",
+				"weapon"
+			]
+		},
+		{
+			"address": "atlas_x06_y15",
+			"alias": "dungeon_tile_091",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y15",
+			"alias": "dungeon_tile_092",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y15",
+			"alias": "dungeon_tile_093",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y15",
+			"alias": "dungeon_tile_094",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y15",
+			"alias": "dungeon_tile_095",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x13_y15",
+			"alias": "dungeon_tile_096",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y15",
+			"alias": "dungeon_tile_097",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y15",
+			"alias": "dungeon_tile_098",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y15",
+			"alias": "dungeon_tile_099",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x07_y16",
+			"alias": "dungeon_tile_100",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y16",
+			"alias": "dungeon_tile_101",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y16",
+			"alias": "dungeon_tile_102",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y16",
+			"alias": "dungeon_tile_103",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y16",
+			"alias": "dungeon_tile_104",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x13_y16",
+			"alias": "dungeon_tile_105",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x14_y16",
+			"alias": "dungeon_tile_106",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x15_y16",
+			"alias": "dungeon_tile_107",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y16",
+			"alias": "dungeon_tile_108",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y16",
+			"alias": "dungeon_tile_109",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y16",
+			"alias": "dungeon_tile_110",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x33_y16",
+			"alias": "deco_book_container_000",
+			"category": "deco",
+			"family": "deco_book_container",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"book",
+				"container",
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x34_y16",
+			"alias": "deco_book_container_001",
+			"category": "deco",
+			"family": "deco_book_container",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"book",
+				"container",
+				"deco",
+				"full_pass",
+				"review_required"
+			]
+		},
+		{
+			"address": "atlas_x07_y17",
+			"alias": "dungeon_tile_111",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y17",
+			"alias": "dungeon_tile_112",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y17",
+			"alias": "dungeon_tile_113",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y17",
+			"alias": "dungeon_tile_114",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x12_y17",
+			"alias": "dungeon_tile_115",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x13_y17",
+			"alias": "dungeon_tile_116",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y17",
+			"alias": "dungeon_tile_117",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y17",
+			"alias": "dungeon_tile_118",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y17",
+			"alias": "dungeon_tile_119",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x09_y18",
+			"alias": "dungeon_tile_120",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x10_y18",
+			"alias": "dungeon_tile_121",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x11_y18",
+			"alias": "dungeon_tile_122",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x16_y18",
+			"alias": "dungeon_tile_123",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x17_y18",
+			"alias": "dungeon_tile_124",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x18_y18",
+			"alias": "dungeon_tile_125",
+			"category": "terrain",
+			"family": "dungeon_tile",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"dungeon",
+				"full_pass",
+				"review_required",
+				"terrain"
+			]
+		},
+		{
+			"address": "atlas_x00_y19",
+			"alias": "overworld_structure_000",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y19",
+			"alias": "overworld_structure_001",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y19",
+			"alias": "overworld_structure_002",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x03_y19",
+			"alias": "overworld_structure_003",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y19",
+			"alias": "overworld_structure_004",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x05_y19",
+			"alias": "overworld_structure_005",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x06_y19",
+			"alias": "overworld_structure_006",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y19",
+			"alias": "overworld_structure_007",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y19",
+			"alias": "overworld_structure_008",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x09_y19",
+			"alias": "overworld_structure_009",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x10_y19",
+			"alias": "overworld_structure_010",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x11_y19",
+			"alias": "overworld_structure_011",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x16_y19",
+			"alias": "overworld_structure_012",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x17_y19",
+			"alias": "overworld_structure_013",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x18_y19",
+			"alias": "overworld_structure_014",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x00_y20",
+			"alias": "overworld_structure_015",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y20",
+			"alias": "overworld_structure_016",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y20",
+			"alias": "overworld_structure_017",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x04_y20",
+			"alias": "overworld_structure_018",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x07_y20",
+			"alias": "overworld_structure_019",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y20",
+			"alias": "overworld_structure_020",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x16_y20",
+			"alias": "overworld_structure_021",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x17_y20",
+			"alias": "overworld_structure_022",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x18_y20",
+			"alias": "overworld_structure_023",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x00_y21",
+			"alias": "overworld_structure_024",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x01_y21",
+			"alias": "overworld_structure_025",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x02_y21",
+			"alias": "overworld_structure_026",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x08_y21",
+			"alias": "overworld_structure_027",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x09_y21",
+			"alias": "overworld_structure_028",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x10_y21",
+			"alias": "overworld_structure_029",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x11_y21",
+			"alias": "overworld_structure_030",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x16_y21",
+			"alias": "overworld_structure_031",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x17_y21",
+			"alias": "overworld_structure_032",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		},
+		{
+			"address": "atlas_x18_y21",
+			"alias": "overworld_structure_033",
+			"category": "structure",
+			"family": "overworld_structure",
+			"note": "Full Pass draft | review_required",
+			"remove_requested": false,
+			"tags": [
+				"full_pass",
+				"overworld",
+				"review_required",
+				"structure"
+			]
+		}
+	],
+	"catalog_entry_count": 499,
+	"catalog_path": "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json",
+	"catalog_sha256": "438b01aebe34ed75e5720a70eb129adb0c48273f31eb4cb42ad965a6f12597f2",
+	"naming_contract": "semantic_aliases_v1",
+	"record_count": 499,
+	"save_sequence": 10,
+	"schema_version": 1
+}

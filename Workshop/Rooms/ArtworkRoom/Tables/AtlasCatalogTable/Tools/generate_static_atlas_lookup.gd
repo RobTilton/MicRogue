@@ -2,14 +2,14 @@ extends SceneTree
 
 const TOOL_ORIGIN := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Tools/generate_static_atlas_lookup.gd"
 const CATALOG_PATH := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json"
-const EXPECTED_CATALOG_SHA256 := "438b01aebe34ed75e5720a70eb129adb0c48273f31eb4cb42ad965a6f12597f2"
+const EXPECTED_CATALOG_SHA256 := "48e5a186b5ea1abdc666c4d4ec911ddd956aed668552259e735cb7ec3a809285"
 const ATLAS_PATH := "res://Workshop/Rooms/ArtworkRoom/Assets/Possible_Artwork/colored-transparent_packed.png"
 const EXPECTED_ATLAS_SHA256 := "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
 const OUTPUT_PATH := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/Generated/fantasy_sprite_regions.gd"
 const CELL_SIZE := 16
 const COLUMN_COUNT := 49
 const ROW_COUNT := 22
-const EXPECTED_ENTRY_COUNT := 499
+const EXPECTED_ENTRY_COUNT := 486
 
 
 func _initialize() -> void:
@@ -24,7 +24,18 @@ func _initialize() -> void:
 			print("%s: deterministic output already current: %s" % [TOOL_ORIGIN, OUTPUT_PATH])
 			quit(0)
 			return
-		_fail("refused to overwrite differing generated output; inspect existing file: %s" % OUTPUT_PATH)
+		var replacement := FileAccess.open(OUTPUT_PATH, FileAccess.WRITE)
+		if replacement == null:
+			_fail("could not open existing generated output for authorized regeneration: %s" % OUTPUT_PATH)
+			return
+		replacement.store_string(generated_text)
+		replacement.flush()
+		replacement.close()
+		if FileAccess.get_file_as_string(OUTPUT_PATH) != generated_text:
+			_fail("regenerated output failed exact read-back: %s" % OUTPUT_PATH)
+			return
+		print("%s: regenerated %d entries at %s" % [TOOL_ORIGIN, validation.entries.size(), OUTPUT_PATH])
+		quit(0)
 		return
 	var temporary_path := OUTPUT_PATH + ".tmp"
 	if FileAccess.file_exists(temporary_path):

@@ -52,6 +52,8 @@ The broader default is `item-type_variance-UID`, omitting only fields that do no
 5. Ctrl+S or `Save New Snapshot` validates the entire working set, refuses invalid or duplicate aliases, and writes the next unused `semantic_aliases_NNN.json` file.
 6. Clearing an alias removes only the working semantic record. It never removes the accepted coordinate from the catalog.
 
+During the full naming pass, `Request Remove` adds an optional Boolean review flag. It marks an address for later reconciliation without removing catalog membership. Older snapshots omit the field and load as `false`; new saves normalize an explicit Boolean value for each semantic record.
+
 ## Accepted Seed Mapping
 
 - Frames `18`, `19`, `20`, `67`, `68`, `69`, `116`, `117`, `118`, `165`, `166`, `167`, `168`, `214`, `215`, `216`, and `217` form the confirmed `floor_*_stone_a_*` family.

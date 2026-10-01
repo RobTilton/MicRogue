@@ -2,9 +2,9 @@ extends SceneTree
 
 const TEST_ORIGIN := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/Tests/validate_static_atlas_lookup.gd"
 const SOURCE_CATALOG_PATH := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/Catalog/fantasy_sprite_catalog.json"
-const EXPECTED_CATALOG_SHA256 := "438b01aebe34ed75e5720a70eb129adb0c48273f31eb4cb42ad965a6f12597f2"
+const EXPECTED_CATALOG_SHA256 := "48e5a186b5ea1abdc666c4d4ec911ddd956aed668552259e735cb7ec3a809285"
 const EXPECTED_ATLAS_SHA256 := "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
-const EXPECTED_ENTRY_COUNT := 499
+const EXPECTED_ENTRY_COUNT := 486
 const Catalog := preload("res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/fantasy_sprite_catalog.gd")
 
 

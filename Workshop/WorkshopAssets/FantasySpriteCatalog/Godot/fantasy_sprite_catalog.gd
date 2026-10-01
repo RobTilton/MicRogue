@@ -1,16 +1,16 @@
 class_name FantasySpriteCatalog
 extends RefCounted
 
-const IMPLEMENTATION_ORIGIN := "res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/fantasy_sprite_catalog.gd"
-const ATLAS_PATH := "res://Workshop/Rooms/ArtworkRoom/Assets/Possible_Artwork/colored-transparent_packed.png"
+const IMPLEMENTATION_ORIGIN := "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_catalog.gd"
+const ATLAS_PATH := "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png"
 const ATLAS_SHA256 := "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
 const CELL_SIZE := Vector2i(16, 16)
 const COLUMN_COUNT := 49
 const ROW_COUNT := 22
-const EXPECTED_ENTRY_COUNT := 499
+const EXPECTED_ENTRY_COUNT := 486
 const AtlasTextureSource := preload(ATLAS_PATH)
-const GeneratedRegions := preload("res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/Generated/fantasy_sprite_regions.gd")
-const EntrySource := preload("res://Workshop/Rooms/ArtworkRoom/Tables/AtlasCatalogTable/GodotConsumers/fantasy_sprite_entry.gd")
+const GeneratedRegions := preload("res://Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/Generated/fantasy_sprite_regions.gd")
+const EntrySource := preload("res://Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_entry.gd")
 
 static var _entries: Dictionary = {}
 static var _texture_cache: Dictionary = {}
