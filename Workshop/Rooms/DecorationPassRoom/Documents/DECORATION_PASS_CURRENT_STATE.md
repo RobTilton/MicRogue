@@ -1,7 +1,7 @@
 # Decoration Pass Current State
 Updated: 2026-10-01
-Checkpoint: `[DecorationPassRoom]+[DecorationPassTable]+[RoomSetupAndContracts]`
-Implementation baseline/evidence: Setup-only execution established the Room from inspected current contracts; no Decoration implementation or runtime behavior exists.
+Checkpoint: `[DecorationPassRoom]+[DecorationPassTable]+[DecorationResultContract]`
+Implementation baseline/evidence: The catalog adapter and detached result contract are implemented; focused seeded size-4 and size-5 result validation passed on 2026-10-01. No painting implementation exists.
 
 ## Rapid Shape
 
@@ -17,7 +17,7 @@ RapidRoomMapData after RoomLayoutTagger
     → TileMapLayer adapter
 ```
 
-Only the Room contract and empty Table structure currently exist. Implementation requires a new Alignment Check beginning with the catalog adapter.
+The catalog adapter and result contract are complete. Semantic authority is validated before lookup, and a Decoration result cannot be created until its complete source context and all cell assignments validate together. Further implementation requires a new Alignment Check for the base-cell painter.
 
 ## Current Locations And Structure
 
@@ -28,9 +28,33 @@ Workshop/Rooms/DecorationPassRoom/
 │   └── DECORATION_PASS_CURRENT_STATE.md
 └── Tables/
     └── DecorationPassTable/
+        ├── CatalogAdapter/
+            ├── decoration_catalog_adapter.gd
+            ├── decoration_sprite_query.gd
+            ├── decoration_sprite_record.gd
+            └── validate_decoration_catalog_adapter.gd
+        └── ResultContract/
+            ├── decorated_map_data.gd
+            └── validate_decorated_map_data.gd
 ```
 
 `DOTS.md` owns authorization, Box dependencies, completion conditions, and traversal. This document owns concise recovery context.
+
+## Catalog Adapter Contract
+
+Create an adapter through `DecorationCatalogAdapter.create()`. Creation verifies the exact accepted catalog and semantic SHA-256 values, both 486-record counts, semantic-to-catalog authority linkage, catalog/Godot API membership parity, unique IDs and aliases, required family/category/tags, and absence of removal requests. Failed authority returns `null`; directly constructed adapters refuse lookup because they have not passed initialization.
+
+`DecorationSpriteQuery` supports an exact alias plus optional family, category, and all-required-tag filters. `ids_for()` returns matching stable coordinate IDs in deterministic sorted order. `id_for_alias()` resolves the unique alias index directly. `unique_id_for()` refuses zero or multiple matches. `record()` exposes immutable-by-convention Decoration-owned semantic values without leaking parsed JSON dictionaries to consumers.
+
+The adapter parses semantic JSON once at creation because the source package does not provide generated semantic GDScript. That parsing and all source-specific validation remain contained at this boundary; later painters consume typed records and IDs.
+
+## Decoration Result Contract
+
+`DecoratedMapData.create(source, assignments, catalog_adapter)` validates the complete input before allocating its result. It derives square dimensions from physical cell count; accepts only Rapid `FLOOR` and `WALL` values; requires one accepted catalog sprite ID per row-major physical cell; and validates Layout-completed ordered rooms, contiguous IDs, panel counts, tags, owned-floor coordinates, doorway positions, axes, and traversal neighbors.
+
+A successful result owns detached copies of physical cells, sprite assignments, rooms, and doorways. Room type, ordered duplicate-preserving tags, safe-floor ownership, and doorway context survive unchanged. Mutating the caller's assignment array or the returned result cannot mutate the source `RapidRoomMapData`.
+
+`validate_inputs()` exposes the same non-mutating refusal contract for callers that need to inspect validity without creating output. Failed `create()` calls return `null` and emit an origin-qualified error.
 
 ## Dependency Contracts
 
@@ -76,6 +100,13 @@ The controller currently composes Rapid and Layout and returns the same tagged `
 
 ## Current Limits And Next Action
 
-No code, scene, profile, TileSet, or preview has been created. No tile has been selected, no topology convention has been established, and no visual result is claimed.
+The completed components have no topology or tile-role policy. No painter, scene, profile, TileSet, or preview has been created. No tile has been selected, no topology convention has been established, and no visual result is claimed.
 
-The next eligible action is an Alignment Check for `[DecorationPassRoom]+[DecorationPassTable]+[DecorationCatalogAdapter]`.
+Validation evidence:
+
+- Focused adapter validator passed authority, alias, family, category, tag, deterministic ordering, and unique-result checks.
+- The source catalog's own validator passed all 486 entries, semantics, generated lookup, atlas regions, and cached textures.
+- Seeded Layout-completed size-4 and size-5 maps passed exact coverage, invalid-input refusal, detached ownership, preserved context, and source non-mutation checks.
+- A headless Godot editor load completed after both implemented Boxes without parse errors.
+
+The next eligible action is an Alignment Check for `[DecorationPassRoom]+[DecorationPassTable]+[BaseCellPainter]`.
