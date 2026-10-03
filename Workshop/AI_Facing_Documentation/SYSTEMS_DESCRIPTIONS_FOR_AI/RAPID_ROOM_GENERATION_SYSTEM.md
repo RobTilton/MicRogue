@@ -69,7 +69,7 @@ Floor coordinates include ordinary room blocks and merged same-room divider bloc
 
 ### `RapidRoomDoorway`
 
-- `position: Vector2i`: exact final layer-three coordinate for one door item, guaranteed to have floor immediately before and after it along the traversal axis.
+- `position: Vector2i`: exact final layer-three coordinate for one door item, guaranteed to have floor immediately before and after it along `door_item_axis`, the local straight-span axis; this may differ from overall room-to-room `axis`.
 - `footprint_center: Vector2i`: center coordinate of the final 3×3 doorway footprint.
 - `axis`: horizontal or vertical traversal orientation.
 - `door_item_axis`: local horizontal or vertical floor-span orientation used to rotate the door item so it blocks its immediate passage.

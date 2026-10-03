@@ -1,5 +1,5 @@
 # Completed Tool Builds Catalog
-Updated: 2026-10-01
+Updated: 2026-10-03
 
 Name: Sprite Atlas Curation
 Status: Proven
@@ -12,13 +12,13 @@ UseWhen: A project needs human-controlled curation and naming of cells from one 
 DoNotUseWhen: Packing is irregular, multiple textures form one catalog, automated image recognition is required, or execution authority has not been established.
 KeyRules: Configure exact paths, hashes, grid, and output directories; resolve uncertainty before catalog generation; preserve numbered snapshots; removal flags do not delete membership; human judgment owns selection and meaning.
 
-Name: Decorated Dungeon Preview
+Name: Rapid Generation Inspection
 Status: Proven
-Kind: Completed Tool Build
-BuildUnit: `Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/`
-Authority: [BuildReadme](../Completed_Tool_Builds/DecoratedDungeonPreview/BuildReadme.md)
-Keywords: dungeon, Rapid, Layout, Decoration, preview, F6, Godot, TileMapLayer
-Summary: Runnable seeded preview composing Rapid, Layout and modular Decoration into separate base/sticker layers.
-UseWhen: Reviewing the durable Workshop Decoration pipeline across archetypes, sizes and seeds.
-DoNotUseWhen: Production controller adoption, population or persistence is required.
-KeyRules: Domain owners remain separate; caller controls size/archetype/seed; failed stages stop dependent work; no temporary Room dependency.
+Kind: Scene Utility
+BuildUnit: `Workshop/ToolShed/Completed_Tool_Builds/RapidGenerationInspection/`
+Authority: [BuildReadme](../Completed_Tool_Builds/RapidGenerationInspection/BuildReadme.md)
+Keywords: Rapid, Layout, doorway, GridMap, visualization, benchmark
+Summary: Inspect seeded map geometry and measure generation performance.
+UseWhen: Reviewing Rapid/Layout output or checking doorway placement.
+DoNotUseWhen: Gameplay orchestration or new geometry mechanics are required.
+KeyRules: Reads generated maps; headless checks establish geometry/startup, not human visual acceptance.

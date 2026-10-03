@@ -1,11 +1,11 @@
 # Sprite Atlas Curation
-Updated: 2026-10-01
+Updated: 2026-10-03
 
 ## What It Is
 
 Sprite Atlas Curation is a configurable Godot workflow for selecting cells from one uniform rectangular sprite atlas, deriving a stable coordinate catalog, and editing searchable semantic metadata through append-only JSON snapshots.
 
-Status: Proven for Godot 4.4.1 and the documented rectangular-grid contract.
+Status: Automated fixture, write/read-back and refusal checks verified under Godot 4.4.1. Interactive visual acceptance remains human-owned.
 
 ## How It Works
 
@@ -32,24 +32,19 @@ The template scenes intentionally have no default configuration. The caller owns
 
 The texture dimensions must equal `columns × cell_width` by `rows × cell_height`, and its SHA-256 must match the configuration.
 
-Selection schema 2 stores atlas authority, grid geometry, deterministic y-then-x cells, frames, regions, and `keep`/`uncertain` state. Catalog schema 1 stores one stable entry per retained cell. Semantic contract `semantic_aliases_v1` binds records to an exact catalog path, hash, and count.
+Selection schema 2 stores atlas authority, grid geometry, deterministic y-then-x cells, frames, regions, and `keep`/`uncertain` state. Selection loading and catalog building refuse unsupported schemas and mismatched atlas, grid or selected-count headers. Catalog schema 1 stores one stable entry per retained cell. Semantic contract `semantic_aliases_v1` binds records to an exact catalog path, hash, and count.
 
 Stable addresses use `<prefix>_xXX_yYY`. Non-empty aliases must be unique and use lowercase alphanumeric underscore syntax.
 
-Writes are append-only or refuse existing targets. Catalog and semantic finalization use validated temporary output so invalid input cannot partially replace authority. Atlas pixels are never modified.
+Writes are append-only or refuse existing targets. Catalog and semantic writers refuse both existing final targets and retained `.tmp` targets before opening output. Catalog and semantic finalization use validated temporary output so invalid input cannot partially replace authority. Atlas pixels are never modified.
 
 ## Validation
 
-The validator uses `Workshop/WorkshopAssets/FantasySpriteCatalog/` as a durable fixture. It passes:
+The non-mutating validator uses `Production/Assets/FantasySpriteCatalog/` as its current fixture. It verifies source/catalog authority, invalid-hash and malformed-header/schema refusal, existing catalog-target refusal, exact 486-entry derivation, selection/semantic preload and UI teardown.
 
-- configured source and catalog authority;
-- deliberate invalid-hash refusal;
-- exact 486-entry catalog derivation;
-- current selection preload;
-- all 486 semantic records preload;
-- script and scene import under Godot 4.4.1.
+[retained validation evidence](../../../_Audits/Current_Audits/System_Realignment/CurationValidation.md) additionally records actual append-only selection saves, catalog creation, semantic edit/save/read-back, retained-temporary refusal without mutation, and clean editor import. All four final Godot checks exited 0 without errors or warnings. The five original fixture authority hashes remained unchanged. Write-check snapshots remain in the archived evidence; they are not adopted catalog data.
 
-Headless teardown of the UI scenes may report renderer RID cleanup warnings after the successful assertions. The validator exits successfully and performs no writes.
+Rob verified the stated selection and naming interactions on 2026-10-03. This does not automatically approve new semantic data or changed artwork.
 
 ## Limits
 

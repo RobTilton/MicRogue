@@ -4,14 +4,14 @@
 
 [resource]
 script = ExtResource("1")
-atlas_path = "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png"
+atlas_path = "res://Production/Assets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png"
 expected_atlas_sha256 = "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
 cell_size = Vector2i(16, 16)
 columns = 49
 rows = 22
-selection_directory = "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Validation"
-catalog_path = "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Data/fantasy_sprite_catalog.json"
-expected_catalog_sha256 = "6e2d93232faebf9ea7ce5cd0623d312156ff80f8d4f3f061a2788eb1c549df71"
-semantic_directory = "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Data"
+selection_directory = "res://Production/Assets/FantasySpriteCatalog/Validation"
+catalog_path = "res://Production/Assets/FantasySpriteCatalog/Data/fantasy_sprite_catalog.json"
+expected_catalog_sha256 = "d82eb8e6f4666097145ea39bca76106383712dd4f910c4f2a16d62b158ef8948"
+semantic_directory = "res://Production/Assets/FantasySpriteCatalog/Data"
 address_prefix = "atlas"
 catalog_category = "curated_fantasy"

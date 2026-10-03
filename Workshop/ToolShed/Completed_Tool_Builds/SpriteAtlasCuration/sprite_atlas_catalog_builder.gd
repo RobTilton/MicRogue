@@ -10,8 +10,9 @@ static func build_payload(config: SpriteAtlasCurationConfig, selection_payload: 
 		return {"valid": false, "error": error}
 	if not selection_payload is Dictionary or not selection_payload.get("selected_cells") is Array:
 		return {"valid": false, "error": "selection root or selected_cells is invalid"}
-	if selection_payload.get("atlas_path") != config.atlas_path or selection_payload.get("atlas_sha256") != config.expected_atlas_sha256:
-		return {"valid": false, "error": "selection atlas authority differs from configuration"}
+	var header_error: String = validate_selection_header(config, selection_payload)
+	if not header_error.is_empty():
+		return {"valid": false, "error": header_error}
 	var entries: Array[Dictionary] = []
 	var seen: Dictionary = {}
 	var previous := Vector2i(-1, -1)
@@ -46,6 +47,24 @@ static func build_payload(config: SpriteAtlasCurationConfig, selection_payload: 
 	}
 
 
+static func validate_selection_header(config: SpriteAtlasCurationConfig, payload: Dictionary) -> String:
+	if payload.get("schema_version") != 2:
+		return "unsupported selection schema; expected schema_version 2"
+	if payload.get("atlas_path") != config.atlas_path or payload.get("atlas_sha256") != config.expected_atlas_sha256:
+		return "selection atlas authority differs from configuration"
+	if payload.get("columns") != config.columns or payload.get("rows") != config.rows or not _array_matches_ints(payload.get("cell_size"), [config.cell_size.x, config.cell_size.y]) or not _array_matches_ints(payload.get("atlas_size"), [config.atlas_size().x, config.atlas_size().y]):
+		return "selection grid contract differs from configuration"
+	if not payload.get("selected_cells") is Array or payload.get("selected_count") != payload.selected_cells.size():
+		return "selection selected_count differs from its cells"
+	return ""
+
+
+static func write_target_error(target_path: String) -> String:
+	if FileAccess.file_exists(target_path) or FileAccess.file_exists(target_path + ".tmp"):
+		return "refused overwrite: %s" % target_path
+	return ""
+
+
 static func _array_matches_ints(value: Variant, expected: Array) -> bool:
 	if not value is Array or value.size() != expected.size():
 		return false
@@ -56,8 +75,9 @@ static func _array_matches_ints(value: Variant, expected: Array) -> bool:
 
 
 static func write_new(config: SpriteAtlasCurationConfig, selection_path: String, target_path: String) -> bool:
-	if FileAccess.file_exists(target_path) or FileAccess.file_exists(target_path + ".tmp"):
-		push_error("%s: refused overwrite: %s" % [ERROR_ORIGIN, target_path])
+	var target_error: String = write_target_error(target_path)
+	if not target_error.is_empty():
+		push_error("%s: %s" % [ERROR_ORIGIN, target_error])
 		return false
 	var selection = JSON.parse_string(FileAccess.get_file_as_string(selection_path))
 	var payload := build_payload(config, selection)

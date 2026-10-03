@@ -155,13 +155,9 @@ func _payload(sequence: int) -> Dictionary:
 func _validate_payload(payload: Variant) -> Dictionary:
 	if not payload is Dictionary or not payload.get("selected_cells") is Array:
 		return {"valid": false, "error": "invalid root or selected_cells", "cells": {}}
-	if payload.get("atlas_path") != config.atlas_path or payload.get("atlas_sha256") != config.expected_atlas_sha256:
-		return {"valid": false, "error": "atlas authority differs", "cells": {}}
-	var cell_size_value = payload.get("cell_size")
-	if int(payload.get("columns", -1)) != config.columns or int(payload.get("rows", -1)) != config.rows or not _array_matches_ints(cell_size_value, [config.cell_size.x, config.cell_size.y]):
-		return {"valid": false, "error": "grid contract differs", "cells": {}}
-	if int(payload.get("selected_count", -1)) != payload.selected_cells.size():
-		return {"valid": false, "error": "selected_count differs", "cells": {}}
+	var header_error: String = SpriteAtlasCatalogBuilder.validate_selection_header(config, payload)
+	if not header_error.is_empty():
+		return {"valid": false, "error": header_error, "cells": {}}
 	var result: Dictionary = {}
 	var previous := Vector2i(-1, -1)
 	for raw in payload.selected_cells:

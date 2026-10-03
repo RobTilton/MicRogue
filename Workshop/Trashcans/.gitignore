@@ -1,0 +1,5 @@
+# Human-managed sorting material is not versioned.
+/*
+!/.gitignore
+!/.gdignore
+!/README.md

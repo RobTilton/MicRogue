@@ -15,10 +15,10 @@ var texture: Texture2D
 var list := ItemList.new()
 var filter := LineEdit.new()
 var identity := Label.new()
-var alias := LineEdit.new()
-var category := LineEdit.new()
-var family := LineEdit.new()
-var tags := LineEdit.new()
+var alias: LineEdit
+var category: LineEdit
+var family: LineEdit
+var tags: LineEdit
 var note := TextEdit.new()
 var remove := CheckBox.new()
 var status := Label.new()
@@ -187,7 +187,10 @@ func _save() -> void:
 	var sequence := 1; while FileAccess.file_exists(config.semantic_directory.path_join("semantic_aliases_%03d.json" % sequence)): sequence += 1
 	var serialized: Array[Dictionary] = []; for entry in entries: if records.has(entry.id): serialized.append(records[entry.id].duplicate(true))
 	var payload := {"schema_version": 1, "naming_contract": "semantic_aliases_v1", "catalog_path": config.catalog_path, "catalog_sha256": config.expected_catalog_sha256, "catalog_entry_count": entries.size(), "save_sequence": sequence, "alias_count": names.size(), "record_count": serialized.size(), "aliases": serialized}
-	var path := config.semantic_directory.path_join("semantic_aliases_%03d.json" % sequence); var temporary := path + ".tmp"; var file := FileAccess.open(temporary, FileAccess.WRITE)
+	var path := config.semantic_directory.path_join("semantic_aliases_%03d.json" % sequence)
+	var target_error: String = SpriteAtlasCatalogBuilder.write_target_error(path)
+	if not target_error.is_empty(): _fail(target_error); return
+	var temporary := path + ".tmp"; var file := FileAccess.open(temporary, FileAccess.WRITE)
 	if file == null: _fail("could not open temporary snapshot"); return
 	file.store_string(JSON.stringify(payload, "\t") + "\n"); file.close()
 	var checked := _validate_semantics(JSON.parse_string(FileAccess.get_file_as_string(temporary)))

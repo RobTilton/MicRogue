@@ -1,6 +1,0 @@
-{
-  "duplicate_global_classes": {},
-  "missing_literal_res_paths": [],
-  "literal_room_dependencies": [],
-  "scope": "Production, WorkshopAssets and ToolShed .gd/.tscn/.tres; literal res paths only, not dynamic paths"
-}

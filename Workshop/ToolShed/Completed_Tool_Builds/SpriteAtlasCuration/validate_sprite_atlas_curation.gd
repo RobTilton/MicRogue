@@ -2,7 +2,7 @@ extends SceneTree
 
 const ORIGIN := "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/validate_sprite_atlas_curation.gd"
 const CONFIG_PATH := "res://Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/fantasy_sprite_catalog_validation_config.tres"
-const SELECTION_PATH := "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/atlas_selection_005.json"
+const SELECTION_PATH := "res://Production/Assets/FantasySpriteCatalog/Validation/atlas_selection_005.json"
 const SELECTION_SCENE := "res://Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/AtlasSelectionTool.tscn"
 const NAMING_SCENE := "res://Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/SemanticNamingTool.tscn"
 
@@ -25,6 +25,21 @@ func _run() -> void:
 	var generated := SpriteAtlasCatalogBuilder.build_payload(config, selection)
 	if not bool(generated.get("valid", false)) or int(generated.get("entry_count", -1)) != 486:
 		_fail("selection-to-catalog validation failed: %s" % generated.get("error", "wrong count"))
+		return
+	for field: String in ["schema_version", "columns", "rows", "selected_count"]:
+		var malformed: Dictionary = selection.duplicate(true)
+		malformed[field] = 999
+		if bool(SpriteAtlasCatalogBuilder.build_payload(config, malformed).get("valid", false)):
+			_fail("invalid selection header was accepted: %s" % field)
+			return
+	for field: String in ["cell_size", "atlas_size"]:
+		var malformed: Dictionary = selection.duplicate(true)
+		malformed[field] = [1, 1]
+		if bool(SpriteAtlasCatalogBuilder.build_payload(config, malformed).get("valid", false)):
+			_fail("invalid selection geometry was accepted: %s" % field)
+			return
+	if SpriteAtlasCatalogBuilder.write_target_error(config.catalog_path).is_empty():
+		_fail("existing final target was accepted")
 		return
 	var current = JSON.parse_string(FileAccess.get_file_as_string(config.catalog_path))
 	if not current is Dictionary or not current.get("entries") is Array or current.entries.size() != generated.entries.size():
@@ -51,6 +66,11 @@ func _run() -> void:
 	if not selection_tool.valid or selection_tool.selected.size() != 486 or selection_tool.loaded_name != "atlas_selection_005.json":
 		_fail("selection scene did not load the current 486-cell snapshot")
 		return
+	var unsupported: Dictionary = selection.duplicate(true)
+	unsupported["schema_version"] = 999
+	if bool(selection_tool.call("_validate_payload", unsupported).get("valid", false)):
+		_fail("selection UI accepted unsupported schema")
+		return
 	selection_tool.queue_free()
 	await process_frame
 	var naming_tool := (load(NAMING_SCENE) as PackedScene).instantiate() as ReusableSemanticNamingTool
@@ -62,7 +82,7 @@ func _run() -> void:
 		return
 	naming_tool.queue_free()
 	await process_frame
-	print("%s: passed configurable atlas authority, invalid-hash refusal, exact 486-entry catalog derivation, selection preload, and semantic preload" % ORIGIN)
+	print("%s: passed atlas authority, invalid-hash/header/schema refusal, existing-target refusal, exact 486-entry derivation, selection/semantic preload and UI teardown" % ORIGIN)
 	quit(0)
 
 
