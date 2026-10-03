@@ -1,0 +1,346 @@
+[
+  {
+    "path": "project.godot",
+    "sha256": "e6e247ad00d0a7bc8aad8b8d61900c62b4bf3d77da58d3779597c04ec64910ce"
+  },
+  {
+    "path": "icon.svg",
+    "sha256": "f6369bae7e12e6d16019cd6214cf27a2fdb6f3f6d024bd6f23c322be4804474f"
+  },
+  {
+    "path": "Production/Systems/LightweightGenerationController/lightweight_generation_controller.gd",
+    "sha256": "44e077b59899bcedca90f5c110a7914a8a4f230eb9ad85e44e5222e04452e563"
+  },
+  {
+    "path": "Production/Systems/LightweightGenerationController/lightweight_generation_controller.gd.uid",
+    "sha256": "dae1adacf6952015d79c4ca816e4fdf0926e5d9b7f5b4d34f8a8d668173e9bf1"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room.gd",
+    "sha256": "33719b88de45230272d85738743e9794fbd9899766ffdc8cf7f9c1bdde308d3e"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room.gd.uid",
+    "sha256": "74882e8a741b9b63f4cfac67e131a2c027021c4cf0eabadfddaec0e3d17fd959"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_doorway.gd",
+    "sha256": "2a69eb544a0c261d2b3c0077c9624cfa277f1c5a0c74f36154e60c8debf75330"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_doorway.gd.uid",
+    "sha256": "679fd01031a3d577f22627b126b0ef4e0b77f9c139bd28d83f6698369c5f7123"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_generator.gd",
+    "sha256": "a5993d9232fb43473add67e0345816a5d4d929da0e46e558339460187e97022f"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_generator.gd.uid",
+    "sha256": "078cbe02da6c8fea0e138496e5f5967dfa23cc2c7f836dd33fe3b29afa39b6e2"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_map_data.gd",
+    "sha256": "08f2cf7d5178f8850510bf9f38fae5270a38ef177f461bf7e956803ab573119e"
+  },
+  {
+    "path": "Production/Systems/RapidRoomGenerationSystem/rapid_room_map_data.gd.uid",
+    "sha256": "45a8e30446d3ba7799fa620f15a91c29d2e9794e26a980e4c169b31ace5e000f"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_catalog.gd",
+    "sha256": "1debccfbb8c480981555d407c8108f0c032117a8dd01601ef1f40b1979b7deb5"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_catalog.gd.uid",
+    "sha256": "cc332179f00d9cb6e619903ac0ae589d48018d4eb96c5e882e04b5bcfa535d5f"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_entry.gd",
+    "sha256": "b2796a8d67c211c0f4aba51f35c18834a8f1c5bd6353e999129724bb0e244185"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_entry.gd.uid",
+    "sha256": "98fdf9886506abf6138fb751c9737fc97e1cce284278491d59033d13db32cfca"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_semantics.gd",
+    "sha256": "f010708eba20d11b088b0ac7213661d24745ece9113bc7d2e742e3143262052b"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_semantics.gd.uid",
+    "sha256": "19de2f457211dbbd5ac8b0ea84f0c6e8fe54a6404bad58ecb6ae68f94071db83"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_tagger.gd",
+    "sha256": "bb2979b6290b88543a143d78db61dd6376194e8215f391e6f8ba592c751c99c5"
+  },
+  {
+    "path": "Production/Systems/RoomLayoutSystem/room_layout_tagger.gd.uid",
+    "sha256": "c732d3cb4be08171fe233fb3644b4dcdf42fa1fe559368aff88f9d60c3b1fd33"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/benchmark_rapid_generator.gd",
+    "sha256": "0217b5a499c03842588e10481c5137de9168ad7ea26d692e905e5a4ad9b8359f"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/benchmark_rapid_generator.gd.uid",
+    "sha256": "02abf7fc5ab9f4b4b119f25bf916e8ca726dc83bceaeeaabf0c6217b51cd84e9"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/test_rapid_doorway_placement.gd",
+    "sha256": "3fd25c0bd150412c58e7a49cdcf07d50ca03c2f2cd9475ff7d0aa35247fdccfe"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/test_rapid_doorway_placement.gd.uid",
+    "sha256": "72cfee27c081ead8b422012e622554f74c940a85cdeaca64fd113ab42bd456e1"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/VisualizationMeshLibrary.tscn",
+    "sha256": "1554820f993ca30016c58936ed8e37f0f4042e6b334a6c6bd7282cd22da540af"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/VisualizationTool.tscn",
+    "sha256": "f1bfb062169e3110c4b8d7cdd29566613887a950b4c3b2bc1c01d99f0d5a4afd"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/VisualizationToolMeshLibrary.tres",
+    "sha256": "b393170da7a0d7a7136ffe5172de98da4e8b4f5650ded6badb98c6cf251061d3"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/visualization_tool.gd",
+    "sha256": "ca4316c52eee9c6e0ab410aed5483ba24f231e1967975e2f6e5545def4c02dcd"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/visualization_tool.gd.uid",
+    "sha256": "35acf675affebddb833e09dda2fd805e2724cee2ccbc780d7218ad7143518431"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png",
+    "sha256": "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Data/fantasy_sprite_catalog.json",
+    "sha256": "6e2d93232faebf9ea7ce5cd0623d312156ff80f8d4f3f061a2788eb1c549df71"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Data/semantic_aliases_001.json",
+    "sha256": "7199e90a6247dcf72f5b646d8cb7cd6a355216787a3f1b15a8ec1ae7dabf7d52"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_catalog.gd",
+    "sha256": "73924baa69a67006f340d489f8e2a68ce7974d85fbe703ca8698f6473a94cd9f"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_catalog.gd.uid",
+    "sha256": "4d0145206e5201e08b1f5035f62842218c3936e3adc45de630253f18373ed751"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_entry.gd",
+    "sha256": "5ca0931747b6d6c39d79ab38bf46b5d6948853733f1c6dd98f85844255e4d0a9"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/fantasy_sprite_entry.gd.uid",
+    "sha256": "cf6442674dfffef0370194c29c24dd2dc4d626c21da477e97486cacf523aed21"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/atlas_selection_005.json",
+    "sha256": "f38907f88c712bbd36e46771e518c387521c49c8d7bed48b1e88b40b7bd7a690"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/validate_fantasy_sprite_catalog.gd",
+    "sha256": "ec0d2ec7ce6587e69cd46b5222f43197e506417860f9ba45eed055325f26fe58"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/validate_fantasy_sprite_catalog.gd.uid",
+    "sha256": "ade201607efe5e2cdca6d9a7e5ea0629a7b322474ed03488989efba5912ceac0"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/Generated/fantasy_sprite_regions.gd",
+    "sha256": "cb9d5f59f2190092d54c4ae18f92a913a329f8155d2e96eb04a404896321efbd"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/Generated/fantasy_sprite_regions.gd.uid",
+    "sha256": "c96dab47ca567021f0c8f2c1dfe4b7f76adc74b6f4fa8bd2710c15c666f19876"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/decoration_generation_preview.gd",
+    "sha256": "6d62463a58828d230560e889d2e3a31cb3a71ed146832b9c550dbe658962540f"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/decoration_generation_preview.gd.uid",
+    "sha256": "c4c6607f3b4561d13fe9626f59a511b4ec33e65bc6a6cc5f439969f171728f61"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/decoration_generation_preview.tscn",
+    "sha256": "82df1318b5b5dad49254ae097c019a4c0d8d53636270f48508db9a3ffd10a7d2"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/AtlasSelectionTool.tscn",
+    "sha256": "c08f2b40677b04a251d3f818f57cb9b7e3fbb6088d027019dedc9e9db68c8f8e"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/atlas_selection_tool.gd",
+    "sha256": "1dcc98986fe489aff2c969c757bff09c9d8b1d7700e01b7625636c237dcc8696"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/atlas_selection_tool.gd.uid",
+    "sha256": "4abbff5197e8f5912df75808813ce040de5933eeca24fb509510880512ea5f27"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/fantasy_sprite_catalog_validation_config.tres",
+    "sha256": "97541a6c6f021e5fd19506cec53f5b5e62def77e53a3cdf12e941bc94f52ac66"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/SemanticNamingTool.tscn",
+    "sha256": "9fcfb6deb760fcb51c9a576e1b7e49fdd7750931e47691b724a6a1ee03ab9f6b"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/semantic_naming_tool.gd",
+    "sha256": "ff4892eb3fbd12e2eeb7f34a1129f8f3b6a5c1ae9afbd403d36dbc75af40204f"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/semantic_naming_tool.gd.uid",
+    "sha256": "115b9219e8d685249b419aa0fa0af62e38ab82521c5df0eb1b5c4a080237de70"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/sprite_atlas_catalog_builder.gd",
+    "sha256": "fea8b4eb5ce7112d25447bf0fdc570d8d99ce9b6e5a338cbc079aa357953dc5b"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/sprite_atlas_catalog_builder.gd.uid",
+    "sha256": "3eec4aef0d0300575ce9cfce96a0f1daf3b6a74ba08db247eda671ce6a82f5d3"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/sprite_atlas_curation_config.gd",
+    "sha256": "b2554f3714dd91459f2950d0bfce28b35aef103f163b0bcf93b281aa8f72a562"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/sprite_atlas_curation_config.gd.uid",
+    "sha256": "dcea148efc9f8121c35ed3de7351eee0c276377220bb8f2f685866a454e14b7a"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/validate_sprite_atlas_curation.gd",
+    "sha256": "cfd391bcc1b01adc08dae9642bf99a2358ce352e0d667373ee95ec4230e2f692"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/validate_sprite_atlas_curation.gd.uid",
+    "sha256": "bfe861d0756bd11d26d6235a58a27b5f05f17eeb185cec2c9b07c46967eff548"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/base_cell_painter.gd",
+    "sha256": "d34d841e6667d60098436f32c8503830fe1748b8df533ece7b71678ceb2013d8"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/base_cell_painter.gd.uid",
+    "sha256": "4970cebd2fe9c661f54447b7186e994d41a319922a95aec4fd7fa1fa7b380394"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_cell_context.gd",
+    "sha256": "74a58384b0c211bb6790fd8249c6b7ab9da427de26b6b2bb26249d1891f48c1d"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_cell_context.gd.uid",
+    "sha256": "0410be5c8d112a6921280c7f6d68f44110a427ec4929abf38c2aadcb2560c0e4"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_paint_plan.gd",
+    "sha256": "e5fd9e3189d33bdae45d3ce568aa285619fc945b74458cb4c93a5cdb9ea37330"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_paint_plan.gd.uid",
+    "sha256": "254841fc5e4f13e32e07a230391d3b3f6f2ca03de1f2081bd351bf147e117f09"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/validate_base_cell_painter.gd",
+    "sha256": "ca8454b575d6c9b8866da6ff3d638e8c2cc3892a67950901606ad9eb75f6adbf"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/validate_base_cell_painter.gd.uid",
+    "sha256": "54cade76aad48e8ef55a0c52f1bd4abd095585038518817aeb8cedfc06b6b06e"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd",
+    "sha256": "11594be5adcdbb4cb199b0487345eb1967a6f9cba71ea8097c2cbdc55a726abc"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd.uid",
+    "sha256": "7ad1f2b47e0e7f3c1df675eb02a4dde814cc01cde82fcc105cb9d1d862e67056"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_query.gd",
+    "sha256": "49370fbe5602e66cc4bd5aa9a307e38df2262c21ef4d75c099e4b255c108393a"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_query.gd.uid",
+    "sha256": "1b2c930299d4ebe01fb7e30cc0271ea94001194c179fa8f578814cfc0e178265"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_record.gd",
+    "sha256": "46f462e42471eaf21df8f5f27c9aa5ec88dc8e107c7183090fdc2eaedfec7258"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_record.gd.uid",
+    "sha256": "f7da70fc312a3b76e8c06a17a214b7bb4c20af656236fa6840d3264ed933188d"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/validate_decoration_catalog_adapter.gd",
+    "sha256": "bd743b76833a504938e848c5992620e7cdacea29a5a74d1b353a202d49e0a215"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/validate_decoration_catalog_adapter.gd.uid",
+    "sha256": "5125e7a87f751e3c06231881cbe8a7a0a82104295a7e48e2d311661011088938"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/fantasy_dungeon_profile.gd",
+    "sha256": "5d70ffeb3b139c9fa44ba3c0f11872a9cacb148656f26c392adb736ebaaa1e5a"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/fantasy_dungeon_profile.gd.uid",
+    "sha256": "211d346d642e9b8a9ed5ea87dab65b90d944b0c6eceed746ec84b109003891c2"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/profile_review.png",
+    "sha256": "0a9251bfe5f579764324cb2caeaf1022c98d21dae41b6db8acaf3b6baee7fa8c"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/validate_fantasy_dungeon_profile.gd",
+    "sha256": "98897c15c177c3e0fac4dd668717a5e0e3ab3e1452a7a1c3a2cd97083e00fb0e"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/validate_fantasy_dungeon_profile.gd.uid",
+    "sha256": "8c6919243a4db0a6ce007df055f7a3de6c4137f829dcf3cb2a01af51256c1ac7"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/decorated_map_data.gd",
+    "sha256": "117c5829d4226f7f3acb00c6ae648652d7d05357af55318b80a212c6f073d57d"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/decorated_map_data.gd.uid",
+    "sha256": "0df65415c9d4895cfedb46c0089eeef52d414bef13053b6d05b04fc4cc151d35"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/validate_decorated_map_data.gd",
+    "sha256": "9f7359c3087e36b8ace2fb90c569c60dbbfeb6ff941cf64b3fc62cdf65f07ce1"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/validate_decorated_map_data.gd.uid",
+    "sha256": "545d9f57d6fe8c0658979dd042c16a91a206e0c8739b8c5c93cef02e1debcabb"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/decoration_tile_map_layer_adapter.gd",
+    "sha256": "1a7753e430f7448c9e8d0ff589e454d244aed909f4a3878c6afb501f752c3f3b"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/decoration_tile_map_layer_adapter.gd.uid",
+    "sha256": "ca5c18c0ee637fbe427432f82d18b3d5da954c338669852404c05351bc890574"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/validate_tile_map_layer_adapter.gd",
+    "sha256": "f7559c438144b104091b5b4cc86b6c74c51fae159f9f0065c9be282814b9d7f7"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/validate_tile_map_layer_adapter.gd.uid",
+    "sha256": "1a7defae1189c38340c7db34e5ed5a72147b3ad5d5cd2730ecf55a541c3ce7ba"
+  }
+]

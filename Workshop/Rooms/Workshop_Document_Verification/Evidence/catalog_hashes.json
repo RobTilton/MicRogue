@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png",
+    "matches": true,
+    "actual": "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74",
+    "expected": "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Data/fantasy_sprite_catalog.json",
+    "matches": true,
+    "actual": "6e2d93232faebf9ea7ce5cd0623d312156ff80f8d4f3f061a2788eb1c549df71",
+    "expected": "6e2d93232faebf9ea7ce5cd0623d312156ff80f8d4f3f061a2788eb1c549df71"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Data/semantic_aliases_001.json",
+    "matches": true,
+    "actual": "7199e90a6247dcf72f5b646d8cb7cd6a355216787a3f1b15a8ec1ae7dabf7d52",
+    "expected": "7199e90a6247dcf72f5b646d8cb7cd6a355216787a3f1b15a8ec1ae7dabf7d52"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/atlas_selection_005.json",
+    "matches": true,
+    "actual": "f38907f88c712bbd36e46771e518c387521c49c8d7bed48b1e88b40b7bd7a690",
+    "expected": "f38907f88c712bbd36e46771e518c387521c49c8d7bed48b1e88b40b7bd7a690"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/Godot/Generated/fantasy_sprite_regions.gd",
+    "matches": true,
+    "actual": "cb9d5f59f2190092d54c4ae18f92a913a329f8155d2e96eb04a404896321efbd",
+    "expected": "cb9d5f59f2190092d54c4ae18f92a913a329f8155d2e96eb04a404896321efbd"
+  }
+]

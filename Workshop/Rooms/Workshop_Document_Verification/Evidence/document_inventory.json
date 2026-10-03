@@ -1,0 +1,266 @@
+[
+  {
+    "path": "Workshop/AI_AGENTS_README/CHAD_ONLY/AI_WORKFLOW_CONTEXT_PRIMER.md",
+    "sha256": "d4b90445ee416502a11e34a9f527a06842da995877c69de9f531e77ffcb48511",
+    "bytes": 946,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/Codex_Only/CODEX_WORKFLOW_CONTEXT_PRIMER.md",
+    "sha256": "57d2917fa0202a63b1c6b46f491e421941c99ada8f0153a97a53a67ec8301aa3",
+    "bytes": 3275,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/README.md",
+    "sha256": "bb2bd35d56172c676180afbb66226cf4a232a53000a744971698872941a05d19",
+    "bytes": 916,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/.AGENTS.md",
+    "sha256": "c807b155d9c8c7fdc4a33c9432fb3081cd02e5744ccd853e434ed638f04b7aaa",
+    "bytes": 5306,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/AI_WORKFLOW_NOTES.md",
+    "sha256": "e47824899e417591f540ec15cccbe9fad98d41b808d7849d17d1b77c99dd2a73",
+    "bytes": 1324,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/MCA_ROOM_AND_DOCUMENTATION_CONTRACT.md",
+    "sha256": "d62b1b4763dc48340db4a967f229d5e321cc2a2f45e6f978a27d6cc549f009c4",
+    "bytes": 7191,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Templates/CURRENT_STATE_TEMPLATE.md",
+    "sha256": "ac6386794ed27ef6cb613cffced54fa1cfec165d16bd9b38eb72f5f064e55e3d",
+    "bytes": 995,
+    "kind": "template"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Templates/DOTS_TEMPLATE.md",
+    "sha256": "5befe1e01289762cbd9e5cdb3d70f35b359396f57bd6e60bdd4ff0a8c233b85d",
+    "bytes": 1244,
+    "kind": "template"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Templates/HANDOFF_TEMPLATE.md",
+    "sha256": "df00cac7fbf95b3f794ddc5c33d7b3f4e56559e7e14042523d7320fee2e50a62",
+    "bytes": 940,
+    "kind": "template"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Templates/README.md",
+    "sha256": "bc8bf02a109daca478788cf179de445d1e0cbc3073f4be468403320843448dd7",
+    "bytes": 708,
+    "kind": "template"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Workflow_References/when_working_with_documented_systems.md",
+    "sha256": "3f05b5ca48efab4b0e0d9001119eb51bf1c8604d969cbd6873a5994668387af5",
+    "bytes": 695,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Workflow_References/when_working_with_fragile_system_documentation.md",
+    "sha256": "f00f0a5a76f2f628d60263727ad332fa571a23e3ac8809057e64aa1e06b4bf75",
+    "bytes": 2356,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/MCA_PROTOCOL_REF_FOR_AI/MCA_PROTOCOL_REFERENCE.md",
+    "sha256": "d77f81956c9ee5fe00b86c8d59787582e056a3bb7e43c29adda0a93419dc74bd",
+    "bytes": 1586,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/README.md",
+    "sha256": "8b17ab61a42f0ee57e9d75eb858d850163fb2154b441b7103ac9cfdeecf51ee5",
+    "bytes": 761,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SHADER_LIBRARY_FOR_AI/README.md",
+    "sha256": "618e9d9de0f072fc96e9a4ce115e6c45456a814d34ffea8bbecc4bb950abb5b8",
+    "bytes": 613,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/FRAGILE_DECORATION_PIPELINE.md",
+    "sha256": "9606b52328a397bcda636634e979a575679c9841043c398dd9d29f27529d1450",
+    "bytes": 4272,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/LIGHTWEIGHT_GENERATION_CONTROLLER.md",
+    "sha256": "bff07fe053712ae2a16eb07342a0b8c46ce7055c0ad67f54809ef482f76681b6",
+    "bytes": 1219,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/RAPID_ROOM_GENERATION_SYSTEM.md",
+    "sha256": "80a00b5b5f6e153a0a22a026b20bc26673102fc64c4c57f0be4130ab8168a7e0",
+    "bytes": 4849,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/ROOM_LAYOUT_SYSTEM.md",
+    "sha256": "6aa3462a7d78ffcf99199cf49f2de4c91b6c3377a82b74b20dbf0b61fa63e03c",
+    "bytes": 2265,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/_README.md",
+    "sha256": "9c071ea06ca31f45b0c55569b833fdf212ca71e82ca66ec67096d055e4992e91",
+    "bytes": 1207,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/Documentation_Format_README.md",
+    "sha256": "66830b715150546bb0176d8dc4c9aee000203b3c9f97bc14d5fe1c555acc2a3e",
+    "bytes": 12344,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/README.md",
+    "sha256": "6be16b759509b73e8c8d4508ce71ca9931bda1203aed8b6840292ea7c00de7b7",
+    "bytes": 978,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/Rooms/Project_Core_Documentation/ArtDirectionV2.md",
+    "sha256": "6d4d271caf7d23f613042f7180f3a6d348c3f42fefedb966dc4d6105d58e51d4",
+    "bytes": 19092,
+    "kind": "design-source"
+  },
+  {
+    "path": "Workshop/Rooms/Project_Core_Documentation/GameDefinitionV1.md",
+    "sha256": "6b5a8871dfae93e713e9348b135f4701c53a4f967f5274bc86200f19e537723f",
+    "bytes": 23181,
+    "kind": "design-source"
+  },
+  {
+    "path": "Workshop/Rooms/Project_Core_Documentation/Scope_Defined.md",
+    "sha256": "2b1c97c980d9f040fa5aadfcc681a29fcb0acdc0120a158fdc0c5d48ab14c7bb",
+    "bytes": 23584,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/Rooms/README.md",
+    "sha256": "9fde628d6cc296681ce3a79a824c29b25dd1b6726e96995da8645c1e24e07c42",
+    "bytes": 939,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/SimWalkDocuments/Micro_Rogue_Sim_Walk_2026-09-25.docx",
+    "sha256": "e5bfa0b4e2d1b4228de4ba7828ee9d31e9cc643d3fb80854e997a9bfa37c6dbc",
+    "bytes": 41184,
+    "kind": "experience-capture"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/BuildReadme.md",
+    "sha256": "5e82fdd5dae17b8e0f46e7042f42419d17168818f0b924d9345db5c2457aba40",
+    "bytes": 2281,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/VALIDATION_AND_ROOM_REMOVAL.md",
+    "sha256": "c8bfe759bfef98f34b869cde59cadd8dd3d2acb749295e4994e9d756d0613760",
+    "bytes": 10539,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/README.md",
+    "sha256": "594bad737f27cec2a2cd0e91c24d3d0b7d8159476b6504a1c8a4ce1b5f8390db",
+    "bytes": 469,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/BuildReadme.md",
+    "sha256": "5a3fbb22668ea022cbcfd8bb47deab726240722213e0467c18660fde5d31ebca",
+    "bytes": 3852,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Ledger/Completed_Tool_Builds_Catalog.md",
+    "sha256": "9d9081b0c065fbf50b8085b1906d8d26b26a4f60182042da7adbab1c486a1b90",
+    "bytes": 1841,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Ledger/ToolShed_Format.md",
+    "sha256": "4c59428f417a93f0b007d34bed29e7c93f6ddfdb8f92fe9a749cb86d8a8f416a",
+    "bytes": 2783,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/Ledger/ToolShed_Parts_Catalog.md",
+    "sha256": "5b604a949f31e98108382d5a193f61537c50ac46aabf806ff509295f50cebeb6",
+    "bytes": 951,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/README.md",
+    "sha256": "496d689715947b5a441677f2bfa3f383230dba66fa42288f603d80418ac5f095",
+    "bytes": 742,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/PROFILE_REVIEW.md",
+    "sha256": "f25613f106b938e08a6aa88f8fbee2f41df3be6613410edf6fe70b73ad0457d5",
+    "bytes": 1071,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ToolReadme.md",
+    "sha256": "5f5689d6a05e2979ceb6cbb1b14ba34eee5860a82bcdde2cacc03c9b8355a7d3",
+    "bytes": 4473,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/README.md",
+    "sha256": "082b152e2af054c995f5b5f485e79ed7db06a913b3af3d355987cbdb39252ded",
+    "bytes": 327,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/Trashcans/README.md",
+    "sha256": "4f71ba06005e63ec1f48c59c41374ffd08f7218c17882f6a3b47932b38740210",
+    "bytes": 721,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/FantasySpriteCatalog/README.md",
+    "sha256": "a6222e1a02d6e13b4d3a06017f64da93eca0a31a2e361e38c076d07981cf826a",
+    "bytes": 3928,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/WorkshopAssets/README.md",
+    "sha256": "24c9d803d89183a39025167bd149a3357e1215833e914718ab9feed4ac2effc1",
+    "bytes": 511,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/_Audits/Archive_Of_Last_Resort/README.md",
+    "sha256": "33d7be633fa12ade37cfef1065098fedffed0b595eeafd969f99b5a87d5b89c3",
+    "bytes": 326,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/_Audits/Current_Audits/README.md",
+    "sha256": "e8b4d1f58c2caf159be7da09dd0bcd06b6f1127c5874c3acf780d28dcad5135a",
+    "bytes": 289,
+    "kind": "current"
+  },
+  {
+    "path": "Workshop/_Audits/README.md",
+    "sha256": "fa5aaa221cd3f72fa29fd39e997ab9628731fc462f1760f2ccfd3baea4a1bc27",
+    "bytes": 504,
+    "kind": "current"
+  }
+]

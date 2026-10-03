@@ -1,0 +1,107 @@
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+first_scan_filesystem: begin: Project initialization steps: 5
+	first_scan_filesystem: step 0: Scanning file structure...
+	first_scan_filesystem: step 1: Loading global class names...
+	first_scan_filesystem: step 2: Verifying GDExtensions...
+	first_scan_filesystem: step 3: Creating autoload scripts...
+	first_scan_filesystem: step 4: Initializing plugins...
+	first_scan_filesystem: step 5: Starting file scan...
+first_scan_filesystem: end
+update_scripts_classes: begin: Registering global classes... steps: 36
+	update_scripts_classes: step 0: LightweightGenerationController
+	update_scripts_classes: step 1: RapidRoom
+	update_scripts_classes: step 2: RapidRoomDoorway
+	update_scripts_classes: step 3: RapidRoomGenerator
+	update_scripts_classes: step 4: RapidRoomMapData
+	update_scripts_classes: step 5: RoomLayoutCatalog
+	update_scripts_classes: step 6: RoomLayoutEntry
+	update_scripts_classes: step 7: RoomLayoutSemantics
+	update_scripts_classes: step 8: RoomLayoutTagger
+	update_scripts_classes: step 9: 
+	update_scripts_classes: step 10: ReusableAtlasSelectionTool
+	update_scripts_classes: step 11: ReusableSemanticNamingTool
+	update_scripts_classes: step 12: SpriteAtlasCatalogBuilder
+	update_scripts_classes: step 13: SpriteAtlasCurationConfig
+	update_scripts_classes: step 14: 
+	update_scripts_classes: step 15: BaseCellPainter
+	update_scripts_classes: step 16: DecorationCellContext
+	update_scripts_classes: step 17: DecorationPaintPlan
+	update_scripts_classes: step 18: 
+	update_scripts_classes: step 19: DecorationCatalogAdapter
+	update_scripts_classes: step 20: DecorationSpriteQuery
+	update_scripts_classes: step 21: DecorationSpriteRecord
+	update_scripts_classes: step 22: 
+	update_scripts_classes: step 23: FantasyDungeonProfile
+	update_scripts_classes: step 24: 
+	update_scripts_classes: step 25: DecoratedMapData
+	update_scripts_classes: step 26: 
+	update_scripts_classes: step 27: DecorationTileMapLayerAdapter
+	update_scripts_classes: step 28: 
+	update_scripts_classes: step 29: 
+	update_scripts_classes: step 30: FantasySpriteCatalog
+	update_scripts_classes: step 31: FantasySpriteEntry
+	update_scripts_classes: step 32: 
+	update_scripts_classes: step 33: 
+	update_scripts_classes: step 34: 
+	update_scripts_classes: step 35: 
+update_scripts_classes: end
+_update_scan_actions: begin: Scanning actions... steps: 3
+	_update_scan_actions: step 0: profile_review.png
+	_update_scan_actions: step 1: colored-transparent_packed.png
+	_update_scan_actions: step 2: icon.svg
+_update_scan_actions: end
+reimport: begin: (Re)Importing Assets steps: 3
+	reimport: step 0: Preparing files to reimport...
+	reimport: step 1: Preparing files to reimport...
+	reimport: step 2: Preparing files to reimport...
+	reimport: step 0: Executing pre-reimport operations...
+	reimport: step 0: profile_review.png
+	reimport: step 1: colored-transparent_packed.png
+	reimport: step 2: icon.svg
+	reimport: step 3: Finalizing Asset Import...
+reimport: end
+update_script_paths_documentation: begin: Updating scripts documentation steps: 36
+	update_script_paths_documentation: step 0: lightweight_generation_controller.gd
+	update_script_paths_documentation: step 1: rapid_room.gd
+	update_script_paths_documentation: step 2: rapid_room_doorway.gd
+	update_script_paths_documentation: step 3: rapid_room_generator.gd
+	update_script_paths_documentation: step 4: rapid_room_map_data.gd
+	update_script_paths_documentation: step 5: room_layout_catalog.gd
+	update_script_paths_documentation: step 6: room_layout_entry.gd
+	update_script_paths_documentation: step 7: room_layout_semantics.gd
+	update_script_paths_documentation: step 8: room_layout_tagger.gd
+	update_script_paths_documentation: step 9: decoration_generation_preview.gd
+	update_script_paths_documentation: step 10: atlas_selection_tool.gd
+	update_script_paths_documentation: step 11: semantic_naming_tool.gd
+	update_script_paths_documentation: step 12: sprite_atlas_catalog_builder.gd
+	update_script_paths_documentation: step 13: sprite_atlas_curation_config.gd
+	update_script_paths_documentation: step 14: validate_sprite_atlas_curation.gd
+	update_script_paths_documentation: step 15: base_cell_painter.gd
+	update_script_paths_documentation: step 16: decoration_cell_context.gd
+	update_script_paths_documentation: step 17: decoration_paint_plan.gd
+	update_script_paths_documentation: step 18: validate_base_cell_painter.gd
+	update_script_paths_documentation: step 19: decoration_catalog_adapter.gd
+	update_script_paths_documentation: step 20: decoration_sprite_query.gd
+	update_script_paths_documentation: step 21: decoration_sprite_record.gd
+	update_script_paths_documentation: step 22: validate_decoration_catalog_adapter.gd
+	update_script_paths_documentation: step 23: fantasy_dungeon_profile.gd
+	update_script_paths_documentation: step 24: validate_fantasy_dungeon_profile.gd
+	update_script_paths_documentation: step 25: decorated_map_data.gd
+	update_script_paths_documentation: step 26: validate_decorated_map_data.gd
+	update_script_paths_documentation: step 27: decoration_tile_map_layer_adapter.gd
+	update_script_paths_documentation: step 28: validate_tile_map_layer_adapter.gd
+	update_script_paths_documentation: step 29: fantasy_sprite_regions.gd
+	update_script_paths_documentation: step 30: fantasy_sprite_catalog.gd
+	update_script_paths_documentation: step 31: fantasy_sprite_entry.gd
+	update_script_paths_documentation: step 32: validate_fantasy_sprite_catalog.gd
+	update_script_paths_documentation: step 33: benchmark_rapid_generator.gd
+	update_script_paths_documentation: step 34: test_rapid_doorway_placement.gd
+	update_script_paths_documentation: step 35: visualization_tool.gd
+update_script_paths_documentation: end
+reimport: begin: (Re)Importing Assets steps: 3
+	reimport: step 0: Executing post-reimport operations...
+reimport: end
+loading_editor_layout: begin: Loading editor steps: 5
+	loading_editor_layout: step 0: Loading editor layout...
+loading_editor_layout: end

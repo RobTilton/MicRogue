@@ -1,0 +1,104 @@
+[
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/base_cell_painter.gd",
+    "expected": "d34d841e6667d60098436f32c8503830fe1748b8df533ece7b71678ceb2013d8",
+    "actual": "d34d841e6667d60098436f32c8503830fe1748b8df533ece7b71678ceb2013d8",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_cell_context.gd",
+    "expected": "74a58384b0c211bb6790fd8249c6b7ab9da427de26b6b2bb26249d1891f48c1d",
+    "actual": "74a58384b0c211bb6790fd8249c6b7ab9da427de26b6b2bb26249d1891f48c1d",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/decoration_paint_plan.gd",
+    "expected": "e5fd9e3189d33bdae45d3ce568aa285619fc945b74458cb4c93a5cdb9ea37330",
+    "actual": "e5fd9e3189d33bdae45d3ce568aa285619fc945b74458cb4c93a5cdb9ea37330",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/BaseCellPainter/validate_base_cell_painter.gd",
+    "expected": "ca8454b575d6c9b8866da6ff3d638e8c2cc3892a67950901606ad9eb75f6adbf",
+    "actual": "ca8454b575d6c9b8866da6ff3d638e8c2cc3892a67950901606ad9eb75f6adbf",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_catalog_adapter.gd",
+    "expected": "11594be5adcdbb4cb199b0487345eb1967a6f9cba71ea8097c2cbdc55a726abc",
+    "actual": "11594be5adcdbb4cb199b0487345eb1967a6f9cba71ea8097c2cbdc55a726abc",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_query.gd",
+    "expected": "49370fbe5602e66cc4bd5aa9a307e38df2262c21ef4d75c099e4b255c108393a",
+    "actual": "49370fbe5602e66cc4bd5aa9a307e38df2262c21ef4d75c099e4b255c108393a",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/decoration_sprite_record.gd",
+    "expected": "46f462e42471eaf21df8f5f27c9aa5ec88dc8e107c7183090fdc2eaedfec7258",
+    "actual": "46f462e42471eaf21df8f5f27c9aa5ec88dc8e107c7183090fdc2eaedfec7258",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/validate_decoration_catalog_adapter.gd",
+    "expected": "bd743b76833a504938e848c5992620e7cdacea29a5a74d1b353a202d49e0a215",
+    "actual": "bd743b76833a504938e848c5992620e7cdacea29a5a74d1b353a202d49e0a215",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/fantasy_dungeon_profile.gd",
+    "expected": "5d70ffeb3b139c9fa44ba3c0f11872a9cacb148656f26c392adb736ebaaa1e5a",
+    "actual": "5d70ffeb3b139c9fa44ba3c0f11872a9cacb148656f26c392adb736ebaaa1e5a",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/profile_review.png",
+    "expected": "0a9251bfe5f579764324cb2caeaf1022c98d21dae41b6db8acaf3b6baee7fa8c",
+    "actual": "0a9251bfe5f579764324cb2caeaf1022c98d21dae41b6db8acaf3b6baee7fa8c",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/FantasyDungeonProfile/validate_fantasy_dungeon_profile.gd",
+    "expected": "98897c15c177c3e0fac4dd668717a5e0e3ab3e1452a7a1c3a2cd97083e00fb0e",
+    "actual": "98897c15c177c3e0fac4dd668717a5e0e3ab3e1452a7a1c3a2cd97083e00fb0e",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/decorated_map_data.gd",
+    "expected": "117c5829d4226f7f3acb00c6ae648652d7d05357af55318b80a212c6f073d57d",
+    "actual": "117c5829d4226f7f3acb00c6ae648652d7d05357af55318b80a212c6f073d57d",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/validate_decorated_map_data.gd",
+    "expected": "9f7359c3087e36b8ace2fb90c569c60dbbfeb6ff941cf64b3fc62cdf65f07ce1",
+    "actual": "9f7359c3087e36b8ace2fb90c569c60dbbfeb6ff941cf64b3fc62cdf65f07ce1",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/decoration_tile_map_layer_adapter.gd",
+    "expected": "1a7753e430f7448c9e8d0ff589e454d244aed909f4a3878c6afb501f752c3f3b",
+    "actual": "1a7753e430f7448c9e8d0ff589e454d244aed909f4a3878c6afb501f752c3f3b",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/StorageUnits/DecorationPipeline/TileMapLayerAdapter/validate_tile_map_layer_adapter.gd",
+    "expected": "f7559c438144b104091b5b4cc86b6c74c51fae159f9f0065c9be282814b9d7f7",
+    "actual": "f7559c438144b104091b5b4cc86b6c74c51fae159f9f0065c9be282814b9d7f7",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/decoration_generation_preview.gd",
+    "expected": "6d62463a58828d230560e889d2e3a31cb3a71ed146832b9c550dbe658962540f",
+    "actual": "6d62463a58828d230560e889d2e3a31cb3a71ed146832b9c550dbe658962540f",
+    "matches": true
+  },
+  {
+    "path": "Workshop/ToolShed/Completed_Tool_Builds/DecoratedDungeonPreview/decoration_generation_preview.tscn",
+    "expected": "82df1318b5b5dad49254ae097c019a4c0d8d53636270f48508db9a3ffd10a7d2",
+    "actual": "82df1318b5b5dad49254ae097c019a4c0d8d53636270f48508db9a3ffd10a7d2",
+    "matches": true
+  }
+]

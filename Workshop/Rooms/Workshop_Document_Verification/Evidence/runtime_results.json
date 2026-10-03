@@ -1,0 +1,108 @@
+{
+  "engine": "4.4.1.stable.official.49a5bc7b6",
+  "import": {
+    "exit_code": 0,
+    "log": "import.log",
+    "completed_import": true
+  },
+  "results": [
+    {
+      "name": "catalog_adapter",
+      "chunk_id": "fd3991",
+      "wall_time_seconds": 0.269859479,
+      "exit_code": 0,
+      "original_token_count": 71,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\nres://Workshop/ToolShed/StorageUnits/DecorationPipeline/CatalogAdapter/validate_decoration_catalog_adapter.gd: passed authority, alias, family, category, tag, deterministic ordering, and unique-result checks\r\n"
+    },
+    {
+      "name": "result_contract",
+      "chunk_id": "04cd3c",
+      "wall_time_seconds": 0.361015788,
+      "exit_code": 0,
+      "original_token_count": 70,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\nres://Workshop/ToolShed/StorageUnits/DecorationPipeline/ResultContract/validate_decorated_map_data.gd: passed complete coverage, invalid-input refusal, detached context, and source non-mutation checks\r\n"
+    },
+    {
+      "name": "base_painter",
+      "chunk_id": "c518c1",
+      "wall_time_seconds": 1.2856e-05,
+      "session_id": 18138,
+      "original_token_count": 29,
+      "output": "BaseCellPainter: passed all four archetypes at sizes 4 and 5 with exact deterministic coverage and non-mutation\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "fantasy_profile",
+      "chunk_id": "efc700",
+      "wall_time_seconds": 1.1285e-05,
+      "session_id": 69948,
+      "original_token_count": 23,
+      "output": "FantasyDungeonProfile: passed all mapped aliases and all four archetypes at sizes 4 and 5\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "renderer",
+      "chunk_id": "ab5159",
+      "wall_time_seconds": 1.4524e-05,
+      "session_id": 5161,
+      "original_token_count": 27,
+      "output": "TileMapLayerAdapter: passed complete base and sparse sticker rendering for all archetypes at sizes 4 and 5\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "sprite_catalog",
+      "chunk_id": "327c99",
+      "wall_time_seconds": 0.512315904,
+      "exit_code": 0,
+      "original_token_count": 66,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\nWorkshop/WorkshopAssets/FantasySpriteCatalog/Validation/validate_fantasy_sprite_catalog.gd: passed 486 catalog entries, semantics, generated lookup, atlas regions, and cached API textures\r\n"
+    },
+    {
+      "name": "sprite_curation",
+      "chunk_id": "cf257b",
+      "wall_time_seconds": 0.611818005,
+      "exit_code": 0,
+      "original_token_count": 214,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\nWorkshop/ToolShed/Completed_Tool_Builds/SpriteAtlasCuration/validate_sprite_atlas_curation.gd: passed configurable atlas authority, invalid-hash refusal, exact 486-entry catalog derivation, selection preload, and semantic preload\r\nWARNING: 4 RIDs of type \"CanvasItem\" were leaked.\r\n   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2679)\r\nERROR: 2 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.\r\nERROR: 4 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.\r\nERROR: 1 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.\r\nWARNING: ObjectDB instances leaked at exit (run with --verbose for details).\r\n   at: cleanup (core/object/object.cpp:2378)\r\n"
+    },
+    {
+      "name": "rapid_doors",
+      "chunk_id": "452b35",
+      "wall_time_seconds": 8.538e-06,
+      "session_id": 19543,
+      "original_token_count": 24,
+      "output": "Workshop/WorkshopAssets/test_rapid_doorway_placement.gd: PASS (517322 checks across 1000 maps)\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "rapid_document_claims",
+      "chunk_id": "ab5c14",
+      "wall_time_seconds": 0.291335305,
+      "exit_code": 1,
+      "original_token_count": 132,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\nWorkshop/Rooms/Workshop_Document_Verification/verify_rapid_document_claims.gd: PASS exact seeded size normalization for requests 1/2/3/4 at seed 42\r\nERROR: Workshop/Rooms/Workshop_Document_Verification/verify_rapid_document_claims.gd: FAIL documented traversal-axis floor guarantee; size=4 seed=42 position=(25, 28) footprint_center=(25, 28) axis=0 door_item_axis=1 neighbor=(24, 28) cell=2\r\n   at: push_error (core/variant/variant_utility.cpp:1098)\r\n"
+    },
+    {
+      "name": "decorated_startup",
+      "chunk_id": "e68a25",
+      "wall_time_seconds": 0.465644107,
+      "exit_code": 0,
+      "original_token_count": 19,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\n"
+    },
+    {
+      "name": "visualization_startup",
+      "chunk_id": "3aaaea",
+      "wall_time_seconds": 0.297473104,
+      "exit_code": 0,
+      "original_token_count": 19,
+      "output": "Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\r\n\r\n"
+    },
+    {
+      "name": "curation_document_claims",
+      "exit_code": 1,
+      "log": "curation_document_claims.log",
+      "output": "FAIL: builder accepted unsupported schema_version=999 with 486 entries"
+    }
+  ]
+}

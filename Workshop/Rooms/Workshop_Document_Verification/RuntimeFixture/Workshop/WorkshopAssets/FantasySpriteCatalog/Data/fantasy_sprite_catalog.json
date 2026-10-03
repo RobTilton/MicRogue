@@ -1,0 +1,6338 @@
+{
+	"atlas_path": "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Atlas/colored-transparent_packed.png",
+	"atlas_sha256": "801243b8b35bcfde727bd52447bcae5c2abf36b0ae2f3ac7ee54f91791575e74",
+	"atlas_size": [
+		784.0,
+		352.0
+	],
+	"catalog_id": "fantasy_sprite_catalog",
+	"cell_size": [
+		16.0,
+		16.0
+	],
+	"columns": 49.0,
+	"entries": [
+		{
+			"category": "curated_fantasy",
+			"frame": 1.0,
+			"id": "atlas_x01_y00",
+			"region": [
+				16.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 2.0,
+			"id": "atlas_x02_y00",
+			"region": [
+				32.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 3.0,
+			"id": "atlas_x03_y00",
+			"region": [
+				48.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 4.0,
+			"id": "atlas_x04_y00",
+			"region": [
+				64.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 5.0,
+			"id": "atlas_x05_y00",
+			"region": [
+				80.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 6.0,
+			"id": "atlas_x06_y00",
+			"region": [
+				96.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 7.0,
+			"id": "atlas_x07_y00",
+			"region": [
+				112.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 16.0,
+			"id": "atlas_x16_y00",
+			"region": [
+				256.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 17.0,
+			"id": "atlas_x17_y00",
+			"region": [
+				272.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 18.0,
+			"id": "atlas_x18_y00",
+			"region": [
+				288.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 19.0,
+			"id": "atlas_x19_y00",
+			"region": [
+				304.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 20.0,
+			"id": "atlas_x20_y00",
+			"region": [
+				320.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 21.0,
+			"id": "atlas_x21_y00",
+			"region": [
+				336.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 24.0,
+			"id": "atlas_x24_y00",
+			"region": [
+				384.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 25.0,
+			"id": "atlas_x25_y00",
+			"region": [
+				400.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 25.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 26.0,
+			"id": "atlas_x26_y00",
+			"region": [
+				416.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 27.0,
+			"id": "atlas_x27_y00",
+			"region": [
+				432.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 28.0,
+			"id": "atlas_x28_y00",
+			"region": [
+				448.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 29.0,
+			"id": "atlas_x29_y00",
+			"region": [
+				464.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 30.0,
+			"id": "atlas_x30_y00",
+			"region": [
+				480.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 31.0,
+			"id": "atlas_x31_y00",
+			"region": [
+				496.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 32.0,
+			"id": "atlas_x32_y00",
+			"region": [
+				512.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 33.0,
+			"id": "atlas_x33_y00",
+			"region": [
+				528.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 34.0,
+			"id": "atlas_x34_y00",
+			"region": [
+				544.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 35.0,
+			"id": "atlas_x35_y00",
+			"region": [
+				560.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 36.0,
+			"id": "atlas_x36_y00",
+			"region": [
+				576.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 39.0,
+			"id": "atlas_x39_y00",
+			"region": [
+				624.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 40.0,
+			"id": "atlas_x40_y00",
+			"region": [
+				640.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 41.0,
+			"id": "atlas_x41_y00",
+			"region": [
+				656.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 42.0,
+			"id": "atlas_x42_y00",
+			"region": [
+				672.0,
+				0.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 0.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 49.0,
+			"id": "atlas_x00_y01",
+			"region": [
+				0.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 50.0,
+			"id": "atlas_x01_y01",
+			"region": [
+				16.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 51.0,
+			"id": "atlas_x02_y01",
+			"region": [
+				32.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 52.0,
+			"id": "atlas_x03_y01",
+			"region": [
+				48.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 53.0,
+			"id": "atlas_x04_y01",
+			"region": [
+				64.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 54.0,
+			"id": "atlas_x05_y01",
+			"region": [
+				80.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 55.0,
+			"id": "atlas_x06_y01",
+			"region": [
+				96.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 56.0,
+			"id": "atlas_x07_y01",
+			"region": [
+				112.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 57.0,
+			"id": "atlas_x08_y01",
+			"region": [
+				128.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 58.0,
+			"id": "atlas_x09_y01",
+			"region": [
+				144.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 59.0,
+			"id": "atlas_x10_y01",
+			"region": [
+				160.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 60.0,
+			"id": "atlas_x11_y01",
+			"region": [
+				176.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 61.0,
+			"id": "atlas_x12_y01",
+			"region": [
+				192.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 67.0,
+			"id": "atlas_x18_y01",
+			"region": [
+				288.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 68.0,
+			"id": "atlas_x19_y01",
+			"region": [
+				304.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 69.0,
+			"id": "atlas_x20_y01",
+			"region": [
+				320.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 70.0,
+			"id": "atlas_x21_y01",
+			"region": [
+				336.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 73.0,
+			"id": "atlas_x24_y01",
+			"region": [
+				384.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 74.0,
+			"id": "atlas_x25_y01",
+			"region": [
+				400.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 25.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 75.0,
+			"id": "atlas_x26_y01",
+			"region": [
+				416.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 76.0,
+			"id": "atlas_x27_y01",
+			"region": [
+				432.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 77.0,
+			"id": "atlas_x28_y01",
+			"region": [
+				448.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 78.0,
+			"id": "atlas_x29_y01",
+			"region": [
+				464.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 79.0,
+			"id": "atlas_x30_y01",
+			"region": [
+				480.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 80.0,
+			"id": "atlas_x31_y01",
+			"region": [
+				496.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 81.0,
+			"id": "atlas_x32_y01",
+			"region": [
+				512.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 82.0,
+			"id": "atlas_x33_y01",
+			"region": [
+				528.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 83.0,
+			"id": "atlas_x34_y01",
+			"region": [
+				544.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 84.0,
+			"id": "atlas_x35_y01",
+			"region": [
+				560.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 85.0,
+			"id": "atlas_x36_y01",
+			"region": [
+				576.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 86.0,
+			"id": "atlas_x37_y01",
+			"region": [
+				592.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 87.0,
+			"id": "atlas_x38_y01",
+			"region": [
+				608.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 88.0,
+			"id": "atlas_x39_y01",
+			"region": [
+				624.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 89.0,
+			"id": "atlas_x40_y01",
+			"region": [
+				640.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 90.0,
+			"id": "atlas_x41_y01",
+			"region": [
+				656.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 91.0,
+			"id": "atlas_x42_y01",
+			"region": [
+				672.0,
+				16.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 1.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 98.0,
+			"id": "atlas_x00_y02",
+			"region": [
+				0.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 101.0,
+			"id": "atlas_x03_y02",
+			"region": [
+				48.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 102.0,
+			"id": "atlas_x04_y02",
+			"region": [
+				64.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 103.0,
+			"id": "atlas_x05_y02",
+			"region": [
+				80.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 104.0,
+			"id": "atlas_x06_y02",
+			"region": [
+				96.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 116.0,
+			"id": "atlas_x18_y02",
+			"region": [
+				288.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 117.0,
+			"id": "atlas_x19_y02",
+			"region": [
+				304.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 118.0,
+			"id": "atlas_x20_y02",
+			"region": [
+				320.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 122.0,
+			"id": "atlas_x24_y02",
+			"region": [
+				384.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 123.0,
+			"id": "atlas_x25_y02",
+			"region": [
+				400.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 25.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 124.0,
+			"id": "atlas_x26_y02",
+			"region": [
+				416.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 125.0,
+			"id": "atlas_x27_y02",
+			"region": [
+				432.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 126.0,
+			"id": "atlas_x28_y02",
+			"region": [
+				448.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 127.0,
+			"id": "atlas_x29_y02",
+			"region": [
+				464.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 128.0,
+			"id": "atlas_x30_y02",
+			"region": [
+				480.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 130.0,
+			"id": "atlas_x32_y02",
+			"region": [
+				512.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 131.0,
+			"id": "atlas_x33_y02",
+			"region": [
+				528.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 132.0,
+			"id": "atlas_x34_y02",
+			"region": [
+				544.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 135.0,
+			"id": "atlas_x37_y02",
+			"region": [
+				592.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 136.0,
+			"id": "atlas_x38_y02",
+			"region": [
+				608.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 137.0,
+			"id": "atlas_x39_y02",
+			"region": [
+				624.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 138.0,
+			"id": "atlas_x40_y02",
+			"region": [
+				640.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 141.0,
+			"id": "atlas_x43_y02",
+			"region": [
+				688.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 43.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 142.0,
+			"id": "atlas_x44_y02",
+			"region": [
+				704.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 44.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 145.0,
+			"id": "atlas_x47_y02",
+			"region": [
+				752.0,
+				32.0,
+				16.0,
+				16.0
+			],
+			"x": 47.0,
+			"y": 2.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 147.0,
+			"id": "atlas_x00_y03",
+			"region": [
+				0.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 148.0,
+			"id": "atlas_x01_y03",
+			"region": [
+				16.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 149.0,
+			"id": "atlas_x02_y03",
+			"region": [
+				32.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 150.0,
+			"id": "atlas_x03_y03",
+			"region": [
+				48.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 151.0,
+			"id": "atlas_x04_y03",
+			"region": [
+				64.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 152.0,
+			"id": "atlas_x05_y03",
+			"region": [
+				80.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 153.0,
+			"id": "atlas_x06_y03",
+			"region": [
+				96.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 154.0,
+			"id": "atlas_x07_y03",
+			"region": [
+				112.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 155.0,
+			"id": "atlas_x08_y03",
+			"region": [
+				128.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 156.0,
+			"id": "atlas_x09_y03",
+			"region": [
+				144.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 157.0,
+			"id": "atlas_x10_y03",
+			"region": [
+				160.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 158.0,
+			"id": "atlas_x11_y03",
+			"region": [
+				176.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 159.0,
+			"id": "atlas_x12_y03",
+			"region": [
+				192.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 165.0,
+			"id": "atlas_x18_y03",
+			"region": [
+				288.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 166.0,
+			"id": "atlas_x19_y03",
+			"region": [
+				304.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 167.0,
+			"id": "atlas_x20_y03",
+			"region": [
+				320.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 168.0,
+			"id": "atlas_x21_y03",
+			"region": [
+				336.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 175.0,
+			"id": "atlas_x28_y03",
+			"region": [
+				448.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 176.0,
+			"id": "atlas_x29_y03",
+			"region": [
+				464.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 179.0,
+			"id": "atlas_x32_y03",
+			"region": [
+				512.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 180.0,
+			"id": "atlas_x33_y03",
+			"region": [
+				528.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 181.0,
+			"id": "atlas_x34_y03",
+			"region": [
+				544.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 182.0,
+			"id": "atlas_x35_y03",
+			"region": [
+				560.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 183.0,
+			"id": "atlas_x36_y03",
+			"region": [
+				576.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 184.0,
+			"id": "atlas_x37_y03",
+			"region": [
+				592.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 185.0,
+			"id": "atlas_x38_y03",
+			"region": [
+				608.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 186.0,
+			"id": "atlas_x39_y03",
+			"region": [
+				624.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 187.0,
+			"id": "atlas_x40_y03",
+			"region": [
+				640.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 189.0,
+			"id": "atlas_x42_y03",
+			"region": [
+				672.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 190.0,
+			"id": "atlas_x43_y03",
+			"region": [
+				688.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 43.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 191.0,
+			"id": "atlas_x44_y03",
+			"region": [
+				704.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 44.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 192.0,
+			"id": "atlas_x45_y03",
+			"region": [
+				720.0,
+				48.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 3.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 196.0,
+			"id": "atlas_x00_y04",
+			"region": [
+				0.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 197.0,
+			"id": "atlas_x01_y04",
+			"region": [
+				16.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 198.0,
+			"id": "atlas_x02_y04",
+			"region": [
+				32.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 199.0,
+			"id": "atlas_x03_y04",
+			"region": [
+				48.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 200.0,
+			"id": "atlas_x04_y04",
+			"region": [
+				64.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 201.0,
+			"id": "atlas_x05_y04",
+			"region": [
+				80.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 202.0,
+			"id": "atlas_x06_y04",
+			"region": [
+				96.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 203.0,
+			"id": "atlas_x07_y04",
+			"region": [
+				112.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 204.0,
+			"id": "atlas_x08_y04",
+			"region": [
+				128.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 205.0,
+			"id": "atlas_x09_y04",
+			"region": [
+				144.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 206.0,
+			"id": "atlas_x10_y04",
+			"region": [
+				160.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 207.0,
+			"id": "atlas_x11_y04",
+			"region": [
+				176.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 208.0,
+			"id": "atlas_x12_y04",
+			"region": [
+				192.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 214.0,
+			"id": "atlas_x18_y04",
+			"region": [
+				288.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 215.0,
+			"id": "atlas_x19_y04",
+			"region": [
+				304.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 216.0,
+			"id": "atlas_x20_y04",
+			"region": [
+				320.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 217.0,
+			"id": "atlas_x21_y04",
+			"region": [
+				336.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 218.0,
+			"id": "atlas_x22_y04",
+			"region": [
+				352.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 22.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 219.0,
+			"id": "atlas_x23_y04",
+			"region": [
+				368.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 23.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 225.0,
+			"id": "atlas_x29_y04",
+			"region": [
+				464.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 227.0,
+			"id": "atlas_x31_y04",
+			"region": [
+				496.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 228.0,
+			"id": "atlas_x32_y04",
+			"region": [
+				512.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 229.0,
+			"id": "atlas_x33_y04",
+			"region": [
+				528.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 230.0,
+			"id": "atlas_x34_y04",
+			"region": [
+				544.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 231.0,
+			"id": "atlas_x35_y04",
+			"region": [
+				560.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 232.0,
+			"id": "atlas_x36_y04",
+			"region": [
+				576.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 233.0,
+			"id": "atlas_x37_y04",
+			"region": [
+				592.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 234.0,
+			"id": "atlas_x38_y04",
+			"region": [
+				608.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 235.0,
+			"id": "atlas_x39_y04",
+			"region": [
+				624.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 236.0,
+			"id": "atlas_x40_y04",
+			"region": [
+				640.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 237.0,
+			"id": "atlas_x41_y04",
+			"region": [
+				656.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 241.0,
+			"id": "atlas_x45_y04",
+			"region": [
+				720.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 242.0,
+			"id": "atlas_x46_y04",
+			"region": [
+				736.0,
+				64.0,
+				16.0,
+				16.0
+			],
+			"x": 46.0,
+			"y": 4.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 245.0,
+			"id": "atlas_x00_y05",
+			"region": [
+				0.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 246.0,
+			"id": "atlas_x01_y05",
+			"region": [
+				16.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 247.0,
+			"id": "atlas_x02_y05",
+			"region": [
+				32.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 248.0,
+			"id": "atlas_x03_y05",
+			"region": [
+				48.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 249.0,
+			"id": "atlas_x04_y05",
+			"region": [
+				64.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 250.0,
+			"id": "atlas_x05_y05",
+			"region": [
+				80.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 251.0,
+			"id": "atlas_x06_y05",
+			"region": [
+				96.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 252.0,
+			"id": "atlas_x07_y05",
+			"region": [
+				112.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 253.0,
+			"id": "atlas_x08_y05",
+			"region": [
+				128.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 254.0,
+			"id": "atlas_x09_y05",
+			"region": [
+				144.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 255.0,
+			"id": "atlas_x10_y05",
+			"region": [
+				160.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 256.0,
+			"id": "atlas_x11_y05",
+			"region": [
+				176.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 257.0,
+			"id": "atlas_x12_y05",
+			"region": [
+				192.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 258.0,
+			"id": "atlas_x13_y05",
+			"region": [
+				208.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 13.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 259.0,
+			"id": "atlas_x14_y05",
+			"region": [
+				224.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 260.0,
+			"id": "atlas_x15_y05",
+			"region": [
+				240.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 261.0,
+			"id": "atlas_x16_y05",
+			"region": [
+				256.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 262.0,
+			"id": "atlas_x17_y05",
+			"region": [
+				272.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 269.0,
+			"id": "atlas_x24_y05",
+			"region": [
+				384.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 271.0,
+			"id": "atlas_x26_y05",
+			"region": [
+				416.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 273.0,
+			"id": "atlas_x28_y05",
+			"region": [
+				448.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 274.0,
+			"id": "atlas_x29_y05",
+			"region": [
+				464.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 275.0,
+			"id": "atlas_x30_y05",
+			"region": [
+				480.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 276.0,
+			"id": "atlas_x31_y05",
+			"region": [
+				496.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 277.0,
+			"id": "atlas_x32_y05",
+			"region": [
+				512.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 278.0,
+			"id": "atlas_x33_y05",
+			"region": [
+				528.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 279.0,
+			"id": "atlas_x34_y05",
+			"region": [
+				544.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 280.0,
+			"id": "atlas_x35_y05",
+			"region": [
+				560.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 281.0,
+			"id": "atlas_x36_y05",
+			"region": [
+				576.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 282.0,
+			"id": "atlas_x37_y05",
+			"region": [
+				592.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 283.0,
+			"id": "atlas_x38_y05",
+			"region": [
+				608.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 284.0,
+			"id": "atlas_x39_y05",
+			"region": [
+				624.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 285.0,
+			"id": "atlas_x40_y05",
+			"region": [
+				640.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 286.0,
+			"id": "atlas_x41_y05",
+			"region": [
+				656.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 290.0,
+			"id": "atlas_x45_y05",
+			"region": [
+				720.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 293.0,
+			"id": "atlas_x48_y05",
+			"region": [
+				768.0,
+				80.0,
+				16.0,
+				16.0
+			],
+			"x": 48.0,
+			"y": 5.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 294.0,
+			"id": "atlas_x00_y06",
+			"region": [
+				0.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 295.0,
+			"id": "atlas_x01_y06",
+			"region": [
+				16.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 296.0,
+			"id": "atlas_x02_y06",
+			"region": [
+				32.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 297.0,
+			"id": "atlas_x03_y06",
+			"region": [
+				48.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 298.0,
+			"id": "atlas_x04_y06",
+			"region": [
+				64.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 299.0,
+			"id": "atlas_x05_y06",
+			"region": [
+				80.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 300.0,
+			"id": "atlas_x06_y06",
+			"region": [
+				96.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 301.0,
+			"id": "atlas_x07_y06",
+			"region": [
+				112.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 302.0,
+			"id": "atlas_x08_y06",
+			"region": [
+				128.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 303.0,
+			"id": "atlas_x09_y06",
+			"region": [
+				144.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 306.0,
+			"id": "atlas_x12_y06",
+			"region": [
+				192.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 318.0,
+			"id": "atlas_x24_y06",
+			"region": [
+				384.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 319.0,
+			"id": "atlas_x25_y06",
+			"region": [
+				400.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 25.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 320.0,
+			"id": "atlas_x26_y06",
+			"region": [
+				416.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 321.0,
+			"id": "atlas_x27_y06",
+			"region": [
+				432.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 322.0,
+			"id": "atlas_x28_y06",
+			"region": [
+				448.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 323.0,
+			"id": "atlas_x29_y06",
+			"region": [
+				464.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 324.0,
+			"id": "atlas_x30_y06",
+			"region": [
+				480.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 326.0,
+			"id": "atlas_x32_y06",
+			"region": [
+				512.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 327.0,
+			"id": "atlas_x33_y06",
+			"region": [
+				528.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 328.0,
+			"id": "atlas_x34_y06",
+			"region": [
+				544.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 329.0,
+			"id": "atlas_x35_y06",
+			"region": [
+				560.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 330.0,
+			"id": "atlas_x36_y06",
+			"region": [
+				576.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 331.0,
+			"id": "atlas_x37_y06",
+			"region": [
+				592.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 332.0,
+			"id": "atlas_x38_y06",
+			"region": [
+				608.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 333.0,
+			"id": "atlas_x39_y06",
+			"region": [
+				624.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 334.0,
+			"id": "atlas_x40_y06",
+			"region": [
+				640.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 335.0,
+			"id": "atlas_x41_y06",
+			"region": [
+				656.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 336.0,
+			"id": "atlas_x42_y06",
+			"region": [
+				672.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 337.0,
+			"id": "atlas_x43_y06",
+			"region": [
+				688.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 43.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 338.0,
+			"id": "atlas_x44_y06",
+			"region": [
+				704.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 44.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 339.0,
+			"id": "atlas_x45_y06",
+			"region": [
+				720.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 340.0,
+			"id": "atlas_x46_y06",
+			"region": [
+				736.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 46.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 342.0,
+			"id": "atlas_x48_y06",
+			"region": [
+				768.0,
+				96.0,
+				16.0,
+				16.0
+			],
+			"x": 48.0,
+			"y": 6.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 343.0,
+			"id": "atlas_x00_y07",
+			"region": [
+				0.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 344.0,
+			"id": "atlas_x01_y07",
+			"region": [
+				16.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 345.0,
+			"id": "atlas_x02_y07",
+			"region": [
+				32.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 346.0,
+			"id": "atlas_x03_y07",
+			"region": [
+				48.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 347.0,
+			"id": "atlas_x04_y07",
+			"region": [
+				64.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 348.0,
+			"id": "atlas_x05_y07",
+			"region": [
+				80.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 349.0,
+			"id": "atlas_x06_y07",
+			"region": [
+				96.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 350.0,
+			"id": "atlas_x07_y07",
+			"region": [
+				112.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 351.0,
+			"id": "atlas_x08_y07",
+			"region": [
+				128.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 352.0,
+			"id": "atlas_x09_y07",
+			"region": [
+				144.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 353.0,
+			"id": "atlas_x10_y07",
+			"region": [
+				160.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 357.0,
+			"id": "atlas_x14_y07",
+			"region": [
+				224.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 358.0,
+			"id": "atlas_x15_y07",
+			"region": [
+				240.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 359.0,
+			"id": "atlas_x16_y07",
+			"region": [
+				256.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 360.0,
+			"id": "atlas_x17_y07",
+			"region": [
+				272.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 367.0,
+			"id": "atlas_x24_y07",
+			"region": [
+				384.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 375.0,
+			"id": "atlas_x32_y07",
+			"region": [
+				512.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 376.0,
+			"id": "atlas_x33_y07",
+			"region": [
+				528.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 377.0,
+			"id": "atlas_x34_y07",
+			"region": [
+				544.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 378.0,
+			"id": "atlas_x35_y07",
+			"region": [
+				560.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 379.0,
+			"id": "atlas_x36_y07",
+			"region": [
+				576.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 380.0,
+			"id": "atlas_x37_y07",
+			"region": [
+				592.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 381.0,
+			"id": "atlas_x38_y07",
+			"region": [
+				608.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 382.0,
+			"id": "atlas_x39_y07",
+			"region": [
+				624.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 383.0,
+			"id": "atlas_x40_y07",
+			"region": [
+				640.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 384.0,
+			"id": "atlas_x41_y07",
+			"region": [
+				656.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 385.0,
+			"id": "atlas_x42_y07",
+			"region": [
+				672.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 386.0,
+			"id": "atlas_x43_y07",
+			"region": [
+				688.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 43.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 387.0,
+			"id": "atlas_x44_y07",
+			"region": [
+				704.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 44.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 388.0,
+			"id": "atlas_x45_y07",
+			"region": [
+				720.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 389.0,
+			"id": "atlas_x46_y07",
+			"region": [
+				736.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 46.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 391.0,
+			"id": "atlas_x48_y07",
+			"region": [
+				768.0,
+				112.0,
+				16.0,
+				16.0
+			],
+			"x": 48.0,
+			"y": 7.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 392.0,
+			"id": "atlas_x00_y08",
+			"region": [
+				0.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 393.0,
+			"id": "atlas_x01_y08",
+			"region": [
+				16.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 394.0,
+			"id": "atlas_x02_y08",
+			"region": [
+				32.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 395.0,
+			"id": "atlas_x03_y08",
+			"region": [
+				48.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 396.0,
+			"id": "atlas_x04_y08",
+			"region": [
+				64.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 397.0,
+			"id": "atlas_x05_y08",
+			"region": [
+				80.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 398.0,
+			"id": "atlas_x06_y08",
+			"region": [
+				96.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 399.0,
+			"id": "atlas_x07_y08",
+			"region": [
+				112.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 400.0,
+			"id": "atlas_x08_y08",
+			"region": [
+				128.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 401.0,
+			"id": "atlas_x09_y08",
+			"region": [
+				144.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 402.0,
+			"id": "atlas_x10_y08",
+			"region": [
+				160.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 406.0,
+			"id": "atlas_x14_y08",
+			"region": [
+				224.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 407.0,
+			"id": "atlas_x15_y08",
+			"region": [
+				240.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 408.0,
+			"id": "atlas_x16_y08",
+			"region": [
+				256.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 409.0,
+			"id": "atlas_x17_y08",
+			"region": [
+				272.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 416.0,
+			"id": "atlas_x24_y08",
+			"region": [
+				384.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 418.0,
+			"id": "atlas_x26_y08",
+			"region": [
+				416.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 419.0,
+			"id": "atlas_x27_y08",
+			"region": [
+				432.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 420.0,
+			"id": "atlas_x28_y08",
+			"region": [
+				448.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 421.0,
+			"id": "atlas_x29_y08",
+			"region": [
+				464.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 422.0,
+			"id": "atlas_x30_y08",
+			"region": [
+				480.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 423.0,
+			"id": "atlas_x31_y08",
+			"region": [
+				496.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 424.0,
+			"id": "atlas_x32_y08",
+			"region": [
+				512.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 425.0,
+			"id": "atlas_x33_y08",
+			"region": [
+				528.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 426.0,
+			"id": "atlas_x34_y08",
+			"region": [
+				544.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 427.0,
+			"id": "atlas_x35_y08",
+			"region": [
+				560.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 428.0,
+			"id": "atlas_x36_y08",
+			"region": [
+				576.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 429.0,
+			"id": "atlas_x37_y08",
+			"region": [
+				592.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 430.0,
+			"id": "atlas_x38_y08",
+			"region": [
+				608.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 431.0,
+			"id": "atlas_x39_y08",
+			"region": [
+				624.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 39.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 432.0,
+			"id": "atlas_x40_y08",
+			"region": [
+				640.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 40.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 433.0,
+			"id": "atlas_x41_y08",
+			"region": [
+				656.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 41.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 434.0,
+			"id": "atlas_x42_y08",
+			"region": [
+				672.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 42.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 435.0,
+			"id": "atlas_x43_y08",
+			"region": [
+				688.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 43.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 436.0,
+			"id": "atlas_x44_y08",
+			"region": [
+				704.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 44.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 437.0,
+			"id": "atlas_x45_y08",
+			"region": [
+				720.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 45.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 438.0,
+			"id": "atlas_x46_y08",
+			"region": [
+				736.0,
+				128.0,
+				16.0,
+				16.0
+			],
+			"x": 46.0,
+			"y": 8.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 441.0,
+			"id": "atlas_x00_y09",
+			"region": [
+				0.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 442.0,
+			"id": "atlas_x01_y09",
+			"region": [
+				16.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 443.0,
+			"id": "atlas_x02_y09",
+			"region": [
+				32.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 444.0,
+			"id": "atlas_x03_y09",
+			"region": [
+				48.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 445.0,
+			"id": "atlas_x04_y09",
+			"region": [
+				64.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 446.0,
+			"id": "atlas_x05_y09",
+			"region": [
+				80.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 447.0,
+			"id": "atlas_x06_y09",
+			"region": [
+				96.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 448.0,
+			"id": "atlas_x07_y09",
+			"region": [
+				112.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 449.0,
+			"id": "atlas_x08_y09",
+			"region": [
+				128.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 450.0,
+			"id": "atlas_x09_y09",
+			"region": [
+				144.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 451.0,
+			"id": "atlas_x10_y09",
+			"region": [
+				160.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 457.0,
+			"id": "atlas_x16_y09",
+			"region": [
+				256.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 458.0,
+			"id": "atlas_x17_y09",
+			"region": [
+				272.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 467.0,
+			"id": "atlas_x26_y09",
+			"region": [
+				416.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 471.0,
+			"id": "atlas_x30_y09",
+			"region": [
+				480.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 473.0,
+			"id": "atlas_x32_y09",
+			"region": [
+				512.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 474.0,
+			"id": "atlas_x33_y09",
+			"region": [
+				528.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 475.0,
+			"id": "atlas_x34_y09",
+			"region": [
+				544.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 476.0,
+			"id": "atlas_x35_y09",
+			"region": [
+				560.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 477.0,
+			"id": "atlas_x36_y09",
+			"region": [
+				576.0,
+				144.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 9.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 493.0,
+			"id": "atlas_x03_y10",
+			"region": [
+				48.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 494.0,
+			"id": "atlas_x04_y10",
+			"region": [
+				64.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 498.0,
+			"id": "atlas_x08_y10",
+			"region": [
+				128.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 504.0,
+			"id": "atlas_x14_y10",
+			"region": [
+				224.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 505.0,
+			"id": "atlas_x15_y10",
+			"region": [
+				240.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 506.0,
+			"id": "atlas_x16_y10",
+			"region": [
+				256.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 507.0,
+			"id": "atlas_x17_y10",
+			"region": [
+				272.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 511.0,
+			"id": "atlas_x21_y10",
+			"region": [
+				336.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 522.0,
+			"id": "atlas_x32_y10",
+			"region": [
+				512.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 523.0,
+			"id": "atlas_x33_y10",
+			"region": [
+				528.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 524.0,
+			"id": "atlas_x34_y10",
+			"region": [
+				544.0,
+				160.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 10.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 540.0,
+			"id": "atlas_x01_y11",
+			"region": [
+				16.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 541.0,
+			"id": "atlas_x02_y11",
+			"region": [
+				32.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 542.0,
+			"id": "atlas_x03_y11",
+			"region": [
+				48.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 544.0,
+			"id": "atlas_x05_y11",
+			"region": [
+				80.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 545.0,
+			"id": "atlas_x06_y11",
+			"region": [
+				96.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 546.0,
+			"id": "atlas_x07_y11",
+			"region": [
+				112.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 547.0,
+			"id": "atlas_x08_y11",
+			"region": [
+				128.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 549.0,
+			"id": "atlas_x10_y11",
+			"region": [
+				160.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 550.0,
+			"id": "atlas_x11_y11",
+			"region": [
+				176.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 551.0,
+			"id": "atlas_x12_y11",
+			"region": [
+				192.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 552.0,
+			"id": "atlas_x13_y11",
+			"region": [
+				208.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 13.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 553.0,
+			"id": "atlas_x14_y11",
+			"region": [
+				224.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 554.0,
+			"id": "atlas_x15_y11",
+			"region": [
+				240.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 555.0,
+			"id": "atlas_x16_y11",
+			"region": [
+				256.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 556.0,
+			"id": "atlas_x17_y11",
+			"region": [
+				272.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 563.0,
+			"id": "atlas_x24_y11",
+			"region": [
+				384.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 24.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 564.0,
+			"id": "atlas_x25_y11",
+			"region": [
+				400.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 25.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 565.0,
+			"id": "atlas_x26_y11",
+			"region": [
+				416.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 26.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 566.0,
+			"id": "atlas_x27_y11",
+			"region": [
+				432.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 567.0,
+			"id": "atlas_x28_y11",
+			"region": [
+				448.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 568.0,
+			"id": "atlas_x29_y11",
+			"region": [
+				464.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 569.0,
+			"id": "atlas_x30_y11",
+			"region": [
+				480.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 570.0,
+			"id": "atlas_x31_y11",
+			"region": [
+				496.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 574.0,
+			"id": "atlas_x35_y11",
+			"region": [
+				560.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 35.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 575.0,
+			"id": "atlas_x36_y11",
+			"region": [
+				576.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 36.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 576.0,
+			"id": "atlas_x37_y11",
+			"region": [
+				592.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 37.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 577.0,
+			"id": "atlas_x38_y11",
+			"region": [
+				608.0,
+				176.0,
+				16.0,
+				16.0
+			],
+			"x": 38.0,
+			"y": 11.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 588.0,
+			"id": "atlas_x00_y12",
+			"region": [
+				0.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 589.0,
+			"id": "atlas_x01_y12",
+			"region": [
+				16.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 590.0,
+			"id": "atlas_x02_y12",
+			"region": [
+				32.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 591.0,
+			"id": "atlas_x03_y12",
+			"region": [
+				48.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 592.0,
+			"id": "atlas_x04_y12",
+			"region": [
+				64.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 593.0,
+			"id": "atlas_x05_y12",
+			"region": [
+				80.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 594.0,
+			"id": "atlas_x06_y12",
+			"region": [
+				96.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 595.0,
+			"id": "atlas_x07_y12",
+			"region": [
+				112.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 606.0,
+			"id": "atlas_x18_y12",
+			"region": [
+				288.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 607.0,
+			"id": "atlas_x19_y12",
+			"region": [
+				304.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 608.0,
+			"id": "atlas_x20_y12",
+			"region": [
+				320.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 609.0,
+			"id": "atlas_x21_y12",
+			"region": [
+				336.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 610.0,
+			"id": "atlas_x22_y12",
+			"region": [
+				352.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 22.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 611.0,
+			"id": "atlas_x23_y12",
+			"region": [
+				368.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 23.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 615.0,
+			"id": "atlas_x27_y12",
+			"region": [
+				432.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 27.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 616.0,
+			"id": "atlas_x28_y12",
+			"region": [
+				448.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 28.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 617.0,
+			"id": "atlas_x29_y12",
+			"region": [
+				464.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 29.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 618.0,
+			"id": "atlas_x30_y12",
+			"region": [
+				480.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 30.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 619.0,
+			"id": "atlas_x31_y12",
+			"region": [
+				496.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 31.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 620.0,
+			"id": "atlas_x32_y12",
+			"region": [
+				512.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 621.0,
+			"id": "atlas_x33_y12",
+			"region": [
+				528.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 622.0,
+			"id": "atlas_x34_y12",
+			"region": [
+				544.0,
+				192.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 12.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 637.0,
+			"id": "atlas_x00_y13",
+			"region": [
+				0.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 638.0,
+			"id": "atlas_x01_y13",
+			"region": [
+				16.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 639.0,
+			"id": "atlas_x02_y13",
+			"region": [
+				32.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 640.0,
+			"id": "atlas_x03_y13",
+			"region": [
+				48.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 641.0,
+			"id": "atlas_x04_y13",
+			"region": [
+				64.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 642.0,
+			"id": "atlas_x05_y13",
+			"region": [
+				80.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 643.0,
+			"id": "atlas_x06_y13",
+			"region": [
+				96.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 644.0,
+			"id": "atlas_x07_y13",
+			"region": [
+				112.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 652.0,
+			"id": "atlas_x15_y13",
+			"region": [
+				240.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 653.0,
+			"id": "atlas_x16_y13",
+			"region": [
+				256.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 654.0,
+			"id": "atlas_x17_y13",
+			"region": [
+				272.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 655.0,
+			"id": "atlas_x18_y13",
+			"region": [
+				288.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 656.0,
+			"id": "atlas_x19_y13",
+			"region": [
+				304.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 19.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 657.0,
+			"id": "atlas_x20_y13",
+			"region": [
+				320.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 20.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 658.0,
+			"id": "atlas_x21_y13",
+			"region": [
+				336.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 21.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 659.0,
+			"id": "atlas_x22_y13",
+			"region": [
+				352.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 22.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 660.0,
+			"id": "atlas_x23_y13",
+			"region": [
+				368.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 23.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 669.0,
+			"id": "atlas_x32_y13",
+			"region": [
+				512.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 670.0,
+			"id": "atlas_x33_y13",
+			"region": [
+				528.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 671.0,
+			"id": "atlas_x34_y13",
+			"region": [
+				544.0,
+				208.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 13.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 686.0,
+			"id": "atlas_x00_y14",
+			"region": [
+				0.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 687.0,
+			"id": "atlas_x01_y14",
+			"region": [
+				16.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 688.0,
+			"id": "atlas_x02_y14",
+			"region": [
+				32.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 689.0,
+			"id": "atlas_x03_y14",
+			"region": [
+				48.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 691.0,
+			"id": "atlas_x05_y14",
+			"region": [
+				80.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 692.0,
+			"id": "atlas_x06_y14",
+			"region": [
+				96.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 693.0,
+			"id": "atlas_x07_y14",
+			"region": [
+				112.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 701.0,
+			"id": "atlas_x15_y14",
+			"region": [
+				240.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 702.0,
+			"id": "atlas_x16_y14",
+			"region": [
+				256.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 703.0,
+			"id": "atlas_x17_y14",
+			"region": [
+				272.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 704.0,
+			"id": "atlas_x18_y14",
+			"region": [
+				288.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 718.0,
+			"id": "atlas_x32_y14",
+			"region": [
+				512.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 32.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 719.0,
+			"id": "atlas_x33_y14",
+			"region": [
+				528.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 720.0,
+			"id": "atlas_x34_y14",
+			"region": [
+				544.0,
+				224.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 14.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 735.0,
+			"id": "atlas_x00_y15",
+			"region": [
+				0.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 736.0,
+			"id": "atlas_x01_y15",
+			"region": [
+				16.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 737.0,
+			"id": "atlas_x02_y15",
+			"region": [
+				32.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 738.0,
+			"id": "atlas_x03_y15",
+			"region": [
+				48.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 739.0,
+			"id": "atlas_x04_y15",
+			"region": [
+				64.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 740.0,
+			"id": "atlas_x05_y15",
+			"region": [
+				80.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 741.0,
+			"id": "atlas_x06_y15",
+			"region": [
+				96.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 742.0,
+			"id": "atlas_x07_y15",
+			"region": [
+				112.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 745.0,
+			"id": "atlas_x10_y15",
+			"region": [
+				160.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 746.0,
+			"id": "atlas_x11_y15",
+			"region": [
+				176.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 747.0,
+			"id": "atlas_x12_y15",
+			"region": [
+				192.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 748.0,
+			"id": "atlas_x13_y15",
+			"region": [
+				208.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 13.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 751.0,
+			"id": "atlas_x16_y15",
+			"region": [
+				256.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 752.0,
+			"id": "atlas_x17_y15",
+			"region": [
+				272.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 753.0,
+			"id": "atlas_x18_y15",
+			"region": [
+				288.0,
+				240.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 15.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 791.0,
+			"id": "atlas_x07_y16",
+			"region": [
+				112.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 793.0,
+			"id": "atlas_x09_y16",
+			"region": [
+				144.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 794.0,
+			"id": "atlas_x10_y16",
+			"region": [
+				160.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 795.0,
+			"id": "atlas_x11_y16",
+			"region": [
+				176.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 796.0,
+			"id": "atlas_x12_y16",
+			"region": [
+				192.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 797.0,
+			"id": "atlas_x13_y16",
+			"region": [
+				208.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 13.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 798.0,
+			"id": "atlas_x14_y16",
+			"region": [
+				224.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 14.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 799.0,
+			"id": "atlas_x15_y16",
+			"region": [
+				240.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 15.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 800.0,
+			"id": "atlas_x16_y16",
+			"region": [
+				256.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 801.0,
+			"id": "atlas_x17_y16",
+			"region": [
+				272.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 802.0,
+			"id": "atlas_x18_y16",
+			"region": [
+				288.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 817.0,
+			"id": "atlas_x33_y16",
+			"region": [
+				528.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 33.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 818.0,
+			"id": "atlas_x34_y16",
+			"region": [
+				544.0,
+				256.0,
+				16.0,
+				16.0
+			],
+			"x": 34.0,
+			"y": 16.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 840.0,
+			"id": "atlas_x07_y17",
+			"region": [
+				112.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 842.0,
+			"id": "atlas_x09_y17",
+			"region": [
+				144.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 843.0,
+			"id": "atlas_x10_y17",
+			"region": [
+				160.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 844.0,
+			"id": "atlas_x11_y17",
+			"region": [
+				176.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 845.0,
+			"id": "atlas_x12_y17",
+			"region": [
+				192.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 12.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 846.0,
+			"id": "atlas_x13_y17",
+			"region": [
+				208.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 13.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 849.0,
+			"id": "atlas_x16_y17",
+			"region": [
+				256.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 850.0,
+			"id": "atlas_x17_y17",
+			"region": [
+				272.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 851.0,
+			"id": "atlas_x18_y17",
+			"region": [
+				288.0,
+				272.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 17.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 891.0,
+			"id": "atlas_x09_y18",
+			"region": [
+				144.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 892.0,
+			"id": "atlas_x10_y18",
+			"region": [
+				160.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 893.0,
+			"id": "atlas_x11_y18",
+			"region": [
+				176.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 898.0,
+			"id": "atlas_x16_y18",
+			"region": [
+				256.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 899.0,
+			"id": "atlas_x17_y18",
+			"region": [
+				272.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 900.0,
+			"id": "atlas_x18_y18",
+			"region": [
+				288.0,
+				288.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 18.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 931.0,
+			"id": "atlas_x00_y19",
+			"region": [
+				0.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 932.0,
+			"id": "atlas_x01_y19",
+			"region": [
+				16.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 933.0,
+			"id": "atlas_x02_y19",
+			"region": [
+				32.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 934.0,
+			"id": "atlas_x03_y19",
+			"region": [
+				48.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 3.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 935.0,
+			"id": "atlas_x04_y19",
+			"region": [
+				64.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 936.0,
+			"id": "atlas_x05_y19",
+			"region": [
+				80.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 5.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 937.0,
+			"id": "atlas_x06_y19",
+			"region": [
+				96.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 6.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 938.0,
+			"id": "atlas_x07_y19",
+			"region": [
+				112.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 939.0,
+			"id": "atlas_x08_y19",
+			"region": [
+				128.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 940.0,
+			"id": "atlas_x09_y19",
+			"region": [
+				144.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 941.0,
+			"id": "atlas_x10_y19",
+			"region": [
+				160.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 942.0,
+			"id": "atlas_x11_y19",
+			"region": [
+				176.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 947.0,
+			"id": "atlas_x16_y19",
+			"region": [
+				256.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 948.0,
+			"id": "atlas_x17_y19",
+			"region": [
+				272.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 949.0,
+			"id": "atlas_x18_y19",
+			"region": [
+				288.0,
+				304.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 19.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 980.0,
+			"id": "atlas_x00_y20",
+			"region": [
+				0.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 981.0,
+			"id": "atlas_x01_y20",
+			"region": [
+				16.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 982.0,
+			"id": "atlas_x02_y20",
+			"region": [
+				32.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 984.0,
+			"id": "atlas_x04_y20",
+			"region": [
+				64.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 4.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 987.0,
+			"id": "atlas_x07_y20",
+			"region": [
+				112.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 7.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 988.0,
+			"id": "atlas_x08_y20",
+			"region": [
+				128.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 996.0,
+			"id": "atlas_x16_y20",
+			"region": [
+				256.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 997.0,
+			"id": "atlas_x17_y20",
+			"region": [
+				272.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 998.0,
+			"id": "atlas_x18_y20",
+			"region": [
+				288.0,
+				320.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 20.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1029.0,
+			"id": "atlas_x00_y21",
+			"region": [
+				0.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 0.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1030.0,
+			"id": "atlas_x01_y21",
+			"region": [
+				16.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 1.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1031.0,
+			"id": "atlas_x02_y21",
+			"region": [
+				32.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 2.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1037.0,
+			"id": "atlas_x08_y21",
+			"region": [
+				128.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 8.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1038.0,
+			"id": "atlas_x09_y21",
+			"region": [
+				144.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 9.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1039.0,
+			"id": "atlas_x10_y21",
+			"region": [
+				160.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 10.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1040.0,
+			"id": "atlas_x11_y21",
+			"region": [
+				176.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 11.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1045.0,
+			"id": "atlas_x16_y21",
+			"region": [
+				256.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 16.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1046.0,
+			"id": "atlas_x17_y21",
+			"region": [
+				272.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 17.0,
+			"y": 21.0
+		},
+		{
+			"category": "curated_fantasy",
+			"frame": 1047.0,
+			"id": "atlas_x18_y21",
+			"region": [
+				288.0,
+				336.0,
+				16.0,
+				16.0
+			],
+			"x": 18.0,
+			"y": 21.0
+		}
+	],
+	"entry_count": 486,
+	"rows": 22.0,
+	"schema_version": 1.0,
+	"source_snapshot": "res://Workshop/WorkshopAssets/FantasySpriteCatalog/Validation/atlas_selection_005.json"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/AI_WORKFLOW_NOTES.md",
+    "line": 10,
+    "target": "../../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/README.md"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/MCA_ROOM_AND_DOCUMENTATION_CONTRACT.md",
+    "line": 61,
+    "target": "Templates/ASTRA_HANDOFF_TEMPLATE.md"
+  },
+  {
+    "path": "Workshop/AI_AGENTS_README/SHARED/Templates/README.md",
+    "line": 8,
+    "target": "ASTRA_HANDOFF_TEMPLATE.md"
+  },
+  {
+    "path": "Workshop/AI_Facing_Documentation/README.md",
+    "line": 7,
+    "target": "SYSTEMS_DESCRIPTIONS_FOR_AI/README.md"
+  },
+  {
+    "path": "Workshop/Documentation_Format_README.md",
+    "line": 105,
+    "target": "AI_AGENTS_README/SHARED/Templates/ASTRA_HANDOFF_TEMPLATE.md"
+  },
+  {
+    "path": "Workshop/Trashcans/README.md",
+    "line": 6,
+    "target": "LayoutInterpretationRoom_Retired_2026-09-26/"
+  },
+  {
+    "path": "Workshop/Trashcans/README.md",
+    "line": 6,
+    "target": "../../Production/Systems/LayoutInterpretationSystem/"
+  }
+]
