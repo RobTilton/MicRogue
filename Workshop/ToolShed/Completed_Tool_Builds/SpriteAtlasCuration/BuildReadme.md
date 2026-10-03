@@ -42,9 +42,9 @@ Writes are append-only or refuse existing targets. Catalog and semantic writers 
 
 The non-mutating validator uses `Production/Assets/FantasySpriteCatalog/` as its current fixture. It verifies source/catalog authority, invalid-hash and malformed-header/schema refusal, existing catalog-target refusal, exact 486-entry derivation, selection/semantic preload and UI teardown.
 
-[retained validation evidence](../../../_Audits/Current_Audits/System_Realignment/CurationValidation.md) additionally records actual append-only selection saves, catalog creation, semantic edit/save/read-back, retained-temporary refusal without mutation, and clean editor import. All four final Godot checks exited 0 without errors or warnings. The five original fixture authority hashes remained unchanged. Write-check snapshots remain in the archived evidence; they are not adopted catalog data.
+Validation scope also includes actual selection saves, catalog creation, semantic edit/save/read-back, append-only snapshot preservation, retained-temporary refusal and UI teardown. The workflow uses the current 486-entry Production catalog fixture. Snapshot outputs belong to the caller's configured directories; validation does not adopt them into runtime authority.
 
-Rob verified the stated selection and naming interactions on 2026-10-03. This does not automatically approve new semantic data or changed artwork.
+Human judgment owns visual selection, semantic meaning and interaction quality.
 
 ## Limits
 

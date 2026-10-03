@@ -21,6 +21,6 @@ Material cleared for human sorting moves to Workshop/Trashcans after required ou
 
 ## Current Placement And Limits
 
-[Sprite Atlas Curation](Completed_Tool_Builds/SpriteAtlasCuration/BuildReadme.md) is a selection/catalog/semantic authoring workflow. Its retained validation has known schema-validation and shutdown-diagnostic findings; its existing Proven label does not establish the current zero-error/zero-warning acceptance condition.
+[Sprite Atlas Curation](Completed_Tool_Builds/SpriteAtlasCuration/BuildReadme.md) owns human selection, catalog derivation and append-only semantic naming. Its current validation refuses unsupported selection schemas and existing final/temporary outputs; UI teardown is clean within the verified workflow.
 
-[Decoration components](../../Production/Systems/DecorationPipeline/ToolReadme.md) and [decorated preview](../../Production/Tools/DecoratedDungeonPreview/BuildReadme.md) are now Production-owned. [Rapid inspection](Completed_Tool_Builds/RapidGenerationInspection/BuildReadme.md) remains reusable ToolShed tooling. Recovery validation is recorded in [recovery evidence](../_Audits/Current_Audits/System_Realignment/RelocationValidation.md); human verification of the stated four checks was received on 2026-10-03.
+[Rapid inspection](Completed_Tool_Builds/RapidGenerationInspection/BuildReadme.md) owns reusable visualization, doorway checks and generation measurement. [Decoration](../AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/FRAGILE_DECORATION_PIPELINE.md) and its composed preview are Production-owned.

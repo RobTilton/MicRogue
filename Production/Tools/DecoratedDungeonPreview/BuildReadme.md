@@ -19,8 +19,6 @@ Required data is the durable FantasySpriteCatalog package under `Production/Asse
 
 ## Validation And Limits
 
-Historical scope: [validation and Room removal report](VALIDATION_AND_ROOM_REMOVAL.md) for executed checks, preserved acceptance and exact removal disposition. The report remains outside the temporary Room. The profile review image is also retained in the component unit.
+Validation scope: component validators cover catalog authority, detached source-preserving results, deterministic topology/profile behavior and composed layer rendering. Headless startup checks scene composition and teardown; visual and interaction checks cover regeneration, map appearance, pan and zoom. Current system contract: [Decoration pipeline](../../../Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/FRAGILE_DECORATION_PIPELINE.md).
 
 This preview does not adopt Decoration into the Production controller or add population, persistence, collisions, navigation or lighting. Its durable files have no dependency on DecorationPassRoom. No temporary Room implementation is required.
-
-Current adoption checks: [recovery validation](../../../Workshop/_Audits/Current_Audits/System_Realignment/RelocationValidation.md). Human visual and interaction verification was received on 2026-10-03.

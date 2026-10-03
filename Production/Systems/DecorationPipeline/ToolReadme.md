@@ -33,10 +33,8 @@ Create the adapter, pass the tagged map and seed to the profile, then render the
 
 Each component directory retains its focused `validate_*.gd` SceneTree script. Run with Godot 4.4.1: `godot --headless --path <project> --script res://Production/Systems/DecorationPipeline/<Component>/validate_<name>.gd`.
 
-Historical evidence: [durable validation and removal report](../../Tools/DecoratedDungeonPreview/VALIDATION_AND_ROOM_REMOVAL.md). The [profile review](FantasyDungeonProfile/PROFILE_REVIEW.md) and accepted image are retained independently of the Room.
+Validation scope: the focused validators exercise authority, detached results and source non-mutation, deterministic topology/profile assignments, and composed layer rendering across all four archetypes at sizes 4 and 5. Current system contract: [Decoration pipeline](../../../Workshop/AI_Facing_Documentation/SYSTEMS_DESCRIPTIONS_FOR_AI/FRAGILE_DECORATION_PIPELINE.md).
 
 ## Boundaries
 
-This is Production-owned implementation. It does not own generation, Layout semantics, controller orchestration, population, collision, navigation, lighting, persistence or artwork authority. The TileMap renderer expects a compatible result from the owning result/profile boundary; it is not a validator for arbitrary hostile objects. Human art acceptance is preserved as recorded evidence, not newly inferred from automated checks.
-
-Current adoption checks: [recovery validation](../../../Workshop/_Audits/Current_Audits/System_Realignment/RelocationValidation.md). Human verification of the stated checks was received on 2026-10-03.
+This is Production-owned implementation. It does not own generation, Layout semantics, controller orchestration, population, collision, navigation, lighting, persistence or artwork authority. The TileMap renderer expects a compatible result from the owning result/profile boundary; it is not a validator for arbitrary hostile objects. Human judgment owns artwork meaning and appearance.

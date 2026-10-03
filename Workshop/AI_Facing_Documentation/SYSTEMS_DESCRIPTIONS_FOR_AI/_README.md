@@ -7,7 +7,7 @@ Current Production system contracts:
 - [Room Layout System](ROOM_LAYOUT_SYSTEM.md)
 - [Lightweight Generation Controller](LIGHTWEIGHT_GENERATION_CONTROLLER.md)
 
-Durable Workshop system contracts:
+Production composition contracts:
 
 - [Decoration Pipeline](FRAGILE_DECORATION_PIPELINE.md)
 
